@@ -8,63 +8,17 @@
 
 <http://www.w3id.org/cdio/> rdf:type owl:Ontology ;
                              <http://protege.stanford.edu/plugins/owl/protege#defaultLanguage> "en" ;
-                             <http://purl.org/dc/elements/1.1/contributor> "Adam Goldstein"@en ,
-                                                                           """Advisors for this project come ICARE4CVD consortium
-Komal Gilani
-Michel Dumontier"""@en ,
-                                                                           "Alan Ruttenberg"@en ,
-                                                                           "Albert Goldfain"@en ,
-                                                                           "Barry Smith"@en ,
-                                                                           "Bjoern Peters"@en ,
-                                                                           "Carlo Torniai"@en ,
-                                                                           "Chris Mungall"@en ,
-                                                                           "Chris Stoeckert"@en ,
-                                                                           "Christian A. Boelling"@en ,
-                                                                           "Clint Dowland"@en ,
-                                                                           "Darren Natale"@en ,
-                                                                           "David Osumi-Sutherland"@en ,
-                                                                           "Gwen Frishkoff"@en ,
-                                                                           "Holger Stenzhorn"@en ,
-                                                                           "James A. Overton"@en ,
-                                                                           "James Malone"@en ,
-                                                                           "Jennifer Fostel"@en ,
-                                                                           "Jie Zheng"@en ,
-                                                                           "Jonathan Rees"@en ,
-                                                                           "Larisa Soldatova"@en ,
-                                                                           "Lawrence Hunter"@en ,
-                                                                           "Mathias Brochhausen"@en ,
-                                                                           "Matt Brush"@en ,
-                                                                           "Melanie Courtot"@en ,
-                                                                           "Michel Dumontier"@en ,
-                                                                           "Paolo Ciccarese"@en ,
-                                                                           "Pat Hayes"@en ,
-                                                                           "Philippe Rocca-Serra"@en ,
-                                                                           "Randy Dipert"@en ,
-                                                                           "Ron Rudnicki"@en ,
-                                                                           "Satya Sahoo"@en ,
-                                                                           "Sivaram Arabandi"@en ,
-                                                                           "Werner Ceusters"@en ,
-                                                                           "William Duncan"@en ,
-                                                                           "William Hogan"@en ,
-                                                                           "Yongqun (Oliver) He"@en ,
-                                                                           "komal gilani"@en ,
-                                                                           "Contributors to the GA4GH Data Use Ontology workstream are listed at https://github.com/EBISPOT/DUO/blob/master/README.md#contributions" ;
-                             <http://purl.org/dc/elements/1.1/creator> "Melanie Courtot" ;
-                             <http://purl.org/dc/elements/1.1/description> "An ontology for representing clinical studies, including study designs, the collection and preparation of the targets of investigation, as well as the data generated and the types of analysis performed on the data to reach conclusions, and their documentation. It further extends to represent metadata of each data element in the study and related statatistics."@en ,
-                                                                           "The Information Artifact Ontology (IAO) is an ontology of information entities, originally driven by work by the OBI digital entity and realizable information entity branch." ;
+                             <http://purl.org/dc/elements/1.1/creator> "Komal Gilani"@en ;
+                             <http://purl.org/dc/elements/1.1/description> "An ontology for representing clinical studies, including study designs, the collection and preparation of the targets of investigation, as well as the data generated and the types of analysis performed on the data to reach conclusions, and their documentation. It further extends to represent metadata of each data element in the study and related statatistics."@en ;
                              <http://purl.org/dc/elements/1.1/format> "OWL-DL"@en ;
-                             <http://purl.org/dc/elements/1.1/title> "Information Artifact Ontology (IAO)" ;
-                             <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ,
-                                                                "http://creativecommons.org/licenses/by/4.0/" ;
+                             <http://purl.org/dc/elements/1.1/title> "Clinical Data Integration Ontology (CDIO)"@en ;
+                             <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> ;
                              <http://purl.org/dc/terms/title> "Clinical Data Integration Ontology"@en ;
-                             rdfs:comment "An information artifact is, loosely, a dependent continuant or its bearer that is created as the result of one or more intentional processes. Examples: uniprot, the english language, the contents of this document or a printout of it, the temperature measurements from a weather balloon. For more information, see the project home page at https://github.com/information-artifact-ontology/IAO"@en ,
-                                          "Harmonization & Exploration Ontology for Clinical Study Metadata and Data Analysis"@en ,
-                                          "IDs allocated to related efforts: PNO: IAO_0020000-IAO_0020999, D_ACTS: IAO_0021000-IAO_0021999" ,
-                                          "IDs allocated to subdomains of IAO. pno.owl: IAO_0020000-IAO_0020999, d-acts.owl: IAO_0021000-IAO_0021999" ;
+                             rdfs:comment "Harmonization & Exploration Ontology for Clinical Study Metadata and Data Analysis"@en ;
                              rdfs:label "CDIO"@en ;
-                             rdfs:seeAlso <https://github.com/information-artifact-ontology/IAO> ;
-                             owl:versionInfo "2022-11-07" ,
-                                             "2025-01-09" .
+                             rdfs:seeAlso <https://github.com/komi786/cdio/cdio.ttl> ;
+                             owl:versionInfo "2025-01-09" ,
+                                             "2025-03-16" .
 
 #################################################################
 #    Annotation properties
@@ -4388,21 +4342,6 @@ of this, different, term."""@en ,
                                                                                           "OBI_0000217"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
                                              rdfs:label "objective specification"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000006
-<http://purl.obolibrary.org/obo/IAO_0000006> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "narrative object"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "Examples of narrative objects are reports, journal  articles, and patents submission."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A narrative object is an information content entity that is a set of propositions."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "2009-08-10 Alan Ruttenberg: Larry Hunter suggests that this be obsoleted and replaced by 'textual entity' and 'figure'. Alan restored as there are OBI dependencies and this merits further discussion"@en ,
-                                                                                          "agree - DENRIE. Issue(alan) do we only mean text? What about a story told by mime. Does music count? (no) what about an oral report. Regarding definition, saying it is a set of propositions means we loose the idea that wording matters. Maybe adjust saying a narrative object has some relationshop to a set of propositions"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "person:Chris Stoeckert"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "OBI_0000013"@en ,
-                                                                                          "group:OBI"@en ;
-                                             rdfs:label "narrative object"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000007
