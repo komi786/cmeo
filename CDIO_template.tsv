@@ -1,0 +1,5 @@
+ontology ID	label	editor preferred term	has curation status	alternative label	definition	definition source	example of usage	term editor	editor note	curator note	ontology term requester	term tracker item	logical type	logical note	parent class	target of administration	material administered	administration technique	objective	associated axiom
+ID	A rdfs:label	A editor preferred term		A alternative label SPLIT=|	AL definition@en SPLIT=|	A definition source SPLIT=|	A example of usage SPLIT=|	A term editor SPLIT=|	A editor note SPLIT=|	A curator note SPLIT=|	A ontology term requester	A term tracker item	CLASS_TYPE		C %	C 'realizes' some ('target of material addition role' and ('role of' some %)) SPLIT=|	C 'realizes' some ('material to be added role' and ('role of' some %)) SPLIT=|	C 'has part' some % SPLIT=|		C %
+CHExO:0000001	outcome specification	outcome specification	Manually curated																	
+CHExO:0000002	primary outcome specification	primary outcome specification	Manually curated																	
+CHExO:0000003	secondary outcome specification	secondary outcome specification	Manually curated																	
