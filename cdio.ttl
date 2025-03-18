@@ -1419,7 +1419,6 @@ Werner suggests a solution based on \"Magnitudes\" a proposal for which we are a
                                              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
                                              rdf:type owl:FunctionalProperty ;
                                              rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000400> ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/UO_0000001> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "has coordinate unit label"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
                                              rdfs:comment "relating a cartesian spatial coordinate datum to a unit label that together with the values represent a point"@en ;
@@ -5395,10 +5394,6 @@ GO   gene ontology"""@en ;
 <http://purl.obolibrary.org/obo/IAO_0000408> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> ,
                                                              [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000039> ;
-                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/UO_0000001>
-                                                             ] ,
-                                                             [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000221> ;
                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/PATO_0000122>
                                                              ] ;
@@ -5427,18 +5422,7 @@ GO   gene ontology"""@en ;
 
 ###  http://purl.obolibrary.org/obo/IAO_0000414
 <http://purl.obolibrary.org/obo/IAO_0000414> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> ,
-                                                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000039> ;
-                                                                                      owl:allValuesFrom <http://purl.obolibrary.org/obo/UO_0000002>
-                                                                                    ]
-                                                                                    [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000221> ;
-                                                                                      owl:allValuesFrom <http://purl.obolibrary.org/obo/PATO_0000125>
-                                                                                    ]
-                                                                                  ) ;
-                                                               rdf:type owl:Class
-                                                             ] ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A scalar measurement datum that is the result of measurement of mass quality"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000116> "2009/09/28 Alan Ruttenberg. Fucoidan-use-case"@en ;
@@ -5448,18 +5432,7 @@ GO   gene ontology"""@en ;
 
 ###  http://purl.obolibrary.org/obo/IAO_0000416
 <http://purl.obolibrary.org/obo/IAO_0000416> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> ,
-                                                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000039> ;
-                                                                                      owl:allValuesFrom <http://purl.obolibrary.org/obo/UO_0000003>
-                                                                                    ]
-                                                                                    [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000413> ;
-                                                                                      owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
-                                                                                    ]
-                                                                                  ) ;
-                                                               rdf:type owl:Class
-                                                             ] ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "time measurement datum"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A scalar measurement datum that is the result of measuring a temporal interval"@en ;
@@ -7994,15 +7967,7 @@ for now."""@en ;
 
 ###  http://purl.obolibrary.org/obo/OBI_0000973
 <http://purl.obolibrary.org/obo/OBI_0000973> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ,
-                                                             [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000109>
-                                                                                    [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                                                      owl:someValuesFrom <http://purl.obolibrary.org/obo/SO_0000001>
-                                                                                    ]
-                                                                                  ) ;
-                                                               rdf:type owl:Class
-                                                             ] ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "sequence data" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000112> "example of usage: the representation of a nucleotide sequence in FASTA format used for a sequence similarity search." ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
@@ -9156,20 +9121,6 @@ defines and states the requirements (positive or negative) for an entity to be c
                                              owl:deprecated "true"^^xsd:boolean .
 
 
-###  http://purl.obolibrary.org/obo/SO_0000001
-<http://purl.obolibrary.org/obo/SO_0000001> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000111> "region" ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "A sequence_feature with an extent greater than zero. A nucleotide region is composed of bases and a polypeptide region is composed of amino acids." ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000118> "primary structure of sequence macromolecule" ,
-                                                                                         "sequence" ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/so.owl> ;
-                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "sequence" ;
-                                            <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> "sequence" ;
-                                            <http://www.geneontology.org/formats/oboInOwl#id> "SO:0000001" ;
-                                            rdfs:label "region" .
-
-
 ###  http://purl.obolibrary.org/obo/STATO_0000017
 <http://purl.obolibrary.org/obo/STATO_0000017> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBCS_0000010> ;
@@ -9468,36 +9419,53 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
                                                 rdfs:label "material anatomical entity" .
 
 
-###  http://purl.obolibrary.org/obo/UO_0000001
-<http://purl.obolibrary.org/obo/UO_0000001> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000003> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000111> "length unit" ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/uo.owl> ;
-                                            rdfs:label "length unit" .
-
-
-###  http://purl.obolibrary.org/obo/UO_0000002
-<http://purl.obolibrary.org/obo/UO_0000002> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000003> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000111> "mass unit" ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/uo.owl> ;
-                                            rdfs:label "mass unit" .
-
-
-###  http://purl.obolibrary.org/obo/UO_0000003
-<http://purl.obolibrary.org/obo/UO_0000003> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000003> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000111> "time unit" ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/uo.owl> ;
-                                            rdfs:label "time unit" .
-
-
 ###  http://purl.obolibrary.org/obo/topic_0003
 <http://purl.obolibrary.org/obo/topic_0003> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A category denoting a rather broad domain or field of interest, study, application, work, data, or technology. Topics have no clearly defined borders between each other." ;
                                             <http://www.geneontology.org/formats/oboInOwl#id> "topic:0003" ;
                                             rdfs:label "Topic" .
+
+
+###  http://semanticscience.org/resource/SIO_000033
+<http://semanticscience.org/resource/SIO_000033> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                   owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                 ] ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "process status is a process quality that describes the state of a process."@en ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000033> ;
+                                                 <http://www.geneontology.org/formats/oboInOwl#id> <SIO_000033> ;
+                                                 rdfs:isDefinedBy <https://w3id.org/cdio/> ;
+                                                 rdfs:label "process status"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000034
+<http://semanticscience.org/resource/SIO_000034> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://semanticscience.org/resource/SIO_000033> ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "completed is that status of a process that successfully unfolds."@en ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000034> ;
+                                                 <http://www.geneontology.org/formats/oboInOwl#id> <SIO_000034> ;
+                                                 rdfs:label "completed"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000035
+<http://semanticscience.org/resource/SIO_000035> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://semanticscience.org/resource/SIO_000033> ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "ongoing is the status of a process that is not yet complete."@en ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000035> ;
+                                                 rdfs:isDefinedBy <https://w3id.org/cdio/> ;
+                                                 rdfs:label "ongoing"@en .
+
+
+###  http://semanticscience.org/resource/SIO_000963
+<http://semanticscience.org/resource/SIO_000963> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://semanticscience.org/resource/SIO_000033> ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "not started is the status of a process that is predicted to exist but has not yet begun."@en ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000963> ;
+                                                 rdfs:isDefinedBy <https://w3id.org/cdio/> ;
+                                                 rdfs:label "not started"@en .
 
 
 ###  http://www.w3.org/2002/07/owl#Thing
@@ -9509,6 +9477,43 @@ owl:Thing rdf:type owl:Class .
                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020020> ;
                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                             rdfs:label "atc"@en .
+
+
+###  https://w3id.org/cdio/CDIO_00000001
+<https://w3id.org/cdio/CDIO_00000001> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000312> ;
+                                                        owl:someValuesFrom <https://w3id.org/cdio/categorization>
+                                                      ] ;
+                                      <http://purl.obolibrary.org/obo/IAO_0000116> "Categorisation is grouping items in a dataset based on attributes that are not mutually exclusive. For example death can be categorized as event or outcome depending on the context and utility of such observation. In clinical data, one's interpretation often depends heavily on context. A symptom in one scenerio could become a diagnosis or outcome in another."@en ;
+                                      <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON:Komal Gilani"@en ;
+                                      <http://purl.obolibrary.org/obo/IAO_0000412> "http://semanticscience.org/resource/SIO_000137"@en ;
+                                      rdfs:comment "A category is a class of entities having particular shared characteristics."@en ;
+                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
+                                      rdfs:label "category"@en .
+
+
+###  https://w3id.org/cdio/CDIO_00000002
+<https://w3id.org/cdio/CDIO_00000002> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
+                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
+                                      rdfs:label "adverse event"@en .
+
+
+###  https://w3id.org/cdio/CDIO_00000003
+<https://w3id.org/cdio/CDIO_00000003> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
+                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
+                                      rdfs:label "clinical finding"@en .
+
+
+###  https://w3id.org/cdio/CDIO_00000004
+<https://w3id.org/cdio/CDIO_00000004> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000003> ;
+                                      <http://purl.obolibrary.org/obo/IAO_0000115> "Compliance Finding is modeled as a subtype of Clinical Finding because it represents an observed or assessed state regarding the patient or healthcare provider behavior related to treatment."@en ;
+                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
+                                      rdfs:label "compliance finding"@en .
 
 
 ###  https://w3id.org/cdio/LOINC
@@ -9544,13 +9549,6 @@ owl:Thing rdf:type owl:Class .
                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020020> ;
                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                              rdfs:label "UCUM"@en .
-
-
-###  https://w3id.org/cdio/adverse_event
-<https://w3id.org/cdio/adverse_event> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                      rdfs:label "adverse event"@en .
 
 
 ###  https://w3id.org/cdio/age
@@ -9634,21 +9632,6 @@ owl:Thing rdf:type owl:Class .
                                        rdfs:label "categorization process"@en .
 
 
-###  https://w3id.org/cdio/category
-<https://w3id.org/cdio/category> rdf:type owl:Class ;
-                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000312> ;
-                                                   owl:someValuesFrom <https://w3id.org/cdio/categorization>
-                                                 ] ;
-                                 <http://purl.obolibrary.org/obo/IAO_0000116> "Categorisation is grouping items in a dataset based on attributes that are not mutually exclusive. For example death can be categorized as event or outcome depending on the context and utility of such observation. In clinical data, one's interpretation often depends heavily on context. A symptom in one scenerio could become a diagnosis or outcome in another."@en ;
-                                 <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON:Komal Gilani"@en ;
-                                 <http://purl.obolibrary.org/obo/IAO_0000412> "http://semanticscience.org/resource/SIO_000137"@en ;
-                                 rdfs:comment "A category is a class of entities having particular shared characteristics."@en ;
-                                 rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                 rdfs:label "category"@en .
-
-
 ###  https://w3id.org/cdio/cause_of_death
 <https://w3id.org/cdio/cause_of_death> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/cdio/etiology> ;
@@ -9667,13 +9650,6 @@ owl:Thing rdf:type owl:Class .
                                         rdfs:label "chi square test value"@en .
 
 
-###  https://w3id.org/cdio/clinical_finding
-<https://w3id.org/cdio/clinical_finding> rdf:type owl:Class ;
-                                         rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                                         rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                         rdfs:label "clinical finding"@en .
-
-
 ###  https://w3id.org/cdio/code
 <https://w3id.org/cdio/code> rdf:type owl:Class ;
                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020000> ,
@@ -9690,27 +9666,11 @@ owl:Thing rdf:type owl:Class .
                              rdfs:label "code"@en .
 
 
-###  https://w3id.org/cdio/completed
-<https://w3id.org/cdio/completed> rdf:type owl:Class ;
-                                  rdfs:subClassOf <https://w3id.org/cdio/process_status> ;
-                                  <http://purl.obolibrary.org/obo/IAO_0000115> "completed is that status of a process that successfully unfolds."@en ;
-                                  <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000034> ;
-                                  rdfs:label "completed"@en .
-
-
 ###  https://w3id.org/cdio/compliance
 <https://w3id.org/cdio/compliance> rdf:type owl:Class ;
                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
                                    rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                    rdfs:label "compliance"@en .
-
-
-###  https://w3id.org/cdio/compliance_finding
-<https://w3id.org/cdio/compliance_finding> rdf:type owl:Class ;
-                                           rdfs:subClassOf <https://w3id.org/cdio/clinical_finding> ;
-                                           <http://purl.obolibrary.org/obo/IAO_0000115> "Compliance Finding is modeled as a subtype of Clinical Finding because it represents an observed or assessed state regarding the patient or healthcare provider behavior related to treatment."@en ;
-                                           rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                           rdfs:label "compliance finding"@en .
 
 
 ###  https://w3id.org/cdio/consumption_measurement
@@ -9771,14 +9731,14 @@ owl:Thing rdf:type owl:Class .
 
 ###  https://w3id.org/cdio/death
 <https://w3id.org/cdio/death> rdf:type owl:Class ;
-                              rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                              rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                               rdfs:label "death"@en .
 
 
 ###  https://w3id.org/cdio/demographics
 <https://w3id.org/cdio/demographics> rdf:type owl:Class ;
-                                     rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                     rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                      rdfs:label "demographics"@en .
 
@@ -9801,7 +9761,7 @@ owl:Thing rdf:type owl:Class .
 
 ###  https://w3id.org/cdio/dietary_intake
 <https://w3id.org/cdio/dietary_intake> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                       rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                        <http://purl.obolibrary.org/obo/IAO_0000115> "A documented record or conceptual representation of the overall pattern of food and beverage consumption, as recorded in surveys or data dictionaries."@en ;
                                        rdfs:comment "Dietary Intake is the process (or the information about that process) by which an organism consumes substances that provide nutrition. It represents a collection of observable data points (e.g., frequency of fruit, vegetable, dairy consumption) that characterize an individual’s nutritional behavior."@en ;
                                        rdfs:isDefinedBy <https://w3id.org/cdio/> ;
@@ -9825,7 +9785,7 @@ owl:Thing rdf:type owl:Class .
 
 ###  https://w3id.org/cdio/disease_or_disorder_indicator
 <https://w3id.org/cdio/disease_or_disorder_indicator> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <https://w3id.org/cdio/clinical_finding> ,
+                                                      rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000003> ,
                                                                       [ rdf:type owl:Restriction ;
                                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                                         owl:someValuesFrom <http://purl.obolibrary.org/obo/OGMS_0000031>
@@ -9843,18 +9803,6 @@ owl:Thing rdf:type owl:Class .
                                                 rdfs:label "drug therapy compliance"@en .
 
 
-###  https://w3id.org/cdio/drug_therapy_compliance_finding
-<https://w3id.org/cdio/drug_therapy_compliance_finding> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://w3id.org/cdio/compliance_finding> ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                                          owl:allValuesFrom <https://w3id.org/cdio/drug_therapy_compliance>
-                                                                        ] ;
-                                                        <http://purl.obolibrary.org/obo/IAO_0000115> "It is a more specific data element that records findings about compliance with drug therapy"@en ;
-                                                        rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                                        rdfs:label "drug therapy compliance finding"@en .
-
-
 ###  https://w3id.org/cdio/end_time
 <https://w3id.org/cdio/end_time> rdf:type owl:Class ;
                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ,
@@ -9869,7 +9817,7 @@ owl:Thing rdf:type owl:Class .
 
 ###  https://w3id.org/cdio/etiology
 <https://w3id.org/cdio/etiology> rdf:type owl:Class ;
-                                 rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                 rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                  <http://purl.obolibrary.org/obo/IAO_0000115> "The cause of a disease or abnormal condition"@en ;
                                  rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                  rdfs:label "etiology"@en .
@@ -9914,7 +9862,7 @@ owl:Thing rdf:type owl:Class .
 
 ###  https://w3id.org/cdio/follow_up_attrition
 <https://w3id.org/cdio/follow_up_attrition> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                            rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                             rdfs:comment "refers to the loss of study participants during the follow-up period of a research study. This occurs when individuals:Are lost to follow-up: They cannot be contacted or fail to attend scheduled follow-up assessments. Withdraw from the study: They actively choose to leave the study."@en ;
                                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                             rdfs:label "follow up attrition" .
@@ -9936,7 +9884,7 @@ owl:Thing rdf:type owl:Class .
 
 ###  https://w3id.org/cdio/functional_finding
 <https://w3id.org/cdio/functional_finding> rdf:type owl:Class ;
-                                           rdfs:subClassOf <https://w3id.org/cdio/clinical_finding> ,
+                                           rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000003> ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                              owl:someValuesFrom <http://purl.obolibrary.org/obo/OGMS_0000023>
@@ -9968,7 +9916,7 @@ owl:Thing rdf:type owl:Class .
 
 ###  https://w3id.org/cdio/healthcare_provider_compliance_finding
 <https://w3id.org/cdio/healthcare_provider_compliance_finding> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <https://w3id.org/cdio/compliance_finding> ,
+                                                               rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000004> ,
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                                                  owl:allValuesFrom <https://w3id.org/cdio/healthcare_provider_compliance>
@@ -10021,13 +9969,6 @@ owl:Thing rdf:type owl:Class .
                                  rdfs:label "kurtosis"@en .
 
 
-###  https://w3id.org/cdio/mass
-<https://w3id.org/cdio/mass> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://w3id.org/cdio/physical_quality> ;
-                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/PATO_0001241> ;
-                             rdfs:label "mass"@en .
-
-
 ###  https://w3id.org/cdio/maximum_value
 <https://w3id.org/cdio/maximum_value> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/cdio/statistic> ;
@@ -10054,7 +9995,7 @@ owl:Thing rdf:type owl:Class .
 
 ###  https://w3id.org/cdio/measurement
 <https://w3id.org/cdio/measurement> rdf:type owl:Class ;
-                                    rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                    rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                     rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                     rdfs:label "measurement"@en .
 
@@ -10079,7 +10020,7 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
 
 ###  https://w3id.org/cdio/medical_history
 <https://w3id.org/cdio/medical_history> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                        rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                         rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                         rdfs:label "medical history"@en .
 
@@ -10165,15 +10106,6 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
                                              rdfs:label "normality test value"@en .
 
 
-###  https://w3id.org/cdio/not_started
-<https://w3id.org/cdio/not_started> rdf:type owl:Class ;
-                                    rdfs:subClassOf <https://w3id.org/cdio/process_status> ;
-                                    <http://purl.obolibrary.org/obo/IAO_0000115> "not started is the status of a process that is predicted to exist but has not yet begun."@en ;
-                                    <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000963> ;
-                                    rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                    rdfs:label "not started"@en .
-
-
 ###  https://w3id.org/cdio/number_of_hospitalizations
 <https://w3id.org/cdio/number_of_hospitalizations> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
@@ -10183,7 +10115,7 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
 
 ###  https://w3id.org/cdio/number_of_occurances
 <https://w3id.org/cdio/number_of_occurances> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                             rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                              rdfs:label "number of occurances"@en .
 
@@ -10239,15 +10171,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                                                              rdfs:label "OMOP identifier"@en .
 
 
-###  https://w3id.org/cdio/ongoing
-<https://w3id.org/cdio/ongoing> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/cdio/process_status> ;
-                                <http://purl.obolibrary.org/obo/IAO_0000115> "ongoing is the status of a process that is not yet complete."@en ;
-                                <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000035> ;
-                                rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                rdfs:label "ongoing"@en .
-
-
 ###  https://w3id.org/cdio/outlier_count
 <https://w3id.org/cdio/outlier_count> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/cdio/count> ;
@@ -10275,13 +10198,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
                                           rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                           rdfs:label "permissible value"@en .
-
-
-###  https://w3id.org/cdio/physical_quality
-<https://w3id.org/cdio/physical_quality> rdf:type owl:Class ;
-                                         rdfs:subClassOf <http://purl.obolibrary.org/obo/PATO_0001241> ;
-                                         <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/PATO_0001018"@en ;
-                                         rdfs:label "physical quality"@en .
 
 
 ###  https://w3id.org/cdio/polychotomous_variable
@@ -10330,19 +10246,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                         rdfs:label "process quality"@en .
 
 
-###  https://w3id.org/cdio/process_status
-<https://w3id.org/cdio/process_status> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                         owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
-                                                       ] ;
-                                       <http://purl.obolibrary.org/obo/IAO_0000115> "process status is a process quality that describes the state of a process."@en ;
-                                       <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000033> ;
-                                       rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                       rdfs:label "process status"@en .
-
-
 ###  https://w3id.org/cdio/protein_biomarker_data_element
 <https://w3id.org/cdio/protein_biomarker_data_element> rdf:type owl:Class ;
                                                        rdfs:subClassOf <https://w3id.org/cdio/blood_measurement> ;
@@ -10366,7 +10269,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
 ###  https://w3id.org/cdio/reasons
 <https://w3id.org/cdio/reasons> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/cdio/compliance_finding> ;
+                                rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000004> ;
                                 rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                 rdfs:label "reasons"@en .
 
@@ -10387,7 +10290,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
 ###  https://w3id.org/cdio/risk_factor
 <https://w3id.org/cdio/risk_factor> rdf:type owl:Class ;
-                                    rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                    rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                     rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                     rdfs:label "risk factor"@en .
 
@@ -10453,7 +10356,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
 ###  https://w3id.org/cdio/sign_or_symptom
 <https://w3id.org/cdio/sign_or_symptom> rdf:type owl:Class ;
-                                        rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                        rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                         rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                         rdfs:label "sign or symptom"@en .
 
@@ -10530,7 +10433,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
 ###  https://w3id.org/cdio/study_design_dependent
 <https://w3id.org/cdio/study_design_dependent> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                               rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                                rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                rdfs:label "study design dependent"@en .
 
@@ -10633,13 +10536,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                                   rdfs:label "time to event measurement"@en .
 
 
-###  https://w3id.org/cdio/total_data_items
-<https://w3id.org/cdio/total_data_items> rdf:type owl:Class ;
-                                         rdfs:subClassOf <https://w3id.org/cdio/count> ;
-                                         <http://purl.obolibrary.org/obo/IAO_0000115> "total number of data items within a dataset"@en ;
-                                         rdfs:label "total data items"@en .
-
-
 ###  https://w3id.org/cdio/treatement_non_compliance_reason
 <https://w3id.org/cdio/treatement_non_compliance_reason> rdf:type owl:Class ;
                                                          rdfs:subClassOf <https://w3id.org/cdio/non_compliance_reason> ;
@@ -10649,7 +10545,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
 ###  https://w3id.org/cdio/treatment
 <https://w3id.org/cdio/treatment> rdf:type owl:Class ;
-                                  rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                  rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000001> ;
                                   rdfs:comment "a broader category which repesents all data elements related to patient exposure to medication, devices and procedures"@en ;
                                   rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                   rdfs:label "treatment"@en .
@@ -10681,7 +10577,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/weight
 <https://w3id.org/cdio/weight> rdf:type owl:Class ;
                                rdfs:subClassOf <http://purl.obolibrary.org/obo/PATO_0000051> ;
-                               rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                rdfs:label "weight"@en .
 
 
@@ -10725,6 +10621,18 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                              rdfs:subClassOf <https://w3id.org/cdio/outlier_count> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000118> "z score outlier count"@en ;
                                              rdfs:label "z score outlier count"@en .
+
+
+###  https://w3id.org/cdio/cdio:drug_therapy_compliance_finding
+<https://w3id.org/cdio/cdio:drug_therapy_compliance_finding> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://w3id.org/cdio/CDIO_00000004> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                               owl:allValuesFrom <https://w3id.org/cdio/drug_therapy_compliance>
+                                                                             ] ;
+                                                             <http://purl.obolibrary.org/obo/IAO_0000115> "It is a more specific data element that records findings about compliance with drug therapy"@en ;
+                                                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
+                                                             rdfs:label "drug therapy compliance finding"@en .
 
 
 #################################################################
