@@ -5026,19 +5026,6 @@ Cons sometimes specifies a quality which is not a realizable."""@en ,
                                              rdfs:label "setting datum"@en .
 
 
-###  http://purl.obolibrary.org/obo/IAO_0000144
-<http://purl.obolibrary.org/obo/IAO_0000144> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "conclusion textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "that fucoidan has a small statistically significant effect on AT3 level but no useful clinical effect as in-vivo anticoagulant, a paraphrase of part of the last paragraph of the discussion section of the paper 'Pilot clinical study to evaluate the anticoagulant activity of fucoidan', by Lowenthal et. al.PMID:19696660"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that expresses the results of reasoning about a problem, for instance as typically found towards the end of scientific papers."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "2009/09/28 Alan Ruttenberg. Fucoidan-use-case"@en ,
-                                                                                          "2009/10/23 Alan Ruttenberg: We need to work on the definition still"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Person:Alan Ruttenberg"@en ;
-                                             rdfs:label "conclusion textual entity"@en .
-
-
 ###  http://purl.obolibrary.org/obo/IAO_0000179
 <http://purl.obolibrary.org/obo/IAO_0000179> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000038> ;
@@ -5176,58 +5163,6 @@ clustering algorithm."""@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000118> "text"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
                                              rdfs:label "textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000301
-<http://purl.obolibrary.org/obo/IAO_0000301> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000310>
-                                                             ] ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "citation"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "Verspoor, K., Cohen, KB., Hunter, L. Textual characteristics of traditional and Open Access scientific journals are similar, BMC Bioinformatics 2009, 10:183."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity intended to identify a particular publication."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Lawrence Hunter"@en ;
-                                             rdfs:label "citation"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000302
-<http://purl.obolibrary.org/obo/IAO_0000302> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000590> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "author identification"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "L. Hunter"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity intended to identify a particular author"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Lawrence Hunter"@en ;
-                                             rdfs:label "author identification"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000303
-<http://purl.obolibrary.org/obo/IAO_0000303> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "institutional identification"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "University of Colorado Denver School of Medicine"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity intended to identify a particular institution"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Lawrence Hunter"@en ;
-                                             rdfs:label "institutional identification"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000304
-<http://purl.obolibrary.org/obo/IAO_0000304> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000308>
-                                                             ] ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "caption"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "Figure 1: A system diagram describing the modules of the Hanalyzer.  Reading methods (green) take external sources of knowledge (blue) and extract information from them, either by parsing structured data or biomedical language processing to extract information from unstructured data.  Reading modules are responsible for tracking the provenance of all knowledge.  Reasoning methods (yellow) enrich the knowledge that results from reading by, for example, noting two genes that are annotated to the same ontology term or database entry.  All knowledge sources, read or reasoned, are assigned a reliability score, and all are combined using that score into a knowledge network (orange) that represents the integration of all sorts of relationship between a pair of genes and a combined reliability score.  A data network (also orange) is created from experimental results to be analyzed.  The reporting modules (pink) integrate the data and knowledge networks, producing visualizations that can be queried with the associated drill-down tool."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that describes a figure"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Lawrence Hunter"@en ;
-                                             rdfs:label "caption"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000305
@@ -5511,18 +5446,6 @@ GO   gene ontology"""@en ;
                                              rdfs:label "mass measurement datum"@en .
 
 
-###  http://purl.obolibrary.org/obo/IAO_0000415
-<http://purl.obolibrary.org/obo/IAO_0000415> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "hypothesis textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "that fucoidan has a small statistically significant effect on AT3 level but no useful clinical effect as in-vivo anticoagulant, a paraphrase of part of the last paragraph of the discussion section of the paper 'Pilot clinical study to evaluate the anticoagulant activity of fucoidan', by Lowenthal et. al.PMID:19696660"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that expresses an assertion that is intended to be tested."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "2009/09/28 Alan Ruttenberg. Fucoidan-use-case"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Person:Alan Ruttenberg"@en ;
-                                             rdfs:label "hypothesis textual entity"@en .
-
-
 ###  http://purl.obolibrary.org/obo/IAO_0000416
 <http://purl.obolibrary.org/obo/IAO_0000416> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> ,
@@ -5697,154 +5620,6 @@ points together with a line."""@en ;
                                              rdfs:label "time stamped measurement datum"@en .
 
 
-###  http://purl.obolibrary.org/obo/IAO_0000590
-<http://purl.obolibrary.org/obo/IAO_0000590> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "written name"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "\"Bill Clinton\""@en ,
-                                                                                          "\"The Eiffel Tower\""@en ,
-                                                                                          "\"United States of America\""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that denotes a particular in reality."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Hogan"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "https://github.com/information-artifact-ontology/IAO/issues/114"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000232> "The qualifier \"written\" is to set it apart from spoken names.  Also, note the restrictions to particulars.  We are not naming universals.   We could however, be naming, attributive collections which are particulars, so \"All people located in the boundaries of the city of Little Rock, AR on June 18, 2011 at 9:50a CDT\" would be a name."@en ;
-                                             rdfs:label "written name"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000591
-<http://purl.obolibrary.org/obo/IAO_0000591> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000010> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A software method (also called subroutine, subprogram, procedure, method, function, or routine) is software designed to execute a specific task."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Melanie Courtot"@en ,
-                                                                                          "PERSON: Michel Dumontier"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "https://github.com/information-artifact-ontology/IAO/issues/80"@en ;
-                                             rdfs:label "software method"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000592
-<http://purl.obolibrary.org/obo/IAO_0000592> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000010> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A software module is software composed of a collection of software methods."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Melanei Courtot"@en ,
-                                                                                          "PERSON: Michel Dumontier"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "https://github.com/information-artifact-ontology/IAO/issues/80"@en ;
-                                             rdfs:label "software module"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000593
-<http://purl.obolibrary.org/obo/IAO_0000593> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000010> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A software library is software composed of a collection of software modules and/or software methods in a form that can be statically or dynamically linked to some software application."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Melanie Courtot"@en ,
-                                                                                          "PERSON: Michel Dumontier"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "https://github.com/information-artifact-ontology/IAO/issues/80"@en ;
-                                             rdfs:label "software library"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000594
-<http://purl.obolibrary.org/obo/IAO_0000594> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000010> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A software application is software that can be directly executed by some processing unit."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Melanie Courtot"@en ,
-                                                                                          "PERSON: Michel Dumontier"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "https://github.com/information-artifact-ontology/IAO/issues/80"@en ;
-                                             rdfs:label "software application"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000595
-<http://purl.obolibrary.org/obo/IAO_0000595> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000010> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A software script is software whose instructions can be executed using a software interpreter."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Melanie Courtot"@en ,
-                                                                                          "PERSON: Michel Dumontier"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "https://github.com/information-artifact-ontology/IAO/issues/80"@en ;
-                                             rdfs:label "software script"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000605
-<http://purl.obolibrary.org/obo/IAO_0000605> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "abbreviation textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """From Shiba et al. Acta Neuropathol Commun. 2013; 1: 45. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3893467/):
-
-BAC: Bacterial artificial chromosome; CR: Calretinin; GFAP: Glial fibrillary acidic protein; MAP: Microtubule-associated protein; MRI: Magnetic resonance imaging; NSC: Neural stem cell; PDA: Patent ductus arteriosus; PMG: Polymicrogyria; PNH: Periventricular nodular heterotopia; VSD: Ventricular septal defect."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity listing abbreviations and their expansions that are used in a document."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "abbreviation textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000608
-<http://purl.obolibrary.org/obo/IAO_0000608> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "author information textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """From Takon. Ann Gen Psychiatry. 2011; 10: 25. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3204268/):
-
-IT [the author] is the lead paediatrician for ADHD services in East Hertfordshire, UK, where she runs a weekly joint ADHD clinic with the Child and Adolescent psychiatrist and works within an ADHD specialist team. IT also sees children with other neurodisability issues who may have comorbid ADHD, where the presentation may be more complex and challenging to manage. IT has vast experience in managing children with complex ADHD. She has 18 years of experience in paediatrics and also has extensive experience in the use of psychopharmacologic agents in managing children with ADHD."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity expression information about an author of a document. This information may include biographical information and may discuss how the authors' professional experiences are relevant to the work described in the document."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "author information textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000610
-<http://purl.obolibrary.org/obo/IAO_0000610> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "author summary textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """From Pendse et al. BMC Genomics. 2013; 14: 136. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3608171/):
-
-
-The search for genetic risk factors for common human diseases often relies on the use of linkage and association studies to establish correlation between genomic markers and disease risk. These studies require additional functional evaluation of candidate genes, including their possible interaction with diet and environment. The number of candidate genes is typically large and the development of appropriate genetic tools in mammalian systems is slow. By contrast, large-scale genetic screens, using widely available genetic tools, are routinely conducted in the fruit fly Drosophila melanogaster. In this study, we used Drosophila to screen candidate genes identified in human genome-wide scans as associated with risk of metabolic abnormalities such as type 2 diabetes. We show that a number of human candidate genes have fly orthologs that play an important role in Drosophila tolerance to high dietary sucrose. We further explored some of the specific metabolic abnormalities that can result when these genes’ activities are reduced in flies, focusing on a gene we call dHHEX (CG7056), the fly ortholog of human HHEX."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity, distinct from the abstract, that describes the significance and broader context of the document content. The author summary is often written in a non-technical manner and is aimed at both scientists and non-scientist readers, e.g as described in the article submission guidelines for PLoS Genetics (http://journals.plos.org/plosgenetics/s/submission-guidelines)."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "Article submission guidelines for PLoS Genetics (http://journals.plos.org/plosgenetics/s/submission-guidelines)."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "author summary textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000612
-<http://purl.obolibrary.org/obo/IAO_0000612> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "availability textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """From Qi et al. BMC Bioinformatics. 2014; 15: 11. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3897912/):
-
-Project home page:http://krux.googlecode.com"""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity expressing the location of a resource, e.g. software, or the manner in which a resource can be obtained."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "availability textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000614
-<http://purl.obolibrary.org/obo/IAO_0000614> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "case report textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """Excerpt from Taglia et al. Acta Myol. 2012 Dec; 31(3): 201–203. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3631801/):
-
-The patient is a 50-year-old man. His medical history was not contributory. At the age of 37 years, he complained of persistent fatigue and dyspnoea even for modest efforts and oedema of lower limbs. The patient was examined at the department of internal medicine of the local hospital, and hospitalised with a diagnosis of dilated cardiomyopathy probably consequence of a myocarditis process. Soon after he was transferred to the cardiologic department of the regional hospital, and pharmacologically treated for heart failure and pulmonary hypertension."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that expresses a detailed account of a portion of the medical history for a specific patient."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "case report textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000617
-<http://purl.obolibrary.org/obo/IAO_0000617> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "conflict of interest statement"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "SD [an author] is a Merck employee and Merck is the sponsor of this study. [Taken from 'Effects of obstructive sleep apnoea risk on postoperative respiratory complications: protocol for a hospital-based registry study' Shin et al. 2016  (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4735131/)] "@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that expresses a situation involving one or more of the authors, or the funding source of a document whereby the authors or funding source stand to potentially gain (typically financially) from the results reported in the document."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "conflict of interest textual entity"@en .
-
-
 ###  http://purl.obolibrary.org/obo/IAO_0000619
 <http://purl.obolibrary.org/obo/IAO_0000619> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
@@ -5858,179 +5633,12 @@ Written informed consent was obtained from the patient’s parents for publicati
                                              rdfs:label "consent textual entity"@en .
 
 
-###  http://purl.obolibrary.org/obo/IAO_0000621
-<http://purl.obolibrary.org/obo/IAO_0000621> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0500000>
-                                                             ] ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "ethical approval textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """From McLean et al. Br J Gen Pract. 2014 Jul; 64(624): e440–e447 (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4073730/):
-
-The NHS National Research Ethics Service had previously approved the use of these anonymised data for research purposes and this analysis did not require independent review."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that documents the ethical approval of some study design."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "ethical approval textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000624
-<http://purl.obolibrary.org/obo/IAO_0000624> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "funding souce declaration textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """From Stephan et al. Accid Anal Prev. 2011 May; 43(3): 1062–1067. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3062852/):
-
-This study was supported by the International Collaborative Research Grants Scheme with joint grants from the Wellcome Trust UK (GR071587MA) and the Australian NHMRC (268055). The funding sources played no role in study design, data collection, analysis or interpretation, writing the report, or the decision to submit the paper for publication."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity documenting the source of funding that supported some study."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "funding source declaration textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000626
-<http://purl.obolibrary.org/obo/IAO_0000626> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "future directions textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """Excerpt from Wang and Li. Acta Pharmacol Sin. 2016 Jan; 37(1): 25–33. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4722976/):
-
-In the future, several questions will need to be resolved regarding the physiological assembly of KCNQ channels and their functional implications in complex neural circuits. First, we still lack sufficiently selective inhibitors and activators among the KCNQ family members."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity expressing ideas regarding future work relevant to work described in a document that could be done."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "future directions textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000628
-<http://purl.obolibrary.org/obo/IAO_0000628> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "genome announcement textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """Excerpt from Kim et al. J Bacteriol. 2011 Oct; 193(19): 5537. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3187466/):
-
-Here we report the genome sequence of Lactobacillus malefermentans KCTC 3548, which we obtained using a whole-genome shotgun strategy (4) with Roche 454 GS (FLX Titanium) pyrosequencing (257,559 reads totaling ∼89.8 Mb; ∼45-fold coverage of the genome) at the Genome Resource Center, Korea Research Institute of Bioscience and Biotechnology (KRIBB)."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that describes the generation and public release of a novel, draft genome sequence."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "genome announcement textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000629
-<http://purl.obolibrary.org/obo/IAO_0000629> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "keyword textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """From: Fu and Lin. Identification of gene-oriented exon orthology between human and mouse. BMC Genomics. 2012; 13(Suppl 1): S10. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3303729/):
-
-Exon orthology; alternative splicing; exon duplication; intron-exon structure."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity listing keywords indicating the major theme(s) of a document."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "keyword textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000632
-<http://purl.obolibrary.org/obo/IAO_0000632> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "study limitations textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """Excerpt from the Limitations section of Fermann et al 2015, Acad Emerg Med. 2015 Mar; 22(3): 299–307 (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4405051/). 
-
-Owing to the nature of a post hoc study, any significant values must be interpreted with caution. In the current analysis, no multiple testing was conducted and p-values remain unadjusted. Moreover, a selection bias arising from the randomized open-label design of the original EINSTEIN PE study cannot be ruled out."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity addressing a shortcoming or bias of a study design or execution."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "Author guidelines published by The Society for Academic Emergency Medicine. (http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1553-2712/homepage/ForAuthors.html)"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "study limitations textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000636
-<http://purl.obolibrary.org/obo/IAO_0000636> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "patients textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """Excerpt from Citak et al. Acta Orthop. 2013 Jun; 84(3): 326–327. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3715825/):
-
-Between January 1996 and February 2012, we treated 4 patients with interprosthetic femoral fractures (3 of them women) (Figure 2) using a custom-made interposition device (Waldemar Link GmbH, Hamburg, Germany) (Figure 1). Mean age was 74 (59–86) years. The fractures occurred mean 18 (13–28) years after primary THA and mean 14 (10–17) years after primary TKA. At the latest follow-up, after mean 8 (0.5–16) years, revision surgery with a total femur replacement was required in 1 case due to aseptic loosening. No other complications requiring revision surgery occurred."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity expressing information regarding the patients used in a study."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "patients textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000638
-<http://purl.obolibrary.org/obo/IAO_0000638> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "pre-publication history textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """From Xiao et al. BMC Anesthesiol. 2013; 13: 33. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4016475/):
-
-The pre-publication history for this paper can be accessed here:
-http://www.biomedcentral.com/1471-2253/13/33/prepub"""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that expresses the pre-publication history (submission dates, reviewer comments, etc) for a document, often including a hyperlink to a web page detailing the information."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "pre-publication history textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000640
-<http://purl.obolibrary.org/obo/IAO_0000640> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "related work textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """Excerpt from Žitnik and Zupan. Bioinformatics. 2015 Jun 15; 31(12): i230–i239. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4542780/):
-
-Our work presented here is similar in spirit to our recently developed methodology for data fusion via collective matrix factorization (Žitnik and Zupan, 2015).
-
-"""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that discusses work from other publications and expresses their relevancy to the content of a document."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "related work textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000642
-<http://purl.obolibrary.org/obo/IAO_0000642> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "requirements textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """From Qi et al. BMC Bioinformatics. 2014; 15: 11. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3897912/):
-
-• Operating systems: Platform independent
-
-• Programming language: Matlab, R, Python
-
-• Other requirements: None
-
-• License: GNU GPL v3
-
-• Any restrictions to use by non-academics: None"""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity that expresses the requirements necessary to use a resource, e.g. software."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "requirements textual entity"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000643
-<http://purl.obolibrary.org/obo/IAO_0000643> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "statistical analysis textual entity"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> """From Mondo et al. Cardiovasc J Afr. 2013 Mar; 24(2): 28–33. (http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3734881/):
-
-Data were captured into EPI-DATA (version 3.1), cleaned and then exported to Stata version 10 for analysis. Continuous variables were summarised as mean (± standard deviation) and median (inter-quartile range), and presented in the tables. Categorical data were analysed using frequency and percentages, and results are presented in frequency tables and bar charts. Test of significance (p-value) was determined using the chi-square test. A p-value of less than 0.05 was considered significant."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A textual entity documenting statistical analysis tools and techniques employed."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bill Baumgartner"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/183> ;
-                                             rdfs:label "statistical analysis textual entity"@en .
-
-
 ###  http://purl.obolibrary.org/obo/IAO_0000646
 <http://purl.obolibrary.org/obo/IAO_0000646> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020000> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An identifier that denotes some postal delivery route, some aggregate of postal delivery routes or a geographical region and was created for the purpose of sorting and delivering mail."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Mathias Brochhausen"@en ;
                                              rdfs:label "postal code"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000647
-<http://purl.obolibrary.org/obo/IAO_0000647> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A plan specification that if realized, is realized by the delivery of mail to some facility or mailbox within some geographical region."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Mathias Brochhausen"@en ;
-                                             rdfs:label "Postal delivery route"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000648
@@ -6085,8 +5693,7 @@ Data were captured into EPI-DATA (version 3.1), cleaned and then exported to Sta
 
 ###  http://purl.obolibrary.org/obo/IAO_0020000
 <http://purl.obolibrary.org/obo/IAO_0020000> rdf:type owl:Class ;
-                                             owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000030>
-                                                                                        [ rdf:type owl:Restriction ;
+                                             owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000219> ;
                                                                                           owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
                                                                                         ]
@@ -6097,8 +5704,7 @@ Data were captured into EPI-DATA (version 3.1), cleaned and then exported to Sta
                                                                                       ) ;
                                                                    rdf:type owl:Class
                                                                  ] ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000028> ,
-                                                             <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000028> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "identifier"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Justin Whorton"@en ,
@@ -6108,19 +5714,6 @@ Data were captured into EPI-DATA (version 3.1), cleaned and then exported to Sta
                                              <http://purl.org/dc/elements/1.1/creator> "Mathias Brochhausen" ;
                                              rdfs:comment "Sep 29, 2016: The current definition has been amended from the previous version: \"A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.\" to more accuratly reflect the necessary and sufficient condition on the class. (MB)"@en ;
                                              rdfs:label "identifier"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0020001
-<http://purl.obolibrary.org/obo/IAO_0020001> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "alphabetic letters, Chinese characters, numerical digits, punctuation marks, and the individual symbols of any of the world's writing systems"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that is a fundamental unit in a written language."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Justin Whorton"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "http://en.wikipedia.org/wiki/Grapheme" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/information-artifact-ontology/IAO/issues/237"@en ;
-                                             <http://purl.org/dc/elements/1.1/creator> "Mathias Brochhausen" ;
-                                             rdfs:comment "Grapheme is not about anything and hence is likely to not be an information content entity. If a new subclass of GDC for information structure entities is created it should move there."@en ;
-                                             rdfs:label "grapheme"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0020010
@@ -6191,29 +5784,12 @@ Data were captured into EPI-DATA (version 3.1), cleaned and then exported to Sta
                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0020000>
                                                              ] ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Alan Ruttenberg"@en ,
-                                                                                          "Justin Whorton"@en ,
-                                                                                          "Mathias Brochhausen"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000118> "code map"@en ,
-                                                                                          "code system"@en ,
-                                                                                          "codeset"@en ,
-                                                                                          "coding system"@en ,
-                                                                                          "controlled vocabulary"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Mathias Brochhausen"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000118> "controlled vocabulary"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/information-artifact-ontology/IAO/issues/237"@en ;
-                                             <http://purl.org/dc/elements/1.1/contributor> "Alan Ruttenberg" ,
-                                                                                           "Clint Dowland" ,
-                                                                                           "Matt Diller" ,
-                                                                                           "Sarah Bost" ,
-                                                                                           "William R. Hogan" ;
+                                             <http://purl.org/dc/elements/1.1/contributor> "Alan Ruttenberg" ;
                                              rdfs:comment "Code sets might include non-entities/things (e.g. missing thumbs)."@en ,
                                                           "Does not imply absence vs. presence of any taxonomy."@en ,
-                                                          "Does not imply that aggregated entities denote particulars, universals, or defined classes (a.k.a. attributive collections) or even that they denote only one of these three types of entities."@en ,
-                                                          """Each aggregated entity is often (but not necessarily) associated with a text string—variously called a “description,” “name,” “title,” or “label”—that helps humans reach the target of denotation.
-
-When there is no such string, it is almost always because the entities take the form of human language words. For example, a “sex” or “gender” code set could contain “MALE” and “FEMALE,” or even “M” and “F” (by convention, we understand what these mean)."""@en ,
-                                                          "For National Drug Codes (NDCs) and similar code sets, there doesn’t even have to be a single, fully-concretized copy somewhere (for example, for NDCs there is no centralized database or repository where they all live as one instance of concretization of code set). The code set can be “distributively” concretized. This seems like an unusual exception, but it also likely applies to Universal Product Codes (UPCs) and their follow on Global Trade Item Numbers (GTINs)."@en ,
-                                                          "For each given domain, there can potentially exist multiple code sets. The multiplicity of code sets is partially due to the different specific purposes of those code sets."@en ,
-                                                          "Many code sets are created for a specific purpose in addition to merely identifying or annotating core ideas of a specified domain."@en ,
                                                           "The information content entities do not denote each other."@en ;
                                              rdfs:label "code set"@en .
 
@@ -6436,15 +6012,8 @@ No imports"""@en ;
                                                                                                         "SCTID:64572001" ,
                                                                                                         "UMLS:C0012634" ;
                                                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "condition" ,
-                                                                                                              "disease" ,
                                                                                                               "disease or disorder" ,
-                                                                                                              "disease or disorder, non-neoplastic" ,
-                                                                                                              "diseases" ,
-                                                                                                              "diseases and disorders" ,
-                                                                                                              "disorder" ,
-                                                                                                              "disorders" ,
-                                                                                                              "medical condition" ,
-                                                                                                              "other disease" ;
+                                                                                                              "disease or disorder, non-neoplastic" ;
                                                <http://www.geneontology.org/formats/oboInOwl#id> "MONDO:0000001" ;
                                                rdfs:label "disease or disorder" ;
                                                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://identifiers.org/mesh/D004194> ,
@@ -6500,6 +6069,7 @@ No imports"""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000117> "Jie Zheng, Oliver He" ;
                                               <http://purl.obolibrary.org/obo/IAO_0000118> "data collection"@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000119> "WEB: http://en.wikipedia.org/wiki/Data_collection" ;
+                                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                               rdfs:label "data acquisition"@en .
 
 
@@ -6938,6 +6508,7 @@ No imports"""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A quantitative confidence value that equals the percentage of a distribution that is below a specific value. As an example, a child is in 90th percentile for weight if only 10 percent of children the same age weigh more than she does." ;
                                               <http://purl.obolibrary.org/obo/IAO_0000117> "Yongqun He" ;
                                               <http://purl.obolibrary.org/obo/IAO_0000119> "WEB: http://www.uptodate.com/contents/glossary-of-common-biostatistical-and-epidemiological-terms" ;
+                                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                               rdfs:label "percentile" .
 
 
@@ -7473,6 +7044,7 @@ http://www.ncbi.nlm.nih.gov/pubmed/10521349
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A rate of deaths (in general, or due to a specific cause) that in a particular population, scaled to the size of that population, per unit of time. " ;
                                               <http://purl.obolibrary.org/obo/IAO_0000117> "Jie Zheng" ;
                                               <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Mortality_rate" ;
+                                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                               rdfs:label "mortality rate"@en .
 
 
@@ -7481,6 +7053,7 @@ http://www.ncbi.nlm.nih.gov/pubmed/10521349
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/PATO_0000161> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A rate of unit shif in a hospital. " ;
                                               <http://purl.obolibrary.org/obo/IAO_0000117> "Jie Zheng" ;
+                                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                               rdfs:label "hospital unit  shift rate"@en .
 
 
@@ -8174,18 +7747,6 @@ for now."""@en ;
                                              rdfs:label "statistical hypothesis test"@en .
 
 
-###  http://purl.obolibrary.org/obo/OBI_0000688
-<http://purl.obolibrary.org/obo/OBI_0000688> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000715> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "rodent care protocol" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "Keeping mice in the UCSD animals facility at 20 - 25 degrees celsius, in cages of 4 animals each and providing food twice daily." ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A rodent care protocol is an animal protocol in which the animals being taken care of are rodents."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Bjoern Peters" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "Bjoern Peters" ;
-                                             rdfs:label "rodent care protocol" .
-
-
 ###  http://purl.obolibrary.org/obo/OBI_0000698
 <http://purl.obolibrary.org/obo/OBI_0000698> rdf:type owl:Class ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "obsolete_DNA ligase" ;
@@ -8196,18 +7757,6 @@ for now."""@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000231> <http://purl.obolibrary.org/obo/IAO_0000228> ;
                                              rdfs:label "obsolete_DNA ligase" ;
                                              owl:deprecated "true"^^xsd:boolean .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0000715
-<http://purl.obolibrary.org/obo/OBI_0000715> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000272> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "animal care protocol" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "Keeping mice in the UCSD animals facility at 20 - 25 degrees celsius, in cages of 4 animals each and providing food twice daily." ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "An animal care protocol is a protocol which specifies the environment in which animals are being kept in captivity for research purposes"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Bjoern Peters" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "Bjoern Peters" ;
-                                             rdfs:label "animal care protocol" .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000739
@@ -8951,28 +8500,6 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
                                              rdfs:label "population based design" .
 
 
-###  http://purl.obolibrary.org/obo/OBI_0003069
-<http://purl.obolibrary.org/obo/OBI_0003069> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000272> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "sequencing protocol" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A protocol that, when concretized, is realized in an assay that uses chemical or biological means to infer the sequence of a biomaterial."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "John Judkins" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "VEuPathDB" ;
-                                             rdfs:label "sequencing protocol" .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0003070
-<http://purl.obolibrary.org/obo/OBI_0003070> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000272> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "specimen collection protocol" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A protocol that specifies processes to fulfill a specimen collection objective."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "John Judkins" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "VEuPathDB" ;
-                                             rdfs:label "specimen collection protocol" .
-
-
 ###  http://purl.obolibrary.org/obo/OBI_0003071
 <http://purl.obolibrary.org/obo/OBI_0003071> rdf:type owl:Class ;
                                              owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0020000>
@@ -8992,7 +8519,7 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A symbol that denotes a participant under investigation."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "John Judkins" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "VEuPathDB" ;
-                                             rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                              rdfs:label "participant identifier" .
 
 
@@ -9007,21 +8534,6 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "VEuPathDB" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/obi-ontology/obi/issues/1370" ;
                                              rdfs:label "laboratory-based population" .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0003332
-<http://purl.obolibrary.org/obo/OBI_0003332> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000272> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "magnetic resonance pulse sequence protocol"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "The NMR/MRI machine protocol about the radiofrequency pulse sequence."@en ,
-                                                                                          "The NMR/MRI machine protocol about the radiofrequency pulse sequence." ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "https://orcid.org/0000-0001-9676-7377 \"Alexander D. Bartnik\"" ,
-                                                                                          "https://orcid.org/0000-0001-9990-8331 \"Alexander D. Diehl\"" ,
-                                                                                          "https://orcid.org/0000-0002-2104-0568 \"Lucas M. Serra\"" ,
-                                                                                          "https://orcid.org/0000-0002-9821-4132 \"Mackenzie T. Smith\"" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/obi.owl> ;
-                                             rdfs:label "magnetic resonance pulse sequence protocol"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0003355
@@ -9995,62 +9507,63 @@ owl:Thing rdf:type owl:Class .
 ###  https://w3id.org/cdio/ATC
 <https://w3id.org/cdio/ATC> rdf:type owl:Class ;
                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020020> ;
-                            rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                            rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                             rdfs:label "atc"@en .
 
 
 ###  https://w3id.org/cdio/LOINC
 <https://w3id.org/cdio/LOINC> rdf:type owl:Class ;
                               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020020> ;
-                              rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                               rdfs:label "LOINC"@en .
 
 
 ###  https://w3id.org/cdio/OMOP
 <https://w3id.org/cdio/OMOP> rdf:type owl:Class ;
                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020020> ;
-                             rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                              rdfs:label "OMOP"@en .
 
 
 ###  https://w3id.org/cdio/RxNorm
 <https://w3id.org/cdio/RxNorm> rdf:type owl:Class ;
                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020020> ;
-                               rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                rdfs:label "RxNorm"@en .
 
 
 ###  https://w3id.org/cdio/SNOMED
 <https://w3id.org/cdio/SNOMED> rdf:type owl:Class ;
                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020020> ;
-                               rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                rdfs:label "SNOMED"@en .
 
 
 ###  https://w3id.org/cdio/UCUM
 <https://w3id.org/cdio/UCUM> rdf:type owl:Class ;
                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020020> ;
-                             rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                              rdfs:label "UCUM"@en .
 
 
 ###  https://w3id.org/cdio/adverse_event
 <https://w3id.org/cdio/adverse_event> rdf:type owl:Class ;
                                       rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                                      rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                       rdfs:label "adverse event"@en .
 
 
 ###  https://w3id.org/cdio/age
 <https://w3id.org/cdio/age> rdf:type owl:Class ;
                             rdfs:subClassOf <https://w3id.org/cdio/demographics> ;
-                            rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                            rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                             rdfs:label "age"@en .
 
 
 ###  https://w3id.org/cdio/agent
 <https://w3id.org/cdio/agent> rdf:type owl:Class ;
                               rdfs:subClassOf <https://w3id.org/cdio/object> ;
+                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                               rdfs:label "agent"@en .
 
 
@@ -10061,63 +9574,63 @@ owl:Thing rdf:type owl:Class .
                                                                      owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000039> ;
                                                                      owl:allValuesFrom <http://purl.obolibrary.org/obo/IAO_0000003>
                                                                    ] ;
-                                                   rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                   rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                    rdfs:label "anthropometric measurement"@en .
 
 
 ###  https://w3id.org/cdio/blood_biomarker
 <https://w3id.org/cdio/blood_biomarker> rdf:type owl:Class ;
                                         rdfs:subClassOf <https://w3id.org/cdio/blood_measurement> ;
-                                        rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                        rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                         rdfs:label "blood biomarker"@en .
 
 
 ###  https://w3id.org/cdio/blood_measurement
 <https://w3id.org/cdio/blood_measurement> rdf:type owl:Class ;
                                           rdfs:subClassOf <https://w3id.org/cdio/measurement> ;
-                                          rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                          rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                           rdfs:label "blood measurement"@en .
 
 
 ###  https://w3id.org/cdio/cardiac_risk_factor
 <https://w3id.org/cdio/cardiac_risk_factor> rdf:type owl:Class ;
                                             rdfs:subClassOf <https://w3id.org/cdio/risk_factor> ;
-                                            rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                            rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                             rdfs:label "cardiac risk factor"@en .
 
 
 ###  https://w3id.org/cdio/cardiac_sign
 <https://w3id.org/cdio/cardiac_sign> rdf:type owl:Class ;
                                      rdfs:subClassOf <https://w3id.org/cdio/sign> ;
-                                     rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                     rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                      rdfs:label "cardiac sign"@en .
 
 
 ###  https://w3id.org/cdio/cardiovascular_finding
 <https://w3id.org/cdio/cardiovascular_finding> rdf:type owl:Class ;
                                                rdfs:subClassOf <https://w3id.org/cdio/disease_or_disorder_indicator> ;
-                                               rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                rdfs:label "cardiovascular finding"@en .
 
 
 ###  https://w3id.org/cdio/cardiovascular_measurement
 <https://w3id.org/cdio/cardiovascular_measurement> rdf:type owl:Class ;
                                                    rdfs:subClassOf <https://w3id.org/cdio/measurement> ;
-                                                   rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                   rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                    rdfs:label "cardiovascular measurement"@en .
 
 
 ###  https://w3id.org/cdio/categorical_variable
 <https://w3id.org/cdio/categorical_variable> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000258> ;
-                                             rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                              rdfs:label "categorical variable"@en .
 
 
 ###  https://w3id.org/cdio/categorization
 <https://w3id.org/cdio/categorization> rdf:type owl:Class ;
                                        rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
-                                       rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                       rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                        rdfs:label "categorization process"@en .
 
 
@@ -10132,14 +9645,14 @@ owl:Thing rdf:type owl:Class .
                                  <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON:Komal Gilani"@en ;
                                  <http://purl.obolibrary.org/obo/IAO_0000412> "http://semanticscience.org/resource/SIO_000137"@en ;
                                  rdfs:comment "A category is a class of entities having particular shared characteristics."@en ;
-                                 rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                 rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                  rdfs:label "category"@en .
 
 
 ###  https://w3id.org/cdio/cause_of_death
 <https://w3id.org/cdio/cause_of_death> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/cdio/etiology> ;
-                                       rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                       rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                        rdfs:label "cause of death"@en .
 
 
@@ -10157,7 +9670,7 @@ owl:Thing rdf:type owl:Class .
 ###  https://w3id.org/cdio/clinical_finding
 <https://w3id.org/cdio/clinical_finding> rdf:type owl:Class ;
                                          rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                                         rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                         rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                          rdfs:label "clinical finding"@en .
 
 
@@ -10173,6 +9686,7 @@ owl:Thing rdf:type owl:Class .
                                                owl:someValuesFrom <https://w3id.org/cdio/data_standardization>
                                              ] ;
                              <http://purl.obolibrary.org/obo/IAO_0000115> "A unique identifier assigned to a concept in a standardized vocabulary (e.g., LOINC, SNOMED)."@en ;
+                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                              rdfs:label "code"@en .
 
 
@@ -10181,13 +9695,13 @@ owl:Thing rdf:type owl:Class .
                                   rdfs:subClassOf <https://w3id.org/cdio/process_status> ;
                                   <http://purl.obolibrary.org/obo/IAO_0000115> "completed is that status of a process that successfully unfolds."@en ;
                                   <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000034> ;
-                                  rdfs:isDefinedBy <https://w3id.org/chexo/> ;
                                   rdfs:label "completed"@en .
 
 
 ###  https://w3id.org/cdio/compliance
 <https://w3id.org/cdio/compliance> rdf:type owl:Class ;
                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+                                   rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                    rdfs:label "compliance"@en .
 
 
@@ -10195,7 +9709,7 @@ owl:Thing rdf:type owl:Class .
 <https://w3id.org/cdio/compliance_finding> rdf:type owl:Class ;
                                            rdfs:subClassOf <https://w3id.org/cdio/clinical_finding> ;
                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Compliance Finding is modeled as a subtype of Clinical Finding because it represents an observed or assessed state regarding the patient or healthcare provider behavior related to treatment."@en ;
-                                           rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                           rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                            rdfs:label "compliance finding"@en .
 
 
@@ -10204,7 +9718,7 @@ owl:Thing rdf:type owl:Class .
                                                 rdfs:subClassOf <https://w3id.org/cdio/measurement> ;
                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification."@en ;
                                                 <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/CMO_0000426"@en ;
-                                                rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                 rdfs:label "consumption measurement"@en .
 
 
@@ -10214,7 +9728,7 @@ owl:Thing rdf:type owl:Class .
                                           <http://purl.obolibrary.org/obo/IAO_0000112> "Blood Pressure Measurement in [Recumbent Position] at Baseline where body position is contextual factor"@en ;
                                           <http://purl.obolibrary.org/obo/IAO_0000115> "A contextual factor is an information entity that modifies or provides additional meaning to an entity by describing how, when, or under what conditions a measurement, observation, or recorded value was obtained."@en ;
                                           rdfs:comment "Contextual Factors are essential for ensuring semantic precision in data harmonization. They allow for the differentiation of otherwise identical data elements by specifying the conditions under which the data was recorded. This is particularly important in clinical research, where factors such as body position, fasting state, timing, and measurement technique can significantly impact the interpretation of a variable"@en ;
-                                          rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                          rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                           rdfs:label "contextual factor"@en .
 
 
@@ -10222,6 +9736,7 @@ owl:Thing rdf:type owl:Class .
 <https://w3id.org/cdio/count> rdf:type owl:Class ;
                               rdfs:subClassOf <https://w3id.org/cdio/statistic> ;
                               <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/stato.owl> ;
+                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                               rdfs:label "count"@en .
 
 
@@ -10242,7 +9757,7 @@ owl:Thing rdf:type owl:Class .
                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
                                      <http://purl.obolibrary.org/obo/IAO_0000115> "A basic unit of information that has a unique meaning and instances (data items) of distinct value. Examples of data elements include gender, race, and geographic location in data dictionary(ref. https://cde.nlm.nih.gov/)"@en ;
                                      rdfs:comment "A grouping or label that provides a semantic interpretation of a data element."@en ;
-                                     rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                     rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                      rdfs:label "data element"@en .
 
 
@@ -10250,21 +9765,21 @@ owl:Thing rdf:type owl:Class .
 <https://w3id.org/cdio/data_standardization> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000232> "linking a concept to unique identifier in respective domain standard such as linking variable bp to blood pressure concept in SNOMED"@en ;
-                                             rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                              rdfs:label "data standardization process"@en .
 
 
 ###  https://w3id.org/cdio/death
 <https://w3id.org/cdio/death> rdf:type owl:Class ;
                               rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                              rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                               rdfs:label "death"@en .
 
 
 ###  https://w3id.org/cdio/demographics
 <https://w3id.org/cdio/demographics> rdf:type owl:Class ;
                                      rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                                     rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                     rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                      rdfs:label "demographics"@en .
 
 
@@ -10273,12 +9788,14 @@ owl:Thing rdf:type owl:Class .
                                rdfs:subClassOf <https://w3id.org/cdio/object> ;
                                <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/OBI_0000968> ;
                                rdfs:comment "device is modelled as processed material in OBI which refers to material entities that can alter and modified under certain process. however device is a material object and it doesnot change it course. We dont not consider blood samples as device but only material entities such as needle, MRI scan, wearable smart watch etc."@en ;
+                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                rdfs:label "device"@en .
 
 
 ###  https://w3id.org/cdio/device_exposure
 <https://w3id.org/cdio/device_exposure> rdf:type owl:Class ;
                                         rdfs:subClassOf <https://w3id.org/cdio/exposure> ;
+                                        rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                         rdfs:label "device exposure"@en .
 
 
@@ -10287,7 +9804,7 @@ owl:Thing rdf:type owl:Class .
                                        rdfs:subClassOf <https://w3id.org/cdio/category> ;
                                        <http://purl.obolibrary.org/obo/IAO_0000115> "A documented record or conceptual representation of the overall pattern of food and beverage consumption, as recorded in surveys or data dictionaries."@en ;
                                        rdfs:comment "Dietary Intake is the process (or the information about that process) by which an organism consumes substances that provide nutrition. It represents a collection of observable data points (e.g., frequency of fruit, vegetable, dairy consumption) that characterize an individual’s nutritional behavior."@en ;
-                                       rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                       rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                        rdfs:label "dietary intake"@en .
 
 
@@ -10295,14 +9812,14 @@ owl:Thing rdf:type owl:Class .
 <https://w3id.org/cdio/dischotomous_variable> rdf:type owl:Class ;
                                               rdfs:subClassOf <https://w3id.org/cdio/categorical_variable> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "variable with only two categories"@en ;
-                                              rdfs:isDefinedBy <https://w3id.org/chexo/> ;
-                                              rdfs:label "dischotomous variable"@en .
+                                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
+                                              rdfs:label "binary class variable"@en .
 
 
 ###  https://w3id.org/cdio/disease_or_disorder_history
 <https://w3id.org/cdio/disease_or_disorder_history> rdf:type owl:Class ;
                                                     rdfs:subClassOf <https://w3id.org/cdio/medical_history> ;
-                                                    rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                    rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                     rdfs:label "disease or disorder history"@en .
 
 
@@ -10314,7 +9831,7 @@ owl:Thing rdf:type owl:Class .
                                                                         owl:someValuesFrom <http://purl.obolibrary.org/obo/OGMS_0000031>
                                                                       ] ;
                                                       rdfs:comment "presence/absence of disease data element"@en ;
-                                                      rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                       rdfs:label "disease or disorder indicator"@en .
 
 
@@ -10322,6 +9839,7 @@ owl:Thing rdf:type owl:Class .
 <https://w3id.org/cdio/drug_therapy_compliance> rdf:type owl:Class ;
                                                 rdfs:subClassOf <https://w3id.org/cdio/compliance> ;
                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A patient’s likelihood or propensity to adhere to a prescribed drug regimen is not a one-time observation; it is a persistent aspect of their behavior and decision-making that can manifest over time when conditions (like receiving the medication) are met."@en ;
+                                                rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                 rdfs:label "drug therapy compliance"@en .
 
 
@@ -10333,7 +9851,7 @@ owl:Thing rdf:type owl:Class .
                                                                           owl:allValuesFrom <https://w3id.org/cdio/drug_therapy_compliance>
                                                                         ] ;
                                                         <http://purl.obolibrary.org/obo/IAO_0000115> "It is a more specific data element that records findings about compliance with drug therapy"@en ;
-                                                        rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                        rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                         rdfs:label "drug therapy compliance finding"@en .
 
 
@@ -10353,7 +9871,7 @@ owl:Thing rdf:type owl:Class .
 <https://w3id.org/cdio/etiology> rdf:type owl:Class ;
                                  rdfs:subClassOf <https://w3id.org/cdio/category> ;
                                  <http://purl.obolibrary.org/obo/IAO_0000115> "The cause of a disease or abnormal condition"@en ;
-                                 rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                 rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                  rdfs:label "etiology"@en .
 
 
@@ -10368,13 +9886,14 @@ owl:Thing rdf:type owl:Class .
 ###  https://w3id.org/cdio/exposure
 <https://w3id.org/cdio/exposure> rdf:type owl:Class ;
                                  rdfs:subClassOf <https://w3id.org/cdio/treatment> ;
+                                 rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                  rdfs:label "exposure"@en .
 
 
 ###  https://w3id.org/cdio/family_history
 <https://w3id.org/cdio/family_history> rdf:type owl:Class ;
                                        rdfs:subClassOf <https://w3id.org/cdio/medical_history> ;
-                                       rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                       rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                        rdfs:label "family history"@en .
 
 
@@ -10382,6 +9901,7 @@ owl:Thing rdf:type owl:Class .
 <https://w3id.org/cdio/first_hospitalization_time> rdf:type owl:Class ;
                                                    rdfs:subClassOf <https://w3id.org/cdio/hospitalisation_time> ;
                                                    <http://purl.obolibrary.org/obo/IAO_0000115> "focuses specifically on the interval from a baseline event (e.g., study inclusion) to the first occurrence of hospitalization"@en ;
+                                                   rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                    rdfs:label "first hospitalisation time"@en .
 
 
@@ -10396,21 +9916,21 @@ owl:Thing rdf:type owl:Class .
 <https://w3id.org/cdio/follow_up_attrition> rdf:type owl:Class ;
                                             rdfs:subClassOf <https://w3id.org/cdio/category> ;
                                             rdfs:comment "refers to the loss of study participants during the follow-up period of a research study. This occurs when individuals:Are lost to follow-up: They cannot be contacted or fail to attend scheduled follow-up assessments. Withdraw from the study: They actively choose to leave the study."@en ;
-                                            rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                            rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                             rdfs:label "follow up attrition" .
 
 
 ###  https://w3id.org/cdio/formula
 <https://w3id.org/cdio/formula> rdf:type owl:Class ;
                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
-                                rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                 rdfs:label "formula"@en .
 
 
 ###  https://w3id.org/cdio/functional_and_behavioral_assesment_score
 <https://w3id.org/cdio/functional_and_behavioral_assesment_score> rdf:type owl:Class ;
                                                                   rdfs:subClassOf <https://w3id.org/cdio/measurement> ;
-                                                                  rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                                  rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                                   rdfs:label "functional and behavioral assesment score"@en .
 
 
@@ -10421,26 +9941,28 @@ owl:Thing rdf:type owl:Class .
                                                              owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                              owl:someValuesFrom <http://purl.obolibrary.org/obo/OGMS_0000023>
                                                            ] ;
-                                           rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                           rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                            rdfs:label "functional finding"@en .
 
 
 ###  https://w3id.org/cdio/general_sign
 <https://w3id.org/cdio/general_sign> rdf:type owl:Class ;
                                      rdfs:subClassOf <https://w3id.org/cdio/sign> ;
-                                     rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                     rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                      rdfs:label "general sign"@en .
 
 
 ###  https://w3id.org/cdio/harmonization_plan_specification
 <https://w3id.org/cdio/harmonization_plan_specification> rdf:type owl:Class ;
                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> ;
+                                                         rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                          rdfs:label "harmonization plan specification"@en .
 
 
 ###  https://w3id.org/cdio/healthcare_provider_compliance
 <https://w3id.org/cdio/healthcare_provider_compliance> rdf:type owl:Class ;
                                                        rdfs:subClassOf <https://w3id.org/cdio/compliance> ;
+                                                       rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                        rdfs:label "healthcare provider compliance"@en .
 
 
@@ -10451,21 +9973,21 @@ owl:Thing rdf:type owl:Class .
                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                                                  owl:allValuesFrom <https://w3id.org/cdio/healthcare_provider_compliance>
                                                                                ] ;
-                                                               rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                                rdfs:label "healthcare provider compliance finding"@en .
 
 
 ###  https://w3id.org/cdio/heart_failure_etiology
 <https://w3id.org/cdio/heart_failure_etiology> rdf:type owl:Class ;
                                                rdfs:subClassOf <https://w3id.org/cdio/etiology> ;
-                                               rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                rdfs:label "heart failure etiology"@en .
 
 
 ###  https://w3id.org/cdio/hospitalisation_history
 <https://w3id.org/cdio/hospitalisation_history> rdf:type owl:Class ;
                                                 rdfs:subClassOf <https://w3id.org/cdio/medical_history> ;
-                                                rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                 rdfs:label "hospitalisation history"@en .
 
 
@@ -10473,6 +9995,7 @@ owl:Thing rdf:type owl:Class .
 <https://w3id.org/cdio/hospitalisation_time> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "might be used in contexts where the endpoint is any hospitalization (e.g., multiple hospitalizations could occur during follow‑up)"@en ;
+                                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                              rdfs:label "hospitalisation time"@en .
 
 
@@ -10510,6 +10033,7 @@ owl:Thing rdf:type owl:Class .
                                       rdfs:subClassOf <https://w3id.org/cdio/statistic> ;
                                       <http://purl.obolibrary.org/obo/IAO_0000115> "The highest permissible value for a data element."@en ;
                                       <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/stato.owl> ;
+                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                       rdfs:label "maximum value"@en .
 
 
@@ -10531,7 +10055,7 @@ owl:Thing rdf:type owl:Class .
 ###  https://w3id.org/cdio/measurement
 <https://w3id.org/cdio/measurement> rdf:type owl:Class ;
                                     rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                                    rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                    rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                     rdfs:label "measurement"@en .
 
 
@@ -10539,6 +10063,7 @@ owl:Thing rdf:type owl:Class .
 <https://w3id.org/cdio/measurement_device> rdf:type owl:Class ;
                                            rdfs:subClassOf <https://w3id.org/cdio/device> ;
                                            <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/OBI_0002046"@en ;
+                                           rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                            rdfs:label "measurement device"@en .
 
 
@@ -10555,20 +10080,21 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
 ###  https://w3id.org/cdio/medical_history
 <https://w3id.org/cdio/medical_history> rdf:type owl:Class ;
                                         rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                                        rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                        rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                         rdfs:label "medical history"@en .
 
 
 ###  https://w3id.org/cdio/medication_exposure
 <https://w3id.org/cdio/medication_exposure> rdf:type owl:Class ;
                                             rdfs:subClassOf <https://w3id.org/cdio/exposure> ;
+                                            rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                             rdfs:label "medication exposure"@en .
 
 
 ###  https://w3id.org/cdio/medication_history
 <https://w3id.org/cdio/medication_history> rdf:type owl:Class ;
                                            rdfs:subClassOf <https://w3id.org/cdio/medical_history> ;
-                                           rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                           rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                            rdfs:label "medication history"@en .
 
 
@@ -10577,7 +10103,7 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
                                       rdfs:subClassOf <https://w3id.org/cdio/statistic> ;
                                       <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/stato.owl> ;
                                       rdfs:comment "The lowest permissible value for a data element"@en ;
-                                      rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                       rdfs:label "minimum value"@en .
 
 
@@ -10585,13 +10111,14 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
 <https://w3id.org/cdio/missing_value_specification> rdf:type owl:Class ;
                                                     rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001933> ;
                                                     rdfs:comment "to indicate the missing value indicator for a data element in its dataset"@en ;
-                                                    rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                    rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                     rdfs:label "missing value specification"@en .
 
 
 ###  https://w3id.org/cdio/missing_values_count
 <https://w3id.org/cdio/missing_values_count> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/cdio/count> ;
+                                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                              rdfs:label "missing values count"@en .
 
 
@@ -10618,14 +10145,14 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
 ###  https://w3id.org/cdio/neurological_sign
 <https://w3id.org/cdio/neurological_sign> rdf:type owl:Class ;
                                           rdfs:subClassOf <https://w3id.org/cdio/sign> ;
-                                          rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                          rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                           rdfs:label "neurological sign"@en .
 
 
 ###  https://w3id.org/cdio/non_compliance_reason
 <https://w3id.org/cdio/non_compliance_reason> rdf:type owl:Class ;
                                               rdfs:subClassOf <https://w3id.org/cdio/reasons> ;
-                                              rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                               rdfs:label "non compliance reason data element"@en .
 
 
@@ -10634,7 +10161,7 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
                                              rdfs:subClassOf <https://w3id.org/cdio/statistic> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/stato.owl> ;
                                              rdfs:comment "he p-value obtained from the (Shapiro-Wilk, Kolmogorov-Smirnov, etc.)​, used to determine normality of the dataset."@en ;
-                                             rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                              rdfs:label "normality test value"@en .
 
 
@@ -10643,28 +10170,28 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
                                     rdfs:subClassOf <https://w3id.org/cdio/process_status> ;
                                     <http://purl.obolibrary.org/obo/IAO_0000115> "not started is the status of a process that is predicted to exist but has not yet begun."@en ;
                                     <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000963> ;
-                                    rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                    rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                     rdfs:label "not started"@en .
 
 
 ###  https://w3id.org/cdio/number_of_hospitalizations
 <https://w3id.org/cdio/number_of_hospitalizations> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
-                                                   rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                   rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                    rdfs:label "number of hospitalizations"@en .
 
 
 ###  https://w3id.org/cdio/number_of_occurances
 <https://w3id.org/cdio/number_of_occurances> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                                             rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                              rdfs:label "number of occurances"@en .
 
 
 ###  https://w3id.org/cdio/number_of_participants
 <https://w3id.org/cdio/number_of_participants> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000005> ;
-                                               rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                rdfs:label "number of study participants objective"@en .
 
 
@@ -10708,7 +10235,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000312> ;
                                                                                                owl:someValuesFrom <https://w3id.org/cdio/data_standardization>
                                                                                              ] ;
-                                                                             rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                                              rdfs:label "OMOP identifier"@en .
 
 
@@ -10717,7 +10244,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                 rdfs:subClassOf <https://w3id.org/cdio/process_status> ;
                                 <http://purl.obolibrary.org/obo/IAO_0000115> "ongoing is the status of a process that is not yet complete."@en ;
                                 <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000035> ;
-                                rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                 rdfs:label "ongoing"@en .
 
 
@@ -10746,7 +10273,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/permissible_value
 <https://w3id.org/cdio/permissible_value> rdf:type owl:Class ;
                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
-                                          rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                          rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                           rdfs:label "permissible value"@en .
 
 
@@ -10761,8 +10288,9 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 <https://w3id.org/cdio/polychotomous_variable> rdf:type owl:Class ;
                                                rdfs:subClassOf <https://w3id.org/cdio/categorical_variable> ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "variable with more than two categories"@en ;
-                                               rdfs:isDefinedBy <https://w3id.org/chexo/> ;
-                                               rdfs:label "polychotomous variable"@en .
+                                               <http://purl.obolibrary.org/obo/IAO_0000118> "polychotomous variable"@en ;
+                                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
+                                               rdfs:label "multi class variable"@en .
 
 
 ###  https://w3id.org/cdio/population_quality
@@ -10775,19 +10303,21 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/primary_outcome_specification
 <https://w3id.org/cdio/primary_outcome_specification> rdf:type owl:Class ;
                                                       rdfs:subClassOf <https://w3id.org/cdio/study_outcome_specification> ;
+                                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                       rdfs:label "primary outcome specification"@en .
 
 
 ###  https://w3id.org/cdio/procedure
 <https://w3id.org/cdio/procedure> rdf:type owl:Class ;
                                   rdfs:subClassOf <https://w3id.org/cdio/treatment> ;
+                                  rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                   rdfs:label "procedure"@en .
 
 
 ###  https://w3id.org/cdio/procedure_history
 <https://w3id.org/cdio/procedure_history> rdf:type owl:Class ;
                                           rdfs:subClassOf <https://w3id.org/cdio/medical_history> ;
-                                          rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                          rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                           rdfs:label "procedure history"@en .
 
 
@@ -10796,7 +10326,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
                                         <http://purl.obolibrary.org/obo/IAO_0000115> "A process quality is quality that is associated with a process."@en ;
                                         <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000027> ;
-                                        rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                        rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                         rdfs:label "process quality"@en .
 
 
@@ -10809,14 +10339,14 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                                        ] ;
                                        <http://purl.obolibrary.org/obo/IAO_0000115> "process status is a process quality that describes the state of a process."@en ;
                                        <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000033> ;
-                                       rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                       rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                        rdfs:label "process status"@en .
 
 
 ###  https://w3id.org/cdio/protein_biomarker_data_element
 <https://w3id.org/cdio/protein_biomarker_data_element> rdf:type owl:Class ;
                                                        rdfs:subClassOf <https://w3id.org/cdio/blood_measurement> ;
-                                                       rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                       rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                        rdfs:label "protein biomarker"@en .
 
 
@@ -10837,14 +10367,14 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/reasons
 <https://w3id.org/cdio/reasons> rdf:type owl:Class ;
                                 rdfs:subClassOf <https://w3id.org/cdio/compliance_finding> ;
-                                rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                 rdfs:label "reasons"@en .
 
 
 ###  https://w3id.org/cdio/respiratory_sign
 <https://w3id.org/cdio/respiratory_sign> rdf:type owl:Class ;
                                          rdfs:subClassOf <https://w3id.org/cdio/sign> ;
-                                         rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                         rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                          rdfs:label "respiratory sign"@en .
 
 
@@ -10858,13 +10388,14 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/risk_factor
 <https://w3id.org/cdio/risk_factor> rdf:type owl:Class ;
                                     rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                                    rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                    rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                     rdfs:label "risk factor"@en .
 
 
 ###  https://w3id.org/cdio/secondary_outcome_specification
 <https://w3id.org/cdio/secondary_outcome_specification> rdf:type owl:Class ;
                                                         rdfs:subClassOf <https://w3id.org/cdio/study_outcome_specification> ;
+                                                        rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                         rdfs:label "secondary outcome specification"@en .
 
 
@@ -10879,7 +10410,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/sex
 <https://w3id.org/cdio/sex> rdf:type owl:Class ;
                             rdfs:subClassOf <https://w3id.org/cdio/demographics> ;
-                            rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                            rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                             rdfs:label "sex"@en .
 
 
@@ -10916,20 +10447,21 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/sign
 <https://w3id.org/cdio/sign> rdf:type owl:Class ;
                              rdfs:subClassOf <https://w3id.org/cdio/sign_or_symptom> ;
-                             rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                             rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                              rdfs:label "sign"@en .
 
 
 ###  https://w3id.org/cdio/sign_or_symptom
 <https://w3id.org/cdio/sign_or_symptom> rdf:type owl:Class ;
                                         rdfs:subClassOf <https://w3id.org/cdio/category> ;
-                                        rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                        rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                         rdfs:label "sign or symptom"@en .
 
 
 ###  https://w3id.org/cdio/single_arm_cross_over_design
 <https://w3id.org/cdio/single_arm_cross_over_design> rdf:type owl:Class ;
                                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500003> ;
+                                                     rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                      rdfs:label "single arm cross over design"@en .
 
 
@@ -10952,14 +10484,14 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/smoking
 <https://w3id.org/cdio/smoking> rdf:type owl:Class ;
                                 rdfs:subClassOf <https://w3id.org/cdio/risk_factor> ;
-                                rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                 rdfs:label "smoking"@en .
 
 
 ###  https://w3id.org/cdio/stages_and_scales
 <https://w3id.org/cdio/stages_and_scales> rdf:type owl:Class ;
                                           rdfs:subClassOf <https://w3id.org/cdio/measurement> ;
-                                          rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                          rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                           rdfs:label "stages and scales"@en .
 
 
@@ -10983,6 +10515,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                                      owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
                                                    ] ;
                                    <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000669> ;
+                                   rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                    rdfs:label "start time"@en .
 
 
@@ -10991,26 +10524,28 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ;
                                   <http://purl.obolibrary.org/obo/IAO_0000115> "a statistic is a measurement datum to describe a dataset or a variable. It is generated by a calculation on set of observed data."@en ;
                                   <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/stato.owl> ;
+                                  rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                   rdfs:label "statistic"@en .
 
 
 ###  https://w3id.org/cdio/study_design_dependent
 <https://w3id.org/cdio/study_design_dependent> rdf:type owl:Class ;
                                                rdfs:subClassOf <https://w3id.org/cdio/category> ;
+                                               rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                rdfs:label "study design dependent"@en .
 
 
 ###  https://w3id.org/cdio/study_design_variable_specification
 <https://w3id.org/cdio/study_design_variable_specification> rdf:type owl:Class ;
                                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> ;
-                                                            rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                            rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                             rdfs:label "study design variable specification"@en .
 
 
 ###  https://w3id.org/cdio/study_duration
 <https://w3id.org/cdio/study_duration> rdf:type owl:Class ;
                                        rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
-                                       rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                       rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                        rdfs:label "study duration"@en .
 
 
@@ -11018,6 +10553,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 <https://w3id.org/cdio/study_outcome_specification> rdf:type owl:Class ;
                                                     rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> ;
                                                     <http://purl.obolibrary.org/obo/IAO_0000115> "A Study Outcome/Endpoint Specification is a Plan Specification that defines the measurable variables used to assess the effectiveness or impact of an intervention, treatment, or observation within a study. Endpoints are classified into Primary Endpoints (the main variable of interest) and Secondary Endpoints (additional measures that provide supporting information)."@en ;
+                                                    rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                     rdfs:label "study outcome specification"@en .
 
 
@@ -11033,20 +10569,21 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/study_time_point
 <https://w3id.org/cdio/study_time_point> rdf:type owl:Class ;
                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000005> ;
+                                         rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                          rdfs:label "study time point specification"@en .
 
 
 ###  https://w3id.org/cdio/study_variable_harmonization_specification
 <https://w3id.org/cdio/study_variable_harmonization_specification> rdf:type owl:Class ;
                                                                    rdfs:subClassOf <https://w3id.org/cdio/harmonization_plan_specification> ;
-                                                                   rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                                   rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                                    rdfs:label "study variable harmonization specification"@en .
 
 
 ###  https://w3id.org/cdio/symptom
 <https://w3id.org/cdio/symptom> rdf:type owl:Class ;
                                 rdfs:subClassOf <https://w3id.org/cdio/sign_or_symptom> ;
-                                rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                 rdfs:label "symptom"@en .
 
 
@@ -11071,7 +10608,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
                                            <http://purl.obolibrary.org/obo/IAO_0000112> "measurement at \"follow-up 6 month\""@en ;
                                            <http://purl.obolibrary.org/obo/IAO_0000115> "An Information Content Entity (ICE) that denotes or specifies a particular point in time, interval of time, or temporal context during which data collection, measurement, or observation occurs, or to which it applies."@en ;
-                                           rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                           rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                            rdfs:label "temporal reference"@en .
 
 
@@ -11092,7 +10629,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/time_to_event_measurement
 <https://w3id.org/cdio/time_to_event_measurement> rdf:type owl:Class ;
                                                   rdfs:subClassOf <https://w3id.org/cdio/measurement> ;
-                                                  rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                  rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                   rdfs:label "time to event measurement"@en .
 
 
@@ -11106,7 +10643,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/treatement_non_compliance_reason
 <https://w3id.org/cdio/treatement_non_compliance_reason> rdf:type owl:Class ;
                                                          rdfs:subClassOf <https://w3id.org/cdio/non_compliance_reason> ;
-                                                         rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                                         rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                          rdfs:label "treatement non compliance reason"@en .
 
 
@@ -11114,6 +10651,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 <https://w3id.org/cdio/treatment> rdf:type owl:Class ;
                                   rdfs:subClassOf <https://w3id.org/cdio/category> ;
                                   rdfs:comment "a broader category which repesents all data elements related to patient exposure to medication, devices and procedures"@en ;
+                                  rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                   rdfs:label "treatment"@en .
 
 
@@ -11126,7 +10664,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  https://w3id.org/cdio/vital_sign
 <https://w3id.org/cdio/vital_sign> rdf:type owl:Class ;
                                    rdfs:subClassOf <https://w3id.org/cdio/sign_or_symptom> ;
-                                   rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                   rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                    rdfs:label "vital sign"@en .
 
 
@@ -11136,7 +10674,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                         <http://purl.obolibrary.org/obo/IAO_0000115> "Wearable devices such as activity trackers are an example of the Internet of things, since \"things\" such as electronics, software, sensors, and connectivity are effectors that enable objects to exchange data (including data quality[5]) through the internet with a manufacturer, operator, and/or other connected devices, without requiring human intervention."@en ;
                                         <http://purl.obolibrary.org/obo/IAO_0000118> "health wearable"@en ;
                                         <http://purl.obolibrary.org/obo/IAO_0000119> <https://en.wikipedia.org/wiki/Wearable_technology> ;
-                                        rdfs:isDefinedBy <https://w3id.org/chexo/> ;
+                                        rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                         rdfs:label "wearable device"@en .
 
 
