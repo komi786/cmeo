@@ -4881,7 +4881,11 @@ XML document; The instructions in a XSD file\""""@en ;
                                                              <http://purl.obolibrary.org/obo/IAO_0000030> ,
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://purl.obolibrary.org/obo/RO_0002351> ;
-                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000027>
+                                                               owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                    owl:unionOf ( <http://purl.obolibrary.org/obo/IAO_0000027>
+                                                                                                  <http://purl.obolibrary.org/obo/IAO_0000109>
+                                                                                                )
+                                                                                  ]
                                                              ] ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "data set"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000112> "Intensity values in a CEL file or from multiple CEL files comprise a data set (as opposed to the CEL files themselves)."@en ;
@@ -9315,7 +9319,7 @@ Spearman's coefficient may be used when the conditions for computing Pearson's c
 
 ###  http://purl.obolibrary.org/obo/STATO_0000258
 <http://purl.obolibrary.org/obo/STATO_0000258> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ,
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                                  owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000027>
@@ -9436,7 +9440,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
                                                                  ] ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "process status is a process quality that describes the state of a process."@en ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000033> ;
-                                                 <http://www.geneontology.org/formats/oboInOwl#id> <SIO_000033> ;
+                                                 <http://www.geneontology.org/formats/oboInOwl#id> :SIO_000033 ;
                                                  rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                                  rdfs:label "process status"@en .
 
@@ -9446,7 +9450,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
                                                  rdfs:subClassOf <http://semanticscience.org/resource/SIO_000033> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "completed is that status of a process that successfully unfolds."@en ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000034> ;
-                                                 <http://www.geneontology.org/formats/oboInOwl#id> <SIO_000034> ;
+                                                 <http://www.geneontology.org/formats/oboInOwl#id> :SIO_000034 ;
                                                  rdfs:label "completed"@en .
 
 
@@ -9714,7 +9718,7 @@ owl:Thing rdf:type owl:Class .
 
 ###  https://w3id.org/cdio/data_element
 <https://w3id.org/cdio/data_element> rdf:type owl:Class ;
-                                     rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                     rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
                                      <http://purl.obolibrary.org/obo/IAO_0000115> "A basic unit of information that has a unique meaning and instances (data items) of distinct value. Examples of data elements include gender, race, and geographic location in data dictionary(ref. https://cde.nlm.nih.gov/)"@en ;
                                      rdfs:comment "A grouping or label that provides a semantic interpretation of a data element."@en ;
                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
