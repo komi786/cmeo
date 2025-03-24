@@ -2621,7 +2621,7 @@ level of radioactivity is_proxy_for level of toxicity"""@en ;
 ###  https://w3id.org/cdio/is_count_of_most_frequency_category
 <https://w3id.org/cdio/is_count_of_most_frequency_category> rdf:type owl:ObjectProperty ;
                                                             rdfs:subPropertyOf <https://w3id.org/cdio/is_count_of> ;
-                                                            rdfs:domain <https://w3id.org/cdio/most_frequent_category_count> ;
+                                                            rdfs:domain <https://w3id.org/cdio/number_of_unique_value> ;
                                                             rdfs:label "is count of most frequency category"@en .
 
 
@@ -9722,7 +9722,8 @@ owl:Thing rdf:type owl:Class .
                                      <http://purl.obolibrary.org/obo/IAO_0000115> "A basic unit of information that has a unique meaning and instances (data items) of distinct value. Examples of data elements include gender, race, and geographic location in data dictionary(ref. https://cde.nlm.nih.gov/)"@en ;
                                      rdfs:comment "A grouping or label that provides a semantic interpretation of a data element."@en ;
                                      rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                     rdfs:label "data element"@en .
+                                     rdfs:label "data element"@en ;
+                                     rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C41002> .
 
 
 ###  https://w3id.org/cdio/data_standardization
@@ -10063,8 +10064,9 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
 ###  https://w3id.org/cdio/missing_values_count
 <https://w3id.org/cdio/missing_values_count> rdf:type owl:Class ;
                                              rdfs:subClassOf <https://w3id.org/cdio/count> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000118> "missing values count"@en ;
                                              rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                             rdfs:label "missing values count"@en .
+                                             rdfs:label "number of missing value"@en .
 
 
 ###  https://w3id.org/cdio/mixed_sex
@@ -10079,12 +10081,6 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
                                   rdfs:subClassOf <https://w3id.org/cdio/population_quality> ;
                                   <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/PATO_0001415"@en ;
                                   rdfs:label "morbidity"@en .
-
-
-###  https://w3id.org/cdio/most_frequent_category_count
-<https://w3id.org/cdio/most_frequent_category_count> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <https://w3id.org/cdio/count> ;
-                                                     rdfs:label "most frequent category count"@en .
 
 
 ###  https://w3id.org/cdio/neurological_sign
@@ -10131,10 +10127,10 @@ If \"Measurement Process\" were a direct child of \"Process,\" it would be treat
                                                rdfs:label "number of study participants objective"@en .
 
 
-###  https://w3id.org/cdio/number_of_unique_categories
-<https://w3id.org/cdio/number_of_unique_categories> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://w3id.org/cdio/count> ;
-                                                    rdfs:label "number of unique categories"@en .
+###  https://w3id.org/cdio/number_of_unique_value
+<https://w3id.org/cdio/number_of_unique_value> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/cdio/count> ;
+                                               rdfs:label "number of unique value"@en .
 
 
 ###  https://w3id.org/cdio/object
@@ -10201,7 +10197,8 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 <https://w3id.org/cdio/permissible_value> rdf:type owl:Class ;
                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
                                           rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                          rdfs:label "permissible value"@en .
+                                          rdfs:label "permissible value"@en ;
+                                          rdfs:seeAlso <http://purl.obolibrary.org/obo/NCIT_C41109> .
 
 
 ###  https://w3id.org/cdio/polychotomous_variable
