@@ -1181,16 +1181,6 @@ A continuant cannot have an occurrent as part: use 'participates in'. An occurre
                                              rdfs:label "contains process"@en .
 
 
-###  http://purl.obolibrary.org/obo/DUO_0000010
-<http://purl.obolibrary.org/obo/DUO_0000010> rdf:type owl:ObjectProperty ;
-                                             <http://purl.obolibrary.org/obo/DUO_0000041> "is_restricted_to" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A is restricted to B iff A is a consent code and B is an investigation and A may only participate in instances of a class C, of which B is an instance." ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "J. Neil Otte" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000232> "E.g. A dataset is restricted to an instance of an investigation for a specific disease or at geographical location." ;
-                                             <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000010" ;
-                                             rdfs:label "is restricted to" .
-
-
 ###  http://purl.obolibrary.org/obo/IAO_0000039
 <http://purl.obolibrary.org/obo/IAO_0000039> rdf:type owl:ObjectProperty ;
                                              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
@@ -1255,28 +1245,6 @@ Some currently missing phenomena that should be considered \"about\" are predica
                                              rdfs:label "is about"@en .
 
 
-###  http://purl.obolibrary.org/obo/IAO_0000142
-<http://purl.obolibrary.org/obo/IAO_0000142> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                             owl:inverseOf <http://purl.obolibrary.org/obo/IAO_0000143> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "An information artifact IA mentions an entity E exactly when it has a component/part that denotes E"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "7/6/2009 Alan Ruttenberg. P4 RC1 munges our GCI so remove it for now: mentions some entity equivalentTo has_part some ('generically denotes' some entity)"@en ,
-                                                                                          "7/6/2009 Alan Ruttenberg: Add this relation following conversation with Jonathan Rees that N&S GCI for is_about was too strong. Really it was simply sufficient. To effect this change we introduce this relation, which is subproperty of is_about, and have previous GCI use this relation \"mentions\" in it's (logical) definition"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Jonathan Rees"@en ,
-                                                                                          "Person: Alan Ruttenberg"@en ;
-                                             rdfs:label "mentions"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000143
-<http://purl.obolibrary.org/obo/IAO_0000143> rdf:type owl:ObjectProperty ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "Inverse of the relation 'mentions'"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> <http://orcid.org/0000-0002-8844-9165> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/information-artifact-ontology/IAO/issues/250> ;
-                                             <http://purl.org/dc/elements/1.1/date> "2022-01-28T07:20:08Z"^^xsd:dateTime ;
-                                             rdfs:label "mentioned by"@en .
-
-
 ###  http://purl.obolibrary.org/obo/IAO_0000219
 <http://purl.obolibrary.org/obo/IAO_0000219> rdf:type owl:ObjectProperty ;
                                              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
@@ -1304,55 +1272,6 @@ every c that is a concretization of g specifically denotes r"""@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000231> <http://purl.obolibrary.org/obo/IAO_0000103> ;
                                              rdfs:label "obsolete_materially denotes" ;
                                              owl:deprecated "true"^^xsd:boolean .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000221
-<http://purl.obolibrary.org/obo/IAO_0000221> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                             owl:inverseOf <http://purl.obolibrary.org/obo/IAO_0000417> ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000109> ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000019> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "is quality measurement of"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "m is a quality measurement of q at t. When q is a quality, there is a measurement process p that has specified output m, a measurement datum, that is about q"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "8/6/2009 Alan Ruttenberg: The strategy is to be rather specific with this relationship. There are other kinds of measurements that are not of qualities, such as those that measure time. We will add these as separate properties for the moment and see about generalizing later"@en ,
-                                                                                          """From the second IAO workshop [Alan Ruttenberg 8/6/2009: not completely current, though bringing in comparison is probably important]
-
-This one is the one we are struggling with at the moment. The issue is what a measurement measures. On the one hand saying that it measures the quality would include it \"measuring\" the bearer = referring to the bearer in the measurement. However this makes comparisons of two different things not possible. On the other hand not having it inhere in the bearer, on the face of it, breaks the audit trail.
-
-Werner suggests a solution based on \"Magnitudes\" a proposal for which we are awaiting details.
---
-From the second IAO workshop, various comments, [commented on by Alan Ruttenberg 8/6/2009]
-
-unit of measure is a quality, e.g. the length of a ruler.
-
-[We decided to hedge on what units of measure are, instead talking about measurement unit labels, which are the information content entities that are about whatever measurement units are. For IAO we need that information entity in any case. See the term measurement unit label]
-
-[Some struggling with the various subflavors of is_about. We subsequently removed the relation represents, and describes until and only when we have a better theory]
-
-a represents b means either a denotes b or a describes
-
-describe:
-a describes b means a is about b and a allows an inference of at least one quality of b
-
-We have had a long discussion about denotes versus describes."""@en ,
-                                                                                          """From the second IAO workshop: An attempt at tieing the quality to the measurement datum more carefully.
-
-a is a magnitude means a is a determinate quality particular inhering in some bearer b existing at a time t that can be represented/denoted by an information content entity e that has parts denoting a unit of measure, a number, and b. The unit of measure is an instance of the determinable quality."""@en ,
-                                                                                          """From the second meeting on IAO:
-
-An attempt at defining assay using Barry's \"reliability\" wording
-
-assay:
-process and has_input some material entity
-and has_output some information content entity 
-and which is such that instances of this process type reliably generate 
-outputs that describes the input."""@en ,
-                                                                                          """This one is the one we are struggling with at the moment. The issue is what a measurement measures. On the one hand saying that it measures the quality would include it \"measuring\" the bearer = referring to the bearer in the measurement. However this makes comparisons of two different things not possible. On the other hand not having it inhere in the bearer, on the face of it, breaks the audit trail.
-
-Werner suggests a solution based on \"Magnitudes\" a proposal for which we are awaiting details."""@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Alan Ruttenberg"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
-                                             rdfs:label "is quality measurement of"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000222
@@ -1390,50 +1309,6 @@ Werner suggests a solution based on \"Magnitudes\" a proposal for which we are a
                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
                                              rdfs:comment "relating a cartesian spatial coordinate datum to a unit label that together with the values represent a point"@en ;
                                              rdfs:label "has coordinate unit label"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000413
-<http://purl.obolibrary.org/obo/IAO_0000413> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000416> ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "is duration of"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "relates a process to a time-measurement-datum that represents the duration of the process"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Person:Alan Ruttenberg"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
-                                             rdfs:label "is duration of"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000417
-<http://purl.obolibrary.org/obo/IAO_0000417> rdf:type owl:ObjectProperty ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "inverse of the relation of is quality measurement of"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "2009/10/19 Alan Ruttenberg. Named 'junk' relation useful in restrictions, but not a real instance relationship"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Person:Alan Ruttenberg"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
-                                             rdfs:label "is quality measured as"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000418
-<http://purl.obolibrary.org/obo/IAO_0000418> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                             owl:inverseOf <http://purl.obolibrary.org/obo/IAO_0000419> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a data item and a quality of a material entity where the material entity is the specified output of a material transformation which achieves an objective specification that indicates the intended value of the specified quality."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Person:Alan Ruttenberg"@en ,
-                                                                                          "Person:Bjoern Peters"@en ;
-                                             rdfs:label "is quality specification of"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000419
-<http://purl.obolibrary.org/obo/IAO_0000419> rdf:type owl:ObjectProperty ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "inverse of the relation of is quality specification of"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "2009/10/19 Alan Ruttenberg. Named 'junk' relation useful in restrictions, but not a real instance relationship"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Person:Alan Ruttenberg"@en ,
-                                                                                          "Person:Bjoern Peters"@en ;
-                                             rdfs:label "quality is specified as"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000581
@@ -1605,20 +1480,6 @@ For instances: e has_quality q at t iff q inheres_in e at t and q instance-of Qu
                                              <http://purl.obolibrary.org/obo/IAO_0000231> <http://purl.obolibrary.org/obo/IAO_0000103> ;
                                              rdfs:label "obsoleted_has_specified_output_information"@en ;
                                              owl:deprecated "true"^^xsd:boolean .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0000304
-<http://purl.obolibrary.org/obo/OBI_0000304> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "is_manufactured_by"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "http://www.affymetrix.com/products/arrays/specific/hgu133.affx is_manufactered_by http://www.affymetrix.com/ (if we decide to use these URIs for the actual entities)"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "c is_manufactured_by o means that there was a process p in which c was built in which a person, or set of people or machines did the work(bore the \"Manufacturer Role\", and those people/and or machines were members or of directed by the organization to do this."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Alan Ruttenberg"@en ,
-                                                                                          "Liju Fan"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000118> "has_make"@en ,
-                                                                                          "has_manufacturer"@en ;
-                                             rdfs:label "is_manufactured_by"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000306
@@ -1813,7 +1674,6 @@ instance level relation [GOC:cjm]"""@en ;
 
 ###  http://purl.obolibrary.org/obo/OBI_0000646
 <http://purl.obolibrary.org/obo/OBI_0000646> rdf:type owl:ObjectProperty ;
-                                             owl:inverseOf <http://purl.obolibrary.org/obo/OBI_0000647> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "provisions" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an organisation or person and a material entity, where the organization or person provides or supplies the material entity for others to use"@en ;
@@ -1821,45 +1681,6 @@ instance level relation [GOC:cjm]"""@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "GROUP: Relations branch" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000118> "supplies" ;
                                              rdfs:label "provisions" .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0000647
-<http://purl.obolibrary.org/obo/OBI_0000647> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                             rdfs:range [ rdf:type owl:Class ;
-                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/NCBITaxon_9606>
-                                                                        <http://purl.obolibrary.org/obo/OBI_0000245>
-                                                                      )
-                                                        ] ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "has_supplier" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity and an organisation or person who owned or has license to the material entity and there was a legal transfer of ownership or licensing of the material entity to the current owner."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Alan Rutternberg" ,
-                                                                                          "PERSON: Cristian Cocos" ,
-                                                                                          "PERSON: Frank Gibson" ,
-                                                                                          "PERSON: Melanie Courtot" ;
-                                             rdfs:label "has_supplier" .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0000846
-<http://purl.obolibrary.org/obo/OBI_0000846> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain [ rdf:type owl:Class ;
-                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/NCBITaxon_9606>
-                                                                         <http://purl.obolibrary.org/obo/OBI_0000245>
-                                                                       )
-                                                         ] ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/OBI_0000245> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "is member of organization" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "Relating a legal person or organization to an organization in the case where the legal person or organization has a role as member of the organization."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "2009/10/01 Alan Ruttenberg. Barry prefers generic is-member-of. Question of what the range should be. For now organization. Is organization a population? Would the same relation be used to record members of a population" ,
-                                                                                          "JZ: Discussed on May 7, 2012 OBI dev call. Bjoern points out that we need to allow for organizations to be members of organizations. And agreed by the other OBI developers. So, human and organization were specified in 'Domains'. The textual definition was updated based on it." ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Person:Alan Ruttenberg" ,
-                                                                                          "Person:Helen Parkinson" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "Person:Alan Ruttenberg" ,
-                                                                                          "Person:Helen Parkinson" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000232> "2009/09/28 Alan Ruttenberg. Fucoidan-use-case" ;
-                                             rdfs:label "is member of organization" .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000999
@@ -1922,18 +1743,6 @@ instance level relation [GOC:cjm]"""@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "OBI" ;
                                              rdfs:comment "The 'has performer' relation covers the need to report on who performed a planned processed. It has to cover processes done by People or Devices (such as a robot controlled by software  WF management system)." ;
                                              rdfs:label "has performer"@en .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0003385
-<http://purl.obolibrary.org/obo/OBI_0003385> rdf:type owl:ObjectProperty ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "has assay target context" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between  the target entity of an assay and a material entity, where the material entity is the environment in which the target entity of an assay is measured, such as a live mouse, cell culture, test tube, etc."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Hector Guzman-Orozco" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "OBI" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/obi-ontology/obi/issues/1516" ;
-                                             rdfs:label "has assay target context" .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_1110112
@@ -2134,32 +1943,6 @@ instance level relation [GOC:cjm]"""@en ;
                                             rdfs:label "disposition of"@en .
 
 
-###  http://purl.obolibrary.org/obo/RO_0001000
-<http://purl.obolibrary.org/obo/RO_0001000> rdf:type owl:ObjectProperty ;
-                                            rdfs:subPropertyOf owl:topObjectProperty ;
-                                            owl:inverseOf <http://purl.obolibrary.org/obo/RO_0001001> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000111> "derives from" ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000112> "this cell derives from this parent cell (cell division)"@en ,
-                                                                                         "this nucleus derives from this parent nucleus (nuclear division)"@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "a relation between two distinct material entities, the new entity and the old entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity"@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000116> "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops from'."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000118> "derives_from"@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/ro.owl> ;
-                                            rdfs:label "derives from"@en .
-
-
-###  http://purl.obolibrary.org/obo/RO_0001001
-<http://purl.obolibrary.org/obo/RO_0001001> rdf:type owl:ObjectProperty ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000112> "this parent cell derives into this cell (cell division)"@en ,
-                                                                                         "this parent nucleus derives into this nucleus (nuclear division)"@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "a relation between two distinct material entities, the old entity and the new entity, in which the new entity begins to exist when the old entity ceases to exist, and the new entity inherits the significant portion of the matter of the old entity"@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000116> "This is a very general relation. More specific relations are preferred when applicable, such as 'directly develops into'. To avoid making statements about a future that may not come to pass, it is often better to use the backward-looking 'derives from' rather than the forward-looking 'derives into'."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000118> "derives_into"@en ;
-                                            rdfs:label "derives into"@en .
-
-
 ###  http://purl.obolibrary.org/obo/RO_0001015
 <http://purl.obolibrary.org/obo/RO_0001015> rdf:type owl:ObjectProperty ;
                                             owl:inverseOf <http://purl.obolibrary.org/obo/RO_0001025> ;
@@ -2218,35 +2001,6 @@ instance level relation [GOC:cjm]"""@en ;
    owl:annotatedTarget <http://purl.obolibrary.org/obo/BFO_0000004> ;
    <http://purl.obolibrary.org/obo/IAO_0000116> "This is redundant with the more specific 'independent and not spatial region' constraint. We leave in the redundant axiom for use with reasoners that do not use negation."
  ] .
-
-
-###  http://purl.obolibrary.org/obo/RO_0002000
-<http://purl.obolibrary.org/obo/RO_0002000> rdf:type owl:ObjectProperty ;
-                                            owl:inverseOf <http://purl.obolibrary.org/obo/RO_0002002> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000112> "the surface of my skin is a 2D boundary of my body"@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "a relation between a 2D immaterial entity (the boundary) and a material entity, in which the boundary delimits the material entity"@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000116> "A 2D boundary may have holes and gaps, but it must be a single connected entity, not an aggregate of several disconnected parts."@en ,
-                                                                                         "Although the boundary is two-dimensional, it exists in three-dimensional space and thus has a 3D shape."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000118> "2D_boundary_of"@en ,
-                                                                                         "boundary of"@en ,
-                                                                                         "is 2D boundary of"@en ,
-                                                                                         "is boundary of"@en ;
-                                            <http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obolibrary.org/obo/RO_0001901> ;
-                                            rdfs:label "2D boundary of"@en .
-
-
-###  http://purl.obolibrary.org/obo/RO_0002002
-<http://purl.obolibrary.org/obo/RO_0002002> rdf:type owl:ObjectProperty ;
-                                            rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                            rdfs:range <http://purl.obolibrary.org/obo/BFO_0000141> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000112> "my body has 2D boundary the surface of my skin"@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "a relation between a material entity and a 2D immaterial entity (the boundary), in which the boundary delimits the material entity"@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000116> "A 2D boundary may have holes and gaps, but it must be a single connected entity, not an aggregate of several disconnected parts."@en ,
-                                                                                         "Although the boundary is two-dimensional, it exists in three-dimensional space and thus has a 3D shape."@en ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000118> "has boundary"@en ,
-                                                                                         "has_2D_boundary"@en ;
-                                            <http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obolibrary.org/obo/RO_0001901> ;
-                                            rdfs:label "has 2D boundary"@en .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002090
@@ -2332,26 +2086,6 @@ instance level relation [GOC:cjm]"""@en ;
                                             owl:deprecated "true"^^xsd:boolean .
 
 
-###  https://w3id.org/cdio/attached_to
-<https://w3id.org/cdio/attached_to> rdf:type owl:ObjectProperty ;
-                                    rdfs:subPropertyOf <https://w3id.org/cdio/connected_to> ;
-                                    <http://purl.obolibrary.org/obo/IAO_0000115> "a is attached to b if and only if a and b are discrete objects or object parts, and there are physical connections between a and b such that a force pulling a will move b, or a force pulling b will move a"@en ;
-                                    <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/RO_0002371> ;
-                                    rdfs:label "attached to"@en .
-
-
-###  https://w3id.org/cdio/connected_to
-<https://w3id.org/cdio/connected_to> rdf:type owl:ObjectProperty ;
-                                     <http://purl.obolibrary.org/obo/IAO_0000115> "a is connected to b if and only if a and b are discrete structure, and there exists some connecting structure c, such that c connects a and b"@en ;
-                                     <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/RO_0002170> ;
-                                     rdfs:label "connected to"@en .
-
-
-###  https://w3id.org/cdio/detected_by
-<https://w3id.org/cdio/detected_by> rdf:type owl:ObjectProperty ;
-                                    rdfs:label "detected by"@en .
-
-
 ###  https://w3id.org/cdio/exists_at
 <https://w3id.org/cdio/exists_at> rdf:type owl:ObjectProperty ;
                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000001> ;
@@ -2360,14 +2094,6 @@ instance level relation [GOC:cjm]"""@en ;
                                   <http://purl.obolibrary.org/obo/IAO_0000115> "(Elucidation) exists at is a relation between a particular and some temporal region at which the particular exists"@en ;
                                   <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/bfo.owl> ;
                                   rdfs:label "exists at"@en .
-
-
-###  https://w3id.org/cdio/first_instant_of
-<https://w3id.org/cdio/first_instant_of> rdf:type owl:ObjectProperty ;
-                                         rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
-                                         <http://purl.obolibrary.org/obo/IAO_0000115> "t first instant of t' =Def t is a temporal instant & t' is a temporal region t' & t precedes all temporal parts of t' other than t"@en ;
-                                         <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/bfo.owl> ;
-                                         rdfs:label "first instant of"@en .
 
 
 ###  https://w3id.org/cdio/has_boundary
@@ -2388,30 +2114,10 @@ instance level relation [GOC:cjm]"""@en ;
                                      rdfs:label "has end date"@en .
 
 
-###  https://w3id.org/cdio/has_first_instant
-<https://w3id.org/cdio/has_first_instant> rdf:type owl:ObjectProperty ;
-                                          <http://purl.obolibrary.org/obo/IAO_0000115> "t has first instant t' =Def t' first instant of t"@en ;
-                                          <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/bfo.owl> ;
-                                          rdfs:label "has first instant"@en .
-
-
-###  https://w3id.org/cdio/has_frequency_distribution
-<https://w3id.org/cdio/has_frequency_distribution> rdf:type owl:ObjectProperty ;
-                                                   rdfs:label "has frequency distribution"@en .
-
-
 ###  https://w3id.org/cdio/has_identifier
 <https://w3id.org/cdio/has_identifier> rdf:type owl:ObjectProperty ;
                                        rdfs:subPropertyOf owl:topObjectProperty ;
-                                       owl:inverseOf <https://w3id.org/cdio/identifies> ;
                                        rdfs:label "has identifier"@en .
-
-
-###  https://w3id.org/cdio/has_last_instant
-<https://w3id.org/cdio/has_last_instant> rdf:type owl:ObjectProperty ;
-                                         <http://purl.obolibrary.org/obo/IAO_0000115> "t last instant of t' =Def t is a temporal instant & t' is a temporal region & all temporal parts of t' other than t precede t"@en ;
-                                         <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/bfo.owl> ;
-                                         rdfs:label "has last instant"@en .
 
 
 ###  https://w3id.org/cdio/has_na_value_specification
@@ -2430,38 +2136,6 @@ instance level relation [GOC:cjm]"""@en ;
 <https://w3id.org/cdio/has_time_boundary> rdf:type owl:ObjectProperty ;
                                           rdfs:subPropertyOf <https://w3id.org/cdio/has_boundary> ;
                                           rdfs:label "has time boundary"@en .
-
-
-###  https://w3id.org/cdio/identifies
-<https://w3id.org/cdio/identifies> rdf:type owl:ObjectProperty ;
-                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000219> ;
-                                   <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.allotrope.org/ontologies/property#AFX_0002716> ;
-                                   rdfs:label "identifies"@en .
-
-
-###  https://w3id.org/cdio/is_count_of
-<https://w3id.org/cdio/is_count_of> rdf:type owl:ObjectProperty ;
-                                    rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                    rdfs:label "is count of"@en .
-
-
-###  https://w3id.org/cdio/is_count_of_most_frequency_category
-<https://w3id.org/cdio/is_count_of_most_frequency_category> rdf:type owl:ObjectProperty ;
-                                                            rdfs:subPropertyOf <https://w3id.org/cdio/is_count_of> ;
-                                                            rdfs:domain <https://w3id.org/cdio/number_of_unique_value> ;
-                                                            rdfs:label "is count of most frequency category"@en .
-
-
-###  https://w3id.org/cdio/last_instant_of
-<https://w3id.org/cdio/last_instant_of> rdf:type owl:ObjectProperty ;
-                                        <http://purl.obolibrary.org/obo/IAO_0000115> "t has last instant t' =Def t' last instant of t"@en ;
-                                        <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/bfo.owl> ;
-                                        rdfs:label "last instant of"@en .
-
-
-###  https://w3id.org/cdio/measured_data_element
-<https://w3id.org/cdio/measured_data_element> rdf:type owl:ObjectProperty ;
-                                              rdfs:label "measured in"@en .
 
 
 #################################################################
@@ -3800,11 +3474,7 @@ This is better done by Schemablocks and constraining the pattern of usage of DUO
 
 ###  http://purl.obolibrary.org/obo/DUO_0000007
 <http://purl.obolibrary.org/obo/DUO_0000007> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000006> ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://purl.obolibrary.org/obo/DUO_0000010> ;
-                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/MONDO_0000001>
-                                                             ] ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000006> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "This data use permission indicates that use is allowed provided it is related to the specified disease."@en ;
                                              <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000007" ;
                                              rdfs:comment """This term should be coupled with a term describing a disease from an ontology to specify the disease the restriction applies to. 
@@ -3826,11 +3496,7 @@ Other resources, such as the Disease Ontology, HPO, SNOMED-CT or others, can als
 
 ###  http://purl.obolibrary.org/obo/DUO_0000012
 <http://purl.obolibrary.org/obo/DUO_0000012> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000017> ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://purl.obolibrary.org/obo/DUO_0000010> ;
-                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/topic_0003>
-                                                             ] ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000017> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "This data use modifier indicates that use is limited to studies of a certain research type."@en ;
                                              <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000012" ;
                                              rdfs:label "research specific restrictions"@en .
@@ -3895,11 +3561,7 @@ Other resources, such as the Disease Ontology, HPO, SNOMED-CT or others, can als
 
 ###  http://purl.obolibrary.org/obo/DUO_0000022
 <http://purl.obolibrary.org/obo/DUO_0000022> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000017> ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://purl.obolibrary.org/obo/DUO_0000010> ;
-                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/GAZ_00000448>
-                                                             ] ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000017> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "This data use modifier indicates that use is limited to within a specific geographic region."@en ;
                                              <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000022" ;
                                              rdfs:comment "This should be coupled with an ontology term describing the geographical location the restriction applies to."@en ;
@@ -5207,11 +4869,7 @@ GO   gene ontology"""@en ;
 
 ###  http://purl.obolibrary.org/obo/IAO_0000408
 <http://purl.obolibrary.org/obo/IAO_0000408> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000221> ;
-                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/PATO_0000122>
-                                                             ] ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A scalar measurement datum that is the result of measurement of length quality"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Alan Ruttenberg"@en ;
@@ -9618,11 +9276,7 @@ owl:Thing rdf:type owl:Class .
 
 ###  https://w3id.org/cdio/end_time
 <https://w3id.org/cdio/end_time> rdf:type owl:Class ;
-                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000413> ;
-                                                   owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
-                                                 ] ;
+                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
                                  <http://purl.obolibrary.org/obo/IAO_0000115> "An end time is a time instant pertaining to the time at which a process ends."@en ;
                                  <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000670> ;
                                  rdfs:label "end time"@en .
@@ -10221,11 +9875,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
 ###  https://w3id.org/cdio/start_time
 <https://w3id.org/cdio/start_time> rdf:type owl:Class ;
-                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ,
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000413> ;
-                                                     owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
-                                                   ] ;
+                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
                                    <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000669> ;
                                    rdfs:isDefinedBy <https://w3id.org/cdio/> ;
                                    rdfs:label "start time"@en .
