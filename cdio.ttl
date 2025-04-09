@@ -6495,7 +6495,7 @@ No imports"""@en ;
 
 ###  http://purl.obolibrary.org/obo/OBCS_0000106
 <http://purl.obolibrary.org/obo/OBCS_0000106> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500000> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0300311> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A study design that starts with an exposure and moves forward to the outcome of interest, even if the data are collected retrospectively. As an example, a group of patients who have variable exposure to a risk factor of interest can be followed over time for an outcome." ;
                                               <http://purl.obolibrary.org/obo/IAO_0000117> "Yongqun He" ;
                                               <http://purl.obolibrary.org/obo/IAO_0000119> "WEB: http://www.uptodate.com/contents/glossary-of-common-biostatistical-and-epidemiological-terms" ;
@@ -8615,7 +8615,7 @@ information_encoding
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Philippe Rocca-Serra" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "OBI branch derived" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/obi.owl> ;
-                                             rdfs:label "observation design" .
+                                             rdfs:label "observational design"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0302867
@@ -9504,16 +9504,6 @@ owl:Thing rdf:type owl:Class .
                                                 rdfs:label "consumption measurement"@en .
 
 
-###  https://w3id.org/cdio/contextual_factor
-<https://w3id.org/cdio/contextual_factor> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
-                                          <http://purl.obolibrary.org/obo/IAO_0000112> "Blood Pressure Measurement in [Recumbent Position] at Baseline where body position is contextual factor"@en ;
-                                          <http://purl.obolibrary.org/obo/IAO_0000115> "A contextual factor is an information entity that modifies or provides additional meaning to an entity by describing how, when, or under what conditions a measurement, observation, or recorded value was obtained."@en ;
-                                          rdfs:comment "Contextual Factors are essential for ensuring semantic precision in data harmonization. They allow for the differentiation of otherwise identical data elements by specifying the conditions under which the data was recorded. This is particularly important in clinical research, where factors such as body position, fasting state, timing, and measurement technique can significantly impact the interpretation of a variable"@en ;
-                                          rdfs:isDefinedBy <https://w3id.org/cdio/> ;
-                                          rdfs:label "contextual factor"@en .
-
-
 ###  https://w3id.org/cdio/count
 <https://w3id.org/cdio/count> rdf:type owl:Class ;
                               rdfs:subClassOf <https://w3id.org/cdio/statistic> ;
@@ -10327,7 +10317,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
 ###  https://w3id.org/cdio/temporal_reference
 <https://w3id.org/cdio/temporal_reference> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
                                            <http://purl.obolibrary.org/obo/IAO_0000112> "measurement at \"follow-up 6 month\""@en ;
                                            <http://purl.obolibrary.org/obo/IAO_0000115> "An Information Content Entity (ICE) that denotes or specifies a particular point in time, interval of time, or temporal context during which data collection, measurement, or observation occurs, or to which it applies."@en ;
                                            rdfs:isDefinedBy <https://w3id.org/cdio/> ;
