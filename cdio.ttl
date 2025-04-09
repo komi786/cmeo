@@ -1300,17 +1300,6 @@ every c that is a concretization of g specifically denotes r"""@en ;
                                              rdfs:label "denoted by"@en .
 
 
-###  http://purl.obolibrary.org/obo/IAO_0000407
-<http://purl.obolibrary.org/obo/IAO_0000407> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                             rdf:type owl:FunctionalProperty ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000400> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "has coordinate unit label"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
-                                             rdfs:comment "relating a cartesian spatial coordinate datum to a unit label that together with the values represent a point"@en ;
-                                             rdfs:label "has coordinate unit label"@en .
-
-
 ###  http://purl.obolibrary.org/obo/IAO_0000581
 <http://purl.obolibrary.org/obo/IAO_0000581> rdf:type owl:ObjectProperty ;
                                              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
@@ -1322,34 +1311,6 @@ every c that is a concretization of g specifically denotes r"""@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Alan Ruttenberg"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
                                              rdfs:label "has time stamp"@en .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000583
-<http://purl.obolibrary.org/obo/IAO_0000583> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000582> ;
-                                             rdfs:range [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000109>
-                                                                               [ rdf:type owl:Class ;
-                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/IAO_0000416>
-                                                                               ]
-                                                                             ) ;
-                                                          rdf:type owl:Class
-                                                        ] ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "relates a time stamped measurement datum to the measurement datum that was measured"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Alan Ruttenberg"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
-                                             rdfs:label "has measurement datum"@en .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0000107
-<http://purl.obolibrary.org/obo/OBI_0000107> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "provides_service_consumer_with" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "The provides_service_consumer_with relation links the service to its primary process it provides for the consumer (as opposed to secondary processual parts of a service process such as payment or documentation).  For example, a 'DNA sequencing service' provides_service_consumer_with 'DNA sequencing' as the essential process performed by the provider for the client." ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a service and the primary processual part of the service that is performed by the provider for the consumer."@en ;
-                                             rdfs:label "provides_service_consumer_with" .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000293
@@ -1683,31 +1644,6 @@ instance level relation [GOC:cjm]"""@en ;
                                              rdfs:label "provisions" .
 
 
-###  http://purl.obolibrary.org/obo/OBI_0000999
-<http://purl.obolibrary.org/obo/OBI_0000999> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/OBI_0000938> ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/OBI_0000963> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "has category label" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a categorical measurement data item and the categorical label that indicates the value of that data item on the categorical scale."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/obi.owl> ;
-                                             rdfs:label "has category label" .
-
-
-###  http://purl.obolibrary.org/obo/OBI_0001637
-<http://purl.obolibrary.org/obo/OBI_0001637> rdf:type owl:ObjectProperty ,
-                                                      owl:SymmetricProperty ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "has disposition to bind" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relationship between two material entitites that each have disposition to form a complex with the other."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "This is a shortcut relation, and should expand to say that the two material entities have dispositions, point to the process in which they from a complex that realizes those dispositions, and points to the complex in which the two entities are 'bound to' each other" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "IEDB" ;
-                                             rdfs:label "has disposition to bind" .
-
-
 ###  http://purl.obolibrary.org/obo/OBI_0001927
 <http://purl.obolibrary.org/obo/OBI_0001927> rdf:type owl:ObjectProperty ;
                                              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
@@ -1732,19 +1668,6 @@ instance level relation [GOC:cjm]"""@en ;
                                              rdfs:label "has value specification" .
 
 
-###  http://purl.obolibrary.org/obo/OBI_0001950
-<http://purl.obolibrary.org/obo/OBI_0001950> rdf:type owl:ObjectProperty ;
-                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000057> ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/OBI_0000011> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "has performer"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000428> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a planned process and a continuant where the continuant can be a person, organization or device (such as a robot controlled by software workflow management system) that performs the planned process."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "OBI"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "OBI" ;
-                                             rdfs:comment "The 'has performer' relation covers the need to report on who performed a planned processed. It has to cover processes done by People or Devices (such as a robot controlled by software  WF management system)." ;
-                                             rdfs:label "has performer"@en .
-
-
 ###  http://purl.obolibrary.org/obo/OBI_1110112
 <http://purl.obolibrary.org/obo/OBI_1110112> rdf:type owl:ObjectProperty ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "is_described_by" ;
@@ -1752,17 +1675,6 @@ instance level relation [GOC:cjm]"""@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000231> <http://purl.obolibrary.org/obo/IAO_0000103> ;
                                              rdfs:label "obsolete_is_described_by" ;
                                              owl:deprecated "true"^^xsd:boolean .
-
-
-###  http://purl.obolibrary.org/obo/OBI_1110119
-<http://purl.obolibrary.org/obo/OBI_1110119> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "bound_to" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relationship between two material entities that form a complex based on a selective, non-covalent interaction."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "The definition of this term is modeled after the Chebi:50967 and GO:0005488 terms. Further alignment of the logical definitions with those ontologies will require agreement on the placement of GO:molecular function in BFO among other things. OBI will retire this term once such an alignment is achieved as 'bound to' is not in the primary OBI scope." ;
-                                             rdfs:label "bound_to" .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000052
@@ -2013,18 +1925,6 @@ instance level relation [GOC:cjm]"""@en ;
                                             rdfs:label "immediately precedes"@en .
 
 
-###  http://purl.obolibrary.org/obo/RO_0002180
-<http://purl.obolibrary.org/obo/RO_0002180> rdf:type owl:ObjectProperty ;
-                                            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "w 'has component' p if w 'has part' p and w is such that it can be directly disassembled into into n parts p, p2, p3, ..., pn, where these parts are of similar type." ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000116> "The definition of 'has component' is still under discussion. The challenge is in providing a definition that does not imply transitivity." ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000232> "For use in recording has_part with a cardinality constraint, because OWL does not permit cardinality constraints to be used in combination with transitive object properties. In situations where you would want to say something like 'has part exactly 5 digit, you would instead use has_component exactly 5 digit."@en ;
-                                            <http://purl.obolibrary.org/obo/RO_0001900> <http://purl.obolibrary.org/obo/RO_0001901> ;
-                                            rdfs:label "has component"@en ;
-                                            rdfs:seeAlso <http://ontologydesignpatterns.org/wiki/Submissions:Componency> .
-
-
 ###  http://purl.obolibrary.org/obo/RO_0002215
 <http://purl.obolibrary.org/obo/RO_0002215> rdf:type owl:ObjectProperty ;
                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000004> ;
@@ -2032,20 +1932,6 @@ instance level relation [GOC:cjm]"""@en ;
                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity (such as a cell) and a process, in which the material entity has the ability to carry out the process." ;
                                             <http://purl.obolibrary.org/obo/IAO_0000118> "has function realized in" ;
                                             rdfs:label "capable of" .
-
-
-###  http://purl.obolibrary.org/obo/RO_0002219
-<http://purl.obolibrary.org/obo/RO_0002219> rdf:type owl:ObjectProperty ;
-                                            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002220> ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000111> "surrounded by" ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000115> "x surrounded_by y if and only if x is adjacent to y and for every region r that is adjacent to x, r overlaps y" ;
-                                            <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/ro.owl> ;
-                                            rdfs:label "surrounded by"@en .
-
-
-###  http://purl.obolibrary.org/obo/RO_0002220
-<http://purl.obolibrary.org/obo/RO_0002220> rdf:type owl:ObjectProperty ;
-                                            rdfs:label "adjacent to" .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0002350
@@ -2096,46 +1982,10 @@ instance level relation [GOC:cjm]"""@en ;
                                   rdfs:label "exists at"@en .
 
 
-###  https://w3id.org/cdio/has_boundary
-<https://w3id.org/cdio/has_boundary> rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                     rdfs:label "has boundary"@en .
-
-
 ###  https://w3id.org/cdio/has_direct_part
 <https://w3id.org/cdio/has_direct_part> rdf:type owl:ObjectProperty ;
                                         rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000051> ;
                                         rdfs:label "has direct part"@en .
-
-
-###  https://w3id.org/cdio/has_end_date
-<https://w3id.org/cdio/has_end_date> rdf:type owl:ObjectProperty ;
-                                     rdfs:subPropertyOf <https://w3id.org/cdio/has_time_boundary> ;
-                                     rdfs:label "has end date"@en .
-
-
-###  https://w3id.org/cdio/has_identifier
-<https://w3id.org/cdio/has_identifier> rdf:type owl:ObjectProperty ;
-                                       rdfs:subPropertyOf owl:topObjectProperty ;
-                                       rdfs:label "has identifier"@en .
-
-
-###  https://w3id.org/cdio/has_na_value_specification
-<https://w3id.org/cdio/has_na_value_specification> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/OBI_0001938> ;
-                                                   rdfs:label "has na value specification"@en .
-
-
-###  https://w3id.org/cdio/has_start_time
-<https://w3id.org/cdio/has_start_time> rdf:type owl:ObjectProperty ;
-                                       rdfs:subPropertyOf <https://w3id.org/cdio/has_time_boundary> ;
-                                       rdfs:label "has start date"@en .
-
-
-###  https://w3id.org/cdio/has_time_boundary
-<https://w3id.org/cdio/has_time_boundary> rdf:type owl:ObjectProperty ;
-                                          rdfs:subPropertyOf <https://w3id.org/cdio/has_boundary> ;
-                                          rdfs:label "has time boundary"@en .
 
 
 #################################################################
@@ -2978,6 +2828,13 @@ instance level relation [GOC:cjm]"""@en ;
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/BFO_0000027> ;
+   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000602> ;
+   owl:annotatedTarget "(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] " ;
+   <http://purl.obolibrary.org/obo/IAO_0010000> <http://purl.obolibrary.org/obo/bfo/axiom/025-004>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/BFO_0000027> ;
    owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000116> ;
    owl:annotatedTarget "An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects " ;
    <http://purl.obolibrary.org/obo/IAO_0010000> <http://purl.obolibrary.org/obo/bfo/axiom/0000011>
@@ -2995,13 +2852,6 @@ instance level relation [GOC:cjm]"""@en ;
    owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000119> ;
    owl:annotatedTarget "ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, 'A Theory of Granular Partitions', in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158." ;
    <http://purl.obolibrary.org/obo/IAO_0010000> <http://purl.obolibrary.org/obo/bfo/axiom/0000300>
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.obolibrary.org/obo/BFO_0000027> ;
-   owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000602> ;
-   owl:annotatedTarget "(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] " ;
-   <http://purl.obolibrary.org/obo/IAO_0010000> <http://purl.obolibrary.org/obo/bfo/axiom/025-004>
  ] .
 
 
@@ -4793,10 +4643,6 @@ GO   gene ontology"""@en ;
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000219> ;
                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000018>
-                                                             ] ,
-                                                             [ rdf:type owl:Restriction ;
-                                                               owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000407> ;
-                                                               owl:cardinality "1"^^xsd:nonNegativeInteger
                                                              ] ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A cartesian spatial coordinate datum is a representation of a point in a spatial region, in which equal changes in the magnitude of a coordinate value denote length qualities with the same magnitude"@en ;
@@ -5050,18 +4896,7 @@ points together with a line."""@en ;
 
 ###  http://purl.obolibrary.org/obo/IAO_0000582
 <http://purl.obolibrary.org/obo/IAO_0000582> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ,
-                                                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000581> ;
-                                                                                      owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000416>
-                                                                                    ]
-                                                                                    [ rdf:type owl:Restriction ;
-                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000583> ;
-                                                                                      owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000109>
-                                                                                    ]
-                                                                                  ) ;
-                                                               rdf:type owl:Class
-                                                             ] ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> ;
                                              rdfs:label "time stamped measurement datum"@en .
 
