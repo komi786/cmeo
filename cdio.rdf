@@ -86,8 +86,8 @@
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111">
         <obo:IAO_0000111 xml:lang="en">editor preferred label</obo:IAO_0000111>
-        <obo:IAO_0000111 xml:lang="en">editor preferred term</obo:IAO_0000111>
         <obo:IAO_0000111>editor preferred term</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">editor preferred term</obo:IAO_0000111>
         <obo:IAO_0000111>editor preferred term~editor preferred label</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">The concise, meaningful, and human-friendly name for a class or property preferred by the ontology developers. (US-English)</obo:IAO_0000115>
@@ -226,8 +226,8 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000111 xml:lang="en">alternative label</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">A label for a class or property that can be used to refer to the class or property instead of the preferred rdfs:label. Alternative labels should be used to indicate community- or context-specific labels, abbreviations, shorthand forms and the like.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
         <obo:IAO_0000117>OBO Operations committee</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Daniel Schober</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
         <rdfs:comment>Consider re-defing to: An alternative name for a class or property which can mean the same thing as the preferred name (semantically equivalent, narrow, broad or related).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
@@ -631,8 +631,8 @@ https://sourceforge.net/tracker/?func=detail&amp;aid=3603413&amp;group_id=177891
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OBI_9991118">
         <obo:IAO_0000111>IEDB alternative term</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">An alternative term used by the IEDB.</obo:IAO_0000115>
         <obo:IAO_0000115>An alternative term used by the IEDB.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An alternative term used by the IEDB.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Randi Vita, Jason Greenbaum, Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000119>IEDB</obo:IAO_0000119>
         <rdfs:label>IEDB alternative term</rdfs:label>
@@ -902,8 +902,8 @@ WHERE {
          sets of coordinates or date ranges.</dc:description>
         <rdfs:comment xml:lang="en-us">The extent or scope of the content of the resource.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
-        <rdfs:label xml:lang="en-us">Coverage</rdfs:label>
         <rdfs:label>Coverage</rdfs:label>
+        <rdfs:label xml:lang="en-us">Coverage</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -1706,8 +1706,8 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000295"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <obo:IAO_0000111 xml:lang="en">has_input</obo:IAO_0000111>
         <obo:IAO_0000111>has specified input</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">has_input</obo:IAO_0000111>
         <obo:IAO_0000111>has_specified_input</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">see is_input_of example_of_usage</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
@@ -1806,8 +1806,8 @@ For instances: e has_quality q at t iff q inheres_in e at t and q instance-of Qu
         <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000111 xml:lang="en">has input</obo:IAO_0000111>
-        <obo:IAO_0000111 xml:lang="en">has_specified_output</obo:IAO_0000111>
         <obo:IAO_0000111>has_specified_output</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">has_specified_output</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">The inverse property of is_specified_output_of</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Komal Gilani</obo:IAO_0000117>
@@ -1952,8 +1952,8 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000111 xml:lang="en">is output of</obo:IAO_0000111>
-        <obo:IAO_0000111 xml:lang="en">is_specified_output_of</obo:IAO_0000111>
         <obo:IAO_0000111>is_specified_output_of</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">is_specified_output_of</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
@@ -1986,8 +1986,8 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
         <obo:IAO_0000111>has specified input information</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A relation between a process and a participant in that process, that consumes a data set . The process is the realization of a concretization of a directive information entity (objective specification or plan specification). In general, not all data present at the beginning of the process are specified_data.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Frank Gibson</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">PERSON:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000118>consumes data</obo:IAO_0000118>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <rdfs:label xml:lang="en">obsoleted_has_specified_input_information</rdfs:label>
@@ -2511,6 +2511,17 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
     
 
 
+    <!-- http://www.w3id.org/cdio/restricted_to -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3id.org/cdio/restricted_to">
+        <obo:IAO_0000115 xml:lang="en">A is restricted to B iff A is a consent code and B is an investigation and A may only participate in instances of a class C, of which B is an instance.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">is restricted to</obo:IAO_0000118>
+        <obo:IAO_0000412 xml:lang="en">http://purl.obolibrary.org/obo/DUO_0000010</obo:IAO_0000412>
+        <rdfs:label xml:lang="en">is restricted to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/cdio/exists_at -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/cdio/exists_at">
@@ -2567,28 +2578,6 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000522">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000096"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000096"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000111 xml:lang="en">software source code version control repository</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A document that comprises at least one source code module and provenance data about who contributed the set of files making up the module(s), and optionally comprises also multiple versions of files with detailed change history about who committed files and when, a license for the software, readme files, documentation, executables, etc.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
@@ -3399,19 +3388,13 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
         <obo:IAO_0000112 xml:lang="en">the nitrogen atoms in the atmosphere</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">the restaurants in Palo Alto</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">your collection of Meissen ceramic plates.</obo:IAO_0000112>
-        <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: object aggregates may gain and lose parts while remaining numerically identical (one and the same individual) over time. This holds both for aggregates whose membership is determined naturally (the aggregate of cells in your body) and aggregates determined by fiat (a baseball team, a congressional committee).</obo:IAO_0000116>
         <obo:IAO_0000116>An entity a is an object aggregate if and only if there is a mutually exhaustive and pairwise disjoint partition of a into objects </obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">BFO 2 Reference: object aggregates may gain and lose parts while remaining numerically identical (one and the same individual) over time. This holds both for aggregates whose membership is determined naturally (the aggregate of cells in your body) and aggregates determined by fiat (a baseball team, a congressional committee).</obo:IAO_0000116>
         <obo:IAO_0000119>ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, &apos;A Theory of Granular Partitions&apos;, in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158.</obo:IAO_0000119>
         <obo:IAO_0000602>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </obo:IAO_0000602>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
         <rdfs:label xml:lang="en">object aggregate</rdfs:label>
     </owl:Class>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
-        <owl:annotatedTarget>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </owl:annotatedTarget>
-        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/025-004"/>
-    </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000116"/>
@@ -3429,6 +3412,12 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000119"/>
         <owl:annotatedTarget>ISBN:978-3-938793-98-5pp124-158#Thomas Bittner and Barry Smith, &apos;A Theory of Granular Partitions&apos;, in K. Munn and B. Smith (eds.), Applied Ontology: An Introduction, Frankfurt/Lancaster: ontos, 2008, 125-158.</owl:annotatedTarget>
         <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/0000300"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000602"/>
+        <owl:annotatedTarget>(forall (x) (if (ObjectAggregate x) (and (MaterialEntity x) (forall (t) (if (existsAt x t) (exists (y z) (and (Object y) (Object z) (memberPartOfAt y x t) (memberPartOfAt z x t) (not (= y z)))))) (not (exists (w t_1) (and (memberPartOfAt w x t_1) (not (Object w)))))))) // axiom label in BFO2 CLIF: [025-004] </owl:annotatedTarget>
+        <obo:IAO_0010000 rdf:resource="http://purl.obolibrary.org/obo/bfo/axiom/025-004"/>
     </owl:Axiom>
     
 
@@ -4389,21 +4378,6 @@ of this, different, term.</obo:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000007 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-        <obo:IAO_0000112 xml:lang="en">Pour the contents of flask 1 into flask 2</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A directive information entity that describes an action the bearer will take.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">OBI Plan and Planned Process branch</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
-        <rdfs:label xml:lang="en">action specification</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000009 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000009">
@@ -4449,8 +4423,8 @@ interpreted by or directly executed by a processing unit.</obo:IAO_0000115>
 
 Superclass was &apos;digitial quality&apos;</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
         <obo:IAO_0000119>OBI_0000261</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <rdfs:label xml:lang="en">obsolete2_digital entity</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -4538,8 +4512,8 @@ Superclass was &apos;digitial quality&apos;</obo:IAO_0000116>
 Superclass was &apos;digital entity&apos;</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">digital_entity</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
         <obo:IAO_0000119>OBI_0000244</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <rdfs:label xml:lang="en">obsolete2_binary digital entity</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -4575,6 +4549,7 @@ Superclass was &apos;digital entity&apos;</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym.</obo:IAO_0000116>
+        <obo:IAO_0000116>2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">JAR: datum     -- well, this will be very tricky to define, but maybe some 
 information-like stuff that might be put into a computer and that is 
 meant, by someone, to denote and/or to be interpreted by some 
@@ -4582,7 +4557,6 @@ process... I would include lists, tables, sentences... I think I might
 defer to Barry, or to Brian Cantwell Smith
 
 JAR: A data item is an approximately justified approximately true approximate belief</obo:IAO_0000116>
-        <obo:IAO_0000116>2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Jonathan Rees</obo:IAO_0000117>
@@ -4816,8 +4790,8 @@ this case we explicitly refer to the singular form</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">Replaced by defined version of figure</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">person:Allyson Lister</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
         <obo:IAO_0000119>OBI_0000027</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <rdfs:label xml:lang="en">obsolete2_report figure</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -4944,12 +4918,12 @@ whole sentence is deleted.</obo:IAO_0000116>
         <obo:IAO_0000111 xml:lang="en">report element</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
         <obo:IAO_0000115 xml:lang="en">A report element is a narrative object in which information is presented and consumed by a human being, and is part of a report. Examples of report elements are figure (dot plot), table, text portion (may include a movie or audio clip on a web page).</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">There will be some issue here about whether these are defined classes. As intended these are meant to denote the parts of the report that are not textual but are typically boxed and set within the text, labelled with some identifier, and referred to in the text</obo:IAO_0000116>
         <obo:IAO_0000116>2009-03-16: needs some more work (clarify relations).</obo:IAO_0000116>
         <obo:IAO_0000116>2009-03-16: was report display element with definition: A report display element is a narrative object that is part of a report. Report display elements are set off from the textual parts of a report and are typically given a label(e.g. Figure 2) which is used to refer to the element from the text. Typically the 2d layout is part of the identity of such elements.</obo:IAO_0000116>
         <obo:IAO_0000116>2009-03-16: work has been done on this term during during the OBI workshop winter 2009 and the current definition was considered acceptable for use in OBI. If there is a need to modify this definition please notify OBI.</obo:IAO_0000116>
         <obo:IAO_0000116>2009-08-10 Alan Ruttenberg: Larry Hunter suggests that this be obsoleted and replaced by &apos;textual entity&apos; and &apos;figure&apos;. Alan restored as there are OBI dependencies and this merits further discussion</obo:IAO_0000116>
         <obo:IAO_0000116>Replaced by textual entity and figure</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">There will be some issue here about whether these are defined classes. As intended these are meant to denote the parts of the report that are not textual but are typically boxed and set within the text, labelled with some identifier, and referred to in the text</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Allyson Lister</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Melanie Courtot</obo:IAO_0000117>
@@ -4970,28 +4944,11 @@ whole sentence is deleted.</obo:IAO_0000116>
         <obo:IAO_0000116 xml:lang="en">3/22/2009 Alan Ruttenberg, obsoleted per http://groups.google.com/group/information-ontology/browse_thread/thread/789ad4b7708d5cf4
 superclass was &apos;digital entity&apos;</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">person:Jennifer Fostel</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
         <obo:IAO_0000119>OBI_0000222</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <rdfs:label xml:lang="en">obsolete2_binary executable</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000096 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000096">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-        <obo:IAO_0000111 xml:lang="en">source code module</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">The written source code that implements part of an algorithm. Test - if you know that it was written in a specific language, then it can be source code module. We mean here, roughly, the wording of a document such as a perl script.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A source code module is a directive information entity that specifies, using a programming language, some algorithm.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">OBI_0000039</obo:IAO_0000119>
-        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">source code module</rdfs:label>
     </owl:Class>
     
 
@@ -5005,8 +4962,8 @@ superclass was &apos;digital entity&apos;</obo:IAO_0000116>
         <obo:IAO_0000116>2009-08-10 Alan Ruttenberg: Larry Hunter suggests that this be obsoleted and replaced by &apos;textual entity table&apos;. Alan restored as there are OBI dependencies and this merits further discussion</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">person:Allyson Lister</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
         <obo:IAO_0000119>OBI_0000265</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <rdfs:label xml:lang="en">obsolete_report table</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -5039,6 +4996,24 @@ XML document; The instructions in a XSD file&quot;</obo:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000100">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000295"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000295"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0200111"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
@@ -5108,12 +5083,6 @@ XML document; The instructions in a XSD file&quot;</obo:IAO_0000116>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000111 xml:lang="en">plan specification</obo:IAO_0000111>
@@ -5982,8 +5951,8 @@ Written informed consent was obtained from the patient’s parents for publicati
         </rdfs:subClassOf>
         <obo:IAO_0000111 xml:lang="en">database extract, transform, and load process</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A planned process which takes as input a database and fills another database by extracting concretizations of information entities from the first, transforming them, and loading the transformed concretizations into the second.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 12/21/16: We don&apos;t define database in IAO, currently, as the bare word is ambiguous. Reasonable interpretations of the word might be the material entity, an information structure, an information content entity. However this definition commits, at least, to there being some material thing which bear concretizations of information entities and that there are new concretizations created during the process.  We consider the ETL process in terms of information entities rather than the concretizations. No committment is made as to whether the specified output.</obo:IAO_0000116>
         <obo:IAO_0000116>Alan Ruttenberg 12/21/16: Maybe this definition instead: A planned process which takes as input a database and copies concretizations from the first, optionally transforms then copies the result to the second</obo:IAO_0000116>
+        <obo:IAO_0000116 xml:lang="en">Alan Ruttenberg 12/21/16: We don&apos;t define database in IAO, currently, as the bare word is ambiguous. Reasonable interpretations of the word might be the material entity, an information structure, an information content entity. However this definition commits, at least, to there being some material thing which bear concretizations of information entities and that there are new concretizations created during the process.  We consider the ETL process in terms of information entities rather than the concretizations. No committment is made as to whether the specified output.</obo:IAO_0000116>
         <obo:IAO_0000117>PERSON:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">ETL</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">database extract, transform, and load process</obo:IAO_0000118>
@@ -7917,8 +7886,8 @@ http://www.ncbi.nlm.nih.gov/pubmed/10521349
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <obo:IAO_0000111 xml:lang="en">planned process</obo:IAO_0000111>
         <obo:IAO_0000111>planned process</obo:IAO_0000111>
+        <obo:IAO_0000111 xml:lang="en">planned process</obo:IAO_0000111>
         <obo:IAO_0000112>Injecting mice with a vaccine in order to test its efficacy</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">A process that realizes a plan which is the concretization of a plan specification.</obo:IAO_0000115>
@@ -7927,8 +7896,8 @@ http://www.ncbi.nlm.nih.gov/pubmed/10521349
 objectives is a planned process.</obo:IAO_0000116>
         <obo:IAO_0000117>Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000119>branch derived</obo:IAO_0000119>
-        <obo:IAO_0000232 xml:lang="en">This class merges the previously separated objective driven process and planned process, as they the separation proved hard to maintain. (1/22/09, branch call)</obo:IAO_0000232>
         <obo:IAO_0000232>6/11/9: Edited at workshop. Used to include: is initiated by an agent</obo:IAO_0000232>
+        <obo:IAO_0000232 xml:lang="en">This class merges the previously separated objective driven process and planned process, as they the separation proved hard to maintain. (1/22/09, branch call)</obo:IAO_0000232>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label xml:lang="en">planned process</rdfs:label>
     </owl:Class>
@@ -7981,9 +7950,9 @@ objectives is a planned process.</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">a planned process that consists of parts: planning, study design execution, documentation and which produce conclusion(s).</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">OBI branch derived</obo:IAO_0000119>
+        <obo:IAO_0000232>Could add specific objective specification</obo:IAO_0000232>
         <obo:IAO_0000232 xml:lang="en">Following OBI call November 2012,26th: it was decided there was no need for adding &quot;achieves objective of drawing conclusion&quot; as existing relations were providing equivalent ability. this note closes the issue and validates the class definition to be part of the OBI core
 editor = PRS</obo:IAO_0000232>
-        <obo:IAO_0000232>Could add specific objective specification</obo:IAO_0000232>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <obo:OBI_0001847>study</obo:OBI_0001847>
         <rdfs:label xml:lang="en">investigation</rdfs:label>
@@ -9422,8 +9391,8 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <obo:IAO_0000111>number of pregnancies</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A measurement datum of the total number of pregnancies a woman has had.</obo:IAO_0000115>
         <obo:IAO_0000115>A measurement datum of the total number of pregnancies a woman has had.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A measurement datum of the total number of pregnancies a woman has had.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
         <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
         <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
@@ -9439,8 +9408,8 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
         <obo:IAO_0000111>number of live births</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A measurement datum of the total number of live births a female has had.</obo:IAO_0000115>
         <obo:IAO_0000115>A measurement datum of the total number of live births a female has had.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A measurement datum of the total number of live births a female has had.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
         <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
         <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
@@ -9465,21 +9434,6 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0002424 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002424">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
-        <obo:IAO_0000111>chemotherapy treatment exclusion criterion</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An exclusion criterion that defines whether chemotherapy was received or is being received for a previous  or current cancer, which when met, makes an individual unsuitable for a given task or participation in a given process</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
-        <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
-        <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
-        <rdfs:label>chemotherapy treatment exclusion criterion</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0002425 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002425">
@@ -9491,38 +9445,6 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
         <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
         <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
         <rdfs:label>radiation treatment exclusion criteria</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002426 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002426">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
-        <obo:IAO_0000111>chemotherapy treatment within the recent past exclusion criterion</obo:IAO_0000111>
-        <obo:IAO_0000112>An exclusion criterion defined by the pathologist is defined as whether the individual received chemotherapy within the last two years.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An exclusion criterion that defines whether chemotherapy was received within a certain timeframe, which when met, makes an individual unsuitable for a given task or participation in a given process.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
-        <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
-        <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
-        <rdfs:label>chemotherapy treatment within the recent past exclusion criterion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002427 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002427">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
-        <obo:IAO_0000111>radiation treatment within the recent past exclusion criterion</obo:IAO_0000111>
-        <obo:IAO_0000112>An exclusion criterion defined by the pathologist is defined as whether the individual received  radiation therapy within the last two years.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An exclusion criterion that defines whether radiation was received within a certain timeframe, which when met, makes an individual unsuitable for a given task or participation in a given process.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
-        <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
-        <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
-        <rdfs:label>radiation treatment within the recent past exclusion criterion</rdfs:label>
     </owl:Class>
     
 
@@ -9539,22 +9461,6 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
         <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
         <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
         <rdfs:label>BMI range inclusion criterion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002429 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002429">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
-        <obo:IAO_0000111>blood transfusion exclusion criterion</obo:IAO_0000111>
-        <obo:IAO_0000112>An exclusion criterion that is defined by whether the specimen donor received a whole blood transfusion within 48 hours prior to death.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An exclusion criterion that is defined by whether the specimen donor received a whole blood transfusion within a specified time frame prior to death, which if met, makes a specimen donor unsuitable for a given task or participation in a given process.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
-        <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
-        <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
-        <rdfs:label>blood transfusion exclusion criterion</rdfs:label>
     </owl:Class>
     
 
@@ -9590,69 +9496,6 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0002432 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002432">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
-        <obo:IAO_0000111>history of sex with someone with a history of blood borne infection  exclusion criterion</obo:IAO_0000111>
-        <obo:IAO_0000112>Donor eligibility based on whether the donor has a history of sex with someone who has been diagnosed or at risk for HIV/AIDS and/or HCV and/or HBV in the last 5 years.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An exclusion criterion defined  as whether an individual has a history of sex with someone who has been diagnosed or at risk for a blood borne infections disease in a specified time frame, which if met, makes the individual unsuitable for a given task or participation in a given process.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
-        <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
-        <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
-        <rdfs:label>history of sex with someone with a history of blood borne infection  exclusion criterion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002433 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002433">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
-        <obo:IAO_0000111>history of sex with someone with a history of intravenous drugs exclusion criterion</obo:IAO_0000111>
-        <obo:IAO_0000112>Donor eligibility based on whether the donor has a history of sex with someone who has used intravenous drugs in the last 5 years.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An exclusion criterion defined  as whether an individual has a history of sex with someone who has used intravenous drugs in a specified time frame, which if met, makes the individual unsuitable for a given task or participation in a given process.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
-        <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
-        <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
-        <rdfs:label>history of sex with someone with a history of intravenous drugs exclusion criterion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002434 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002434">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
-        <obo:IAO_0000111>HIV exclusion criterion</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An exclusion criterion defined  as whether an individual has a history of repeatedly reactive screening assays for HIV-1 or HIV-2 antibody regardless of the results of supplemental assays, which if met, makes the individual unsuitable for a given task or participation in a given process.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
-        <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
-        <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
-        <rdfs:label>HIV exclusion criterion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002435 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002435">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
-        <obo:IAO_0000111>exposure to blood borne infectious disease exclusion criterion</obo:IAO_0000111>
-        <obo:IAO_0000112>Donor eligibility based on whether the donor has been exposed to HIV/AIDS.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An exclusion criterion defined  as whether an individual has been exposed to a blood borne infections disease through needle sticks and/or contact with non-intact skin and/or contact with open wounds and/or contact with mucous membranes, which if met, makes the individual unsuitable for a given task or participation in a given process.</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
-        <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
-        <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
-        <rdfs:label>exposure to blood borne infectious disease exclusion criterion</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0002444 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002444">
@@ -9665,8 +9508,8 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
         </rdfs:subClassOf>
         <obo:IAO_0000111 xml:lang="en">measurand role</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A role borne by a material entity and realized in an assay which achieves the objective to measure the magnitude/concentration/amount of the measurand in the entity bearing evaluant role.</obo:IAO_0000115>
         <obo:IAO_0000115>A role borne by a material entity and realized in an assay which achieves the objective to measure the magnitude/concentration/amount of the measurand in the entity bearing evaluant role.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A role borne by a material entity and realized in an assay which achieves the objective to measure the magnitude/concentration/amount of the measurand in the entity bearing evaluant role.</obo:IAO_0000115>
         <obo:IAO_0000117>Person: Alan Ruttenberg, Jie Zheng</obo:IAO_0000117>
         <obo:IAO_0000119>https://en.wiktionary.org/wiki/measurand</obo:IAO_0000119>
         <obo:IAO_0000233>https://github.com/obi-ontology/obi/issues/778</obo:IAO_0000233>
@@ -9973,8 +9816,8 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
         <obo:IAO_0000111>image data set analysis</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">The process of deriving a data item from an image data set using computer algorithms. The produced data item can be an image data set, data measurement, or any other data item.</obo:IAO_0000115>
         <obo:IAO_0000115>The process of deriving a data item from an image data set using computer algorithms. The produced data item can be an image data set, data measurement, or any other data item.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The process of deriving a data item from an image data set using computer algorithms. The produced data item can be an image data set, data measurement, or any other data item.</obo:IAO_0000115>
         <obo:IAO_0000117>https://orcid.org/0000-0001-9625-1899 &quot;William D. Duncan&quot;</obo:IAO_0000117>
         <obo:IAO_0000117>https://orcid.org/0000-0001-9676-7377 &quot;Alexander D. Bartnik&quot;</obo:IAO_0000117>
         <obo:IAO_0000117>https://orcid.org/0000-0001-9990-8331 &quot;Alexander D. Diehl&quot;</obo:IAO_0000117>
@@ -10034,8 +9877,8 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100051">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/object"/>
         <obo:IAO_0000111 xml:lang="en">specimen</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">Biobanking of blood taken and stored in a freezer for potential future investigations stores specimen; collecting a stone from a site.</obo:IAO_0000112>
         <obo:IAO_0000112>Biobanking of blood taken and stored in a freezer for potential future investigations stores specimen.</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">Biobanking of blood taken and stored in a freezer for potential future investigations stores specimen; collecting a stone from a site.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
         <obo:IAO_0000115 xml:lang="en">A material entity that has the specimen role.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">A material entity that is collected for potential use as an input upon which measurements or observations are performed.</obo:IAO_0000115>
@@ -10139,13 +9982,13 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Helen Parkinson</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">James Malone</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Melanie Courtot</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Richard Scheuermann</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Ryan Brinkman</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Tina Hernandez-Boussard</obo:IAO_0000117>
-        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">data analysis</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">data processing</obo:IAO_0000118>
         <obo:IAO_0000118>data operation</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">data processing</obo:IAO_0000118>
         <obo:IAO_0000119 xml:lang="en">Branch editors</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label xml:lang="en">data transformation</rdfs:label>
@@ -10162,8 +10005,8 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">Longitudinal analysis is a data transformation used to perform repeated observations of the same items over long periods of time.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON: James Malone</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Tina Boussard</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">longitudinal data analysis</obo:IAO_0000118>
         <obo:IAO_0000118>correlation analysis</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">longitudinal data analysis</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label xml:lang="en">longitudinal data analysis</rdfs:label>
     </owl:Class>
@@ -10177,8 +10020,8 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200194"/>
         <obo:IAO_0000111 xml:lang="en">Kaplan Meier</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">a nonparametric (actuarial) data transformation technique for estimating time-related events. It is a univariate analysis that estimates the probability of the proportion of subjects in remission at a particular time, starting from the initiation of active date (time zero), and takes into account those lost to follow-up or not yet in remission at end of study (censored)</obo:IAO_0000115>
         <obo:IAO_0000115>a nonparametric (actuarial) data transformation technique for estimating time-related events. It is a univariate analysis that estimates the probability of the proportion of subjects in remission at a particular time, starting from the initiation of active date (time zero), and takes into account those lost to follow-up or not yet in remission at end of study (censored)</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a nonparametric (actuarial) data transformation technique for estimating time-related events. It is a univariate analysis that estimates the probability of the proportion of subjects in remission at a particular time, starting from the initiation of active date (time zero), and takes into account those lost to follow-up or not yet in remission at end of study (censored)</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON: James Malone</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Tina Boussard</obo:IAO_0000117>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Kaplan%E2%80%93Meier_estimator</obo:IAO_0000119>
@@ -10219,8 +10062,8 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">James Malone</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Melanie Courtot</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Tina Boussard</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">visualization</obo:IAO_0000118>
         <obo:IAO_0000118>data encoding as image</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">visualization</obo:IAO_0000118>
         <obo:IAO_0000119 xml:lang="en">PERSON: Elisabetta Manduchi</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">PERSON: James Malone</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000119>
@@ -10241,8 +10084,8 @@ information_encoding
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
         <obo:IAO_0000111>Fisher&apos;s exact test</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">Fisher&apos;s exact test is a data transformation used to determine if there are nonrandom associations between two Fisher&apos;s exact test is a statistical significance test used in the analysis of contingency tables where sample sizes are small where the significance of the deviation from a null hypothesis can be calculated exactly, rather than relying on an approximation that becomes exact in the limit as the sample size grows to infinity, as with many statistical tests.</obo:IAO_0000115>
         <obo:IAO_0000115>Fisher&apos;s exact test is a data transformation used to determine if there are nonrandom associations between two Fisher&apos;s exact test is a statistical significance test used in the analysis of contingency tables where sample sizes are small where the significance of the deviation from a null hypothesis can be calculated exactly, rather than relying on an approximation that becomes exact in the limit as the sample size grows to infinity, as with many statistical tests.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Fisher&apos;s exact test is a data transformation used to determine if there are nonrandom associations between two Fisher&apos;s exact test is a statistical significance test used in the analysis of contingency tables where sample sizes are small where the significance of the deviation from a null hypothesis can be calculated exactly, rather than relying on an approximation that becomes exact in the limit as the sample size grows to infinity, as with many statistical tests.</obo:IAO_0000115>
         <obo:IAO_0000117>James Malone</obo:IAO_0000117>
         <obo:IAO_0000119>WEB:http://mathworld.wolfram.com/FishersExactTest.html</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -10257,8 +10100,8 @@ information_encoding
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
         <obo:IAO_0000111>survival analysis data transformation</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A data transformation which has the objective of performing survival analysis.</obo:IAO_0000115>
         <obo:IAO_0000115>A data transformation which has the objective of performing survival analysis.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A data transformation which has the objective of performing survival analysis.</obo:IAO_0000115>
         <obo:IAO_0000117>James Malone</obo:IAO_0000117>
         <obo:IAO_0000119>PERSON: James Malone</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -10274,8 +10117,8 @@ information_encoding
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200194"/>
         <obo:IAO_0000111>proportional hazards model estimation</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">Proportional hazards model is a data transformation model to estimate the effects of different covariates influencing the times-to-failure of a system.</obo:IAO_0000115>
         <obo:IAO_0000115>Proportional hazards model is a data transformation model to estimate the effects of different covariates influencing the times-to-failure of a system.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Proportional hazards model is a data transformation model to estimate the effects of different covariates influencing the times-to-failure of a system.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON: James Malone</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Tina Boussard</obo:IAO_0000117>
         <obo:IAO_0000118>Cox model</obo:IAO_0000118>
@@ -10293,8 +10136,8 @@ information_encoding
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
         <obo:IAO_0000111>chi square test</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">The chi-square test is a data transformation with the objective of statistical hypothesis testing, in which the sampling distribution of the test statistic is a chi-square distribution when the null hypothesis is true, or any in which this is asymptotically true, meaning that the sampling distribution (if the null hypothesis is true) can be made to approximate a chi-square distribution as closely as desired by making the sample size large enough.</obo:IAO_0000115>
         <obo:IAO_0000115>The chi-square test is a data transformation with the objective of statistical hypothesis testing, in which the sampling distribution of the test statistic is a chi-square distribution when the null hypothesis is true, or any in which this is asymptotically true, meaning that the sampling distribution (if the null hypothesis is true) can be made to approximate a chi-square distribution as closely as desired by making the sample size large enough.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">The chi-square test is a data transformation with the objective of statistical hypothesis testing, in which the sampling distribution of the test statistic is a chi-square distribution when the null hypothesis is true, or any in which this is asymptotically true, meaning that the sampling distribution (if the null hypothesis is true) can be made to approximate a chi-square distribution as closely as desired by making the sample size large enough.</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON: James Malone</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Tina Boussard</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -10309,8 +10152,8 @@ information_encoding
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
         <obo:IAO_0000111>ANOVA</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A statistical hypothesis test in which the means of several groups are all equal.</obo:IAO_0000115>
         <obo:IAO_0000115>A statistical hypothesis test in which the means of several groups are all equal.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A statistical hypothesis test in which the means of several groups are all equal.</obo:IAO_0000115>
         <obo:IAO_0000117>James Malone</obo:IAO_0000117>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Analysis_of_variance</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -10326,8 +10169,8 @@ information_encoding
         <obo:IAO_0000111>observation design</obo:IAO_0000111>
         <obo:IAO_0000112>PMID: 12387964.Lancet. 2002 Oct 12;360(9340):1144-9.Deficiency of antibacterial peptides in patients with morbus Kostmann: an observation study.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">observation design is a study design in which subjects are monitored in the absence of any active intervention by experimentalists.</obo:IAO_0000115>
         <obo:IAO_0000115>observation design is a study design in which subjects are monitored in the absence of any active intervention by experimentalists.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">observation design is a study design in which subjects are monitored in the absence of any active intervention by experimentalists.</obo:IAO_0000115>
         <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
         <obo:IAO_0000119>OBI branch derived</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -10394,8 +10237,8 @@ information_encoding
         <obo:IAO_0000111 xml:lang="en">study design</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">a matched pairs study design describes criteria by which subjects are identified as pairs which then undergo the same protocols, and the data generated is analyzed by comparing the differences between the paired subjects, which constitute the results of the executed study design.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <obo:IAO_0000115 xml:lang="en">A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution.</obo:IAO_0000115>
         <obo:IAO_0000115>A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution.</obo:IAO_0000115>
         <obo:IAO_0000116>Editor note: there is at least an implicit restriction on the kind of data transformations that can be done based on the measured data available.</obo:IAO_0000116>
         <obo:IAO_0000117>PERSON: Chris Stoeckert</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">experimental design</obo:IAO_0000118>
@@ -10429,8 +10272,8 @@ information_encoding
         <obo:IAO_0000111>repeated measure design</obo:IAO_0000111>
         <obo:IAO_0000112>PMID: 10959922.J Biopharm Stat. 2000 Aug;10(3):433-45.Equivalence in test assay method comparisons for the repeated-measure, matched-pair design in medical device studies: statistical considerations.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">a study design which use the same individuals and exposure them to a set of conditions. The effect of order and practice can be confounding factor in such designs</obo:IAO_0000115>
         <obo:IAO_0000115>a study design which use the same individuals and exposure them to a set of conditions. The effect of order and practice can be confounding factor in such designs</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a study design which use the same individuals and exposure them to a set of conditions. The effect of order and practice can be confounding factor in such designs</obo:IAO_0000115>
         <obo:IAO_0000117>PlanAndPlannedProcess Branch</obo:IAO_0000117>
         <obo:IAO_0000119>http://www.holah.karoo.net/experimentaldesigns.htm</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -10446,8 +10289,8 @@ information_encoding
         <obo:IAO_0000111>cross over design</obo:IAO_0000111>
         <obo:IAO_0000112>PMID: 17601993-Objective: HIV-infected patients with lipodystrophy (HIV-lipodystrophy) are insulin resistant and have elevated plasma free fatty acid (FFA) concentrations. We aimed to explore the mechanisms underlying FFA-induced insulin resistance in patients with HIV-lipodystrophy. Research Design and Methods: Using a randomized placebo-controlled cross-over design, we studied the effects of an overnight acipimox-induced suppression of FFA on glucose and FFA metabolism by using stable isotope labelled tracer techniques during basal conditions and a two-stage euglycemic, hyperinsulinemic clamp (20 mU insulin/m(2)/min; 50 mU insulin/m(2)/min) in nine patients with nondiabetic HIV-lipodystrophy. All patients received antiretroviral therapy. Biopsies from the vastus lateralis muscle were obtained during each stage of the clamp. Results: Acipimox treatment reduced basal FFA rate of appearance by 68.9% (52.6%-79.5%) and decreased plasma FFA concentration by 51.6 % (42.0%-58.9%), (both, P &lt; 0.0001). Endogenous glucose production was not influenced by acipimox. During the clamp the increase in glucose-uptake was significantly greater after acipimox treatment compared to placebo (acipimox: 26.85 (18.09-39.86) vs placebo: 20.30 (13.67-30.13) mumol/kg/min; P &lt; 0.01). Insulin increased phosphorylation of Akt (Thr(308)) and GSK-3beta (Ser(9)), decreased phosphorylation of glycogen synthase (GS) site 3a+b and increased GS-activity (I-form) in skeletal muscle (P &lt; 0.01). Acipimox decreased phosphorylation of GS (site 3a+b) (P &lt; 0.02) and increased GS-activity (P &lt; 0.01) in muscle. Conclusion: The present study provides direct evidence that suppression of lipolysis in patients with HIV-lipodystrophy improves insulin-stimulated peripheral glucose-uptake. The increased glucose-uptake may in part be explained by increased dephosphorylation of GS (site 3a+b) resulting in increased GS activity.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">a repeated measure design which ensures that experimental units receive, in sequence, the treatment (or the control), and then, after a specified time interval (aka *wash-out periods*), switch to the control (or treatment). In this design, subjects (patients in human context) serve as their own controls, and randomization may be used to determine the ordering which a subject receives the treatment and control</obo:IAO_0000115>
         <obo:IAO_0000115>a repeated measure design which ensures that experimental units receive, in sequence, the treatment (or the control), and then, after a specified time interval (aka *wash-out periods*), switch to the control (or treatment). In this design, subjects (patients in human context) serve as their own controls, and randomization may be used to determine the ordering which a subject receives the treatment and control</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a repeated measure design which ensures that experimental units receive, in sequence, the treatment (or the control), and then, after a specified time interval (aka *wash-out periods*), switch to the control (or treatment). In this design, subjects (patients in human context) serve as their own controls, and randomization may be used to determine the ordering which a subject receives the treatment and control</obo:IAO_0000115>
         <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
         <obo:IAO_0000119>(source: http://www.sbu.se/Filer/Content0/publikationer/1/literaturesearching_1993/glossary.html)</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -10462,8 +10305,8 @@ information_encoding
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500003"/>
         <obo:IAO_0000111>n-to-1 design</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">N-of-1 design is a cross-over design in which the same patient is repeatedly randomised to receive either the experimental treatment or its control (Senn, 1993).</obo:IAO_0000115>
         <obo:IAO_0000115>N-of-1 design is a cross-over design in which the same patient is repeatedly randomised to receive either the experimental treatment or its control (Senn, 1993).</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">N-of-1 design is a cross-over design in which the same patient is repeatedly randomised to receive either the experimental treatment or its control (Senn, 1993).</obo:IAO_0000115>
         <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
         <obo:IAO_0000119>Adapted from  http://www.childrens-mercy.org/stats/definitions/crossover.htm and source:http://symptomresearch.nih.gov/chapter_6/sec1/csss1pg1.htm)</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -10479,8 +10322,8 @@ information_encoding
         <obo:IAO_0000111>randomized complete block design</obo:IAO_0000111>
         <obo:IAO_0000112>http://www.stats.gla.ac.uk/steps/glossary/anova.html,(A researcher is carrying out a study of the effectiveness of four different skin creams for the treatment of a certain skin disease. He has eighty subjects and plans to divide them into 4 treatment groups of twenty subjects each. Using a randomised blocks&amp; design, the subjects are assessed and put in blocks of four according to how severe their skin condition is; the four most severe cases are the first block, the next four most severe cases are the second block, and so on to the twentieth block. The four &amp;members of each block are then randomly assigned, one to each of the four treatment groups. http://www.stats.gla.ac.uk/steps/glossary/anova.html#rbd))</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">A randomized complete block design is_a study design which assigns randomly treatments to block. The number of units per block equals the number of treatment so each block receives each treatment exactly once (hence the qualifier &apos;complete&apos;). The design was originally devised from field trials used in agronomy and agriculture. The analysis assumes that there is no interaction between block and treatment. The method was then used in other settings So The randomised complete block design is a design in which the subjects are matched according to a variable which the experimenter wishes to control. The subjects are put into groups (blocks) of the same size as the number of treatments. The members of each block are then randomly assigned to different treatment groups.</obo:IAO_0000115>
         <obo:IAO_0000115>A randomized complete block design is_a study design which assigns randomly treatments to block. The number of units per block equals the number of treatment so each block receives each treatment exactly once (hence the qualifier &apos;complete&apos;). The design was originally devised from field trials used in agronomy and agriculture. The analysis assumes that there is no interaction between block and treatment. The method was then used in other settings So The randomised complete block design is a design in which the subjects are matched according to a variable which the experimenter wishes to control. The subjects are put into groups (blocks) of the same size as the number of treatments. The members of each block are then randomly assigned to different treatment groups.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A randomized complete block design is_a study design which assigns randomly treatments to block. The number of units per block equals the number of treatment so each block receives each treatment exactly once (hence the qualifier &apos;complete&apos;). The design was originally devised from field trials used in agronomy and agriculture. The analysis assumes that there is no interaction between block and treatment. The method was then used in other settings So The randomised complete block design is a design in which the subjects are matched according to a variable which the experimenter wishes to control. The subjects are put into groups (blocks) of the same size as the number of treatments. The members of each block are then randomly assigned to different treatment groups.</obo:IAO_0000115>
         <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
         <obo:IAO_0000119>http://www.tufts.edu/~gdallal/ranblock.htm</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
@@ -10625,8 +10468,8 @@ defines and states the requirements (positive or negative) for an entity to be c
         <obo:IAO_0000111>morphology</obo:IAO_0000111>
         <obo:IAO_0000115>A quality of a single physical entity inhering in the bearer by virtue of the bearer&apos;s size or shape or structure.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
-        <rdfs:label xml:lang="en">morphology</rdfs:label>
         <rdfs:label>morphology</rdfs:label>
+        <rdfs:label xml:lang="en">morphology</rdfs:label>
     </owl:Class>
     
 
@@ -10996,7 +10839,7 @@ Spearman&apos;s coefficient may be used when the conditions for computing Pearso
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cdio/data_element"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A directive information entity that specifies a data item that can be measured or counted and is used in a statistical analysis.</obo:IAO_0000115>
@@ -11199,6 +11042,15 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
+    <!-- http://www.w3id.org/cdio/clinical_exposure_exclusion_criterion -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cdio/clinical_exposure_exclusion_criterion">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
+        <rdfs:label xml:lang="en">clinical exposure exclusion criterion</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/cdio/data_type -->
 
     <owl:Class rdf:about="http://www.w3id.org/cdio/data_type">
@@ -11216,6 +11068,24 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
         <obo:IAO_0000115 xml:lang="en">A type of eligibility criteria that indicates whether people who do not have the condition/disease being studied can participate in that clinical study. Indication that participants who do not have a disease or condition, or related conditions or symptoms, under study in the clinical study are permitted to participate in the clinical study.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">PERSON: Komal Gilani</obo:IAO_0000117>
         <rdfs:label xml:lang="en">healthy volunteer criterion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cdio/surgical_procedure_history_exclusion_criterion -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cdio/surgical_procedure_history_exclusion_criterion">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
+        <rdfs:label xml:lang="en">surgical procedure history exclusion criterion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cdio/timeline -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cdio/timeline">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:label xml:lang="en">timeline</rdfs:label>
     </owl:Class>
     
 
@@ -11550,6 +11420,18 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
 
     <owl:Class rdf:about="https://w3id.org/cdio/data_element">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000295"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cdio/categorization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000295"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/cdio/data_standardization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A basic unit of information that has a unique meaning and instances (data items) of distinct value. Examples of data elements include gender, race, and geographic location in data dictionary(ref. https://cde.nlm.nih.gov/)</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">A grouping or label that provides a semantic interpretation of a data element.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
@@ -11800,16 +11682,6 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
         <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/sign"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">general sign</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/harmonization_plan_specification -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/harmonization_plan_specification">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">harmonization plan specification</rdfs:label>
     </owl:Class>
     
 
@@ -12108,7 +11980,7 @@ If &quot;Measurement Process&quot; were a direct child of &quot;Process,&quot; i
     <!-- https://w3id.org/cdio/number_of_participants -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/number_of_participants">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">number of study participants objective</rdfs:label>
     </owl:Class>
@@ -12178,17 +12050,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
         <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/count"/>
         <obo:IAO_0000115 xml:lang="en">outlier count</obo:IAO_0000115>
         <rdfs:label xml:lang="en">outlier count</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/outlier_threshold_criteria -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/outlier_threshold_criteria">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-        <rdfs:comment xml:lang="en">Outlier Threshold Criterion should be modeled as a Directive Information Entity (DIE).
-✔ Reason: A threshold criterion is not a measured value but a guideline or rule that defines when a data point is an outlier.</rdfs:comment>
-        <rdfs:label xml:lang="en">outlier threshold criteria</rdfs:label>
     </owl:Class>
     
 
@@ -12570,38 +12431,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
         <obo:IAO_0000115 xml:lang="en">A Study Outcome/Endpoint Specification is a Plan Specification that defines the measurable variables used to assess the effectiveness or impact of an intervention, treatment, or observation within a study. Endpoints are classified into Primary Endpoints (the main variable of interest) and Secondary Endpoints (additional measures that provide supporting information).</obo:IAO_0000115>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">study outcome specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/study_primary_purpose_specification -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/study_primary_purpose_specification">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
-        <obo:IAO_0000115 xml:lang="en">Primary purpose of a clinical study refers to the main reason the study is being performed. The types of primary purpose are: treatment, prevention, diagnostic, supportive care, screening, health services research, basic science, and other.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON:Komal Gilani</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">https://toolkit.ncats.nih.gov/glossary/primary-purpose/</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">study primary purpose specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/study_time_point -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/study_time_point">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">study time point specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/study_variable_harmonization_specification -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/study_variable_harmonization_specification">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/harmonization_plan_specification"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">study variable harmonization specification</rdfs:label>
     </owl:Class>
     
 
