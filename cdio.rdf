@@ -11072,6 +11072,24 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
+    <!-- http://www.w3id.org/cdio/human_subject_enrollment -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cdio/human_subject_enrollment">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <obo:IAO_0000412 xml:lang="en">http://purl.obolibrary.org/obo/OBI_0600004</obo:IAO_0000412>
+        <rdfs:label xml:lang="en">human subject enrollment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3id.org/cdio/observation -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cdio/observation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/cdio/surgical_procedure_history_exclusion_criterion -->
 
     <owl:Class rdf:about="http://www.w3id.org/cdio/surgical_procedure_history_exclusion_criterion">
@@ -11103,7 +11121,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <!-- https://w3id.org/cdio/CDIO_00000001 -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/CDIO_00000001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
@@ -11123,7 +11141,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <!-- https://w3id.org/cdio/CDIO_00000002 -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/CDIO_00000002">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">adverse event</rdfs:label>
     </owl:Class>
@@ -11133,7 +11151,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <!-- https://w3id.org/cdio/CDIO_00000003 -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/CDIO_00000003">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">clinical finding</rdfs:label>
     </owl:Class>
@@ -11455,7 +11473,8 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <!-- https://w3id.org/cdio/death -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/death">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000002"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000003"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">death</rdfs:label>
     </owl:Class>
@@ -11465,7 +11484,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <!-- https://w3id.org/cdio/demographics -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/demographics">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cdio/observation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">demographics</rdfs:label>
     </owl:Class>
@@ -11497,7 +11516,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <!-- https://w3id.org/cdio/dietary_intake -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/dietary_intake">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cdio/observation"/>
         <obo:IAO_0000115 xml:lang="en">A documented record or conceptual representation of the overall pattern of food and beverage consumption, as recorded in surveys or data dictionaries.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">Dietary Intake is the process (or the information about that process) by which an organism consumes substances that provide nutrition. It represents a collection of observable data points (e.g., frequency of fruit, vegetable, dairy consumption) that characterize an individual’s nutritional behavior.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
@@ -11539,7 +11558,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">presence/absence of disease data element</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">disease or disorder indicator</rdfs:label>
+        <rdfs:label xml:lang="en">disease or disorder finidng</rdfs:label>
     </owl:Class>
     
 
@@ -11569,7 +11588,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <!-- https://w3id.org/cdio/etiology -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/etiology">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/disease_or_disorder_indicator"/>
         <obo:IAO_0000115 xml:lang="en">The cause of a disease or abnormal condition</obo:IAO_0000115>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">etiology</rdfs:label>
@@ -11632,7 +11651,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <!-- https://w3id.org/cdio/follow_up_attrition -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/follow_up_attrition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cdio/observation"/>
         <rdfs:comment xml:lang="en">refers to the loss of study participants during the follow-up period of a research study. This occurs when individuals:Are lost to follow-up: They cannot be contacted or fail to attend scheduled follow-up assessments. Withdraw from the study: They actively choose to leave the study.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label>follow up attrition</rdfs:label>
@@ -11810,7 +11829,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <!-- https://w3id.org/cdio/measurement -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/measurement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">measurement</rdfs:label>
     </owl:Class>
@@ -11844,7 +11863,7 @@ If &quot;Measurement Process&quot; were a direct child of &quot;Process,&quot; i
     <!-- https://w3id.org/cdio/medical_history -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/medical_history">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cdio/observation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">medical history</rdfs:label>
     </owl:Class>
@@ -11970,7 +11989,7 @@ If &quot;Measurement Process&quot; were a direct child of &quot;Process,&quot; i
     <!-- https://w3id.org/cdio/number_of_occurances -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/number_of_occurances">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cdio/observation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">number of occurances</rdfs:label>
     </owl:Class>
@@ -12172,7 +12191,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- https://w3id.org/cdio/reasons -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/reasons">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000004"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cdio/observation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">reasons</rdfs:label>
     </owl:Class>
@@ -12202,7 +12221,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- https://w3id.org/cdio/risk_factor -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/risk_factor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cdio/observation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">risk factor</rdfs:label>
     </owl:Class>
@@ -12294,7 +12313,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- https://w3id.org/cdio/sign_or_symptom -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/sign_or_symptom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">sign or symptom</rdfs:label>
     </owl:Class>
@@ -12390,16 +12409,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">statistic</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/study_design_dependent -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/study_design_dependent">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">study design dependent</rdfs:label>
     </owl:Class>
     
 
@@ -12522,7 +12531,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- https://w3id.org/cdio/treatment -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/treatment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000001"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
         <rdfs:comment xml:lang="en">a broader category which repesents all data elements related to patient exposure to medication, devices and procedures</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">treatment</rdfs:label>
