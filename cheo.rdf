@@ -11062,6 +11062,16 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
+    <!-- http://www.w3id.org/cheo/data_use_permission_assignment_process -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cheo/data_use_permission_assignment_process">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3id.org/cheo/"/>
+        <rdfs:label xml:lang="en">data use permission assignment process</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/cheo/healthy_volunteer_criterion -->
 
     <owl:Class rdf:about="http://www.w3id.org/cheo/healthy_volunteer_criterion">
