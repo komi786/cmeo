@@ -2514,7 +2514,7 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
     <!-- http://www.w3id.org/cmeo/describes -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/cmeo/describes">
-        <rdfs:domain rdf:resource="http://www.w3id.org/cmeo/descriptor"/>
+        <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000133"/>
         <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000563"/>
         <rdfs:label xml:lang="en">describes</rdfs:label>
     </owl:ObjectProperty>
@@ -2524,7 +2524,7 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
     <!-- http://www.w3id.org/cmeo/is_described_by -->
 
     <owl:ObjectProperty rdf:about="http://www.w3id.org/cmeo/is_described_by">
-        <rdfs:range rdf:resource="http://www.w3id.org/cmeo/descriptor"/>
+        <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000133"/>
         <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000557"/>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
     </owl:ObjectProperty>
@@ -4452,24 +4452,6 @@ Superclass was &apos;digitial quality&apos;</obo:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000013 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000088"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000311"/>
-        <obo:IAO_0000111 xml:lang="en">journal article</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">Examples are articles published in the journals, Nature and Science. The content can often be cited by reference to a paper based encoding, e.g.  Authors, Title of article, Journal name, date or year of publication, volume and page number.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A report that is published in a journal.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">OBI_0000159</obo:IAO_0000119>
-        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">journal article</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000015 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000015">
@@ -4494,20 +4476,6 @@ Superclass was &apos;digitial quality&apos;</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">Smith, Ceusters, Ruttenberg, 2000 years of philosophy</obo:IAO_0000119>
         <rdfs:label xml:lang="en">information carrier</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000017 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000017">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000028"/>
-        <obo:IAO_0000111 xml:lang="en">model number</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">A model number is an information content entity specifically borne by catalogs, design specifications, advertising materials, inventory systems and similar  that is about manufactured objects of the same class. The model number is an alternative term for the class. The manufactered objects may or may not also bear the model number. Model numbers can be encoded in a variety of other information objects, such as bar codes, numerals, or patterns of dots.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">manufactered items may have more than one model number, sometimes by rebranding, or because companies are sold and the products issued new model numbers</obo:IAO_0000116>
-        <obo:IAO_0000117 xml:lang="en">Person: Alan Ruttenberg</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">model number</rdfs:label>
     </owl:Class>
     
 
@@ -4609,19 +4577,6 @@ JAR: A data item is an approximately justified approximately true approximate be
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000029 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000029">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000028"/>
-        <obo:IAO_0000111 xml:lang="en">numeral</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A symbol that denotes a number.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Jonathan Rees</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">numeral</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
@@ -4645,19 +4600,6 @@ Previous. An information content entity is a non-realizable information entity t
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
         <rdfs:label xml:lang="en">information content entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000031 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000031">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000029"/>
-        <obo:IAO_0000111 xml:lang="en">integer numeral</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A numeral that denotes an integer</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Jonathan Rees</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">integer numeral</rdfs:label>
     </owl:Class>
     
 
@@ -4837,56 +4779,6 @@ this case we explicitly refer to the singular form</obo:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000065 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000065">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
-        <obo:IAO_0000111 xml:lang="en">software interpreter</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">R program, Perl interpreter, Java virtual machine</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A software interpreter is a software application that executes some specified input software.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Do we care? Jennifer: Yes, there was a particular version of R that had a bug and it was fixed later. That would imply that we mean specific version of an interpreter. So an instance of this would be a particular version of the interpreter</obo:IAO_0000116>
-        <obo:IAO_0000117 xml:lang="en">person:Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">person:Chris Stoeckert</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">OBI_0000199</obo:IAO_0000119>
-        <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
-        <rdfs:label xml:lang="en">software interpreter</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000078 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000078">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000002"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000120"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000121"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000122"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000123"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000124"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000125"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000423"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000428"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
-        <obo:IAO_0000111 xml:lang="en">curation status specification</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">The curation status of the term. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Better to represent curation as a process with parts and then relate labels to that process (in IAO meeting)</obo:IAO_0000116>
-        <obo:IAO_0000117 xml:lang="en">PERSON:Bill Bug</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">GROUP:OBI:&lt;http://purl.obolibrary.org/obo/obi&gt;</obo:IAO_0000119>
-        <obo:IAO_0000119 xml:lang="en">OBI_0000266</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">curation status specification</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000079 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000079">
@@ -4900,34 +4792,6 @@ this case we explicitly refer to the singular form</obo:IAO_0000116>
         <obo:IAO_0000119 xml:lang="en">OBI_0000179</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">group:Flow Cytometry community</obo:IAO_0000119>
         <rdfs:label xml:lang="en">density plot</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000088 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000088">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-        <obo:IAO_0000111 xml:lang="en">report</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">Examples of reports are gene lists and investigation reports. These are not published (journal) articles but may be included in a journal article.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">A document assembled by an author for the purpose of providing information for the audience. A report is the output of a documenting process and has the objective to be consumed by a specific audience. Topic of the report is on something that has completed. A report is not a single figure. Examples of reports are journal article, patent application, grant progress report, case report (not patient record).</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">2009-03-16: comment from Darren Natale: I am slightly uneasy with the sentence &quot;Topic of the report is on 
-something that has completed.&quot;  Should it be restricted to those things 
-that are completed?  For example, a progress report is (usually) about 
-something that definitely has *not* been completed, or may include 
-(only) projections.  I think the definition would not suffer if the 
-whole sentence is deleted.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">2009-03-16: this was report of results with definition: A report is a narrative object that is a formal statement of the results of an investigation, or of any matter on which definite information is required, made by some person or body instructed or required to do so.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">2009-03-16: work has been done on this term during during the OBI workshop winter 2009 and the current definition was considered acceptable for use in OBI. If there is a need to modify this definition please notify OBI.</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">2009-08-10 Alan Ruttenberg: Larry Hunter suggests that this be obsoleted and replaced by &apos;document&apos;. Alan restored as there are OBI dependencies and this merits further discussion</obo:IAO_0000116>
-        <obo:IAO_0000116 xml:lang="en">disagreement about where reports go. alan: only some gene lists are reports. Is a report all the content of some document? The example of usage suggests that a report may be part of  some article. Term needs clarification</obo:IAO_0000116>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">GROUP: OBI</obo:IAO_0000119>
-        <obo:IAO_0000119 xml:lang="en">OBI_0000099</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">report</rdfs:label>
     </owl:Class>
     
 
@@ -5155,48 +5019,6 @@ Request that IAO either clarify these or change definitions not to use them</rdf
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000129 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000129">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000028"/>
-        <obo:IAO_0000111 xml:lang="en">version number</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A version number is an information content entity which is a sequence of characters borne by part of each of a class of manufactured products or its packaging and indicates its order within a set of other products having the same name.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Note: we feel that at the moment we are happy with a general version number, and that we will subclass as needed in the future. For example, see 7. genome sequence version</obo:IAO_0000116>
-        <obo:IAO_0000117 xml:lang="en">GROUP: IAO</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">version number</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000131 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000131">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000028"/>
-        <obo:IAO_0000111 xml:lang="en">serial number</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A serial number is an information content entity which is a unique sequence of characters borne by part of manufactured product or its packaging that is assigned to each individual in some class of products, and so can serve as a way to identify an individual product within the class. Serial numbers can be encoded in a variety of other information objects, such as bar codes, numerals, or patterns of dots.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">Note: during the call there was some confusion between serial number and model number. We agreed that it would be very helpful for all those terms to have example of usages - please add if you have any :-)</obo:IAO_0000116>
-        <obo:IAO_0000117 xml:lang="en">GROUP: IAO</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">serial number</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000132 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000132">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000028"/>
-        <obo:IAO_0000111 xml:lang="en">lot number</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A lot number is an information content entity which is an identical sequence of character borne by part of manufactured product or its packaging for each instances of a product class in a discrete batch of an item. Lot numbers are usually assigned to each separate production run of an item. Manufacturing as a lot might be due to a variety of reasons, for example,  a single process during which many individuals are made from the same portion of source material. Lot numbers can be encoded in a pattern  of other information objects, such as bar codes, numerals, or patterns of dots.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">GROUP: IAO</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">batch number</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">lot number</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000140 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000140">
@@ -5339,33 +5161,6 @@ clustering algorithm.</obo:IAO_0000115>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000225 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000225">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000103"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000226"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000227"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000228"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000229"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OMO_0001000"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
-        <obo:IAO_0000111 xml:lang="en">obsolescence reason specification</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">The reason for which a term has been deprecated. The allowed values come from an enumerated list of predefined terms. See the specification of these instances for more detailed definitions of each enumerated value.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">The creation of this class has been inspired in part by Werner Ceusters&apos; paper, Applying evolutionary terminology auditing to the Gene Ontology.</obo:IAO_0000116>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">obsolescence reason specification</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000300 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000300">
@@ -5380,53 +5175,6 @@ clustering algorithm.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">text</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <rdfs:label xml:lang="en">textual entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000305 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000305">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
-        <obo:IAO_0000111 xml:lang="en">document title</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">Textual characteristics of traditional and Open Access scientific journals are similar</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">A textual entity that names a document</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">document title</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000306 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000306">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
-        <obo:IAO_0000111 xml:lang="en">table</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">| T     F
---+-----
-T   | T     F
-F   |  F    F</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">A textual entity that contains a two-dimensional arrangement of texts repeated at regular intervals across a spatial range, such that the spatial relationships among the constituent texts expresses propositions</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">table</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000307 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000307">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000306"/>
-        <obo:IAO_0000111 xml:lang="en">table of abbreviations</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">IAO  information artifact ontology
-OBI  ontology of biomedical investiations
-GO   gene ontology</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">A table where the constituent texts are abbreviations and their expansions</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">table of abbreviations</rdfs:label>
     </owl:Class>
     
 
@@ -5471,99 +5219,6 @@ GO   gene ontology</obo:IAO_0000112>
         <obo:IAO_0000115 xml:lang="en">A collection of information content entities intended to be understood together as a whole</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
         <rdfs:label xml:lang="en">document</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000311 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000311">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-        <obo:IAO_0000111 xml:lang="en">publication</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">journal article, newspaper story, book, etc.</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A document that is the output of a publishing process.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Chris Stoeckert</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">published document</obo:IAO_0000118>
-        <obo:IAO_0000233 rdf:resource="https://github.com/information-artifact-ontology/IAO/issues/232"/>
-        <rdfs:comment xml:lang="en">Revisit the term in Octorber 2020. Improve the defintion.</rdfs:comment>
-        <rdfs:label xml:lang="en">publication</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000312 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000312">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000311"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000066"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000111 xml:lang="en">publication about an investigation</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">Most scientific journal articles</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A publication that is about an investigation</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">scientific publication</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">publication about an investigation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000313 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000313">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-        <obo:IAO_0000111 xml:lang="en">patent</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">US Patent 6,449,603</obo:IAO_0000112>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A document that has been accepted by a patent authority</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">patent</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000327 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000327">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000306"/>
-        <obo:IAO_0000111 xml:lang="en">table of contents</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">A table that relates document parts to specific locations in a document (usually page numbers).  This is also a document part (subsumption there should be inferred).</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">table of contents</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000328 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000328">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000306"/>
-        <obo:IAO_0000111 xml:lang="en">table of figures</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">A table that relates figures in a document to specific locations in that document (usually page numbers).  This is also a document part (subsumption there should be inferred).</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">table of figures</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000329 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000329">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <obo:IAO_0000111 xml:lang="en">running title</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115 xml:lang="en">A shorter version of a document title</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Lawrence Hunter</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">running title</rdfs:label>
     </owl:Class>
     
 
@@ -5685,29 +5340,6 @@ GO   gene ontology</obo:IAO_0000112>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000409 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000409">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000410"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000420"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000421"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
-        <obo:IAO_0000111 xml:lang="en">denotator type</obo:IAO_0000111>
-        <obo:IAO_0000112 xml:lang="en">The Basic Formal Ontology ontology makes a distinction between Universals and defined classes, where the formal are &quot;natural kinds&quot; and the latter arbitrary collections of entities.</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">A denotator type indicates how a term should be interpreted from an ontological perspective.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">Barry Smith, Werner Ceusters</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">denotator type</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000414 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000414">
@@ -5732,18 +5364,6 @@ GO   gene ontology</obo:IAO_0000112>
         <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <rdfs:label xml:lang="en">time measurement datum</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000422 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000422">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115>A textual entity that is used as directive to deliver something to a person, or organization</obo:IAO_0000115>
-        <obo:IAO_0000116>2010-05-24 Alan Ruttenberg. Use label for the string representation. See issue https://github.com/information-artifact-ontology/IAO/issues/59</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">postal address</rdfs:label>
     </owl:Class>
     
 
@@ -5774,21 +5394,6 @@ GO   gene ontology</obo:IAO_0000112>
         <obo:IAO_0000117 xml:lang="en">PERSON: Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">PERSON: Melanie Courtot</obo:IAO_0000117>
         <rdfs:label xml:lang="en">author role</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000445 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000445">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">A document that is in preparation for submission to be published.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">PERSON: Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">EFO_0001795 in preparation</obo:IAO_0000119>
-        <obo:IAO_0000233 rdf:resource="https://github.com/information-artifact-ontology/IAO/issues/232"/>
-        <obo:IAO_0000234 xml:lang="en">VEuPathDB</obo:IAO_0000234>
-        <rdfs:label xml:lang="en">document in preparation for publication</rdfs:label>
     </owl:Class>
     
 
@@ -5931,29 +5536,6 @@ Written informed consent was obtained from the patient’s parents for publicati
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000646 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000646">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
-        <obo:IAO_0000115 xml:lang="en">An identifier that denotes some postal delivery route, some aggregate of postal delivery routes or a geographical region and was created for the purpose of sorting and delivering mail.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">postal code</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000648 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000648">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000646"/>
-        <obo:IAO_0000115 xml:lang="en">A postal code that is used in the United States for the purpose of sorting and delivering mail, and that denotes some postal delivery route or some aggregate of postal delivery routes.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">ZIP code</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">zone improvement plan code</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000650 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000650">
@@ -6008,20 +5590,6 @@ Written informed consent was obtained from the patient’s parents for publicati
     <!-- http://purl.obolibrary.org/obo/IAO_0020000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020000">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0020010"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000028"/>
         <obo:IAO_0000111 xml:lang="en">identifier</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.</obo:IAO_0000115>
@@ -6032,81 +5600,6 @@ Written informed consent was obtained from the patient’s parents for publicati
         <dc:creator>Mathias Brochhausen</dc:creator>
         <rdfs:comment xml:lang="en">Sep 29, 2016: The current definition has been amended from the previous version: &quot;A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.&quot; to more accuratly reflect the necessary and sufficient condition on the class. (MB)</rdfs:comment>
         <rdfs:label xml:lang="en">identifier</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0020010 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020010">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000011"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <obo:IAO_0000115 xml:lang="en">A planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Justin Whorton</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">dubbing process</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">naming</obo:IAO_0000118>
-        <obo:IAO_0000233 xml:lang="en">https://github.com/information-artifact-ontology/IAO/issues/237</obo:IAO_0000233>
-        <dc:creator>Mathias Brochhausen</dc:creator>
-        <rdfs:label xml:lang="en">identifier creating process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0020015 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020015">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
-        <obo:IAO_0000115 xml:lang="en">An identifier referring to an individual entity that is ascribed personhood by the user of the identifier.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Justin Whorton</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Personal_name</obo:IAO_0000119>
-        <obo:IAO_0000233 xml:lang="en">https://github.com/information-artifact-ontology/IAO/issues/237</obo:IAO_0000233>
-        <rdfs:comment xml:lang="en">Personal names &quot;today usually comprises a given name bestowed at birth or at a young age plus a surname. It is nearly universal for a human to have a name; except in rare cases, for example feral children growing up in isolation, or infants orphaned by natural disaster for whom no written record survives.[citation needed] The Convention on the Rights of the Child specifies that a child has the right from birth to a name. Certain isolated tribes, such as the Machiguenga of the Amazon, also lack personal names.&quot; (http://en.wikipedia.org/wiki/Personal_name)</rdfs:comment>
-        <rdfs:comment xml:lang="en">Personal names to not include names of fictional characters, e.g. Sherlock Holmes.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Sep 29, 2016: The comment that including the wikipedia definition of personal name is not to be interpreted in a way that restricts this class to only contain strings of letters. A numerical or alphanumerical identifier that denotes a human is being is a personal name, too. (MB)</rdfs:comment>
-        <rdfs:label xml:lang="en">personal name</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0020016 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020015"/>
-        <obo:IAO_0000115 xml:lang="en">A personal name that specifies and differentiates between members of a group of individuals, especially in a family, all of whose members usually share the same family name (surname). A given name is purposefully given, usually by a child&apos;s parents at or near birth, in contrast to an inherited one such as a family name</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Justin Whorton</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">first name</obo:IAO_0000118>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Given_name</obo:IAO_0000119>
-        <obo:IAO_0000233 xml:lang="en">https://github.com/information-artifact-ontology/IAO/issues/237</obo:IAO_0000233>
-        <rdfs:label xml:lang="en">given name</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0020017 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020017">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
-        <obo:IAO_0000115 xml:lang="en">An identifier that is typically a part of a person&apos;s name which has been passed, according to law or custom, from one or both parents to their children.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Justin Whorton</obo:IAO_0000117>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">last name</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">surname</obo:IAO_0000118>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Family_name</obo:IAO_0000119>
-        <obo:IAO_0000233 xml:lang="en">https://github.com/information-artifact-ontology/IAO/issues/237</obo:IAO_0000233>
-        <rdfs:label xml:lang="en">family name</rdfs:label>
     </owl:Class>
     
 
@@ -6130,272 +5623,6 @@ Written informed consent was obtained from the patient’s parents for publicati
         <rdfs:comment xml:lang="en">Does not imply absence vs. presence of any taxonomy.</rdfs:comment>
         <rdfs:comment xml:lang="en">The information content entities do not denote each other.</rdfs:comment>
         <rdfs:label xml:lang="en">code set</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000000 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000000">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000102"/>
-        <obo:IAO_0000111 xml:lang="en">ontology module</obo:IAO_0000111>
-        <obo:IAO_0000116 xml:lang="en">I have placed this under &apos;data about an ontology part&apos;, but this can be discussed. I think this is OK if &apos;part&apos; is interpreted reflexively, as an ontology module is the whole ontology rather than part of it.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">ontology file</obo:IAO_0000118>
-        <obo:IAO_0000232 xml:lang="en">This class and it&apos;s subclasses are applied to OWL ontologies. Using an rdf:type triple will result in problems with OWL-DL. I propose that dcterms:type is instead used to connect an ontology URI with a class from this hierarchy. The class hierarchy is not disjoint, so multiple assertions can be made about a single ontology.</obo:IAO_0000232>
-        <rdfs:label xml:lang="en">ontology module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000000"/>
-        <obo:IAO_0000111 xml:lang="en">base ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An ontology module that comprises only of asserted axioms local to the ontology, excludes import directives, and excludes axioms or declarations from external ontologies.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">base ontology module</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://github.com/INCATools/ontology-starter-kit/issues/50"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000002 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000002">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000000"/>
-        <obo:IAO_0000111 xml:lang="en">editors ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An ontology module that is intended to be directly edited, typically managed in source control, and typically not intended for direct consumption by end-users.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">source ontology module</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">editors ontology module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000000"/>
-        <obo:IAO_0000111 xml:lang="en">main release ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An ontology module that is intended to be the primary release product and the one consumed by the majority of tools.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">TODO: Add logical axioms that state that a main release ontology module is derived from (directly or indirectly) an editors module</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">main release ontology module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000004 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000004">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000000"/>
-        <obo:IAO_0000111 xml:lang="en">bridge ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An ontology module that consists entirely of axioms that connect or bridge two distinct ontology modules. For example, the Uberon-to-ZFA bridge module.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">bridge ontology module</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://github.com/obophenotype/uberon/wiki/inter-anatomy-ontology-bridge-ontologies"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000005 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000005">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000006"/>
-        <obo:IAO_0000111 xml:lang="en">import ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A subset ontology module that is intended to be imported from another ontology.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">TODO: add axioms that indicate this is the output of a module extraction process.</obo:IAO_0000116>
-        <obo:IAO_0000118 xml:lang="en">import file</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">import ontology module</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://robot.obolibrary.org/extract"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000006 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000006">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000000"/>
-        <obo:IAO_0000111 xml:lang="en">subset ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An ontology module that is extracted from a main ontology module and includes only a subset of entities or axioms.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">ontology slim</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">subset ontology</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">subset ontology module</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://robot.obolibrary.org/filter"/>
-        <rdfs:seeAlso rdf:resource="http://www.geneontology.org/page/go-slim-and-subset-guide"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000007 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000007">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000006"/>
-        <obo:IAO_0000111 xml:lang="en">curation subset ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A subset ontology that is intended as a whitelist for curators using the ontology. Such a subset will exclude classes that curators should not use for curation.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">curation subset ontology module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000008 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000008">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000006"/>
-        <obo:IAO_0000111 xml:lang="en">analysis ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An ontology module that is intended for usage in analysis or discovery applications.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">analysis subset ontology module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000009 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000006"/>
-        <obo:IAO_0000111 xml:lang="en">single layer ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A subset ontology that is largely comprised of a single layer or strata in an ontology class hierarchy. The purpose is typically for rolling up for visualization. The classes in the layer need not be disjoint.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">ribbon subset</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">single layer subset ontology module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000010 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000006"/>
-        <obo:IAO_0000111 xml:lang="en">exclusion subset ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A subset of an ontology that is intended to be excluded for some purpose. For example, a blacklist of classes.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">antislim</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">exclusion subset ontology module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000011 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000011">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000005"/>
-        <obo:IAO_0000111 xml:lang="en">external import ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An imported ontology module that is derived from an external ontology. Derivation methods include the OWLAPI SLME approach.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">external import</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">external import ontology module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000012 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000012">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000006"/>
-        <obo:IAO_0000111 xml:lang="en">species subset ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A subset ontology that is crafted to either include or exclude a taxonomic grouping of species.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">taxon subset</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">species subset ontology module</rdfs:label>
-        <rdfs:seeAlso rdf:resource="https://github.com/obophenotype/uberon/wiki/Taxon-constraints"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000013 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000013">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000000"/>
-        <obo:IAO_0000111 xml:lang="en">reasoned ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An ontology module that contains axioms generated by a reasoner. The generated axioms are typically direct SubClassOf axioms, but other possibilities are available.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">reasoned ontology module</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://robot.obolibrary.org/reason"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000014 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000000"/>
-        <obo:IAO_0000111 xml:lang="en">generated ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An ontology module that is automatically generated, for example via a SPARQL query or via template and a CSV.</obo:IAO_0000115>
-        <obo:IAO_0000116 xml:lang="en">TODO: Add axioms (using PROV-O?) that indicate this is the output-of some reasoning process</obo:IAO_0000116>
-        <rdfs:label xml:lang="en">generated ontology module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000015 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000015">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000014"/>
-        <obo:IAO_0000111 xml:lang="en">template generated ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">An ontology module that is automatically generated from a template specification and fillers for slots in that template.</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">template generated ontology module</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://robot.obolibrary.org/template"/>
-        <rdfs:seeAlso rdf:resource="https://doi.org/10.1186/s13326-017-0126-0"/>
-        <rdfs:seeAlso rdf:resource="https://github.com/dosumis/dead_simple_owl_design_patterns/"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000016 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000016">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000004"/>
-        <obo:IAO_0000111 xml:lang="en">taxonomic bridge ontology module</obo:IAO_0000111>
-        <rdfs:label xml:lang="en">taxonomic bridge ontology module</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000017 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000017">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000006"/>
-        <obo:IAO_0000111 xml:lang="en">ontology module subsetted by expressivity</obo:IAO_0000111>
-        <rdfs:label xml:lang="en">ontology module subsetted by expressivity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000018 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000018">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000017"/>
-        <obo:IAO_0000111 xml:lang="en">obo basic subset ontology module</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A subset ontology that is designed for basic applications to continue to make certain simplifying assumptions; many of these simplifying assumptions were based on the initial version of the Gene Ontology, and have become enshrined in many popular and useful tools such as term enrichment tools.
-
-Examples of such assumptions include: traversing the ontology graph ignoring relationship types using a naive algorithm will not lead to cycles (i.e. the ontology is a DAG); every referenced term is declared in the ontology (i.e. there are no dangling clauses).
-
-An ontology is OBO Basic if and only if it has the following characteristics:
-DAG
-Unidirectional
-No Dangling Clauses
-Fully Asserted
-Fully Labeled
-No equivalence axioms
-Singly labeled edges
-No qualifier lists
-No disjointness axioms
-No owl-axioms header
-No imports</obo:IAO_0000115>
-        <rdfs:label xml:lang="en">obo basic subset ontology module</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://owlcollab.github.io/oboformat/doc/obo-syntax.html#6.2"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000019 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000019">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000017"/>
-        <obo:IAO_0000111 xml:lang="en">ontology module subsetted by OWL profile</obo:IAO_0000111>
-        <rdfs:label xml:lang="en">ontology module subsetted by OWL profile</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_8000020 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_8000020">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_8000019"/>
-        <obo:IAO_0000111 xml:lang="en">EL++ ontology module</obo:IAO_0000111>
-        <rdfs:label xml:lang="en">EL++ ontology module</rdfs:label>
     </owl:Class>
     
 
@@ -6491,7 +5718,7 @@ No imports</obo:IAO_0000115>
         <obo:IAO_0000117>Jie Zheng, Oliver He</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">data collection</obo:IAO_0000118>
         <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Data_collection</obo:IAO_0000119>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">data acquisition</rdfs:label>
     </owl:Class>
     
@@ -6533,17 +5760,6 @@ No imports</obo:IAO_0000115>
         <obo:IAO_0000118>log normal, lognormal</obo:IAO_0000118>
         <obo:IAO_0000119>WEB: http://www.statistics.com</obo:IAO_0000119>
         <rdfs:label>log-normal distribution</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000009 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000009">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000019"/>
-        <obo:IAO_0000115>A special case of the Pearson product-moment correlation; calculated when either the independent variable or dependent variable is dichotomous while the other variable is non-dichotomous</obo:IAO_0000115>
-        <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
-        <rdfs:label>point biserial correlation</rdfs:label>
     </owl:Class>
     
 
@@ -6624,18 +5840,6 @@ No imports</obo:IAO_0000115>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000019 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000019">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>A measure of the linear association between two variables that are measured on ordinal, interval or ratio scales</obo:IAO_0000115>
-        <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: http://www.statistics.com</obo:IAO_0000119>
-        <rdfs:label>correlation statistical analysis</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBCS_0000020 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000020">
@@ -6654,102 +5858,6 @@ No imports</obo:IAO_0000115>
         <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
         <obo:IAO_0000118>hierarchical models</obo:IAO_0000118>
         <rdfs:label>multilevel model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000023 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000023">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>An inferential statistical data analysis that is used to analyze data that arises from more than one variable</obo:IAO_0000115>
-        <obo:IAO_0000117>Yongqun He, Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000119>MVA</obo:IAO_0000119>
-        <obo:IAO_0000119>WEB: http://www.camo.com/multivariate_analysis.html</obo:IAO_0000119>
-        <rdfs:label>multivariate analysis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000025 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000025">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>An inferential statistical data analysis that has only one independent variable</obo:IAO_0000115>
-        <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
-        <rdfs:label>univariate analysis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000026 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000026">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>An inferential statistical data analysis that analyze the relationship between two measured quantities that renders them statistically dependent</obo:IAO_0000115>
-        <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Association_%28statistics%29</obo:IAO_0000119>
-        <rdfs:label>statistical association</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000029 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000029">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>A measure of the extent to which two variables are associated; the extent to which two random variables vary together</obo:IAO_0000115>
-        <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Covariation</obo:IAO_0000119>
-        <rdfs:label>covariation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000030 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000030">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>An inferential statistical data analysis used to analyze how well a statistical model fits a set of observations; measures of goodness of fit typically summarize the discrepancy between observed values and the values expected under the model in question.</obo:IAO_0000115>
-        <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Goodness_of_fit</obo:IAO_0000119>
-        <rdfs:label>goodness of fit</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000032 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000032">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
-        <obo:IAO_0000115>A data transformation that is specifically an inferential statistic to assess the equality of variances in different sample; tests the null hypothesis that the population variances are equal (called homogeneity of variance or homoscedasticity).</obo:IAO_0000115>
-        <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Levene%27s_test</obo:IAO_0000119>
-        <rdfs:label>levene&apos;s test</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000033 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000033">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
-        <obo:IAO_0000115>A data transformation used for both hypothesis testing and model building to examine the relationship between more than two categorical variables; uses a likelihood ratio statistic that has an approximate chi-square distribution when the sample size is large.</obo:IAO_0000115>
-        <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Loglinear_analysis</obo:IAO_0000119>
-        <rdfs:label>loglinear analysis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000034 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000034">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>A normal approximation used on nominal data; applied to 2x2 contingency tables to determine whether the row and column marginal frequencies are equal (&quot;marginal homogeneity&quot;).</obo:IAO_0000115>
-        <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/McNemar%27s_test</obo:IAO_0000119>
-        <rdfs:label>mcnemar&apos;s test</rdfs:label>
     </owl:Class>
     
 
@@ -7078,7 +6186,6 @@ No imports</obo:IAO_0000115>
         <obo:IAO_0000115>A quantitative confidence value that equals the percentage of a distribution that is below a specific value. As an example, a child is in 90th percentile for weight if only 10 percent of children the same age weigh more than she does.</obo:IAO_0000115>
         <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
         <obo:IAO_0000119>WEB: http://www.uptodate.com/contents/glossary-of-common-biostatistical-and-epidemiological-terms</obo:IAO_0000119>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label>percentile</rdfs:label>
     </owl:Class>
     
@@ -7324,19 +6431,6 @@ No imports</obo:IAO_0000115>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000103 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000103">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000236"/>
-        <obo:IAO_0000115>A non-parametric test of the null hypothesis that two populations are the same against an alternative hypothesis</obo:IAO_0000115>
-        <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
-        <obo:IAO_0000118>Wilcoxon rank-sum test</obo:IAO_0000118>
-        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U</obo:IAO_0000119>
-        <rdfs:label>mann-whitney U test</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBCS_0000106 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000106">
@@ -7523,49 +6617,6 @@ No imports</obo:IAO_0000115>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000141 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000141">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000175"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>An inferential statistical data analysis that is established in 2001 by Virginia Tusher, Robert Tibshirani and Gilbert Chu, for determining whether changes in gene expression are statistically significant.</obo:IAO_0000115>
-        <obo:IAO_0000117>Person: Jie Zheng, Oliver He</obo:IAO_0000117>
-        <obo:IAO_0000118>SAM</obo:IAO_0000118>
-        <obo:IAO_0000119>http://www.ncbi.nlm.nih.gov/pmc/articles/PMC33173/
-http://en.wikipedia.org/wiki/Significance_analysis_of_microarrays
-</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">significance analysis of microarrays</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000142 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000142">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000025"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000175"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115>A univariate analysis that calculates  the level of a desired signal to the level of background noise to identify which detected signal is more signal than noise. It can be used to identify differentially expressed genes.</obo:IAO_0000115>
-        <obo:IAO_0000117>Person: Jie Zheng, Oliver He</obo:IAO_0000117>
-        <obo:IAO_0000118>S2N</obo:IAO_0000118>
-        <obo:IAO_0000118>signal-2-noise statistic</obo:IAO_0000118>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Signal-to-noise_ratio
-http://www.ncbi.nlm.nih.gov/pubmed/10521349
-</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">signal-2-noise statistical analysis</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBCS_0000143 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000143">
@@ -7641,60 +6692,6 @@ http://www.ncbi.nlm.nih.gov/pubmed/10521349
         <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Validity_(statistics)</obo:IAO_0000119>
         <rdfs:label xml:lang="en">ecological validity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000167 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000167">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>An inferential statistical data analysis to identify protein-binding regions in a genome sequence from the data generated from a ChIP-sequencing or ChIP-chip experiment. When the protein is a transcription factor, the region is a transcription factor binding site (TFBS).</obo:IAO_0000115>
-        <obo:IAO_0000117>Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Peak_calling
-</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">peak calling</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000168 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000168">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>A differential expression analysis using LIMMA linear model to identify differential expression for microarray data.</obo:IAO_0000115>
-        <obo:IAO_0000117>Person: Oliver He, Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000118>LIMMA</obo:IAO_0000118>
-        <obo:IAO_0000118>LIMMA data analysis</obo:IAO_0000118>
-        <obo:IAO_0000119>Ritchie ME, Phipson B, Wu D, Hu Y, Law CW, Shi W and Smyth GK (2015). “limma powers differential expression analyses for RNA-sequencing and microarray studies.” Nucleic Acids Research, 43, pp. doi: 10.1093/nar/gkv007.</obo:IAO_0000119>
-        <obo:IAO_0000119>WEB: http://www.bioconductor.org/packages/release/bioc/html/limma.html</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">differential expression analysis using LIMMA linear models for microarry data</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000180 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000180">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000023"/>
-        <obo:IAO_0000115>A multivariate analysis that uncovers the latent structure (dimensions) of a set of variables. It reduces attribute space from a larger number of variables to a smaller number of factors.</obo:IAO_0000115>
-        <obo:IAO_0000117>Yongqun He, Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: https://en.wikipedia.org/wiki/Factor_analysis</obo:IAO_0000119>
-        <obo:IAO_0000119>WEB: https://en.wikipedia.org/wiki/Multivariate_analysis</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">factor analysis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000181 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000181">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000023"/>
-        <obo:IAO_0000115>A multivariate analysis that compares multivariate sample means. As a multivariate procedure, it is used when there are two or more dependent variables.</obo:IAO_0000115>
-        <obo:IAO_0000117>Yongqun He, Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: https://en.wikipedia.org/wiki/Multivariate_analysis_of_variance</obo:IAO_0000119>
-        <obo:IAO_0000119>multivariate analysis of variance</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">MANOVA</rdfs:label>
     </owl:Class>
     
 
@@ -7778,31 +6775,6 @@ http://www.ncbi.nlm.nih.gov/pubmed/10521349
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000231 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000231">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000161"/>
-        <obo:IAO_0000115>A rate of deaths (in general, or due to a specific cause) that in a particular population, scaled to the size of that population, per unit of time. </obo:IAO_0000115>
-        <obo:IAO_0000117>Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Mortality_rate</obo:IAO_0000119>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">mortality rate</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000232 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000232">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000161"/>
-        <obo:IAO_0000115>A rate of unit shif in a hospital. </obo:IAO_0000115>
-        <obo:IAO_0000117>Jie Zheng</obo:IAO_0000117>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">hospital unit  shift rate</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBCS_0000233 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000233">
@@ -7821,60 +6793,6 @@ http://www.ncbi.nlm.nih.gov/pubmed/10521349
         <obo:IAO_0000115>A data item that is produced as the output of a data transformation.</obo:IAO_0000115>
         <obo:IAO_0000117>Person: Jie Zheng, Oliver He</obo:IAO_0000117>
         <rdfs:label xml:lang="en">transformed data item</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000236 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000236">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
-        <obo:IAO_0000115>A statistical hypothesis test that is not based on any parameterized family of probability distributions.</obo:IAO_0000115>
-        <obo:IAO_0000117>QL, YH</obo:IAO_0000117>
-        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Nonparametric_statistics</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">non-parametric test</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000240 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000240">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>An inferential statistical data analysis that  includes all randomized patients in the groups to which they were randomly assigned. The intent-to-treat analysis  is based on the initial treatment assignment and not on the treatment eventually received.  ITT analysis includes every subject who is randomized according to randomized treatment assignment. It ignores noncompliance, protocol deviations, withdrawal, and anything that happens after randomization.</obo:IAO_0000115>
-        <obo:IAO_0000117>HL, QL, YH</obo:IAO_0000117>
-        <obo:IAO_0000118>ITT analysis</obo:IAO_0000118>
-        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Intention-to-treat_analysis</obo:IAO_0000119>
-        <obo:IAO_0000119>https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3159210/</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">intent-to-treat analysis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000243 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000243">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000236"/>
-        <obo:IAO_0000115>A non-parametric test that compares the survival distributions of two samples, and iis appropriate to use when the data are right skewed and censored (technically, the censoring must be non-informative). It is widely used in clinical trials to establish the efficacy of a new treatment in comparison with a control treatment when the measurement is the time to event (such as the time from initial treatment to a heart attack).</obo:IAO_0000115>
-        <obo:IAO_0000117>HL, QL, YH</obo:IAO_0000117>
-        <obo:IAO_0000118>KS test</obo:IAO_0000118>
-        <obo:IAO_0000118>Mantel–Cox test</obo:IAO_0000118>
-        <obo:IAO_0000118>log-rank analysis</obo:IAO_0000118>
-        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Log-rank_test</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">log-rank test</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000249 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000249">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <obo:IAO_0000115>An inferential statistical data analysis which is used to find the independent components (also called factors, latent variables or sources) by maximizing the statistical independence of the estimated components.</obo:IAO_0000115>
-        <obo:IAO_0000117>Person: Oliver He and Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000118>ICA</obo:IAO_0000118>
-        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Independent_component_analysis</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">independent component analysis</rdfs:label>
     </owl:Class>
     
 
@@ -8673,31 +7591,10 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0000739 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000739">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000175"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000111>Student&apos;s t-test</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115>Studen&apos;t t-test is a data transformation with the objective of a statistical hypothesis test in which the test statistic has a Student&apos;s t distribution if the null hypothesis is true. It is applied when the population is assumed to be normally distributed but the sample sizes are small enough that the statistic on which inference is based is not normally distributed because it relies on an uncertain estimate of standard deviation rather than on a precisely known value.</obo:IAO_0000115>
-        <obo:IAO_0000117>James Malone</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/T-test</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label>Student&apos;s t-test</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0000804 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000804">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000810"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -8775,7 +7672,7 @@ for now.</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0000842 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000842">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000810"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -8950,6 +7847,18 @@ for now.</obo:IAO_0000116>
         <obo:IAO_0000119>Bjoern Peters</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label>categorical label</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000968 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000968">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/object"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
+        <rdfs:comment xml:lang="en">device is modelled as processed material in OBI which refers to material entities that can alter and modified under certain process. however device is a material object and it doesnot change it course. We dont not consider blood samples as device but only material entities such as needle, MRI scan, wearable smart watch etc.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:label xml:lang="en">device</rdfs:label>
     </owl:Class>
     
 
@@ -9174,23 +8083,6 @@ All subtype will be defined by textual definition now.</obo:IAO_0000232>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0001522 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001522">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
-        <obo:IAO_0000111 xml:lang="en">sequence assembly algorithm</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An algorithm used to assemble individual sequence reads into larger contiguous sequences (contigs).  Assembly details include but are not limited to assembler type (overlap-layout-consensus, deBruijn), assembler version, and any relevant quality control information such as per cent known genes/ESTs captured.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Person: Chris Stoeckert, Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">NIAID GSCID-BRC metadata working group</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <obo:OBI_0001886>Assembly Algorithm</obo:OBI_0001886>
-        <dc:source>NIAID GSCID-BRC</dc:source>
-        <rdfs:label xml:lang="en">sequence assembly algorithm</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0001540 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001540">
@@ -9220,22 +8112,6 @@ All subtype will be defined by textual definition now.</obo:IAO_0000232>
         <obo:OBI_9991118>cell bound MHC direct binding</obo:OBI_9991118>
         <rdfs:label>obsolete cell bound MHC direct binding assay</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0001625 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0001625">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
-        <obo:IAO_0000111 xml:lang="en">sequence annotation algorithm</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An algorithm used to identify sequence features (e.g. protein coding regions) in the assembled contig sequence.  This may also include a description of any manual curation that may have generated or validated the annotation.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Person: Chris Stoeckert, Jie Zheng</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">NIAID GSCID-BRC metadata working group</obo:IAO_0000119>
-        <obo:OBI_0001886>Annotation Algorithm</obo:OBI_0001886>
-        <dc:source>NIAID GSCID-BRC</dc:source>
-        <rdfs:label xml:lang="en">sequence annotation algorithm</rdfs:label>
     </owl:Class>
     
 
@@ -9501,7 +8377,6 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
         <obo:IAO_0000117>Chris Stoeckert, Helena Ellis</obo:IAO_0000117>
         <obo:IAO_0000119>NCI BBRB, OBIB</obo:IAO_0000119>
         <obo:IAO_0000234>NCI BBRB</obo:IAO_0000234>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label>history of metastatic cancer exclusion criterion</rdfs:label>
     </owl:Class>
     
@@ -9558,73 +8433,6 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000234 xml:lang="en">MIABIS2.0</obo:IAO_0000234>
         <rdfs:label xml:lang="en">health status inclusion criterion</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002466 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002466">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
-        <obo:IAO_0000111 xml:lang="en">alignment counting algorithm</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">An algorithm used to assign aligned sequence reads, resulting from a reference genome transcriptome alignment algorithm, to sequence features (e.g. genes or transcripts).</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Stephen A. Fisher, Junhyong Kim, Dan Berrios</obo:IAO_0000117>
-        <rdfs:label>alignment counting algorithm</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002468 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002468">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
-        <obo:IAO_0000111 xml:lang="en">base calling algorithm</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">An algorithm that assigns nucleotides to temporal or spatial peaks generated by a detector, such as peaks of light intensities generated by a DNA sequencer</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Stephen A. Fisher, Junhyong Kim, Dan Berrios</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">base calling algorithm</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002478 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002478">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000064"/>
-        <obo:IAO_0000111 xml:lang="en">reference genome-transcriptome alignment algorithm</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">An algorithm that attempts to align a nucleic acid sequence to a reference genome and transcriptome.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Stephen A. Fisher, Junhyong Kim, Dan Berrios</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">reference genome-transcriptome alignment algorithm</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002484 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002484">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0002478"/>
-        <obo:IAO_0000111 xml:lang="en">star algorithm</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115 xml:lang="en">A reference genome transcriptome alignment algorithm that is a standalone RNA-seq alignment algorithm that uses uncompressed suffix arrays and a mapping algorithm similar to those used in large-scale genome alignment tools to align RNA-seq reads to a genomic reference.</obo:IAO_0000115>
-        <obo:IAO_0000119 xml:lang="en">Stephen A. Fisher, Junhyong Kim, Dan Berrios</obo:IAO_0000119>
-        <obo:IAO_0000119 xml:lang="en">https://www.ncbi.nlm.nih.gov/pubmed/23104886</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">star algorithm</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0002486 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0002486">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0002466"/>
-        <obo:IAO_0000111 xml:lang="en">verse algorithm</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115 xml:lang="en">An alignment counting algorithm that assigns gene features to genomic alignments using a hierarchical assignment scheme, which allows simultaneous quantification of multiple feature types or annotation levels without repeatedly assigning reads.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Stephen A. Fisher, Junhyong Kim</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">http://kim.bio.upenn.edu/software/verse.shtml or http://biorxiv.org/content/early/2016/05/14/053306</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">verse algorithm</rdfs:label>
     </owl:Class>
     
 
@@ -9816,7 +8624,7 @@ Concluding that a gene is upregulated in a tissue sample based on the band inten
         <obo:IAO_0000115 xml:lang="en">A symbol that denotes a participant under investigation.</obo:IAO_0000115>
         <obo:IAO_0000117>John Judkins</obo:IAO_0000117>
         <obo:IAO_0000119>VEuPathDB</obo:IAO_0000119>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label>participant identifier</rdfs:label>
     </owl:Class>
     
@@ -10041,24 +8849,6 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0200088 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200088">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200194"/>
-        <obo:IAO_0000111 xml:lang="en">Kaplan Meier</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
-        <obo:IAO_0000115>a nonparametric (actuarial) data transformation technique for estimating time-related events. It is a univariate analysis that estimates the probability of the proportion of subjects in remission at a particular time, starting from the initiation of active date (time zero), and takes into account those lost to follow-up or not yet in remission at end of study (censored)</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">a nonparametric (actuarial) data transformation technique for estimating time-related events. It is a univariate analysis that estimates the probability of the proportion of subjects in remission at a particular time, starting from the initiation of active date (time zero), and takes into account those lost to follow-up or not yet in remission at end of study (censored)</obo:IAO_0000115>
-        <obo:IAO_0000117>PERSON: James Malone</obo:IAO_0000117>
-        <obo:IAO_0000117>PERSON: Tina Boussard</obo:IAO_0000117>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Kaplan%E2%80%93Meier_estimator</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label xml:lang="en">Kaplan Meier</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0200111 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200111">
@@ -10106,22 +8896,6 @@ information_encoding
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0200176 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200176">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
-        <obo:IAO_0000111>Fisher&apos;s exact test</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115>Fisher&apos;s exact test is a data transformation used to determine if there are nonrandom associations between two Fisher&apos;s exact test is a statistical significance test used in the analysis of contingency tables where sample sizes are small where the significance of the deviation from a null hypothesis can be calculated exactly, rather than relying on an approximation that becomes exact in the limit as the sample size grows to infinity, as with many statistical tests.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">Fisher&apos;s exact test is a data transformation used to determine if there are nonrandom associations between two Fisher&apos;s exact test is a statistical significance test used in the analysis of contingency tables where sample sizes are small where the significance of the deviation from a null hypothesis can be calculated exactly, rather than relying on an approximation that becomes exact in the limit as the sample size grows to infinity, as with many statistical tests.</obo:IAO_0000115>
-        <obo:IAO_0000117>James Malone</obo:IAO_0000117>
-        <obo:IAO_0000119>WEB:http://mathworld.wolfram.com/FishersExactTest.html</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label>Fisher&apos;s exact test</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0200194 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200194">
@@ -10138,26 +8912,6 @@ information_encoding
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OBI_0200195 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200195">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200194"/>
-        <obo:IAO_0000111>proportional hazards model estimation</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115>Proportional hazards model is a data transformation model to estimate the effects of different covariates influencing the times-to-failure of a system.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">Proportional hazards model is a data transformation model to estimate the effects of different covariates influencing the times-to-failure of a system.</obo:IAO_0000115>
-        <obo:IAO_0000117>PERSON: James Malone</obo:IAO_0000117>
-        <obo:IAO_0000117>PERSON: Tina Boussard</obo:IAO_0000117>
-        <obo:IAO_0000118>Cox model</obo:IAO_0000118>
-        <obo:IAO_0000118>Cox proportional hazards model</obo:IAO_0000118>
-        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Cox_proportional_hazards_model</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label>proportional hazards model estimation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0200200 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200200">
@@ -10170,22 +8924,6 @@ information_encoding
         <obo:IAO_0000117>PERSON: Tina Boussard</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
         <rdfs:label>chi square test</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OBI_0200201 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200201">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
-        <obo:IAO_0000111>ANOVA</obo:IAO_0000111>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
-        <obo:IAO_0000115>A statistical hypothesis test in which the means of several groups are all equal.</obo:IAO_0000115>
-        <obo:IAO_0000115 xml:lang="en">A statistical hypothesis test in which the means of several groups are all equal.</obo:IAO_0000115>
-        <obo:IAO_0000117>James Malone</obo:IAO_0000117>
-        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Analysis_of_variance</obo:IAO_0000119>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
-        <rdfs:label>ANOVA</rdfs:label>
     </owl:Class>
     
 
@@ -10454,18 +9192,6 @@ defines and states the requirements (positive or negative) for an entity to be c
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OGMS_0000031 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000031">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-        <obo:IAO_0000111>disease</obo:IAO_0000111>
-        <obo:IAO_0000115 xml:lang="en">A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
-        <rdfs:label>disease</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OMRSE_00000012 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000012">
@@ -10523,19 +9249,6 @@ defines and states the requirements (positive or negative) for an entity to be c
         <obo:IAO_0000115>A physical quality that inheres in a bearer by virtue of the proportion of the bearer&apos;s amount of matter.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
         <rdfs:label>mass</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0000161 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000161">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/process_quality"/>
-        <obo:IAO_0000115>A quality of a single process inhering in a bearer by virtue of the bearer&apos;s occurrence per unit time.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
-        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
-        <oboInOwl:id>PATO:0000161</oboInOwl:id>
-        <rdfs:label>rate</rdfs:label>
     </owl:Class>
     
 
@@ -10632,39 +9345,6 @@ where random samples of size n have been taken from k independent and identicall
     
 
 
-    <!-- http://purl.obolibrary.org/obo/STATO_0000044 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000044">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200201"/>
-        <obo:IAO_0000115 xml:lang="en">one-way anova is an analysis of variance where the different groups being compared are associated with the factor levels of only one independent variable. The null hypothesis is an absence of difference between the means calculated for each of the groups. The test assumes normality and equivariance of the data.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
-        <rdfs:label xml:lang="en">one-way ANOVA</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/STATO_0000045 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000045">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200201"/>
-        <obo:IAO_0000115 xml:lang="en">two-way anova is an analysis of variance where the different groups being compared are associated the factor levels of exatly 2 independent variables. The null hypothesis is an absence of difference between the means calculated for each of the groups. The test assumes normality and equivariance of the data.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
-        <rdfs:label xml:lang="en">two-way ANOVA</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/STATO_0000048 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000048">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200201"/>
-        <obo:IAO_0000115 xml:lang="en">Multi-way anova is an analysis of variance where the difference groups being compared are associated to the factor levels of more than 2 independent variables. The null hypothesis is an absence of difference between the means calculated for each of the groups. The test assumes normality and equivariance of the data.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
-        <rdfs:label xml:lang="en">multiway ANOVA</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/STATO_0000060 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000060">
@@ -10672,17 +9352,6 @@ where random samples of size n have been taken from k independent and identicall
         <obo:IAO_0000115 xml:lang="en">hypergeometric distribution is a probability distribution that describes the probability of  k successes in n draws from a finite population of size  N containing  K successes without replacement</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
         <rdfs:label xml:lang="en">hypergeometric distribution</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/STATO_0000095 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000095">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000202"/>
-        <obo:IAO_0000115 xml:lang="en">paired t-test is a statistical test which is specifically designed to analysis differences between paired observations in the case of studies realizing repeated measures design with only 2 repeated measurements per subject (before and after treatment for example)</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
-        <rdfs:label xml:lang="en">paired t-test</rdfs:label>
     </owl:Class>
     
 
@@ -10815,17 +9484,6 @@ Spearman&apos;s coefficient may be used when the conditions for computing Pearso
     
 
 
-    <!-- http://purl.obolibrary.org/obo/STATO_0000202 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000202">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
-        <obo:IAO_0000115 xml:lang="en">within subject comparison statistical test is a kind of statistical test which evaluates if a change occurs within one experimental unit over time following a treatment or an event</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
-        <rdfs:label xml:lang="en">within subject comparison statistical test</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/STATO_0000212 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000212">
@@ -10882,20 +9540,6 @@ Spearman&apos;s coefficient may be used when the conditions for computing Pearso
     
 
 
-    <!-- http://purl.obolibrary.org/obo/STATO_0000260 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000260">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200201"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000202"/>
-        <obo:IAO_0000115 xml:lang="en">repeated measure ANOVA is a kind of ANOVA specifically developed for non-independent observations as found when repeated measurements on the sample experimental unit. 
-repeated measure ANOVA is sensitive to departure from normality (evaluation using Bartlett&apos;s test), more so in the case of unbalanced groups (i.e. different sizes of sample populations).
-Departure from sphericity (evaluation  using Mauchly&apos;test)  used to be an issue which is now handled robustly by modern tools such as R&apos;s lme4 or nlme, which accommodate dependence assumptions other than sphericity.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
-        <rdfs:label>repeated measure ANOVA</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/STATO_0000267 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000267">
@@ -10941,30 +9585,6 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- http://purl.obolibrary.org/obo/STATO_0000286 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000286">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
-        <obo:IAO_0000115 xml:lang="en">a one-tailed test is a statistical test which, assuming an unskewed probability distribution, allocates all of the significance level to evaluate only one hypothesis to explain a difference.
-The one-tailed test provides more power to detect an effect in one direction by not testing the effect in the other direction.
-one-tailed test should be preceded by two-tailed test in order to avoid missing out on detecting alternate effect explaining an observed difference.</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
-        <rdfs:label xml:lang="en">one tailed test</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/STATO_0000287 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000287">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
-        <obo:IAO_0000115 xml:lang="en">a two tailed test is a statistical test which assess the null hypothesis of absence of difference assuming a symmetric (not skewed) underlying probability distribution by allocating half of the significance level selected to each of the direction of change which could explain a difference (for example, a difference can be an excess or a loss).</obo:IAO_0000115>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
-        <rdfs:label xml:lang="en">two tailed test</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/STATO_0000524 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000524">
@@ -10999,17 +9619,6 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
-    <!-- http://purl.obolibrary.org/obo/topic_0003 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/topic_0003">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <obo:IAO_0000115>A category denoting a rather broad domain or field of interest, study, application, work, data, or technology. Topics have no clearly defined borders between each other.</obo:IAO_0000115>
-        <oboInOwl:id>topic:0003</oboInOwl:id>
-        <rdfs:label>Topic</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://semanticscience.org/resource/SIO_000033 -->
 
     <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000033">
@@ -11023,7 +9632,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
         <obo:IAO_0000115 xml:lang="en">process status is a process quality that describes the state of a process.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000033"/>
         <oboInOwl:id rdf:resource="http://www.w3id.org/cdio/SIO_000033"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">process status</rdfs:label>
     </owl:Class>
     
@@ -11047,8 +9656,18 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000033"/>
         <obo:IAO_0000115 xml:lang="en">ongoing is the status of a process that is not yet complete.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000035"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">ongoing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://semanticscience.org/resource/SIO_000133 -->
+
+    <owl:Class rdf:about="http://semanticscience.org/resource/SIO_000133">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000133"/>
+        <rdfs:isDefinedBy rdf:resource="http://semanticscience.org/resource/SIO_000133"/>
+        <rdfs:label>descriptor</rdfs:label>
     </owl:Class>
     
 
@@ -11059,7 +9678,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
         <rdfs:subClassOf rdf:resource="http://semanticscience.org/resource/SIO_000033"/>
         <obo:IAO_0000115 xml:lang="en">not started is the status of a process that is predicted to exist but has not yet begun.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000963"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">not started</rdfs:label>
     </owl:Class>
     
@@ -11094,19 +9713,18 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <!-- http://www.w3id.org/cmeo/data_use_permission_assignment_process -->
 
     <owl:Class rdf:about="http://www.w3id.org/cmeo/data_use_permission_assignment_process">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3id.org/cheo/"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000810"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">data use permission assignment process</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://www.w3id.org/cmeo/descriptor -->
+    <!-- http://www.w3id.org/cmeo/device_identifier -->
 
-    <owl:Class rdf:about="http://www.w3id.org/cmeo/descriptor">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
-        <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000133"/>
-        <rdfs:label>descriptor</rdfs:label>
+    <owl:Class rdf:about="http://www.w3id.org/cmeo/device_identifier">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:label xml:lang="en">device identifier</rdfs:label>
     </owl:Class>
     
 
@@ -11141,6 +9759,16 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
+    <!-- http://www.w3id.org/cmeo/sensor -->
+
+    <owl:Class rdf:about="http://www.w3id.org/cmeo/sensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/wearable_device"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">sensor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3id.org/cmeo/surgical_procedure_history_exclusion_criterion -->
 
     <owl:Class rdf:about="http://www.w3id.org/cmeo/surgical_procedure_history_exclusion_criterion">
@@ -11155,6 +9783,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
 
     <owl:Class rdf:about="http://www.w3id.org/cmeo/timeline">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">timeline</rdfs:label>
     </owl:Class>
     
@@ -11186,37 +9815,6 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
         <rdfs:comment xml:lang="en">A category is a class of entities having particular shared characteristics.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">category</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/CDIO_00000002 -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/CDIO_00000002">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">adverse event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/CDIO_00000003 -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/CDIO_00000003">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">clinical finding</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/CDIO_00000004 -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/CDIO_00000004">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000003"/>
-        <obo:IAO_0000115 xml:lang="en">Compliance Finding is modeled as a subtype of Clinical Finding because it represents an observed or assessed state regarding the patient or healthcare provider behavior related to treatment.</obo:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">compliance finding</rdfs:label>
     </owl:Class>
     
 
@@ -11271,16 +9869,6 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
-    <!-- https://w3id.org/cdio/age -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/age">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/demographics"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">age</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/agent -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/agent">
@@ -11291,78 +9879,12 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
-    <!-- https://w3id.org/cdio/anthropometric_measurement -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/anthropometric_measurement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/measurement"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
-                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">anthropometric measurement</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/blood_biomarker -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/blood_biomarker">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/blood_measurement"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">blood biomarker</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/blood_measurement -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/blood_measurement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/measurement"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">blood measurement</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/cardiac_risk_factor -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/cardiac_risk_factor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/risk_factor"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/risk_factor"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">cardiac risk factor</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/cardiac_sign -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/cardiac_sign">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/sign"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">cardiac sign</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/cardiovascular_finding -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/cardiovascular_finding">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/disease_or_disorder_indicator"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">cardiovascular finding</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/cardiovascular_measurement -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/cardiovascular_measurement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/measurement"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">cardiovascular measurement</rdfs:label>
     </owl:Class>
     
 
@@ -11381,18 +9903,8 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
 
     <owl:Class rdf:about="https://w3id.org/cdio/categorization">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">categorization process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/cause_of_death -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/cause_of_death">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/etiology"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">cause of death</rdfs:label>
+        <rdfs:label xml:lang="en">categorization process</rdfs:label>
     </owl:Class>
     
 
@@ -11430,7 +9942,7 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A unique identifier assigned to a concept in a standardized vocabulary (e.g., LOINC, SNOMED).</obo:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">code</rdfs:label>
     </owl:Class>
     
@@ -11442,18 +9954,6 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">compliance</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/consumption_measurement -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/consumption_measurement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/measurement"/>
-        <obo:IAO_0000115 xml:lang="en">The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification.</obo:IAO_0000115>
-        <obo:IAO_0000412 xml:lang="en">http://purl.obolibrary.org/obo/CMO_0000426</obo:IAO_0000412>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">consumption measurement</rdfs:label>
     </owl:Class>
     
 
@@ -11516,63 +10016,8 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     <owl:Class rdf:about="https://w3id.org/cdio/data_standardization">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000232 xml:lang="en">linking a concept to unique identifier in respective domain standard such as linking variable bp to blood pressure concept in SNOMED</obo:IAO_0000232>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">data standardization process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/death -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/death">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000002"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000003"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">death</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/demographics -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/demographics">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">demographics</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/device -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/device">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/object"/>
-        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
-        <rdfs:comment xml:lang="en">device is modelled as processed material in OBI which refers to material entities that can alter and modified under certain process. however device is a material object and it doesnot change it course. We dont not consider blood samples as device but only material entities such as needle, MRI scan, wearable smart watch etc.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">device</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/device_exposure -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/device_exposure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/exposure"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">device exposure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/dietary_intake -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/dietary_intake">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
-        <obo:IAO_0000115 xml:lang="en">A documented record or conceptual representation of the overall pattern of food and beverage consumption, as recorded in surveys or data dictionaries.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Dietary Intake is the process (or the information about that process) by which an organism consumes substances that provide nutrition. It represents a collection of observable data points (e.g., frequency of fruit, vegetable, dairy consumption) that characterize an individual’s nutritional behavior.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">dietary intake</rdfs:label>
     </owl:Class>
     
 
@@ -11588,44 +10033,6 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
-    <!-- https://w3id.org/cdio/disease_or_disorder_history -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/disease_or_disorder_history">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/medical_history"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">disease or disorder history</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/disease_or_disorder_indicator -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/disease_or_disorder_indicator">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000003"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000031"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">presence/absence of disease data element</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">disease or disorder finidng</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/drug_therapy_compliance -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/drug_therapy_compliance">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/compliance"/>
-        <obo:IAO_0000115 xml:lang="en">A patient’s likelihood or propensity to adhere to a prescribed drug regimen is not a one-time observation; it is a persistent aspect of their behavior and decision-making that can manifest over time when conditions (like receiving the medication) are met.</obo:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">drug therapy compliance</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/end_time -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/end_time">
@@ -11637,44 +10044,13 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
-    <!-- https://w3id.org/cdio/etiology -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/etiology">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/disease_or_disorder_indicator"/>
-        <obo:IAO_0000115 xml:lang="en">The cause of a disease or abnormal condition</obo:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">etiology</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/exploratory_data_analysis -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/exploratory_data_analysis">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000001"/>
         <obo:IAO_0000115 xml:lang="en">In statistics, exploratory data analysis (EDA) is an approach of analyzing data sets to summarize their main characteristics, often using statistical graphics and other data visualization methods.</obo:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/chexo/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">exploratory data analysis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/exposure -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/exposure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/treatment"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">exposure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/family_history -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/family_history">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/medical_history"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">family history</rdfs:label>
     </owl:Class>
     
 
@@ -11701,105 +10077,12 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
-    <!-- https://w3id.org/cdio/follow_up_attrition -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/follow_up_attrition">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
-        <rdfs:comment xml:lang="en">refers to the loss of study participants during the follow-up period of a research study. This occurs when individuals:Are lost to follow-up: They cannot be contacted or fail to attend scheduled follow-up assessments. Withdraw from the study: They actively choose to leave the study.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label>follow up attrition</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/formula -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/formula">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">formula</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/functional_and_behavioral_assesment_score -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/functional_and_behavioral_assesment_score">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/measurement"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">functional and behavioral assesment score</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/functional_finding -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/functional_finding">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000003"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000023"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">functional finding</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/general_sign -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/general_sign">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/sign"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">general sign</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/healthcare_provider_compliance -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/healthcare_provider_compliance">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/compliance"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">healthcare provider compliance</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/healthcare_provider_compliance_finding -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/healthcare_provider_compliance_finding">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000004"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/cdio/healthcare_provider_compliance"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">healthcare provider compliance finding</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/heart_failure_etiology -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/heart_failure_etiology">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/etiology"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">heart failure etiology</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/hospitalisation_history -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/hospitalisation_history">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/medical_history"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">hospitalisation history</rdfs:label>
     </owl:Class>
     
 
@@ -11881,20 +10164,10 @@ one-tailed test should be preceded by two-tailed test in order to avoid missing 
     
 
 
-    <!-- https://w3id.org/cdio/measurement -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/measurement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">measurement</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/measurement_device -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/measurement_device">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/device"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000412 xml:lang="en">http://purl.obolibrary.org/obo/OBI_0002046</obo:IAO_0000412>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
         <rdfs:label xml:lang="en">measurement device</rdfs:label>
@@ -11911,36 +10184,6 @@ In BFO terms, &quot;Process&quot; includes both natural and intentional processe
 
 If &quot;Measurement Process&quot; were a direct child of &quot;Process,&quot; it would be treated like an uncontrolled biological or physical event rather than a structured, purposeful activity</obo:IAO_0000232>
         <rdfs:label xml:lang="en">measurement process</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/medical_history -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/medical_history">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">medical history</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/medication_exposure -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/medication_exposure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/exposure"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">medication exposure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/medication_history -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/medication_history">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/medical_history"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">medication history</rdfs:label>
     </owl:Class>
     
 
@@ -11962,7 +10205,7 @@ If &quot;Measurement Process&quot; were a direct child of &quot;Process,&quot; i
     <owl:Class rdf:about="https://w3id.org/cdio/missing_value_specification">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
         <rdfs:comment xml:lang="en">to indicate the missing value indicator for a data element in its dataset</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">missing value specification</rdfs:label>
     </owl:Class>
     
@@ -11999,20 +10242,10 @@ If &quot;Measurement Process&quot; were a direct child of &quot;Process,&quot; i
     
 
 
-    <!-- https://w3id.org/cdio/neurological_sign -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/neurological_sign">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/sign"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">neurological sign</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/non_compliance_reason -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/non_compliance_reason">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/reasons"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/reasons"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">non compliance reason data element</rdfs:label>
     </owl:Class>
@@ -12037,16 +10270,6 @@ If &quot;Measurement Process&quot; were a direct child of &quot;Process,&quot; i
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">number of hospitalizations</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/number_of_occurances -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/number_of_occurances">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">number of occurances</rdfs:label>
     </owl:Class>
     
 
@@ -12113,7 +10336,8 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                 <owl:someValuesFrom rdf:resource="https://w3id.org/cdio/data_standardization"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <oboInOwl:id xml:lang="en">omop id</oboInOwl:id>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">OMOP identifier</rdfs:label>
     </owl:Class>
     
@@ -12178,28 +10402,8 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Class rdf:about="https://w3id.org/cdio/primary_outcome_specification">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/study_outcome_specification"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">primary outcome specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/procedure -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/procedure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/treatment"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">procedure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/procedure_history -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/procedure_history">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/medical_history"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">procedure history</rdfs:label>
     </owl:Class>
     
 
@@ -12210,18 +10414,8 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:IAO_0000115 xml:lang="en">A process quality is quality that is associated with a process.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000027"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">process quality</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/protein_biomarker_data_element -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/protein_biomarker_data_element">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/blood_measurement"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">protein biomarker</rdfs:label>
+        <rdfs:label xml:lang="en">process quality</rdfs:label>
     </owl:Class>
     
 
@@ -12248,26 +10442,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     
 
 
-    <!-- https://w3id.org/cdio/reasons -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/reasons">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">reasons</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/respiratory_sign -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/respiratory_sign">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/sign"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">respiratory sign</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/retrospective_study_design -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/retrospective_study_design">
@@ -12278,43 +10452,12 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     
 
 
-    <!-- https://w3id.org/cdio/risk_factor -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/risk_factor">
-        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">risk factor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/secondary_outcome_specification -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/secondary_outcome_specification">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/study_outcome_specification"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">secondary outcome specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/sequence_counter -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/sequence_counter">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000028"/>
-        <obo:IAO_0000115 xml:lang="en">A sequence counter is a numeric identifier assigned to data packets or sensor readings to track their order and integrity in a data stream. It helps ensure that data is received in the correct order and that no packets are lost or duplicated.</obo:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">sequence counter</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/sex -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/sex">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/demographics"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">sex</rdfs:label>
+        <rdfs:label xml:lang="en">secondary outcome specification</rdfs:label>
     </owl:Class>
     
 
@@ -12360,26 +10503,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     
 
 
-    <!-- https://w3id.org/cdio/sign -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/sign">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/sign_or_symptom"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">sign</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/sign_or_symptom -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/sign_or_symptom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">sign or symptom</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/single_arm_cross_over_design -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/single_arm_cross_over_design">
@@ -12415,19 +10538,9 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- https://w3id.org/cdio/smoking -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/smoking">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/risk_factor"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/risk_factor"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">smoking</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/stages_and_scales -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/stages_and_scales">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/measurement"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">stages and scales</rdfs:label>
     </owl:Class>
     
 
@@ -12500,18 +10613,8 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <owl:Class rdf:about="https://w3id.org/cdio/study_outcome_specification">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
         <obo:IAO_0000115 xml:lang="en">A Study Outcome/Endpoint Specification is a Plan Specification that defines the measurable variables used to assess the effectiveness or impact of an intervention, treatment, or observation within a study. Endpoints are classified into Primary Endpoints (the main variable of interest) and Secondary Endpoints (additional measures that provide supporting information).</obo:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
-        <rdfs:label xml:lang="en">study outcome specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/symptom -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/symptom">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/sign_or_symptom"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">symptom</rdfs:label>
+        <rdfs:label xml:lang="en">study outcome specification</rdfs:label>
     </owl:Class>
     
 
@@ -12572,33 +10675,12 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     
 
 
-    <!-- https://w3id.org/cdio/time_to_event_measurement -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/time_to_event_measurement">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/measurement"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">time to event measurement</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/treatement_non_compliance_reason -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/treatement_non_compliance_reason">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/non_compliance_reason"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">treatement non compliance reason</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/cdio/treatment -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/treatment">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
-        <rdfs:comment xml:lang="en">a broader category which repesents all data elements related to patient exposure to medication, devices and procedures</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">treatment</rdfs:label>
     </owl:Class>
     
 
@@ -12612,24 +10694,14 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     
 
 
-    <!-- https://w3id.org/cdio/vital_sign -->
-
-    <owl:Class rdf:about="https://w3id.org/cdio/vital_sign">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/sign_or_symptom"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
-        <rdfs:label xml:lang="en">vital sign</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/cdio/wearable_device -->
 
     <owl:Class rdf:about="https://w3id.org/cdio/wearable_device">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/device"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
         <obo:IAO_0000115 xml:lang="en">Wearable devices such as activity trackers are an example of the Internet of things, since &quot;things&quot; such as electronics, software, sensors, and connectivity are effectors that enable objects to exchange data (including data quality[5]) through the internet with a manufacturer, operator, and/or other connected devices, without requiring human intervention.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">health wearable</obo:IAO_0000118>
         <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Wearable_technology"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cdio/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">wearable device</rdfs:label>
     </owl:Class>
     
@@ -12708,19 +10780,495 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     
 
 
-    <!-- https://w3id.org/cdio/cdio:drug_therapy_compliance_finding -->
+    <!-- https://w3id.org/cmeo/CMEO_00000002 -->
 
-    <owl:Class rdf:about="https://w3id.org/cdio/cdio:drug_therapy_compliance_finding">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/CDIO_00000004"/>
+    <owl:Class rdf:about="https://w3id.org/cmeo/CMEO_00000002">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">adverse event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/CMEO_00000003 -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/CMEO_00000003">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">clinical finding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/CMEO_00000004 -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/CMEO_00000004">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/CMEO_00000003"/>
+        <obo:IAO_0000115 xml:lang="en">Compliance Finding is modeled as a subtype of Clinical Finding because it represents an observed or assessed state regarding the patient or healthcare provider behavior related to treatment.</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">compliance finding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/anthropometric_measurement -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/anthropometric_measurement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/measurement"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/cdio/drug_therapy_compliance"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">anthropometric measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/blood_biomarker -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/blood_biomarker">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/blood_measurement"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">blood biomarker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/blood_measurement -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/blood_measurement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/measurement"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">blood measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/cardiac_sign -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/cardiac_sign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/sign"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">cardiac sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/cardiovascular_finding -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/cardiovascular_finding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/disease_or_disorder_indicator"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">cardiovascular finding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/cardiovascular_measurement -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/cardiovascular_measurement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/measurement"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">cardiovascular measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/cause_of_death -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/cause_of_death">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/etiology"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">cause of death</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/consumption_measurement -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/consumption_measurement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/measurement"/>
+        <obo:IAO_0000115 xml:lang="en">The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification.</obo:IAO_0000115>
+        <obo:IAO_0000412 xml:lang="en">http://purl.obolibrary.org/obo/CMO_0000426</obo:IAO_0000412>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">consumption measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/death -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/death">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/CMEO_00000002"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/CMEO_00000003"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">death</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/demographics -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/demographics">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">demographics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/device_exposure -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/device_exposure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/exposure"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">device exposure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/dietary_intake -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/dietary_intake">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
+        <obo:IAO_0000115 xml:lang="en">A documented record or conceptual representation of the overall pattern of food and beverage consumption, as recorded in surveys or data dictionaries.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Dietary Intake is the process (or the information about that process) by which an organism consumes substances that provide nutrition. It represents a collection of observable data points (e.g., frequency of fruit, vegetable, dairy consumption) that characterize an individual’s nutritional behavior.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">dietary intake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/disease_or_disorder_history -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/disease_or_disorder_history">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/medical_history"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">disease or disorder history</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/disease_or_disorder_indicator -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/disease_or_disorder_indicator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/CMEO_00000003"/>
+        <rdfs:comment xml:lang="en">presence/absence of disease data element</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">disease or disorder finidng</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/drug_therapy_compliance_finding -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/drug_therapy_compliance_finding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/CMEO_00000004"/>
         <obo:IAO_0000115 xml:lang="en">It is a more specific data element that records findings about compliance with drug therapy</obo:IAO_0000115>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
         <rdfs:label xml:lang="en">drug therapy compliance finding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/etiology -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/etiology">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/disease_or_disorder_indicator"/>
+        <obo:IAO_0000115 xml:lang="en">The cause of a disease or abnormal condition</obo:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">etiology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/exposure -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/exposure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/treatment"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">exposure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/family_history -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/family_history">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/medical_history"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">family history</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/follow_up_attrition -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/follow_up_attrition">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
+        <rdfs:comment xml:lang="en">refers to the loss of study participants during the follow-up period of a research study. This occurs when individuals:Are lost to follow-up: They cannot be contacted or fail to attend scheduled follow-up assessments. Withdraw from the study: They actively choose to leave the study.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label>follow up attrition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/functional_and_behavioral_assesment_score -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/functional_and_behavioral_assesment_score">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/measurement"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">functional and behavioral assesment score</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/functional_finding -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/functional_finding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/CMEO_00000003"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000023"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">functional finding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/general_sign -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/general_sign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/sign"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">general sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/healthcare_provider_compliance_finding -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/healthcare_provider_compliance_finding">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/CMEO_00000004"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">healthcare provider compliance finding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/heart_failure_etiology -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/heart_failure_etiology">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/etiology"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">heart failure etiology</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/hospitalisation_history -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/hospitalisation_history">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/medical_history"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/OBI_0002430"/>
+        <rdfs:label xml:lang="en">hospitalisation history</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/measurement -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/measurement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/medical_history -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/medical_history">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">medical history</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/medication_exposure -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/medication_exposure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/exposure"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">medication exposure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/medication_history -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/medication_history">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/medical_history"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">medication history</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/neurological_sign -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/neurological_sign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/sign"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">neurological sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/number_of_occurances -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/number_of_occurances">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">number of occurances</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/procedure -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/procedure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/treatment"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">procedure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/procedure_history -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/procedure_history">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/medical_history"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">procedure history</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/protein_biomarker_data_element -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/protein_biomarker_data_element">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/blood_measurement"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">protein biomarker</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/reasons -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/reasons">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">reasons</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/respiratory_sign -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/respiratory_sign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/sign"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">respiratory sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/risk_factor -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/risk_factor">
+        <rdfs:subClassOf rdf:resource="http://www.w3id.org/cmeo/observation"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">risk factor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/sign -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/sign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/sign_or_symptom"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">sign</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/sign_or_symptom -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/sign_or_symptom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">sign or symptom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/stages_and_scales -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/stages_and_scales">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/measurement"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">stages and scales</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/symptom -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/symptom">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/sign_or_symptom"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">symptom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/time_to_event_measurement -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/time_to_event_measurement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/measurement"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">time to event measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/treatment -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/treatment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cdio/data_element"/>
+        <rdfs:comment xml:lang="en">a broader category which repesents all data elements related to patient exposure to medication, devices and procedures</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">treatment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/cmeo/vital_sign -->
+
+    <owl:Class rdf:about="https://w3id.org/cmeo/vital_sign">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo/sign_or_symptom"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo/"/>
+        <rdfs:label xml:lang="en">vital sign</rdfs:label>
     </owl:Class>
     
 
@@ -12739,7 +11287,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- http://purl.obolibrary.org/obo/IAO_0000002 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000002">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">example to be eventually removed</obo:IAO_0000111>
         <rdfs:label xml:lang="en">example to be eventually removed</rdfs:label>
     </owl:NamedIndividual>
@@ -12750,7 +11297,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/IAO_0000103">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
         <obo:IAO_0000111 xml:lang="en">failed exploratory term</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">The term was used in an attempt to structure part of the ontology but in retrospect failed to do a good job</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Person:Alan Ruttenberg</obo:IAO_0000117>
@@ -12763,7 +11309,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/IAO_0000120">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">metadata complete</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Class has all its metadata, but is either not guaranteed to be in its final location in the asserted IS_A hierarchy or refers to another class that is not complete.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">metadata complete</rdfs:label>
@@ -12775,7 +11320,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/IAO_0000121">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">organizational term</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Term created to ease viewing/sort terms for development purpose, and will not be included in a release</obo:IAO_0000115>
         <obo:IAO_0000117>PERSON:Alan Ruttenberg</obo:IAO_0000117>
@@ -12788,7 +11332,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/IAO_0000122">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">ready for release</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Class has undergone final review, is ready for use, and will be included in the next release. Any class lacking &quot;ready_for_release&quot; should be considered likely to change place in hierarchy, have its definition refined, or be obsoleted in the next release.  Those classes deemed &quot;ready_for_release&quot; will also derived from a chain of ancestor classes that are also &quot;ready_for_release.&quot;</obo:IAO_0000115>
         <rdfs:label xml:lang="en">ready for release</rdfs:label>
@@ -12800,7 +11343,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/IAO_0000123">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">metadata incomplete</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Class is being worked on; however, the metadata (including definition) are not complete or sufficiently clear to the branch editors.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">metadata incomplete</rdfs:label>
@@ -12812,7 +11354,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/IAO_0000124">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">uncurated</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Nothing done yet beyond assigning a unique class ID and proposing a preferred term.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">uncurated</rdfs:label>
@@ -12824,7 +11365,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/IAO_0000125">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">pending final vetting</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">All definitions, placement in the asserted IS_A hierarchy and required minimal metadata are complete. The class is awaiting a final review by someone other than the term editor.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">pending final vetting</rdfs:label>
@@ -12849,7 +11389,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Thing rdf:about="http://purl.obolibrary.org/obo/IAO_0000226">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
         <obo:IAO_0000111 xml:lang="en">placeholder removed</obo:IAO_0000111>
         <rdfs:label xml:lang="en">placeholder removed</rdfs:label>
     </owl:Thing>
@@ -12859,7 +11398,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- http://purl.obolibrary.org/obo/IAO_0000227 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000227">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
         <obo:IAO_0000111 xml:lang="en">terms merged</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">An editor note should explain what were the merged terms and the reason for the merge.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">terms merged</rdfs:label>
@@ -12870,7 +11408,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- http://purl.obolibrary.org/obo/IAO_0000228 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000228">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
         <obo:IAO_0000111 xml:lang="en">term imported</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">This is to be used when the original term has been replaced by a term imported from an other ontology. An editor note should indicate what is the URI of the new term to use.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">term imported</rdfs:label>
@@ -12881,7 +11418,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- http://purl.obolibrary.org/obo/IAO_0000229 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000229">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
         <obo:IAO_0000111 xml:lang="en">term split</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">This is to be used when a term has been split in two or more new terms. An editor note should indicate the reason for the split and indicate the URIs of the new terms created.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">term split</rdfs:label>
@@ -12903,7 +11439,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- http://purl.obolibrary.org/obo/IAO_0000410 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000410">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000409"/>
         <obo:IAO_0000111 xml:lang="en">universal</obo:IAO_0000111>
         <obo:IAO_0000116 xml:lang="en">Hard to give a definition for. Intuitively a &quot;natural kind&quot; rather than a collection of any old things, which a class is able to be, formally. At the meta level, universals are defined as positives, are disjoint with their siblings, have single asserted parents.</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
@@ -12916,7 +11451,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- http://purl.obolibrary.org/obo/IAO_0000420 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000420">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000409"/>
         <obo:IAO_0000111 xml:lang="en">defined class</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A defined class is a class that is defined by a set of logically necessary and sufficient conditions but is not a universal</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">&quot;definitions&quot;, in some readings, always are given by necessary and sufficient conditions. So one must be careful (and this is difficult sometimes) to distinguish between defined classes and universal.</obo:IAO_0000116>
@@ -12929,7 +11463,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- http://purl.obolibrary.org/obo/IAO_0000421 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000421">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000409"/>
         <obo:IAO_0000111 xml:lang="en">named class expression</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A named class expression is a logical expression that is given a name. The name can be used in place of the expression.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">named class expressions are used in order to have more concise logical definition but their extensions may not be interesting classes on their own. In languages such as OWL, with no provisions for macros, these show up as actuall classes. Tools may with to not show them as such, and to replace uses of the macros with their expansions</obo:IAO_0000116>
@@ -12942,7 +11475,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- http://purl.obolibrary.org/obo/IAO_0000423 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000423">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">to be replaced with external ontology term</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">Terms with this status should eventually replaced with a term from another ontology.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
@@ -12955,7 +11487,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- http://purl.obolibrary.org/obo/IAO_0000428 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/IAO_0000428">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000078"/>
         <obo:IAO_0000111 xml:lang="en">requires discussion</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">A term that is metadata complete, has been reviewed, and problems have been identified that require discussion before release. Such a term requires editor note(s) to identify the outstanding issues.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
@@ -16093,7 +14624,6 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- http://purl.obolibrary.org/obo/OMO_0001000 -->
 
     <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OMO_0001000">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
         <obo:IAO_0000115 xml:lang="en">The term was added to the ontology on the assumption it was in scope, but it turned out later that it was not.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">This obsolesence reason should be used conservatively. Typical valid examples are: un-necessary grouping classes in disease ontologies, a phenotype term added on the assumption it was a disease.</obo:IAO_0000116>
         <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
