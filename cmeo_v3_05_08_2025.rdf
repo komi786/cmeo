@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/cmeo#"
-     xml:base="https://w3id.org/cmeo"
+<rdf:RDF xmlns="https://www.w3id.org/cmeo#"
+     xml:base="https://www.w3id.org/cmeo"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -16,7 +16,7 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://w3id.org/cmeo">
-        <owl:versionIRI rdf:resource="https://w3id.org/cmeo#2.0"/>
+        <owl:versionIRI rdf:resource="https://www.w3id.org/cmeo#2.0"/>
         <protege:defaultLanguage>en</protege:defaultLanguage>
         <dc:creator xml:lang="en">Komal Gilani</dc:creator>
         <dc:description xml:lang="en">An ontology for representing clinical studies, including study designs, the collection and preparation of the targets of investigation, as well as the data generated and the types of analysis performed on the data to reach conclusions, and their documentation. It further extends to represent metadata of each data element in the study and related statatistics.</dc:description>
@@ -2506,9 +2506,9 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
     
 
 
-    <!-- https://w3id.org/cmeo#describes -->
+    <!-- https://www.w3id.org/cmeo#describes -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/cmeo#describes">
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/cmeo#describes">
         <rdfs:domain rdf:resource="http://semanticscience.org/resource/SIO_000133"/>
         <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000563"/>
         <rdfs:label xml:lang="en">describes</rdfs:label>
@@ -2516,9 +2516,9 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
     
 
 
-    <!-- https://w3id.org/cmeo#is_described_by -->
+    <!-- https://www.w3id.org/cmeo#is_described_by -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/cmeo#is_described_by">
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/cmeo#is_described_by">
         <rdfs:range rdf:resource="http://semanticscience.org/resource/SIO_000133"/>
         <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000557"/>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
@@ -2526,9 +2526,9 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
     
 
 
-    <!-- https://w3id.org/cmeo#restricted_to -->
+    <!-- https://www.w3id.org/cmeo#restricted_to -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/cmeo#restricted_to">
+    <owl:ObjectProperty rdf:about="https://www.w3id.org/cmeo#restricted_to">
         <obo:IAO_0000115 xml:lang="en">A is restricted to B iff A is a consent code and B is an investigation and A may only participate in instances of a class C, of which B is an instance.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">is restricted to</obo:IAO_0000118>
         <obo:IAO_0000412 xml:lang="en">http://purl.obolibrary.org/obo/DUO_0000010</obo:IAO_0000412>
@@ -9663,9 +9663,9 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#adverse_drug_reaction -->
+    <!-- https://www.w3id.org/cmeo#adverse_drug_reaction -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#adverse_drug_reaction">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#adverse_drug_reaction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#CMEO_00000002"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">adverse drug reaction</rdfs:label>
@@ -9673,9 +9673,9 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#age -->
+    <!-- https://www.w3id.org/cmeo#age -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#age">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#age">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#demographics"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">age</rdfs:label>
@@ -9683,19 +9683,19 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#all-cause_hospitalization -->
+    <!-- https://www.w3id.org/cmeo#all-cause_hospitalization -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#all-cause_hospitalization">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#hospitalization"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#all-cause_hospitalization">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#hospitalization"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">all-cause hospitalization</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#all-cause_mortality -->
+    <!-- https://www.w3id.org/cmeo#all-cause_mortality -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#all-cause_mortality">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#all-cause_mortality">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#death"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">all-cause mortality</rdfs:label>
@@ -9703,9 +9703,9 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#allergic_reaction -->
+    <!-- https://www.w3id.org/cmeo#allergic_reaction -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#allergic_reaction">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#allergic_reaction">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#CMEO_00000002"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">allergic reaction</rdfs:label>
@@ -9713,39 +9713,39 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#bleeding_event -->
+    <!-- https://www.w3id.org/cmeo#bleeding_event -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#bleeding_event">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#event"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#bleeding_event">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#event"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">bleeding event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#cardiovascular_event -->
+    <!-- https://www.w3id.org/cmeo#cardiovascular_event -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#cardiovascular_event">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#event"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#cardiovascular_event">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#event"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">cardiovascular event</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#cause-specific_hospitalization -->
+    <!-- https://www.w3id.org/cmeo#cause-specific_hospitalization -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#cause-specific_hospitalization">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#hospitalization"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#cause-specific_hospitalization">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#hospitalization"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">cause-specific hospitalization</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#cause-specific_mortality -->
+    <!-- https://www.w3id.org/cmeo#cause-specific_mortality -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#cause-specific_mortality">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#cause-specific_mortality">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#death"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">cause-specific mortality</rdfs:label>
@@ -9753,9 +9753,9 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#clinical_exposure_exclusion_criterion -->
+    <!-- https://www.w3id.org/cmeo#clinical_exposure_exclusion_criterion -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#clinical_exposure_exclusion_criterion">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#clinical_exposure_exclusion_criterion">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">clinical exposure exclusion criterion</rdfs:label>
@@ -9763,19 +9763,19 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#compliance_or_adherence -->
+    <!-- https://www.w3id.org/cmeo#compliance_or_adherence -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#compliance_or_adherence">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#observation"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#compliance_or_adherence">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#observation"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">compliance or adherence</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#data_type -->
+    <!-- https://www.w3id.org/cmeo#data_type -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#data_type">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#data_type">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:comment xml:lang="en">data type of variables such as int, float, str, datetime etc.</rdfs:comment>
         <rdfs:label xml:lang="en">data type</rdfs:label>
@@ -9783,9 +9783,9 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#data_use_permission_assignment_process -->
+    <!-- https://www.w3id.org/cmeo#data_use_permission_assignment_process -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#data_use_permission_assignment_process">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#data_use_permission_assignment_process">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000810"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">data use permission assignment process</rdfs:label>
@@ -9793,19 +9793,19 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#deprivation_index -->
+    <!-- https://www.w3id.org/cmeo#deprivation_index -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#deprivation_index">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#socioeconomic_status"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#deprivation_index">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#socioeconomic_status"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">deprivation index</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#device_adverse_event -->
+    <!-- https://www.w3id.org/cmeo#device_adverse_event -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#device_adverse_event">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#device_adverse_event">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#CMEO_00000002"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">device adverse event</rdfs:label>
@@ -9813,18 +9813,18 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#device_identifier -->
+    <!-- https://www.w3id.org/cmeo#device_identifier -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#device_identifier">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#device_identifier">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
         <rdfs:label xml:lang="en">device identifier</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#diagnostic_measurement -->
+    <!-- https://www.w3id.org/cmeo#diagnostic_measurement -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#diagnostic_measurement">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#diagnostic_measurement">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#measurement"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">diagnostic measurement</rdfs:label>
@@ -9832,29 +9832,29 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#disease_progression -->
+    <!-- https://www.w3id.org/cmeo#disease_progression -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#disease_progression">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#event"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#disease_progression">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#event"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">disease progression</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#education_level -->
+    <!-- https://www.w3id.org/cmeo#education_level -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#education_level">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#socioeconomic_status"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#education_level">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#socioeconomic_status"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">education level</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#event -->
+    <!-- https://www.w3id.org/cmeo#event -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#event">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#event">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#data_element"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">event</rdfs:label>
@@ -9862,29 +9862,29 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#fall_or_injury -->
+    <!-- https://www.w3id.org/cmeo#fall_or_injury -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#fall_or_injury">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#functional_or_Patient-reported"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#fall_or_injury">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#functional_or_Patient-reported"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">fall or injury</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#functional_or_Patient-reported -->
+    <!-- https://www.w3id.org/cmeo#functional_or_Patient-reported -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#functional_or_Patient-reported">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#event"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#functional_or_Patient-reported">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#event"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">functional or Patient-reported</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#healthy_volunteer_criterion -->
+    <!-- https://www.w3id.org/cmeo#healthy_volunteer_criterion -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#healthy_volunteer_criterion">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#healthy_volunteer_criterion">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500027"/>
         <obo:IAO_0000115 xml:lang="en">A type of eligibility criteria that indicates whether people who do not have the condition/disease being studied can participate in that clinical study. Indication that participants who do not have a disease or condition, or related conditions or symptoms, under study in the clinical study are permitted to participate in the clinical study.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">PERSON: Komal Gilani</obo:IAO_0000117>
@@ -9893,39 +9893,39 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#hospital-acquired_infection -->
+    <!-- https://www.w3id.org/cmeo#hospital-acquired_infection -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#hospital-acquired_infection">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#event"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#hospital-acquired_infection">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#event"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hospital-acquired infection</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#hospitalization -->
+    <!-- https://www.w3id.org/cmeo#hospitalization -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#hospitalization">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#event"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#hospitalization">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#event"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">hospitalization</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#hospitalization_for_procedure -->
+    <!-- https://www.w3id.org/cmeo#hospitalization_for_procedure -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#hospitalization_for_procedure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#hospitalization"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#hospitalization_for_procedure">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#hospitalization"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">procedure related hospitalization</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#human_subject_enrollment -->
+    <!-- https://www.w3id.org/cmeo#human_subject_enrollment -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#human_subject_enrollment">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#human_subject_enrollment">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000412 xml:lang="en">http://purl.obolibrary.org/obo/OBI_0600004</obo:IAO_0000412>
         <rdfs:label xml:lang="en">human subject enrollment</rdfs:label>
@@ -9933,19 +9933,19 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#income -->
+    <!-- https://www.w3id.org/cmeo#income -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#income">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#socioeconomic_status"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#income">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#socioeconomic_status"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">income</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#marital_status -->
+    <!-- https://www.w3id.org/cmeo#marital_status -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#marital_status">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#marital_status">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#demographics"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">marital status</rdfs:label>
@@ -9953,38 +9953,38 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#nutrition_exposure -->
+    <!-- https://www.w3id.org/cmeo#nutrition_exposure -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#nutrition_exposure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#substance_exposure"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#nutrition_exposure">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#substance_exposure"/>
         <obo:OMO_0004000 xml:lang="en">nutrition use and intake</obo:OMO_0004000>
         <rdfs:label xml:lang="en">nutrition exposure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#observation -->
+    <!-- https://www.w3id.org/cmeo#observation -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#observation">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#observation">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#data_element"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#occupation -->
+    <!-- https://www.w3id.org/cmeo#occupation -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#occupation">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#socioeconomic_status"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#occupation">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#socioeconomic_status"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">occupation</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#place_of_residence -->
+    <!-- https://www.w3id.org/cmeo#place_of_residence -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#place_of_residence">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#place_of_residence">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#demographics"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">place of residence</rdfs:label>
@@ -9992,9 +9992,9 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#race -->
+    <!-- https://www.w3id.org/cmeo#race -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#race">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#race">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#demographics"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">race</rdfs:label>
@@ -10002,19 +10002,19 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#readmission -->
+    <!-- https://www.w3id.org/cmeo#readmission -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#readmission">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#hospitalization"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#readmission">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#hospitalization"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">readmission</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#sensor -->
+    <!-- https://www.w3id.org/cmeo#sensor -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#sensor">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#sensor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#wearable_device"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">sensor</rdfs:label>
@@ -10022,9 +10022,9 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#sex -->
+    <!-- https://www.w3id.org/cmeo#sex -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#sex">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#sex">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#demographics"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">sex</rdfs:label>
@@ -10032,9 +10032,9 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#socioeconomic_status -->
+    <!-- https://www.w3id.org/cmeo#socioeconomic_status -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#socioeconomic_status">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#socioeconomic_status">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#demographics"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">socioeconomic status</rdfs:label>
@@ -10042,27 +10042,27 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#substance_exposure -->
+    <!-- https://www.w3id.org/cmeo#substance_exposure -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#substance_exposure">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#substance_exposure">
         <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#exposure"/>
         <rdfs:label xml:lang="en">substance exposure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#supplement_exposure -->
+    <!-- https://www.w3id.org/cmeo#supplement_exposure -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#supplement_exposure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#substance_exposure"/>
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#supplement_exposure">
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#substance_exposure"/>
         <rdfs:label xml:lang="en">supplement exposure</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://w3id.org/cmeo#surgical_procedure_history_exclusion_criterion -->
+    <!-- https://www.w3id.org/cmeo#surgical_procedure_history_exclusion_criterion -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#surgical_procedure_history_exclusion_criterion">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#surgical_procedure_history_exclusion_criterion">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">surgical procedure history exclusion criterion</rdfs:label>
@@ -10070,9 +10070,9 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#time_interval -->
+    <!-- https://www.w3id.org/cmeo#time_interval -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#time_interval">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#time_interval">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
         <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000417"/>
         <rdfs:label xml:lang="en">time interval</rdfs:label>
@@ -10080,9 +10080,9 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
-    <!-- https://w3id.org/cmeo#timeline -->
+    <!-- https://www.w3id.org/cmeo#timeline -->
 
-    <owl:Class rdf:about="https://w3id.org/cmeo#timeline">
+    <owl:Class rdf:about="https://www.w3id.org/cmeo#timeline">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">timeline</rdfs:label>
@@ -10123,7 +10123,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/cmeo#CMEO_00000002 -->
 
     <owl:Class rdf:about="https://w3id.org/cmeo#CMEO_00000002">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#event"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#event"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">adverse event</rdfs:label>
     </owl:Class>
@@ -10404,7 +10404,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/cmeo#death -->
 
     <owl:Class rdf:about="https://w3id.org/cmeo#death">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#event"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#event"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">death</rdfs:label>
     </owl:Class>
@@ -10414,7 +10414,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/cmeo#demographics -->
 
     <owl:Class rdf:about="https://w3id.org/cmeo#demographics">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#observation"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#observation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">demographics</rdfs:label>
     </owl:Class>
@@ -10519,7 +10519,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/cmeo#follow_up_attrition -->
 
     <owl:Class rdf:about="https://w3id.org/cmeo#follow_up_attrition">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#observation"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#observation"/>
         <rdfs:comment xml:lang="en">refers to the loss of study participants during the follow-up period of a research study. This occurs when individuals:Are lost to follow-up: They cannot be contacted or fail to attend scheduled follow-up assessments. Withdraw from the study: They actively choose to leave the study.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label>follow up attrition</rdfs:label>
@@ -10550,7 +10550,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/cmeo#functional_finding -->
 
     <owl:Class rdf:about="https://w3id.org/cmeo#functional_finding">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#observation"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#observation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -10698,7 +10698,7 @@ If &quot;Measurement Process&quot; were a direct child of &quot;Process,&quot; i
     <!-- https://w3id.org/cmeo#medical_history -->
 
     <owl:Class rdf:about="https://w3id.org/cmeo#medical_history">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#observation"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#observation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">medical history</rdfs:label>
     </owl:Class>
@@ -10708,7 +10708,7 @@ If &quot;Measurement Process&quot; were a direct child of &quot;Process,&quot; i
     <!-- https://w3id.org/cmeo#medication_exposure -->
 
     <owl:Class rdf:about="https://w3id.org/cmeo#medication_exposure">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#substance_exposure"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#substance_exposure"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">medication exposure</rdfs:label>
     </owl:Class>
@@ -10814,7 +10814,7 @@ If &quot;Measurement Process&quot; were a direct child of &quot;Process,&quot; i
     <!-- https://w3id.org/cmeo#number_of_occurances -->
 
     <owl:Class rdf:about="https://w3id.org/cmeo#number_of_occurances">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#observation"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#observation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">number of occurances</rdfs:label>
     </owl:Class>
@@ -11042,7 +11042,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <!-- https://w3id.org/cmeo#risk_factor -->
 
     <owl:Class rdf:about="https://w3id.org/cmeo#risk_factor">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/cmeo#observation"/>
+        <rdfs:subClassOf rdf:resource="https://www.w3id.org/cmeo#observation"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">risk factor</rdfs:label>
     </owl:Class>
