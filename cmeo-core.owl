@@ -4460,6 +4460,15 @@ points together with a line.</obo:IAO_0000115>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000225"/>
+        <rdfs:label xml:lang="en">frequency distribution</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBCS_0000071 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000071">
@@ -6518,6 +6527,15 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0200000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:label xml:lang="en">data transformation</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0200111 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200111">
@@ -6980,6 +6998,15 @@ Spearman&apos;s coefficient may be used when the conditions for computing Pearso
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000269"/>
         <obo:IAO_0000115 xml:lang="en">a tetrachoric correlation coefficient is a polychoric correlation coefficient for 2 dichotomous variables used as proxy for correlation between 2 continuous latent variables.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">tetrachoric correlation coefficient</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000225 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000225">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:label xml:lang="en">probability distribution</rdfs:label>
     </owl:Class>
     
 
@@ -7618,6 +7645,7 @@ The coefficient is calculated by dividing their covariance with the product of t
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000044">
         <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000009"/>
+        <rdfs:label xml:lang="en">observation</rdfs:label>
     </owl:Class>
     
 
@@ -7880,6 +7908,34 @@ The coefficient is calculated by dividing their covariance with the product of t
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">clinical exposure exclusion criterion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CMEO#CMEO_0000071 -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000071">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:comment xml:lang="en">comparator specification</rdfs:comment>
+        <rdfs:label xml:lang="en">comparator specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CMEO#CMEO_0000072 -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:label xml:lang="en">intervention specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CMEO#CMEO_0000073 -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000073">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
+        <rdfs:label xml:lang="en">exploratory data analysis</rdfs:label>
     </owl:Class>
     
 
