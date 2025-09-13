@@ -3634,6 +3634,16 @@ Previous. An information content entity is a non-realizable information entity t
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000032 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000032">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/IAO_0000032"/>
+        <rdfs:label xml:lang="en">scalar measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000033 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000033">
@@ -3917,6 +3927,16 @@ Request that IAO either clarify these or change definitions not to use them</rdf
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000109 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000109">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <oboInOwl:id>http://purl.obolibrary.org/obo/IAO_0000109</oboInOwl:id>
+        <rdfs:label xml:lang="en">measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000179 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000179">
@@ -4084,6 +4104,16 @@ clustering algorithm.</obo:IAO_0000115>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000416 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000416">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <rdfs:label xml:lang="en">time stamped measurement datum</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000429 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000429">
@@ -4204,7 +4234,7 @@ points together with a line.</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020000">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000028"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000009"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000076"/>
         <obo:IAO_0000111 xml:lang="en">identifier</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Justin Whorton</obo:IAO_0000117>
@@ -7270,7 +7300,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO#CMEO_0000010 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000010">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000009"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000076"/>
         <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">clinical event</rdfs:label>
     </owl:Class>
@@ -7496,7 +7526,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO#CMEO_0000030 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000030">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000009"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000076"/>
         <rdfs:label xml:lang="en">measurement</rdfs:label>
     </owl:Class>
     
@@ -7613,7 +7643,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO#CMEO_0000041 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000041">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000009"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000076"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">medical history</rdfs:label>
     </owl:Class>
@@ -7633,7 +7663,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO#CMEO_0000043 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000043">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000009"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000076"/>
         <rdfs:comment xml:lang="en">Prescriptions, over-the-counter meds, hormonal therapy, treatment history</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">medications and therapies</rdfs:label>
@@ -7644,7 +7674,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO#CMEO_0000044 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000044">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000009"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000076"/>
         <rdfs:label xml:lang="en">observation</rdfs:label>
     </owl:Class>
     
@@ -7703,7 +7733,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO#CMEO_0000050 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000050">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000009"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000076"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">procedure</rdfs:label>
     </owl:Class>
@@ -7713,7 +7743,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO#CMEO_0000051 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000051">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000009"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000076"/>
         <rdfs:label xml:lang="en">sign or symptom</rdfs:label>
     </owl:Class>
     
@@ -7813,7 +7843,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO#CMEO_0000061 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000061">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">timeline specification</rdfs:label>
     </owl:Class>
@@ -7823,7 +7853,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO#CMEO_0000062 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000062">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">study design variable specification</rdfs:label>
     </owl:Class>
@@ -7833,7 +7863,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO#CMEO_0000063 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000063">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
         <obo:IAO_0000115 xml:lang="en">A Study Outcome/Endpoint Specification is a Plan Specification that defines the measurable variables used to assess the effectiveness or impact of an intervention, treatment, or observation within a study. Endpoints are classified into Primary Endpoints (the main variable of interest) and Secondary Endpoints (additional measures that provide supporting information).</obo:IAO_0000115>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">study outcome specification</rdfs:label>
@@ -7936,6 +7966,48 @@ The coefficient is calculated by dividing their covariance with the product of t
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000073">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
         <rdfs:label xml:lang="en">exploratory data analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CMEO#CMEO_0000074 -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000074">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/CMEO#has_value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <oboInOwl:id rdf:resource="https://w3id.org/CMEO#CMEO_0000074"/>
+        <rdfs:label xml:lang="en">start time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CMEO#CMEO_0000075 -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000075">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/CMEO#has_value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <oboInOwl:id rdf:resource="https://w3id.org/CMEO#CMEO_0000075"/>
+        <rdfs:label xml:lang="en">end time</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CMEO#CMEO_0000076 -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000076">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <oboInOwl:id rdf:resource="https://w3id.org/CMEO#CMEO_0000076"/>
+        <rdfs:label xml:lang="en">category</rdfs:label>
     </owl:Class>
     
 
