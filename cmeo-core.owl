@@ -1667,7 +1667,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000117>PERSON: Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Larry Hunter</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Melanie Coutot</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">has_input</rdfs:label>
+        <rdfs:label xml:lang="en">has specified input</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1700,7 +1700,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Komal Gilani</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON:Bjoern Peters</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">is input of</rdfs:label>
+        <rdfs:label xml:lang="en">is specified input of</rdfs:label>
         <rdfs:label xml:lang="en">is_specified_input_of</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1759,7 +1759,7 @@ For instances: e has_quality q at t iff q inheres_in e at t and q instance-of Qu
         <obo:IAO_0000117>PERSON: Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Larry Hunter</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON: Melanie Courtot</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">has output</rdfs:label>
+        <rdfs:label xml:lang="en">has specified output</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1899,7 +1899,7 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alan Ruttenberg</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">KOMAL GILANI</obo:IAO_0000117>
         <obo:IAO_0000117>PERSON:Bjoern Peters</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">is output of</rdfs:label>
+        <rdfs:label xml:lang="en">is specified output of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -3833,6 +3833,22 @@ XML document; The instructions in a XSD file&quot;</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/IAO_0000100 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000100">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBCS_0000002"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000272"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <rdfs:subClassOf>
@@ -4295,7 +4311,7 @@ points together with a line.</obo:IAO_0000115>
         <obo:IAO_0000117>Jie Zheng, Oliver He</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">data collection</obo:IAO_0000118>
         <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Data_collection</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">data acquisition</rdfs:label>
+        <rdfs:label xml:lang="en">data collection</rdfs:label>
     </owl:Class>
     
 
@@ -6950,6 +6966,16 @@ defines and states the requirements (positive or negative) for an entity to be c
     
 
 
+    <!-- http://purl.obolibrary.org/obo/STATO_0000039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <rdfs:label xml:lang="en">statistic</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/STATO_0000087 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000087">
@@ -8008,6 +8034,52 @@ The coefficient is calculated by dividing their covariance with the product of t
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <oboInOwl:id rdf:resource="https://w3id.org/CMEO#CMEO_0000076"/>
         <rdfs:label xml:lang="en">category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CMEO#CMEO_0000077 -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000077">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBCS_0000002"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000272"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                                <owl:someValuesFrom rdf:resource="https://w3id.org/CMEO#CMEO_0000061"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <oboInOwl:id rdf:resource="https://w3id.org/CMEO#CMEO_0000077"/>
+        <rdfs:label xml:lang="en">temporal dataset</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CMEO#CMEO_0000078 -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000078">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <oboInOwl:id rdf:resource="https://w3id.org/CMEO#CMEO_0000078"/>
+        <rdfs:label xml:lang="en">permission specification</rdfs:label>
     </owl:Class>
     
 
