@@ -4240,7 +4240,6 @@ points together with a line.</obo:IAO_0000115>
         <obo:IAO_0000118>Open Researcher and Contributor Identifier</obo:IAO_0000118>
         <obo:IAO_0000119>https://orcid.org/</obo:IAO_0000119>
         <obo:IAO_0000233>https://github.com/information-artifact-ontology/IAO/issues/259</obo:IAO_0000233>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">ORCID identifier</rdfs:label>
     </owl:Class>
     
@@ -5543,7 +5542,6 @@ for now.</obo:IAO_0000116>
         <obo:IAO_0000116>removed axiom has_part some (assay or &apos;data transformation&apos;) per discussion on protocol application mailing list to improve reasoner performance. The axiom is still desired.</obo:IAO_0000116>
         <obo:IAO_0000119>branch derived</obo:IAO_0000119>
         <obo:IAO_0000232>6/11/9: edited at workshop. Used to be: study design execution is a process with the objective to generate data according to a concretized study design. The execution of a study design is part of an investigation, and minimally consists of an assay or data transformation.</obo:IAO_0000232>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label>study design execution</rdfs:label>
     </owl:Class>
     
@@ -6446,7 +6444,6 @@ https://sourceforge.net/tracker/?func=detail&amp;aid=3512891&amp;group_id=177891
         <obo:IAO_0000115 xml:lang="en">A symbol that denotes a participant under investigation.</obo:IAO_0000115>
         <obo:IAO_0000117>John Judkins</obo:IAO_0000117>
         <obo:IAO_0000119>VEuPathDB</obo:IAO_0000119>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label>participant identifier</rdfs:label>
     </owl:Class>
     
