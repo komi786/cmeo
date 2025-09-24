@@ -198,7 +198,7 @@ WHERE {
                  iao:is_denoted_by ?statistical_variable .
    
     ?statistical_variable a ?type .
-    VALUES ?type { obi:binary_class_variable obi:multi_class_variable }
+    VALUES ?type { cmeo:binary_class_variable cmeo:multi_class_variable }
   
       ?dataset a iao:data_set ;
              iao:is_about ?statistical_variable ;
