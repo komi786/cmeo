@@ -6979,7 +6979,10 @@ defines and states the requirements (positive or negative) for an entity to be c
         <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000060"/>
         <obo:IAO_0000115 xml:lang="en">variable with more than two categories</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">polychotomous variable</obo:IAO_0000118>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">multi class variable</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/STATO_0000087"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/STATO_0000087"/>
     </owl:Class>
     
 
@@ -6987,9 +6990,12 @@ defines and states the requirements (positive or negative) for an entity to be c
     <!-- http://purl.obolibrary.org/obo/STATO_0000090 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000090">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#CMEO_0000060"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000087"/>
         <obo:IAO_0000115 xml:lang="en">variable with only two categories</obo:IAO_0000115>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">binary class variable</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/STATO_0000090"/>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/STATO_0000090"/>
     </owl:Class>
     
 
