@@ -3874,7 +3874,8 @@ XML document; The instructions in a XSD file&quot;</obo:IAO_0000116>
         <obo:IAO_0000118>data list</obo:IAO_0000118>
         <obo:IAO_0000119 xml:lang="en">OBI_0000042</obo:IAO_0000119>
         <obo:IAO_0000119 xml:lang="en">group:OBI</obo:IAO_0000119>
-        <rdfs:label xml:lang="en">data set</rdfs:label>
+        <obo:IAO_0100001></obo:IAO_0100001>
+        <rdfs:label xml:lang="en">dataset</rdfs:label>
     </owl:Class>
     
 
@@ -7266,7 +7267,7 @@ The coefficient is calculated by dividing their covariance with the product of t
 
     <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000005">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000810"/>
-        <rdfs:label xml:lang="en">data use permission assignment process</rdfs:label>
+        <rdfs:label xml:lang="en">data use permission assignment</rdfs:label>
     </owl:Class>
     
 
@@ -8083,6 +8084,16 @@ The coefficient is calculated by dividing their covariance with the product of t
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
         <oboInOwl:id rdf:resource="https://w3id.org/CMEO#CMEO_0000078"/>
         <rdfs:label xml:lang="en">permission specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CMEO#CMEO_0000079 -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#CMEO_0000079">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
+        <rdfs:label xml:lang="en">data access</rdfs:label>
     </owl:Class>
     
 

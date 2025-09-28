@@ -23,6 +23,7 @@ class OntologyNamespaces(Enum):
     OMOP_EXT = Namespace("http://omop.org/omopextension/")
     OWL = Namespace("http://www.w3.org/2002/07/owl#")
     OBI = Namespace("http://purl.obolibrary.org/obo/obi.owl/")
+    OBCS = Namespace("http://purl.obolibrary.org/obo/obcs.owl/")
     BFO = Namespace("http://purl.obolibrary.org/obo/bfo.owl/")
     STATO = Namespace("http://purl.obolibrary.org/obo/stato.owl/")
     DEFAULT_VALUE = 'Unmapped'
@@ -31,9 +32,12 @@ class OntologyNamespaces(Enum):
     RO = Namespace("http://purl.obolibrary.org/obo/ro.owl/")
     IAO = Namespace("http://purl.obolibrary.org/obo/iao.owl/")
     TIME = Namespace("http://www.w3.org/2006/time#")
-    SIO = Namespace("http://semanticscience.org/ontology/sio/v1.59/sio-release.owl#")
-    # UCUM = Namespace("http://purl.bioontology.org/ontology/UCUM/")
-    # RXNORM = Namespace("http://purl.bioontology.org/ontology/RXNORM/")
+    SIO = Namespace("http://semanticscience.org/ontology/sio.owl/")
+    ICD10 = Namespace("http://purl.bioontology.org/ontology/ICD10/")
+    ICD9 = Namespace("http://purl.bioontology.org/ontology/ICD9CM/")
+    DUO = Namespace("http://purl.obolibrary.org/obo/duo.owl/")
+
+
 
 
 
@@ -54,6 +58,7 @@ def normalize_text(text: str) -> str:
     return urllib.parse.quote(text, safe='_-')
 
 
+
 def init_graph(default_graph_identifier: str | None = "https://w3id.org/CMEO/graph/studies_metadata") -> Dataset:
     """Initialize a new RDF graph for nquads with the voc namespace bindings."""
     g = Dataset(store="Oxigraph")
@@ -61,12 +66,20 @@ def init_graph(default_graph_identifier: str | None = "https://w3id.org/CMEO/gra
     g.bind("bfo", OntologyNamespaces.BFO.value)
     g.bind("obi", OntologyNamespaces.OBI.value)
     g.bind("stato", OntologyNamespaces.STATO.value)
+    g.bind("obcs", OntologyNamespaces.OBCS.value)
     g.bind("rdf", RDF)
+    g.bind("iao", OntologyNamespaces.IAO.value)
+    g.bind("ro", OntologyNamespaces.RO.value)
+    g.bind("time", OntologyNamespaces.TIME.value)
+    g.bind("sio", OntologyNamespaces.SIO.value)
+    g.bind("duo", OntologyNamespaces.DUO.value)
     g.bind("rdfs", RDFS)
+    # g.bind("omop", OMOP)
     g.bind("dc", DC)
-   
+
     g.graph(identifier=URIRef(default_graph_identifier))
     return g
+
 
 
 def get_study_uri(study_id: str) -> URIRef:
@@ -282,6 +295,78 @@ def save_graph_to_trig_file(graph_data, file_path):
     except Exception as e:
         print(f"Error saving graph to TRiG file: {e}")
 
+
+def check_triple_exists(graph_uri: str | URIRef, subject: URIRef, predicate: URIRef, obj: URIRef | Literal):
+    query = f"""
+    ASK WHERE {{
+        GRAPH <{graph_uri!s}> {{ <{subject}> <{predicate}> {f'<{obj}>' if isinstance(obj, URIRef) else f'"{obj}"'} }}
+    }}
+    """
+    print(f"Checking if triple exists: {query}")
+    query_endpoint = SPARQLWrapper(settings.query_endpoint)
+    query_endpoint.setReturnFormat(JSON)
+    query_endpoint.setQuery(query)
+    results = query_endpoint.query().convert()
+    # print(f"Triple exists: {results['boolean']}")
+    return results['boolean']
+    
+
+
+def add_triples_to_graph(graph: Graph, triples: list, graph_context: URIRef = None) -> None:
+    """
+    Adds a list of triples to the graph, optionally under a specific graph context.
+
+    :param graph: RDF Graph
+    :param triples: List of triples (subject, predicate, object)
+    :param graph_context: Specific graph/context to add the triples to
+    """
+    for subj, pred, obj in triples:
+        if graph_context:
+            graph.add((subj, pred, obj, graph_context))
+            print(f"Added triple: {subj} {pred} {obj} in graph {graph_context}")
+        else:
+            graph.add((subj, pred, obj))
+            print(f"Added triple: {subj} {pred} {obj}")
+    return graph
+
+
+  
+def insert_graph_into_named_graph(g_new: Graph, graph_uri: str, chunk_size: int = 500) -> None:
+    """
+    Append triples from g_new into an existing named graph using SPARQL UPDATE INSERT DATA.
+    Does NOT delete/replace existing data.
+
+    :param g_new: rdflib.Graph containing only the new triples to insert
+    :param graph_uri: target named graph URI (string)
+    :param chunk_size: number of triples per INSERT batch (avoid huge updates)
+    """
+    # Convert the new triples to N-Triples lines (safe to embed in SPARQL)
+    nt_bytes = g_new.serialize(format="nt")
+    nt_str = nt_bytes.decode("utf-8") if isinstance(nt_bytes, (bytes, bytearray)) else nt_bytes
+
+    lines = [ln for ln in nt_str.splitlines() if ln.strip()]
+    if not lines:
+        print("No new triples to insert.")
+        return
+
+    sparql = SPARQLWrapper(settings.update_endpoint)
+    sparql.setMethod("POST")
+    sparql.setRequestMethod("urlencoded")
+
+    # Chunk the payload into multiple INSERT DATA blocks
+    for i in range(0, len(lines), chunk_size):
+        block = "\n".join(lines[i:i+chunk_size])
+        query = f"""
+        INSERT DATA {{
+          GRAPH <{graph_uri}> {{
+            {block}
+          }}
+        }}
+        """
+        sparql.setQuery(query)
+        res = sparql.query()
+        print(f"Inserted {min(i+chunk_size, len(lines))}/{len(lines)} triples; HTTP {res.response.status}")
+        
 def publish_graph_to_endpoint(g: Graph, graph_uri: str | None = None) -> bool:
     """Insert the graph into the triplestore endpoint."""
     # url = f"{settings.sparql_endpoint}/store?{graph_uri}"

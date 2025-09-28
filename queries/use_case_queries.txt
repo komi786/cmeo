@@ -34,7 +34,7 @@ PREFIX bfo:  <http://purl.obolibrary.org/obo/bfo.owl/>
 PREFIX cmeo: <https://w3id.org/CMEO/> 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX ro: <http://purl.obolibrary.org/obo/ro.owl/>
-PREFIX sio: <http://semanticscience.org/ontology/sio/v1.59/sio-release.owl#>
+PREFIX sio: <http://semanticscience.org/ontology/sio.owl/>
 
 SELECT DISTINCT ?study_name ?description
 WHERE { 
@@ -361,3 +361,49 @@ WHERE {
         
   }
   }
+
+
+CQ9:
+
+
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX obi: <http://purl.obolibrary.org/obo/obi.owl/>
+PREFIX dc:  <http://purl.org/dc/elements/1.1/>
+PREFIX cmeo:<https://w3id.org/CMEO/> 
+PREFIX iao: <http://purl.obolibrary.org/obo/iao.owl/>         # if your data used iao.owl as base
+PREFIX duo:  <http://purl.obolibrary.org/obo/duo/>
+
+SELECT ?study_name
+WHERE {
+  GRAPH <https://w3id.org/CMEO/graph/studies_metadata> {
+
+    # the assignment instance
+    ?assignment a cmeo:data_use_permission_assignment ;
+                iao:is_about ?x_study ;
+                obi:has_specified_output ?data_policy ;
+                obi:has_specified_output ?data_modifier .
+
+    # the study
+    ?x_study a obi:study_design_execution ;
+             dc:identifier ?study_name .
+
+    # the policy must be the "disease-specific research" permission
+    ?data_policy a duo:data_use_permission ;
+                 rdfs:label "disease specific research"^^xsd:string ;
+                 iao:is_about ?disease_code .
+
+    # the modifier must be the "ethics approval required" modifier
+    ?data_modifier a duo:data_use_modifier ;
+                   rdfs:label "ethics approval required"^^xsd:string .
+
+    # OPTIONAL disease refinements (your current data may not have these labels)
+    OPTIONAL { ?disease_code rdfs:label "hypertensive disorder"^^xsd:string }
+    OPTIONAL { ?disease_code cmeo:has_value "38341003"^^xsd:string }
+  }
+}
+ORDER BY ?study_name
+
+
