@@ -33,6 +33,10 @@
         iao:is_about <https://w3id.org/CMEO/check-hf/study_contact_person> ;
         cmeo:has_value "christof.peters@mumc.nl"^^xsd:string .
 
+    <https://w3id.org/CMEO/d1namo/output_population/site> a bfo:site ;
+        iao:is_about <https://w3id.org/CMEO/d1namo/output_population> ;
+        cmeo:has_value "Switzerland (9), Italy (3), Spain (3), Russia (1), Austria (1), Mexico (1), Mauritius (1), and Britain (1)"^^xsd:string .
+
     <https://w3id.org/CMEO/gissi-hf/administrator/email_address> a obi:email_address ;
         iao:is_about <https://w3id.org/CMEO/gissi-hf/administrator> ;
         cmeo:has_value "Enrico Nicolis"^^xsd:string .
@@ -59,9 +63,9 @@
 
     duo:disease_specific_research a duo:data_use_permission ;
         rdfs:label "disease specific research"^^xsd:string ;
-        iao:is_about <http://purl.bioontology.org/ontology/SNOMEDCT/49601007> ;
+        iao:is_about <http://purl.bioontology.org/ontology/SNOMEDCT/42343007> ;
         obi:is_specified_output_of <https://w3id.org/CMEO/time-chf/data_use_permission_assignment> ;
-        ro:has_specified_output <http://purl.bioontology.org/ontology/SNOMEDCT/49601007> .
+        ro:has_specified_output <http://purl.bioontology.org/ontology/SNOMEDCT/42343007> .
 
     duo:ethics_approval_required a duo:data_use_modifier ;
         rdfs:label "ethics approval required"^^xsd:string ;
@@ -70,6 +74,10 @@
     obi:heart_failure_with_reduced_and_midrange_ejection_fraction_%28hfref_hfmref%29 a obi:morbidity ;
         rdfs:label "heart failure with reduced and midrange ejection fraction (hfref/hfmref)"^^xsd:string ;
         cmeo:has_value "heart failure with reduced and midrange ejection fraction (hfref/hfmref)"^^xsd:string .
+
+    obi:type_1_diabetes a obi:morbidity ;
+        rdfs:label "type 1 diabetes"^^xsd:string ;
+        cmeo:has_value "type 1 diabetes"^^xsd:string .
 
     <https://w3id.org/CMEO/aachenhf/administrator_role> a obi:administrator_role ;
         cmeo:has_value "Katharina Marx-Schütt"^^xsd:string .
@@ -187,8 +195,8 @@
     <https://w3id.org/CMEO/check-hf/descriptor> a sio:descriptor ;
         rdfs:label "established heart failure"^^xsd:string .
 
-    <https://w3id.org/CMEO/check-hf/health__status_exclusion_criterion> a <http://purl.obolibrary.org/obo/obi.owl//health__status_exclusion_criterion> ;
-        rdfs:label "health__status_exclusion_criterion"^^xsd:string ;
+    <https://w3id.org/CMEO/check-hf/health_status_exclusion_criterion> a <http://purl.obolibrary.org/obo/obi.owl//health_status_exclusion_criterion> ;
+        rdfs:label "health_status_exclusion_criterion"^^xsd:string ;
         ro:part_of <https://w3id.org/CMEO/check-hf/exclusion_criterion> ;
         cmeo:has_value "acute kidney or hepatic disease"^^xsd:string,
             "contraindications or hypersensitivity to cyclosporin a"^^xsd:string,
@@ -274,6 +282,97 @@
     <https://w3id.org/CMEO/check-hf/timeline_specification> a cmeo:timeline_specification ;
         rdfs:label "frequency of data collection"^^xsd:string .
 
+    <https://w3id.org/CMEO/d1namo/age_distribution> a obi:age_distribution ;
+        rdfs:label "age distribution"^^xsd:string ;
+        cmeo:has_value "49.5 ± 12.3"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/age_group_inclusion_criterion> a obi:age_group_inclusion_criterion ;
+        rdfs:label "age group inclusion criterion"^^xsd:string ;
+        ro:has_part <https://w3id.org/CMEO/d1namo/age_group_inclusion_criterion/maximum_age_value_specification>,
+            <https://w3id.org/CMEO/d1namo/age_group_inclusion_criterion/minimum_age_value_specification> ;
+        ro:part_of <https://w3id.org/CMEO/d1namo/inclusion_criterion> ;
+        cmeo:has_value "<=79 and >=20 years old"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/age_group_inclusion_criterion/maximum_age_value_specification> a obi:maximum_age_value_specification ;
+        cmeo:has_value "79.0"^^xsd:float .
+
+    <https://w3id.org/CMEO/d1namo/age_group_inclusion_criterion/minimum_age_value_specification> a obi:minimum_age_value_specification ;
+        cmeo:has_value "20.0"^^xsd:float .
+
+    <https://w3id.org/CMEO/d1namo/comparator> a cmeo:comparator_specification ;
+        rdfs:label "comparators specification"^^xsd:string ;
+        cmeo:has_value "Two distinct subsets (healthy vs diabetes mellitus type 1 patients) for comparison point for analyzing Type 1 diabetes management"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/data_format_specification> a obi:data_format_specification ;
+        rdfs:label "data format specification"^^xsd:string ;
+        cmeo:has_value ""^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/descriptor> a sio:descriptor ;
+        rdfs:label "non-invasivediabetes mellitus type 1 management"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/health_status_exclusion_criterion> a <http://purl.obolibrary.org/obo/obi.owl//health_status_exclusion_criterion> ;
+        rdfs:label "health_status_exclusion_criterion"^^xsd:string ;
+        ro:part_of <https://w3id.org/CMEO/d1namo/exclusion_criterion> ;
+        cmeo:has_value "significant psycho-social impairment that impedes on their ability to participate in follow-up"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/health_status_inclusion_criterion> a obi:health_status_inclusion_criterion ;
+        rdfs:label "health_status_inclusion_criterion"^^xsd:string ;
+        ro:part_of <https://w3id.org/CMEO/d1namo/inclusion_criterion> ;
+        cmeo:has_value "diabetes mellitus type 1"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/hospital_patient_inclusion_criterion> a obi:hospital_patient_inclusion_criterion ;
+        rdfs:label "hospital_patient_inclusion_criterion"^^xsd:string ;
+        ro:part_of <https://w3id.org/CMEO/d1namo/inclusion_criterion> ;
+        cmeo:has_value "willing to participate in follow-up"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/human_subject_enrollment> a cmeo:human_subject_enrollment ;
+        ro:has_input <https://w3id.org/CMEO/d1namo/input_population> ;
+        ro:has_output <https://w3id.org/CMEO/d1namo/output_population> .
+
+    <https://w3id.org/CMEO/d1namo/input_population> a obi:population .
+
+    <https://w3id.org/CMEO/d1namo/intervention> a cmeo:intervention_specification ;
+        rdfs:label "intervention specification"^^xsd:string ;
+        cmeo:has_value "protocolized data acquisition"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/mixed_sex> a obi:mixed_sex ;
+        rdfs:label "mixed sex"^^xsd:string ;
+        cmeo:has_value "Male=75.86;female=24.14%"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/number_of_participants> a cmeo:number_of_participants ;
+        rdfs:label "number of participants"^^xsd:string ;
+        ro:is_part_of <https://w3id.org/CMEO/d1namo/observational_design/protocol> ;
+        cmeo:has_value "20"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/objective_specification> a obi:objective_specification ;
+        cmeo:has_value "contribute to the development of data-centric algorithms and diabetes monitoring technologies by providing an openly available multi-modal dataset"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/observational_design> a cmeo:observational_design ;
+        iao:is_about <https://w3id.org/CMEO/d1namo/descriptor> ;
+        ro:has_part <https://w3id.org/CMEO/d1namo/observational_design/protocol> ;
+        ro:is_concretized_by <https://w3id.org/CMEO/d1namo/study_design_execution> ;
+        dc:identifier "d1namo"^^xsd:string ;
+        cmeo:has_value "observational_design"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/ongoing> a cmeo:ongoing ;
+        cmeo:has_value false .
+
+    <https://w3id.org/CMEO/d1namo/outcome_specification> a cmeo:outcome_specification ;
+        rdfs:label "outcome specification"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/study_design_execution> a obi:study_design_execution ;
+        ro:concretizes <https://w3id.org/CMEO/d1namo/observational_design> ;
+        ro:has_characteristic <https://w3id.org/CMEO/d1namo/ongoing> ;
+        dc:identifier "d1namo"^^xsd:string ;
+        dc:language ""^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/study_design_variable_specification> a cmeo:study_design_variable_specification ;
+        rdfs:label "study design variable specification"^^xsd:string ;
+        ro:has_part <https://w3id.org/CMEO/d1namo/data_format_specification> .
+
+    <https://w3id.org/CMEO/d1namo/timeline_specification> a cmeo:timeline_specification ;
+        rdfs:label "frequency of data collection"^^xsd:string .
+
     <https://w3id.org/CMEO/gissi-hf/administrator> a cmeo:homo_sapiens ;
         ro:has_role <https://w3id.org/CMEO/gissi-hf/administrator_role> .
 
@@ -323,8 +422,8 @@
     <https://w3id.org/CMEO/gissi-hf/descriptor> a sio:descriptor ;
         rdfs:label "established heart failure"^^xsd:string .
 
-    <https://w3id.org/CMEO/gissi-hf/health__status_exclusion_criterion> a <http://purl.obolibrary.org/obo/obi.owl//health__status_exclusion_criterion> ;
-        rdfs:label "health__status_exclusion_criterion"^^xsd:string ;
+    <https://w3id.org/CMEO/gissi-hf/health_status_exclusion_criterion> a <http://purl.obolibrary.org/obo/obi.owl//health_status_exclusion_criterion> ;
+        rdfs:label "health_status_exclusion_criterion"^^xsd:string ;
         ro:part_of <https://w3id.org/CMEO/gissi-hf/exclusion_criterion> ;
         cmeo:has_value ""^^xsd:string .
 
@@ -478,8 +577,8 @@
     <https://w3id.org/CMEO/time-chf/descriptor> a sio:descriptor ;
         rdfs:label "established chronic heart failure"^^xsd:string .
 
-    <https://w3id.org/CMEO/time-chf/health__status_exclusion_criterion> a <http://purl.obolibrary.org/obo/obi.owl//health__status_exclusion_criterion> ;
-        rdfs:label "health__status_exclusion_criterion"^^xsd:string ;
+    <https://w3id.org/CMEO/time-chf/health_status_exclusion_criterion> a <http://purl.obolibrary.org/obo/obi.owl//health_status_exclusion_criterion> ;
+        rdfs:label "health_status_exclusion_criterion"^^xsd:string ;
         ro:part_of <https://w3id.org/CMEO/time-chf/exclusion_criterion> ;
         cmeo:has_value "angina pectoris due to documented ischemia ccs class ≥i"^^xsd:string,
             "dyspnea not mainly caused by  congestive heart failure"^^xsd:string .
@@ -501,7 +600,7 @@
 
     <https://w3id.org/CMEO/time-chf/intervention> a cmeo:intervention_specification ;
         rdfs:label "intervention specification"^^xsd:string ;
-        cmeo:has_value " intensified treatment strategy"^^xsd:string .
+        cmeo:has_value "intensified treatment strategy"^^xsd:string .
 
     <https://w3id.org/CMEO/time-chf/limited_life_expectancy_exclusion_criterion> a <http://purl.obolibrary.org/obo/obi.owl//limited_life_expectancy_exclusion_criterion> ;
         rdfs:label "limited_life_expectancy_exclusion_criterion"^^xsd:string ;
@@ -573,9 +672,9 @@
     <https://w3id.org/CMEO/time-chf/timeline_specification> a cmeo:timeline_specification ;
         rdfs:label "frequency of data collection"^^xsd:string .
 
-    <http://purl.bioontology.org/ontology/SNOMEDCT/49601007> rdfs:label "disorder of cardiovascular system"^^xsd:string ;
-        iao:denotes "134057"^^xsd:string ;
-        cmeo:has_value "snomed:49601007"^^xsd:string .
+    <http://purl.bioontology.org/ontology/SNOMEDCT/42343007> rdfs:label "congestive heart failure"^^xsd:string ;
+        iao:denotes "42343007"^^xsd:string ;
+        cmeo:has_value "snomed:42343007"^^xsd:string .
 
     obi:heart_failure a obi:morbidity ;
         rdfs:label "heart failure"^^xsd:string ;
@@ -598,7 +697,7 @@
             "Marlo Verket"^^xsd:string .
 
     <https://w3id.org/CMEO/check-hf/exclusion_criterion> a obi:exclusion_criterion ;
-        ro:has_part <https://w3id.org/CMEO/check-hf/health__status_exclusion_criterion> ;
+        ro:has_part <https://w3id.org/CMEO/check-hf/health_status_exclusion_criterion> ;
         ro:part_of <https://w3id.org/CMEO/check-hf/eligibility_criterion> .
 
     <https://w3id.org/CMEO/check-hf/observational_design/protocol> a obi:protocol ;
@@ -619,6 +718,26 @@
         ro:has_role <https://w3id.org/CMEO/check-hf/study_contact_person_role> ;
         cmeo:has_value " HP Brunner-La Rocca"^^xsd:string,
             "Christof Peters"^^xsd:string .
+
+    <https://w3id.org/CMEO/d1namo/exclusion_criterion> a obi:exclusion_criterion ;
+        ro:has_part <https://w3id.org/CMEO/d1namo/health_status_exclusion_criterion> ;
+        ro:part_of <https://w3id.org/CMEO/d1namo/eligibility_criterion> .
+
+    <https://w3id.org/CMEO/d1namo/observational_design/protocol> a obi:protocol ;
+        rdfs:label "objective specification"^^xsd:string ;
+        ro:has_part <https://w3id.org/CMEO/d1namo/comparator>,
+            <https://w3id.org/CMEO/d1namo/eligibility_criterion>,
+            <https://w3id.org/CMEO/d1namo/intervention>,
+            <https://w3id.org/CMEO/d1namo/number_of_participants>,
+            <https://w3id.org/CMEO/d1namo/objective_specification>,
+            <https://w3id.org/CMEO/d1namo/outcome_specification>,
+            <https://w3id.org/CMEO/d1namo/study_design_variable_specification>,
+            <https://w3id.org/CMEO/d1namo/timeline_specification> .
+
+    <https://w3id.org/CMEO/d1namo/output_population> a obi:population ;
+        ro:has_characteristic obi:type_1_diabetes,
+            <https://w3id.org/CMEO/d1namo/age_distribution>,
+            <https://w3id.org/CMEO/d1namo/mixed_sex> .
 
     <https://w3id.org/CMEO/gissi-hf/output_population> a obi:population ;
         ro:has_characteristic obi:heart_failure,
@@ -691,6 +810,11 @@
             <https://w3id.org/CMEO/check-hf/inclusion_criterion> ;
         ro:is_concretized_by <https://w3id.org/CMEO/check-hf/human_subject_enrollment> .
 
+    <https://w3id.org/CMEO/d1namo/eligibility_criterion> a obi:eligibility_criterion ;
+        ro:has_part <https://w3id.org/CMEO/d1namo/exclusion_criterion>,
+            <https://w3id.org/CMEO/d1namo/inclusion_criterion> ;
+        ro:is_concretized_by <https://w3id.org/CMEO/d1namo/human_subject_enrollment> .
+
     <https://w3id.org/CMEO/gissi-hf/eligibility_criterion> a obi:eligibility_criterion ;
         ro:has_part <https://w3id.org/CMEO/gissi-hf/exclusion_criterion>,
             <https://w3id.org/CMEO/gissi-hf/inclusion_criterion> ;
@@ -700,6 +824,12 @@
         ro:has_part <https://w3id.org/CMEO/time-chf/exclusion_criterion>,
             <https://w3id.org/CMEO/time-chf/inclusion_criterion> ;
         ro:is_concretized_by <https://w3id.org/CMEO/time-chf/human_subject_enrollment> .
+
+    <https://w3id.org/CMEO/d1namo/inclusion_criterion> a obi:inclusion_criterion ;
+        ro:has_part <https://w3id.org/CMEO/d1namo/age_group_inclusion_criterion>,
+            <https://w3id.org/CMEO/d1namo/health_status_inclusion_criterion>,
+            <https://w3id.org/CMEO/d1namo/hospital_patient_inclusion_criterion> ;
+        ro:part_of <https://w3id.org/CMEO/d1namo/eligibility_criterion> .
 
     <https://w3id.org/CMEO/check-hf/inclusion_criterion> a obi:inclusion_criterion ;
         ro:has_part <https://w3id.org/CMEO/check-hf/clinically_relevant_exposure_inclusion_criterion>,
@@ -718,7 +848,7 @@
     <https://w3id.org/CMEO/gissi-hf/exclusion_criterion> a obi:exclusion_criterion ;
         ro:has_part <https://w3id.org/CMEO/gissi-hf/bmi_range_exclusion_criterion>,
             <https://w3id.org/CMEO/gissi-hf/clinically_relevant_exposure_exclusion_criterion>,
-            <https://w3id.org/CMEO/gissi-hf/health__status_exclusion_criterion>,
+            <https://w3id.org/CMEO/gissi-hf/health_status_exclusion_criterion>,
             <https://w3id.org/CMEO/gissi-hf/limited_life_expectancy_exclusion_criterion>,
             <https://w3id.org/CMEO/gissi-hf/need_for_surgery_exclusion_criterion> ;
         ro:part_of <https://w3id.org/CMEO/gissi-hf/eligibility_criterion> .
@@ -726,7 +856,7 @@
     <https://w3id.org/CMEO/time-chf/exclusion_criterion> a obi:exclusion_criterion ;
         ro:has_part <https://w3id.org/CMEO/time-chf/bmi_range_exclusion_criterion>,
             <https://w3id.org/CMEO/time-chf/clinically_relevant_exposure_exclusion_criterion>,
-            <https://w3id.org/CMEO/time-chf/health__status_exclusion_criterion>,
+            <https://w3id.org/CMEO/time-chf/health_status_exclusion_criterion>,
             <https://w3id.org/CMEO/time-chf/limited_life_expectancy_exclusion_criterion>,
             <https://w3id.org/CMEO/time-chf/need_for_surgery_exclusion_criterion> ;
         ro:part_of <https://w3id.org/CMEO/time-chf/eligibility_criterion> .
