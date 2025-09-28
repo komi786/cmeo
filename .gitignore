@@ -176,3 +176,4 @@ cython_debug/
 
 /_older/*
 !/_older/.gitkeep
+cmeo-core.properties
