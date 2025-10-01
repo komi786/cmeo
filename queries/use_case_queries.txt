@@ -323,7 +323,6 @@ CQ7:
                 }}
             }}
             GROUP BY ?omop_id ?code_label ?code_value ?val
-            #HAVING (COUNT(DISTINCT ?source) < 3)
             ORDER BY ?omop_id
 
 -----------------------------------------------
@@ -342,7 +341,7 @@ PREFIX bfo: <http://purl.obolibrary.org/obo/bfo.owl/>
 PREFIX cmeo:<https://w3id.org/CMEO/> 
 PREFIX ro:  <http://purl.obolibrary.org/obo/ro.owl/> 
 PREFIX iao: <http://purl.obolibrary.org/obo/iao.owl/>         # if your data used iao.owl as base
-SELECT DISTINCT (?g as ?study_name)  ?variable_name ?device_id
+SELECT DISTINCT (?g as ?study_name)  ?var_name ?device_id
 WHERE {
     GRAPH ?g {    
 
@@ -373,7 +372,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX obi: <http://purl.obolibrary.org/obo/obi.owl/>
 PREFIX dc:  <http://purl.org/dc/elements/1.1/>
 PREFIX cmeo:<https://w3id.org/CMEO/> 
-PREFIX iao: <http://purl.obolibrary.org/obo/iao.owl/>         # if your data used iao.owl as base
+PREFIX iao: <http://purl.obolibrary.org/obo/iao.owl/>         
 PREFIX duo:  <http://purl.obolibrary.org/obo/duo/>
 
 SELECT ?study_name
