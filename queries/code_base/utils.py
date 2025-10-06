@@ -1,4 +1,4 @@
-from rdflib import Dataset, Namespace,Graph, RDF, RDFS, URIRef, DC
+Yes from rdflib import Dataset, Namespace,Graph, RDF, RDFS, URIRef, DC
 from SPARQLWrapper import SPARQLWrapper, JSON
 from urllib.parse import quote
 import pandas as pd
@@ -36,6 +36,7 @@ class OntologyNamespaces(Enum):
     ICD10 = Namespace("http://purl.bioontology.org/ontology/ICD10/")
     ICD9 = Namespace("http://purl.bioontology.org/ontology/ICD9CM/")
     DUO = Namespace("http://purl.obolibrary.org/obo/duo.owl/")
+    NCBI = Namespace("http://purl.bioontology.org/ontology/NCBITAXON/")
 
 
 
@@ -76,6 +77,7 @@ def init_graph(default_graph_identifier: str | None = "https://w3id.org/CMEO/gra
     g.bind("rdfs", RDFS)
     # g.bind("omop", OMOP)
     g.bind("dc", DC)
+    g.bind("ncbi", OntologyNamespaces.NCBI.value) 
 
     g.graph(identifier=URIRef(default_graph_identifier))
     return g

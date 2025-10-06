@@ -131,9 +131,10 @@ def generate_studies_kg(filepath: str) -> Graph:
             g.add((organization_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row["institute"], datatype=XSD.string),metadata_graph))
         
             if pd.notna(row["study contact person"]):
-                contact_uri = URIRef(study_uri + "/study_contact_person")
+                contact_uri = URIRef(study_uri + "/" + normalize_text(row["study contact person"]))
                 study_contact_person_role_uri = URIRef(study_uri + "/study_contact_person_role")
                 
+
                 g.add((contact_uri, RDF.type, OntologyNamespaces.NCBI.value.homo_sapiens,metadata_graph))
                 g.add((organization_uri, OntologyNamespaces.OBI.value.has_member, contact_uri,metadata_graph))
                 g.add((contact_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row["study contact person"], datatype=XSD.string),metadata_graph))
@@ -149,11 +150,11 @@ def generate_studies_kg(filepath: str) -> Graph:
                     g.add((email_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row["study contact person email address"], datatype=XSD.string),metadata_graph))
             
             if pd.notna(row["administrator"]):
-                administrator_person_uri = URIRef(study_uri + "/administrator")
-                g.add((administrator_person_uri, RDF.type, OntologyNamespaces.CMEO.value.homo_sapiens,metadata_graph))
+                administrator_person_uri = URIRef(study_uri + "/" + normalize_text(row["administrator"]))
+                g.add((administrator_person_uri, RDF.type, OntologyNamespaces.NCBI.value.homo_sapiens,metadata_graph))
                 g.add((organization_uri, OntologyNamespaces.OBI.value.has_member, contact_uri,metadata_graph))
             
-                g.add((contact_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row["administrator"], datatype=XSD.string),metadata_graph))
+                g.add((administrator_person_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row["administrator"], datatype=XSD.string),metadata_graph))
                 administrator_role_uri =  URIRef(study_uri + "/administrator_role")
                 g.add((administrator_role_uri, RDF.type, OntologyNamespaces.CMEO.value.administrator_role,metadata_graph))
                 g.add((administrator_person_uri, OntologyNamespaces.RO.value.has_role, administrator_role_uri,metadata_graph))
@@ -201,9 +202,7 @@ def add_study_timing(g: Graph, row: pd.Series, study_design_execution_uri: URIRe
         if pd.notna(row["start date"]):
             start_time_tuple = day_month_year(row["start date"])
             print(f"Start time tuple: {start_time_tuple}")
-            start_date_uri = URIRef(# The code `study_design_execution_uri` is not valid Python code
-            # as it contains invalid characters (`#`, `
-            study_design_execution_uri+ "/start_time")
+            start_date_uri = URIRef(study_design_execution_uri+ "/start_time")
             g.add((start_date_uri, RDF.type, OntologyNamespaces.CMEO.value.start_time,metadata_graph))
             g.add((study_design_execution_uri, OntologyNamespaces.IAO.value.has_time_stamp,start_date_uri ,metadata_graph))
             # if start_time_tuple:
@@ -228,13 +227,13 @@ def add_study_timing(g: Graph, row: pd.Series, study_design_execution_uri: URIRe
             #     g.add((study_completion_date_uri, OntologyNamespaces.TIME.value.year, Literal(year, datatype=XSD.gYear), metadata_graph)) 
             # else:
             g.add((study_completion_date_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row["end date"], datatype=XSD.dateTime), metadata_graph))   
-        if pd.notna(row["ongoing"]):
-            ongoing_status = True if row["ongoing"].lower().strip() == "yes" else False
-            ongoing_uri = URIRef(study_uri + "/ongoing")
-            g.add((ongoing_uri, RDF.type, OntologyNamespaces.SIO.value.ongoing,metadata_graph))
-            g.add((ongoing_uri, OntologyNamespaces.IAO.value.is_about,study_design_execution_uri,metadata_graph))
-            g.add((ongoing_uri, OntologyNamespaces.CMEO.value.has_value, Literal(ongoing_status, datatype=XSD.boolean),metadata_graph))
-            
+            if pd.notna(row["ongoing"]):
+                ongoing_status = True if row["ongoing"].lower().strip() == "yes" else False
+                ongoing_uri = URIRef(study_uri + "/ongoing")
+                g.add((ongoing_uri, RDF.type, OntologyNamespaces.SIO.value.ongoing,metadata_graph))
+                g.add((ongoing_uri, OntologyNamespaces.IAO.value.is_about,study_design_execution_uri,metadata_graph))
+                g.add((ongoing_uri, OntologyNamespaces.CMEO.value.has_value, Literal(ongoing_status, datatype=XSD.boolean),metadata_graph))
+                
 
         return g
 
@@ -335,8 +334,9 @@ def add_timeline_specification(g: Graph, row: pd.Series, study_uri: URIRef, prot
 
     g.add((timeline_specification_uri, RDF.type, OntologyNamespaces.CMEO.value.timeline_specification, metadata_graph))
     g.add((protocol_uri, OntologyNamespaces.RO.value.has_part, timeline_specification_uri, metadata_graph))
-    g.add((timeline_specification_uri, RDFS.label, Literal(row['frequency of data collection'], datatype=XSD.string), metadata_graph))
+    g.add((timeline_specification_uri, RDFS.label, Literal(row['frequency of data collection'], datatype=XSD.string), metadata_graph))    
     return g
+    
     
 def add_inclusion_criterion(g: Graph, row: pd.Series, study_uri: URIRef, eligibility_criterion_uri: URIRef, metadata_graph: URIRef) -> None:
     
@@ -351,12 +351,12 @@ def add_inclusion_criterion(g: Graph, row: pd.Series, study_uri: URIRef, eligibi
     for col in inclusion_criteria_columns:
         inclusion_criterion_name = normalize_text(col)
         row_value = row[col].lower().strip() if pd.notna(row[col]) else ""
-        if row_value == "not applicable":
+        if not row_value or row_value == "not applicable" or row_value == "":
             continue
         if "age" in inclusion_criterion_name:
             add_age_group_inclusion_criterion(g, study_uri, inclusion_criterion_uri, metadata_graph, row[col])
         else:
-            dynamic_inclusion_criterion_type = URIRef(OntologyNamespaces.OBI.value + inclusion_criterion_name)
+            dynamic_inclusion_criterion_type = URIRef(OntologyNamespaces.CMEO.value + inclusion_criterion_name)
             inclusion_criteria_value = row[col].lower().strip() if pd.notna(row[col]) else ""
             inc_all_values = inclusion_criteria_value.split(";") if pd.notna(row[col]) else ""
             for inclusion_criteria_value in inc_all_values:
@@ -379,7 +379,7 @@ def add_age_group_inclusion_criterion(g: Graph, study_uri: URIRef, inclusion_cri
     
     age_group_inclusion_criterion_uri =  URIRef(study_uri + "/age_group_inclusion_criterion")
     # print(f"Age group inclusion criterion URI: {age_group_inclusion_criterion_uri}")    
-    g.add((age_group_inclusion_criterion_uri, RDF.type, OntologyNamespaces.OBI.value.age_group_inclusion_criterion, metadata_graph))
+    g.add((age_group_inclusion_criterion_uri, RDF.type, OntologyNamespaces.CMEO.value.age_group_inclusion_criterion, metadata_graph))
     g.add((inclusion_criterion_uri, OntologyNamespaces.RO.value.has_part, age_group_inclusion_criterion_uri, metadata_graph))
     g.add((age_group_inclusion_criterion_uri, OntologyNamespaces.RO.value.part_of, inclusion_criterion_uri, metadata_graph))
     g.add((age_group_inclusion_criterion_uri, RDFS.label, Literal("age group inclusion criterion", datatype=XSD.string), metadata_graph))
@@ -421,10 +421,13 @@ def add_exclusion_criterion(g: Graph, row: pd.Series, study_uri: URIRef, eligibi
     exclusion_criteria_columns = [col for col in row.index if "exclusion criterion" in col.lower()]
     for col in exclusion_criteria_columns:
         exclusion_criterion_name = normalize_text(col)
-        dynamic_exclusion_criterion_type = URIRef(OntologyNamespaces.OBI.value + "/" + exclusion_criterion_name)
+        dynamic_exclusion_criterion_type = URIRef(OntologyNamespaces.CMEO.value + "/" + exclusion_criterion_name)
         ec_all_values = row[col].lower().split(";") if pd.notna(row[col]) else ""
         for exclusion_criteria_value in ec_all_values:
-            exclusion_criteria_value = exclusion_criteria_value.strip()
+            exclusion_criteria_value = exclusion_criteria_value.lower().strip()
+            if exclusion_criteria_value == "not applicable" or exclusion_criteria_value == "" or exclusion_criteria_value == None:
+                continue
+           
             col_exclusion_criteria_uri = URIRef(study_uri + "/" + exclusion_criterion_name)
             g.add((col_exclusion_criteria_uri, RDF.type, dynamic_exclusion_criterion_type, metadata_graph))
             g.add((col_exclusion_criteria_uri, OntologyNamespaces.RO.value.part_of, exclusion_criterion_uri, metadata_graph))
