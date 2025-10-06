@@ -134,11 +134,11 @@ def generate_studies_kg(filepath: str) -> Graph:
                 contact_uri = URIRef(study_uri + "/study_contact_person")
                 study_contact_person_role_uri = URIRef(study_uri + "/study_contact_person_role")
                 
-                g.add((contact_uri, RDF.type, OntologyNamespaces.CMEO.value.homo_sapiens,metadata_graph))
+                g.add((contact_uri, RDF.type, OntologyNamespaces.NCBI.value.homo_sapiens,metadata_graph))
                 g.add((organization_uri, OntologyNamespaces.OBI.value.has_member, contact_uri,metadata_graph))
                 g.add((contact_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row["study contact person"], datatype=XSD.string),metadata_graph))
                 
-                g.add((study_contact_person_role_uri, RDF.type, OntologyNamespaces.OBI.value.study_contact_person_role,metadata_graph))
+                g.add((study_contact_person_role_uri, RDF.type, OntologyNamespaces.CMEO.value.study_contact_person_role,metadata_graph))
                 g.add((contact_uri, OntologyNamespaces.RO.value.has_role, study_contact_person_role_uri,metadata_graph))
                 g.add((study_contact_person_role_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row["study contact person"], datatype=XSD.string),metadata_graph))
 
@@ -155,7 +155,7 @@ def generate_studies_kg(filepath: str) -> Graph:
             
                 g.add((contact_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row["administrator"], datatype=XSD.string),metadata_graph))
                 administrator_role_uri =  URIRef(study_uri + "/administrator_role")
-                g.add((administrator_role_uri, RDF.type, OntologyNamespaces.OBI.value.administrator_role,metadata_graph))
+                g.add((administrator_role_uri, RDF.type, OntologyNamespaces.CMEO.value.administrator_role,metadata_graph))
                 g.add((administrator_person_uri, OntologyNamespaces.RO.value.has_role, administrator_role_uri,metadata_graph))
                 g.add((administrator_role_uri, OntologyNamespaces.CMEO.value.has_value,  Literal(row["administrator"], datatype=XSD.string),metadata_graph))
             
@@ -201,7 +201,9 @@ def add_study_timing(g: Graph, row: pd.Series, study_design_execution_uri: URIRe
         if pd.notna(row["start date"]):
             start_time_tuple = day_month_year(row["start date"])
             print(f"Start time tuple: {start_time_tuple}")
-            start_date_uri = URIRef(study_design_execution_uri+ "/start_time")
+            start_date_uri = URIRef(# The code `study_design_execution_uri` is not valid Python code
+            # as it contains invalid characters (`#`, `
+            study_design_execution_uri+ "/start_time")
             g.add((start_date_uri, RDF.type, OntologyNamespaces.CMEO.value.start_time,metadata_graph))
             g.add((study_design_execution_uri, OntologyNamespaces.IAO.value.has_time_stamp,start_date_uri ,metadata_graph))
             # if start_time_tuple:
@@ -229,8 +231,8 @@ def add_study_timing(g: Graph, row: pd.Series, study_design_execution_uri: URIRe
         if pd.notna(row["ongoing"]):
             ongoing_status = True if row["ongoing"].lower().strip() == "yes" else False
             ongoing_uri = URIRef(study_uri + "/ongoing")
-            g.add((ongoing_uri, RDF.type, OntologyNamespaces.CMEO.value.ongoing,metadata_graph))
-            g.add((study_design_execution_uri, OntologyNamespaces.RO.value.has_characteristic, ongoing_uri,metadata_graph))
+            g.add((ongoing_uri, RDF.type, OntologyNamespaces.SIO.value.ongoing,metadata_graph))
+            g.add((ongoing_uri, OntologyNamespaces.IAO.value.is_about,study_design_execution_uri,metadata_graph))
             g.add((ongoing_uri, OntologyNamespaces.CMEO.value.has_value, Literal(ongoing_status, datatype=XSD.boolean),metadata_graph))
             
 
@@ -298,6 +300,7 @@ def add_eligibility_criterion(g: Graph, row: pd.Series, study_uri: URIRef, proto
         if morbidity:
             dynamic_morbidity_uri = URIRef(OntologyNamespaces.OBI.value + normalize_text(morbidity))
             g.add((output_population_uri, OntologyNamespaces.RO.value.has_characteristic, dynamic_morbidity_uri, metadata_graph))
+            g.add((dynamic_morbidity_uri, OntologyNamespaces.RO.value.is_characteristic_of, output_population_uri, metadata_graph))
             g.add((dynamic_morbidity_uri, RDF.type, OntologyNamespaces.OBI.value.morbidity, metadata_graph))
             g.add((dynamic_morbidity_uri, RDFS.label, Literal(morbidity, datatype=XSD.string), metadata_graph)) 
             g.add((dynamic_morbidity_uri, OntologyNamespaces.CMEO.value.has_value, Literal(morbidity, datatype=XSD.string), metadata_graph))    
@@ -332,7 +335,7 @@ def add_timeline_specification(g: Graph, row: pd.Series, study_uri: URIRef, prot
 
     g.add((timeline_specification_uri, RDF.type, OntologyNamespaces.CMEO.value.timeline_specification, metadata_graph))
     g.add((protocol_uri, OntologyNamespaces.RO.value.has_part, timeline_specification_uri, metadata_graph))
-    g.add((timeline_specification_uri, RDFS.label, Literal("frequency of data collection", datatype=XSD.string), metadata_graph))
+    g.add((timeline_specification_uri, RDFS.label, Literal(row['frequency of data collection'], datatype=XSD.string), metadata_graph))
     return g
     
 def add_inclusion_criterion(g: Graph, row: pd.Series, study_uri: URIRef, eligibility_criterion_uri: URIRef, metadata_graph: URIRef) -> None:
