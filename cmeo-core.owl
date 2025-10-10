@@ -8051,6 +8051,17 @@ The coefficient is calculated by dividing their covariance with the product of t
     
 
 
+    <!-- https://w3id.org/CMEO#duration_of_observation -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#duration_of_observation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
+        <rdfs:label xml:lang="en">duration of observation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/EUPATH_0000138"/>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
