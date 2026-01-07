@@ -2457,6 +2457,18 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
     
 
 
+    <!-- https://w3id.org/CMEO#has_close_match -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/CMEO#has_close_match">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/CMEO#is_in_mapping_relation_with"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/CMEO#is_close_match_to"/>
+        <obo:IAO_0000412 rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <oboInOwl:id rdf:resource="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <rdfs:label xml:lang="en">has close match</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/CMEO#is_annotation_of -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/CMEO#is_annotation_of">
@@ -2475,6 +2487,30 @@ instance level relation [GOC:cjm]</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
         <oboInOwl:id rdf:resource="http://semanticscience.org/resource/SIO_000011"/>
         <rdfs:label xml:lang="en">is attribute of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/CMEO#is_close_match_to -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/CMEO#is_close_match_to">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/CMEO#is_related_to"/>
+        <obo:IAO_0000412 rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <oboInOwl:id rdf:resource="http://semanticscience.org/resource/SIO_000490"/>
+        <rdfs:label xml:lang="en">is close match to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/CMEO#is_in_mapping_relation_with -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/CMEO#is_in_mapping_relation_with">
+        <rdfs:domain rdf:resource="https://w3id.org/CMEO_0000009"/>
+        <rdfs:range rdf:resource="https://w3id.org/CMEO_0000026"/>
+        <obo:IAO_0000412 rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <oboInOwl:id rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <rdfs:comment xml:lang="en">These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice.</rdfs:comment>
+        <rdfs:label xml:lang="en">is in mapping relation with</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -4232,6 +4268,7 @@ points together with a line.</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000578">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#code_set"/>
         <obo:IAO_0000112 xml:lang="en">The sentence &quot;The article has Pubmed ID 12345.&quot; contains a CRID that has two parts: one part is the CRID symbol, which is &apos;12345&apos;; the other part denotes the CRID registry, which is Pubmed.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000120"/>
         <obo:IAO_0000115 xml:lang="en">An information content entity that consists of a CRID symbol and additional information about the CRID registry to which it belongs.</obo:IAO_0000115>
@@ -7458,7 +7495,7 @@ The coefficient is calculated by dividing their covariance with the product of t
     <!-- https://w3id.org/CMEO_0000026 -->
 
     <owl:Class rdf:about="https://w3id.org/CMEO_0000026">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/CMEO#code_set"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000219"/>
@@ -7471,7 +7508,15 @@ The coefficient is calculated by dividing their covariance with the product of t
                 <owl:someValuesFrom rdf:resource="https://w3id.org/CMEO_0000007"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002350"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/CMEO#code_set"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A unique identifier assigned to a concept in a standardized vocabulary (e.g., LOINC, SNOMED).</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">Concept</obo:IAO_0000118>
+        <obo:IAO_0006011 rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/CMEO"/>
         <rdfs:label xml:lang="en">code</rdfs:label>
     </owl:Class>
@@ -8118,6 +8163,17 @@ The coefficient is calculated by dividing their covariance with the product of t
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">duration of observation</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/EUPATH_0000138"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/CMEO#code_set -->
+
+    <owl:Class rdf:about="https://w3id.org/CMEO#code_set">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <obo:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/IAO_0020020"/>
+        <rdfs:label xml:lang="en">code set</rdfs:label>
     </owl:Class>
     
 
