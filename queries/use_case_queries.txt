@@ -233,125 +233,89 @@ LIMIT 3
 
 CQ7:Which variables are similar between selected studies (time-chf and gissi-hf)?
 
-   	    PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-            PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-            PREFIX dc:    <http://purl.org/dc/elements/1.1/>
-            PREFIX ro:    <http://purl.obolibrary.org/obo/ro.owl/>
-            PREFIX obi:   <http://purl.obolibrary.org/obo/obi.owl/>
-            PREFIX iao:   <http://purl.obolibrary.org/obo/iao.owl/>
-            PREFIX bfo:   <http://purl.obolibrary.org/obo/bfo.owl/>
-            PREFIX cmeo:  <https://w3id.org/CMEO/>
+PREFIX cdc: <https://w3id.org/cdc#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sio:  <http://semanticscience.org/ontology/sio.owl/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
+PREFIX iao:  <http://purl.obolibrary.org/obo/iao.owl/>
+PREFIX cmeo: <https://w3id.org/CMEO/>
 
-            SELECT
-?omop_id ?code_label ?code_value ?val
-(GROUP_CONCAT(DISTINCT ?varNameA; SEPARATOR=", ") AS ?source)
-(GROUP_CONCAT(DISTINCT ?varNameB; SEPARATOR=", ") AS ?target)
-(GROUP_CONCAT(DISTINCT ?visitsA ; SEPARATOR=", ") AS ?source_visit)
-(GROUP_CONCAT(DISTINCT ?visitsB ; SEPARATOR=", ") AS ?target_visit)
+SELECT
+  ?omop_id
+  (SAMPLE(?lbl) AS ?code_label)
+  (SAMPLE(?val) AS ?code_value)
+  # We now group the COMBINED string, ensuring the link is preserved
+  (GROUP_CONCAT(DISTINCT ?src_combined; SEPARATOR=" | ") AS ?source_data)
+  (GROUP_CONCAT(DISTINCT ?tgt_combined; SEPARATOR=" | ") AS ?target_data)
+  (GROUP_CONCAT(DISTINCT ?src_val; SEPARATOR="|") AS ?source_domain)
+  (GROUP_CONCAT(DISTINCT ?tgt_val; SEPARATOR="|") AS ?target_domain)
 WHERE {
-{
-    # ---------- TIME-CHF (source) ----------
-    SELECT
-    ?omop_id ?code_label ?code_value ?val
-    (GROUP_CONCAT(DISTINCT ?var_nameA; SEPARATOR=", ") AS ?varNameA)
-    (GROUP_CONCAT(DISTINCT ?pairA   ; SEPARATOR=", ") AS ?visitsA)
-    ("time-chf" AS ?source)
+  {
+    # --- BLOCK A: TIME-CHF (Source) ---
+    SELECT ?omop_id ?lbl ?val ?src_combined ?src_val
     WHERE {
-    GRAPH <https://w3id.org/CMEO/graph/time-chf>  {
-        # 1) Most selective: mapping from data element -> standardized code (rdf:_1) -> OMOP
-        ?stdProcessA a cmeo:data_standardization ;
-                    obi:has_specified_output ?codeSetA ;
-                    obi:has_specified_input  ?dataElementA .
+      GRAPH <https://w3id.org/CMEO/graph/time-chf> {
+        ?deA a cmeo:data_element;
+             dc:identifier ?src_var ;
+             skos:has_close_match ?codeSetA .
+
         ?codeSetA rdf:_1 ?codeNodeA .
-        ?codeNodeA a cmeo:code ;
-                cmeo:has_value ?code_value ;
-                rdfs:label     ?code_label ;
-                iao:denotes    ?omopClassA .
-        ?omopClassA a cmeo:omop_id ; cmeo:has_value ?omop_id .
+        ?codeNodeA rdfs:label ?lbl ;
+                   cmeo:has_value ?val ;
+                   iao:denotes/cmeo:has_value ?omop_id .
 
-        # 2) Data element identity (single valued)
-        ?dataElementA a cmeo:data_element ; dc:identifier ?var_nameA .
-
-        # 3) Optional category value (kept single per DE; if multi, choose one deterministically)
         OPTIONAL {
-        ?catProcessA a cmeo:categorization_process ;
-                    obi:has_specified_input  ?dataElementA ;
-                    obi:has_specified_output ?catOutA .
-        ?catOutA cmeo:has_value ?val .
+          ?deA sio:has_attribute/skos:has_close_match/rdfs:label ?src_vis_label .
         }
         OPTIONAL {
-        {
-            SELECT ?dataElementA (GROUP_CONCAT(DISTINCT ?visitLblA; SEPARATOR="|") AS ?visitStrA)
-            WHERE {
-            ?visitDatumA a cmeo:visit_measurement_datum ;
-                        iao:is_about ?dataElementA ;
-                        obi:is_specified_input_of ?vsProcA .
-            ?vsProcA obi:has_specified_output ?visitCodeA .
-            ?visitCodeA rdfs:label ?visitLblA .
-            }
-            GROUP BY ?dataElementA
-        }
+          ?deA sio:has_annotation/cmeo:has_value ?src_val .
         }
 
-        # 5) Make the (var || visits) pair once, not multiplicatively
-        BIND(COALESCE(?visitStrA, "") AS ?visA)
-        BIND(CONCAT(STR(?var_nameA), "||", ?visA) AS ?pairA)
+        # --- FIX: Bind the pair together here ---
+        BIND(
+           IF(BOUND(?src_vis_label), 
+              CONCAT(?src_var, " [", ?src_vis_label, "]"), 
+              ?src_var
+           ) AS ?src_combined
+        )
+      }
     }
-    }
-    GROUP BY ?omop_id ?code_label ?code_value ?val
-}
-UNION
-{
-    # ---------- GISSI-HF (target) ----------
-    SELECT
-    ?omop_id ?code_label ?code_value ?val
-    (GROUP_CONCAT(DISTINCT ?var_nameB; SEPARATOR=", ") AS ?varNameB)
-    (GROUP_CONCAT(DISTINCT ?pairB   ; SEPARATOR=", ") AS ?visitsB)
-    ("gissi-hf" AS ?target)
-    WHERE   {
-    GRAPH <https://w3id.org/CMEO/graph/gissi-hf> {
-        ?stdProcessB a cmeo:data_standardization ;
-                    obi:has_specified_output ?codeSetB ;
-                    obi:has_specified_input  ?dataElementB .
+  }
+  UNION
+  {
+    # --- BLOCK B: GISSI-HF (Target) ---
+    SELECT ?omop_id ?lbl ?val ?tgt_combined ?tgt_val
+    WHERE {
+      GRAPH <https://w3id.org/CMEO/graph/gissi-hf> {
+        ?deB a cmeo:data_element;
+             dc:identifier ?tgt_var ;
+             skos:has_close_match ?codeSetB.
         ?codeSetB rdf:_1 ?codeNodeB .
-        ?codeNodeB a cmeo:code ;
-                cmeo:has_value ?code_value ;
-                rdfs:label     ?code_label ;
-                iao:denotes    ?omopClassB .
-        ?omopClassB a cmeo:omop_id ; cmeo:has_value ?omop_id .
-
-        ?dataElementB a cmeo:data_element ; dc:identifier ?var_nameB .
+        ?codeNodeB rdfs:label ?lbl ;
+                   cmeo:has_value ?val ;
+                   iao:denotes/cmeo:has_value ?omop_id .
 
         OPTIONAL {
-        ?catProcessB a cmeo:categorization_process ;
-                    obi:has_specified_input  ?dataElementB ;
-                    obi:has_specified_output ?catOutB .
-        ?catOutB cmeo:has_value ?val .
+          ?deB sio:has_attribute/skos:has_close_match/rdfs:label ?tgt_vis_label .
         }
-
         OPTIONAL {
-        {
-            SELECT ?dataElementB (GROUP_CONCAT(DISTINCT ?visitLblB; SEPARATOR="|") AS ?visitStrB)
-            WHERE {
-            ?visitDatumB a cmeo:visit_measurement_datum ;
-                        iao:is_about ?dataElementB ;
-                        obi:is_specified_input_of ?vsProcB .
-            ?vsProcB obi:has_specified_output ?visitCodeB .
-            ?visitCodeB rdfs:label ?visitLblB .
-            }
-            GROUP BY ?dataElementB
-        }
+          ?deB sio:has_annotation/cmeo:has_value ?tgt_val .
         }
 
-        BIND(COALESCE(?visitStrB, "") AS ?visB)
-        BIND(CONCAT(STR(?var_nameB), "||", ?visB) AS ?pairB)
+        # --- FIX: Bind the pair together here ---
+        BIND(
+           IF(BOUND(?tgt_vis_label), 
+              CONCAT(?tgt_var, "[", ?tgt_vis_label, "]"), 
+              ?tgt_var
+           ) AS ?tgt_combined
+        )
+      }
     }
-    }
-    GROUP BY ?omop_id ?code_label ?code_value ?val
+  }
 }
-}
-GROUP BY ?omop_id ?code_label ?code_value ?val
+GROUP BY ?omop_id
 ORDER BY ?omop_id
 
 

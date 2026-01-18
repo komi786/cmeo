@@ -9,6 +9,7 @@ from .config import settings
 import json
 import re
 # import os
+# from validate_cde import validate_dictionary
 from .ontology_model import  Concept
 from .study_kg import update_metadata_graph
 from .utils import (
@@ -51,24 +52,23 @@ DERIVED_VARIABLES_LIST= [
                 }
 ]
 
-def categorization_process(g: Graph, variable_uri: URIRef, category: str, cohort_uri:URIRef) -> Graph:
+def add_category_annotation(g: Graph, variable_uri: URIRef, category: str, cohort_uri:URIRef) -> Graph:
     if category is None:
         return g
     category_ = category.strip().lower().replace(' ','_')
-    categorization_process_uri = URIRef(f"{variable_uri}/categorization_process")
-    g.add((categorization_process_uri, RDF.type, OntologyNamespaces.CMEO.value.categorization_process, cohort_uri))
-    g.add((variable_uri, OntologyNamespaces.OBI.value.is_specified_input_of, categorization_process_uri, cohort_uri))
-    g.add((categorization_process_uri, OntologyNamespaces.OBI.value.has_specified_input, variable_uri, cohort_uri))
     category_uri = URIRef(f"{variable_uri}/category/{category_}")
     g.add((category_uri, RDF.type, OntologyNamespaces.CMEO.value.category, cohort_uri))
-    g.add((categorization_process_uri, OntologyNamespaces.OBI.value.has_specified_output, category_uri, cohort_uri))
-    g.add((category_uri, OntologyNamespaces.OBI.value.is_specified_output_of, categorization_process_uri, cohort_uri))
-    g.add((category_uri, OntologyNamespaces.CMEO.value.has_value, Literal(category, datatype=XSD.string), cohort_uri))
+    g.add((variable_uri, OntologyNamespaces.SIO.value.has_annotation, category_uri, cohort_uri))
+    g.add((category_uri, OntologyNamespaces.CMEO.value.has_value, Literal(category_), cohort_uri))
     return g
 
 def process_variables_metadata_file(file_path:str, study_metadata_graph_file_path:str, cohort_name:str,eda_file_path:str) -> tuple[Graph, str]:
 
         print(f"Processing metadata file: {file_path}")
+        file_path_dir = file_path.rsplit('/', 1)[0]
+        # validatation_results = validate_dictionary(file_path)
+        # if not validatation_results:
+        #     return None, None
         data = load_dictionary(file_path)
         if data is None or data.empty:
             return None, None   
@@ -103,7 +103,7 @@ def process_variables_metadata_file(file_path:str, study_metadata_graph_file_pat
             # data_element_domain = row['omop'].lower().strip().replace(' ','_') if pd.notna(row['omop']) else None
                 # Corrected URI assignment
             if pd.notna(row['domain']):
-                g=categorization_process(g, var_uri, row['domain'], cohort_graph)
+                g=add_category_annotation(g, var_uri, row['domain'], cohort_graph)
             
             statistical_type_uri,statistical_type = determine_var_uri(g, cohort_id, var_name, multi_class_categorical, binary_categorical, data_type=row['vartype'])
             
@@ -196,6 +196,7 @@ def add_dataset_uri(g: Graph, row:pd.Series, var_uri: URIRef, statistical_type_u
     dataset_uri = URIRef(f"{var_uri}/dataset")
     g.add((dataset_uri, RDF.type, OntologyNamespaces.IAO.value.dataset, cohort_uri))
     g.add((dataset_uri, OntologyNamespaces.IAO.value.is_about,statistical_type_uri , cohort_uri))
+    
     g = add_device_senors_for_variable(g=g, var_uri=var_uri, data_set_uri=dataset_uri, cohort_uri=cohort_uri, row_info=row)
     return g, dataset_uri
 
@@ -207,7 +208,8 @@ def add_missing_value_specification(g: Graph, var_uri: URIRef, missing_value: st
     g.add((missing_uri, RDF.type, OntologyNamespaces.CMEO.value.missing_value_specification, cohort_uri))
     g.add((missing_uri, OntologyNamespaces.CMEO.value.has_value, Literal(missing_value, datatype=XSD.string), cohort_uri))
     # g.add((var_uri, OntologyNamespaces.OBI.value.has_value_specification, missing_uri, cohort_uri))
-    g.add((missing_uri, OntologyNamespaces.OBI.value.specifies_value_of, missing_uri, cohort_uri))
+    g.add((missing_uri, OntologyNamespaces.OBI.value.specifies_value_of, var_uri, cohort_uri))
+    g.add((var_uri, OntologyNamespaces.OBI.value.has_value_specification, missing_uri, cohort_uri))
     return g
 
 def add_formula(g: Graph, var_uri: URIRef, formula: str, cohort_uri: URIRef) -> Graph:
@@ -216,7 +218,8 @@ def add_formula(g: Graph, var_uri: URIRef, formula: str, cohort_uri: URIRef) -> 
     formula_uri = URIRef(f"{var_uri}/formula")
     g.add((formula_uri, RDF.type, OntologyNamespaces.CMEO.value.formula, cohort_uri))
     g.add((formula_uri, OntologyNamespaces.CMEO.value.has_value, Literal(formula, datatype=XSD.string), cohort_uri))
-    g.add((formula_uri, OntologyNamespaces.IAO.value.is_about, var_uri, cohort_uri))
+    g.add((formula_uri, OntologyNamespaces.SIO.value.is_attribute_of, var_uri, cohort_uri))
+    g.add((var_uri, OntologyNamespaces.SIO.value.has_attribute, formula_uri, cohort_uri))
     return g
 def add_data_type(g: Graph, var_uri: URIRef, data_type: str, cohort_uri: URIRef) -> Graph:
     if data_type is None or pd.isna(data_type):
@@ -224,7 +227,8 @@ def add_data_type(g: Graph, var_uri: URIRef, data_type: str, cohort_uri: URIRef)
     data_type_uri = URIRef(f"{var_uri}/data_type/{data_type}")
     g.add((data_type_uri, RDF.type, OntologyNamespaces.CMEO.value.data_type, cohort_uri))
     g.add((data_type_uri, OntologyNamespaces.CMEO.value.has_value, Literal(data_type, datatype=XSD.string), cohort_uri))
-    g.add((data_type_uri, OntologyNamespaces.IAO.value.is_about, var_uri, cohort_uri))
+    g.add((data_type_uri, OntologyNamespaces.SIO.value.is_attribute_of, var_uri, cohort_uri))
+    g.add((var_uri, OntologyNamespaces.SIO.value.has_attribute, data_type_uri, cohort_uri))
     return g
 
 def add_variable_eda(g: Graph, var_uris: list[dict], cohort_uri: URIRef, eda_json_file_path:str) -> Graph:
@@ -260,11 +264,8 @@ def add_variable_eda(g: Graph, var_uris: list[dict], cohort_uri: URIRef, eda_jso
                 # print(f"eda data: {eda}")  
                 if eda:
                     var_uri = var_uris.get(var_name)[0]
-                    statistical_var_uri = var_uris.get(var_name)[1]
+                    # statistical_var_uri = var_uris.get(var_name)[1]
                     dataset_uri = var_uris.get(var_name)[2]
-                    # g.add((dataset_uri, RDF.type, OntologyNamespaces.IAO.value.data_set, cohort_uri))
-                    # g.add((dataset_uri, OntologyNamespaces.IAO.value.is_about,statistical_var_uri , cohort_uri))
-                    # transformed_data as a process with has_specified_input dataset and statistic as output
                     transformed_data_uri = URIRef(f"{var_uri}/exploratory_data_analysis")
                     g.add((transformed_data_uri, RDF.type, OntologyNamespaces.CMEO.value.exploratory_data_analysis, cohort_uri))
                     g.add((dataset_uri, OntologyNamespaces.OBI.value.is_specified_input_of, transformed_data_uri, cohort_uri))
@@ -273,38 +274,38 @@ def add_variable_eda(g: Graph, var_uris: list[dict], cohort_uri: URIRef, eda_jso
                     g.add((statistic_uri, RDF.type, OntologyNamespaces.STATO.value.statistic, cohort_uri))
                     g.add((transformed_data_uri, OntologyNamespaces.OBI.value.has_specified_output, statistic_uri, cohort_uri))
                     g.add((statistic_uri, OntologyNamespaces.OBI.value.is_specified_output_of, transformed_data_uri, cohort_uri))
-                    g = add_count_to_graph(g, statistic_uri, eda.get('count (metadata dictionary)'), cohort_uri)
-                    g = add_min_value_to_graph(g, statistic_uri, eda.get('min'), cohort_uri)
-                    g = add_max_value_to_graph(g, statistic_uri, eda.get('max'), cohort_uri)
-                    g = add_missing_value_count_to_graph(g, statistic_uri, eda.get('count empty'), cohort_uri)
-                    g = add_unique_values_count_to_graph(g, statistic_uri, eda.get('number of unique values/categories'), cohort_uri)
-                    print(f"variable type: {eda.get('type')} for variable {var_name}")   
-                    if eda.get('type') is None:
+                    g = add_count_to_graph(g, statistic_uri, eda.get('count (metadata dictionary)', None), cohort_uri)
+                    g = add_min_value_to_graph(g, statistic_uri, eda.get('min', None), cohort_uri)
+                    g = add_max_value_to_graph(g, statistic_uri, eda.get('max', None), cohort_uri)
+                    g = add_missing_value_count_to_graph(g, statistic_uri, eda.get('count empty', None), cohort_uri)
+                    g = add_unique_values_count_to_graph(g, statistic_uri, eda.get('number of unique values/categories', None), cohort_uri)
+                    print(f"variable type: {eda.get('type', None)} for variable {var_name}")   
+                    if eda.get('type', None) is None:
                         # print(f"Type is None for variable {var_name}")
                         continue
                     else:
-                        if 'categorical' in eda.get('type','').strip().lower():
+                        if 'categorical' in eda.get('type', None).strip().lower():
                             
 
-                            g = add_frequency_distribution_to_graph(g, statistic_uri, eda.get('class balance'), cohort_uri)
-                            g = add_mode_to_graph(g, statistic_uri, eda.get('most frequent category'), cohort_uri)
-                            g = add_chi_square_test_statistic_to_graph(g, var_uri, dataset_uri, eda.get('chi-square test statistic'), cohort_uri)
-                            g = add_categorical_variable_visualization(g, var_uri, cohort_uri, eda.get('url'), [eda.get('x-ticks'), eda.get('y-ticks')])
+                            g = add_frequency_distribution_to_graph(g, statistic_uri, eda.get('class balance', None), cohort_uri)
+                            g = add_mode_to_graph(g, statistic_uri, eda.get('most frequent category', None), cohort_uri)
+                            g = add_chi_square_test_statistic_to_graph(g, var_uri, dataset_uri, eda.get('chi-square test statistic', None), cohort_uri)
+                            g = add_categorical_variable_visualization(g, var_uri, cohort_uri, eda.get('url', None), [eda.get('x-ticks', None), eda.get('y-ticks', None)])
                         else:
-                            g = add_histogram_visualization(g, var_uri=var_uri, cohort_uri=cohort_uri, chart_url=eda.get('url'), xy_axis=[eda.get('x-ticks'), eda.get('y-ticks')])
-                            g = add_outlier_count_by_iqr_to_graph(g, statistic_uri, eda.get('outliers (iqr)'), cohort_uri)
-                            g = add_outlier_count_by_z_score_to_graph(g, statistic_uri, eda.get('outliers (z)'), cohort_uri)
-                            g = add_normality_test_to_graph(g, statistic_uri, eda.get('normality test'), cohort_uri)
-                            g = add_wilks_shapiro_test_to_graph(g, statistic_uri, eda.get('w_test'), cohort_uri)
-                            g = add_standard_deviation_to_graph(g, statistic_uri, eda.get('Std Dev'), cohort_uri)
-                            g = add_mean_to_graph(g, statistic_uri, eda.get('mean'), cohort_uri)
-                            g = add_median_to_graph(g, statistic_uri, eda.get('median'), cohort_uri)
-                            g = add_iqr_to_graph(g, statistic_uri, eda.get('iqr'), cohort_uri)
-                            g = add_q1_to_graph(g, statistic_uri, eda.get('q1'), cohort_uri)
-                            g = add_q3_to_graph(g, statistic_uri, eda.get('q3'), cohort_uri)
-                            g = add_variance_to_graph(g, statistic_uri, eda.get('variance'), cohort_uri)
-                            g = add_kurtosis_to_graph(g, statistic_uri, eda.get('kurtosis'), cohort_uri)
-                            g = add_skewness_to_graph(g, statistic_uri, eda.get('skewness'), cohort_uri)
+                            g = add_histogram_visualization(g, var_uri=var_uri, cohort_uri=cohort_uri, chart_url=eda.get('url', None), xy_axis=[eda.get('x-ticks', None), eda.get('y-ticks', None)])
+                            g = add_outlier_count_by_iqr_to_graph(g, statistic_uri, eda.get('outliers (iqr)', None), cohort_uri)
+                            g = add_outlier_count_by_z_score_to_graph(g, statistic_uri, eda.get('outliers (z)', None), cohort_uri)
+                            g = add_normality_test_to_graph(g, statistic_uri, eda.get('normality test', None), cohort_uri)
+                            g = add_wilks_shapiro_test_to_graph(g, statistic_uri, eda.get('w_test', None), cohort_uri)
+                            g = add_standard_deviation_to_graph(g, statistic_uri, eda.get('Std Dev', None), cohort_uri)
+                            g = add_mean_to_graph(g, statistic_uri, eda.get('mean', None), cohort_uri)
+                            g = add_median_to_graph(g, statistic_uri, eda.get('median', None), cohort_uri)
+                            g = add_iqr_to_graph(g, statistic_uri, eda.get('iqr', None), cohort_uri)
+                            g = add_q1_to_graph(g, statistic_uri, eda.get('q1', None), cohort_uri)
+                            g = add_q3_to_graph(g, statistic_uri, eda.get('q3', None), cohort_uri)
+                            g = add_variance_to_graph(g, statistic_uri, eda.get('variance', None), cohort_uri)
+                            g = add_kurtosis_to_graph(g, statistic_uri, eda.get('kurtosis', None), cohort_uri)
+                            g = add_skewness_to_graph(g, statistic_uri, eda.get('skewness', None), cohort_uri)
 
     return g
                             
@@ -329,10 +330,10 @@ def add_min_value_to_graph(g: Graph, statistic_uri: URIRef, min_value: any, coho
     min_uri = URIRef(f"{statistic_uri}/minimum_value")
 
     g.add((min_uri, RDF.type, OntologyNamespaces.STATO.value.minimum_value, cohort_uri))
-    if isinstance(min_value, str):
-        g.add((min_uri, OntologyNamespaces.CMEO.value.has_value, Literal(min_value, datatype=XSD.string), cohort_uri))
-    else:
-        g.add((min_uri, OntologyNamespaces.CMEO.value.has_value, Literal(min_value, datatype=XSD.float), cohort_uri))
+    # if isinstance(min_value, str):
+    #     g.add((min_uri, OntologyNamespaces.CMEO.value.has_value, Literal(min_value, datatype=XSD.string), cohort_uri))
+    # else:
+    g.add((min_uri, OntologyNamespaces.CMEO.value.has_value, Literal(min_value, datatype=XSD.float), cohort_uri))
     g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, min_uri, cohort_uri))
     g.add((min_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
     return g
@@ -345,10 +346,10 @@ def add_max_value_to_graph(g: Graph, statistic_uri: URIRef, max_value: any, coho
     # print(f"max value = {max_value}")
     max_uri = URIRef(f"{statistic_uri}/maximum_value")
     g.add((max_uri, RDF.type, OntologyNamespaces.STATO.value.maximum_value, cohort_uri))
-    if isinstance(max_value, str):
-        g.add((max_uri, OntologyNamespaces.CMEO.value.has_value, Literal(max_value, datatype=XSD.string), cohort_uri))
-    else:
-        g.add((max_uri, OntologyNamespaces.CMEO.value.has_value, Literal(max_value, datatype=XSD.float), cohort_uri))
+    # if isinstance(max_value, str):
+    #     g.add((max_uri, OntologyNamespaces.CMEO.value.has_value, Literal(max_value, datatype=XSD.string), cohort_uri))
+    # else:
+    g.add((max_uri, OntologyNamespaces.CMEO.value.has_value, Literal(max_value, datatype=XSD.float), cohort_uri))
     g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, max_uri, cohort_uri))
     g.add((max_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
     return g
@@ -410,18 +411,16 @@ def add_device_senors_for_variable(g: Graph, var_uri:URIRef, data_set_uri: URIRe
             g.add((sensor_uri, OntologyNamespaces.CMEO.value.has_value, Literal(sensor_value, datatype=XSD.string), cohort_uri))
             g.add((device_uri, OntologyNamespaces.RO.value.has_part, sensor_uri, cohort_uri))
             g.add((sensor_uri, OntologyNamespaces.RO.value.is_part_of, device_uri, cohort_uri))
-        if 'wearer location' in row_info and pd.notna(row_info['wearer location']):
-            wearer_location_value = row_info['wearer location'].strip().lower().replace(' ', '_')
-            wearer_location_uri = URIRef(OntologyNamespaces.CMEO.value + f"body_region/{wearer_location_value}")
-            g.add((sensor_uri, OntologyNamespaces.RO.value.is_located_in, wearer_location_uri, cohort_uri))
-            g.add((wearer_location_uri, RDF.type, OntologyNamespaces.CMEO.value.body_region, cohort_uri))
-            g.add((data_collection_process_uri, OntologyNamespaces.RO.value.occurs_in, wearer_location_uri, cohort_uri))
-            g.add((wearer_location_uri, OntologyNamespaces.CMEO.value.has_value, Literal(wearer_location_value, datatype=XSD.string), cohort_uri))
+            if 'wearer location' in row_info and pd.notna(row_info['wearer location']):
+                wearer_location_value = row_info['wearer location'].strip().lower().replace(' ', '_')
+                wearer_location_uri = URIRef(OntologyNamespaces.CMEO.value + f"body_region/{wearer_location_value}")
+                g.add((sensor_uri, OntologyNamespaces.RO.value.is_located_in, wearer_location_uri, cohort_uri))
+                g.add((wearer_location_uri, RDF.type, OntologyNamespaces.CMEO.value.body_region, cohort_uri))
+                g.add((data_collection_process_uri, OntologyNamespaces.RO.value.occurs_in, wearer_location_uri, cohort_uri))
+                g.add((wearer_location_uri, OntologyNamespaces.CMEO.value.has_value, Literal(wearer_location_value, datatype=XSD.string), cohort_uri))
 
     return g
 
-        
-    
 def add_frequency_distribution_to_graph(g: Graph, statistic_uri: URIRef, fd:str, cohort_uri: URIRef) -> Graph:
     if fd is None:
         return g
@@ -789,7 +788,8 @@ def add_temporal_context(g: Graph, var_uri: URIRef, cohort_uri: URIRef, row: pd.
             visit_labels = normalize_text(row['visits'])
             visit_uri = get_temporal_context_uri(var_uri, visit_labels)
             g.add((visit_uri, RDF.type, OntologyNamespaces.CMEO.value.visit_measurement_datum, cohort_uri))
-            g.add((visit_uri, OntologyNamespaces.IAO.value.is_about, var_uri, cohort_uri))
+            g.add((visit_uri, OntologyNamespaces.SIO.value.is_attribute_of, var_uri, cohort_uri))
+            g.add((var_uri, OntologyNamespaces.SIO.value.has_attribute, visit_uri, cohort_uri))
             g.add((visit_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row['visits'], datatype=XSD.string), cohort_uri))
 
             
@@ -799,7 +799,8 @@ def add_temporal_context(g: Graph, var_uri: URIRef, cohort_uri: URIRef, row: pd.
                     code=row['visit concept code'] if pd.notna(row['visit concept code']) else None,
                     omop_id=safe_int(row['visit omop id']) if pd.notna(row['visit omop id']) else None,
                 )
-                add_solo_concept_info(g, visit_uri, concepts, cohort_uri)
+                
+                g= add_solo_concept_info(g, visit_uri, concepts, cohort_uri)
             
                 return g
         return g
@@ -847,8 +848,9 @@ def add_categories_to_graph(g: Graph, var_uri: URIRef, cohort_uri: URIRef, row: 
             #     print(f"value: {value} defined_value: {defined_value}")
             permissible_uri = URIRef(f"{var_uri}/categorical_value_specification/{n_defined_value}")
             g.add((permissible_uri, RDF.type, OntologyNamespaces.OBI.value.categorical_value_specification, cohort_uri))
-            # g.add((var_uri, OntologyNamespaces.OBI.value.has_value_specification, permissible_uri, cohort_uri))
+            g.add((var_uri, OntologyNamespaces.OBI.value.has_value_specification, permissible_uri, cohort_uri))
             g.add((permissible_uri, OntologyNamespaces.OBI.value.specifies_value_of, var_uri, cohort_uri))
+            
             g.add((permissible_uri, RDFS.label, Literal(defined_value, datatype=XSD.string), cohort_uri))
             if data_type_value == 'str':
                 g.add((permissible_uri, OntologyNamespaces.CMEO.value.has_value, Literal(value, datatype=XSD.string), cohort_uri))
@@ -925,33 +927,6 @@ def add_measurement_unit(g:Graph, var_uri:URIRef, cohort_uri: URIRef,row: pd.Ser
     return g
 
 
-# Device	Sensor	Wearer Location
-
-def add_wearable_device(g: Graph, var_uri: URIRef, cohort_uri: URIRef, row: pd.Series) -> Graph:
-    if pd.notna(row['device']) and row['device'] != '':
-        device_label = normalize_text(row['device'])
-        device_uri = URIRef(f"{var_uri}/wearable_device/{device_label}")
-        g.add((device_uri, RDF.type, OntologyNamespaces.CMEO.value.wearable_device, cohort_uri))
-        g.add((device_uri, OntologyNamespaces.IAO.value.is_about, var_uri, cohort_uri))
-        g.add((device_uri, RDFS.label, Literal(device_label, datatype=XSD.string), cohort_uri))
-    
-    
-def add_sensor(g: Graph, var_uri: URIRef, cohort_uri: URIRef, row: pd.Series) -> Graph:
-    if pd.notna(row['sensor']) and row['sensor'] != '':
-        sensor_label = normalize_text(row['sensor'])
-        sensor_uri = URIRef(f"{var_uri}/sensor/{sensor_label}")
-        g.add((sensor_uri, RDF.type, OntologyNamespaces.CMEO.value.sensor, cohort_uri))
-        g.add((sensor_uri, OntologyNamespaces.IAO.value.is_about, var_uri, cohort_uri))
-        g.add((sensor_uri, RDFS.label, Literal(sensor_label, datatype=XSD.string), cohort_uri))   
-        
-def add_wearer_location(g: Graph, var_uri: URIRef, cohort_uri: URIRef, row: pd.Series) -> Graph:
-    if pd.notna(row['wearer location']) and row['wearer location'] != '':
-        wearer_location_label = normalize_text(row['wearer location'])
-        wearer_location_uri = URIRef(f"{var_uri}/wearer_location/{wearer_location_label}")
-        g.add((wearer_location_uri, RDF.type, OntologyNamespaces.CMEO.value.wearer_location, cohort_uri))
-        g.add((wearer_location_uri, OntologyNamespaces.IAO.value.is_about, var_uri, cohort_uri))
-        g.add((wearer_location_uri, RDFS.label, Literal(wearer_location_label, datatype=XSD.string), cohort_uri))
-
 def get_category_uri(var_uri: URIRef, category_value: str) -> URIRef:
     """Generates a unique and URI-safe URI for each category based on the variable URI and category value."""
     # Encode the category value to make it URI-safe
@@ -997,45 +972,6 @@ def get_omop_id_uri(var_uri: URIRef, omop_id: str) -> URIRef:
         print("OMOP ID is empty")
     return URIRef(f"{var_uri}/omop_id/{omop_id}")
 
-def add_context(g: Graph, var_uri: URIRef, cohort_uri: URIRef, row: pd.Series) -> Graph:
-    """
-    Add context to the RDF graph for a specific variable URI.
-    
-    :param g: RDF Graph object
-    :param var_uri: URI of the variable to add context to
-    :param labels: List of context labels
-    :param codes: List of context codes
-    :param omop_ids: List of context OMOP IDs
-    """
-    # visit_not_null = pd.notna(row['visits']) and row['visits']
-    # if visit not null the -1 entry in Additional Context Concept Label should be about visits
-    concepts = []
-    context_label = ""
-    if pd.notna(row['additional context concept name']) and pd.notna(row['additional context concept code']) and pd.notna(row['additional context omop id']):
-        labels = row['additional context concept name'].split("|")
-        codes = row['additional context concept code'].split("|")
-        omop_ids = row['additional context omop id'].split("|")
-        # print(f"labels: {labels} codes: {codes} omop_ids: {omop_ids}")
-        for i, label in enumerate(labels):
-            # label = normalize_text(label)
-            code = codes[i].strip() if codes[i] else None
-            omop_id = omop_ids[i] if omop_ids[i] else None
-                # Create a unique URI for the context except time point
-            if label and code and omop_id:
-                context_label =  f"{context_label};;{label}"
-                concepts.append(Concept(
-                    standard_label=label,
-                    code=code,
-                    omop_id=omop_id,
-                ))
-        # uri_label = f"contextual_factor/{context_label}"
-        context_uri = get_context_uri(var_uri=var_uri, context_id=context_label)
-        g.add((context_uri, RDF.type, OntologyNamespaces.CMEO.value.contextual_factor, cohort_uri))
-        g.add((context_uri, OntologyNamespaces.IAO.value.is_about, var_uri, cohort_uri))
-        g.add((context_uri, RDFS.label, Literal(context_label, datatype=XSD.string), cohort_uri))
-        g.add((context_uri, OntologyNamespaces.CMEO.value.has_value, Literal(context_label, datatype=XSD.string), cohort_uri))
-        g=add_concept_info(g, context_uri, concepts, cohort_uri)
-    return  g
 
 
 def add_concept_info(g: Graph, linked_uri: URIRef, concepts: list[Concept], cohort_uri: URIRef) -> Graph:
@@ -1049,9 +985,11 @@ def add_concept_info(g: Graph, linked_uri: URIRef, concepts: list[Concept], coho
 
     code_set_uri = URIRef(f"{linked_uri}/code_set")
     g.add((code_set_uri, RDF.type, OntologyNamespaces.CMEO.value.code_set,cohort_uri))
+    g.add((linked_uri, OntologyNamespaces.SKOS.value.has_close_match,code_set_uri, cohort_uri))
+    g.add((code_set_uri,  OntologyNamespaces.SIO.value.is_close_match_to,linked_uri, cohort_uri))
     g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_output, code_set_uri,cohort_uri))
     g.add((code_set_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_standardization_uri,cohort_uri))
-
+    
 
     for i, concept in enumerate(concepts):
         code = concept.code.strip()
@@ -1091,6 +1029,8 @@ def add_composite_concepts_info(g: Graph, linked_uri: URIRef, concepts: list[Con
     # g.add((code_set_uri, RDF.type, RDF.Seq, cohort_uri))
     g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_output, code_set_uri,cohort_uri))
     g.add((code_set_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_standardization_uri,cohort_uri))
+    g.add((linked_uri, OntologyNamespaces.SKOS.value.has_close_match, code_set_uri, cohort_uri)) # for composite concepts we use closeMatch instead of exactMatch as they are not exactly defined by the code set in other vocabularies but our interpretation of them
+    g.add((code_set_uri, OntologyNamespaces.SIO.value.is_close_match_to, linked_uri, cohort_uri))
     # print(linked_uri)
     for i, concept in enumerate(concepts):
         # print(concept)
@@ -1113,11 +1053,9 @@ def add_composite_concepts_info(g: Graph, linked_uri: URIRef, concepts: list[Con
 
         g.add((code_set_uri, OntologyNamespaces.RO.value.has_part, code_uri,cohort_uri))
         g.add((code_uri, OntologyNamespaces.RO.value.is_part_of, code_set_uri,cohort_uri))
-        g.add((code_set_uri, RDF[f"_{i}"], code_uri, cohort_uri))
+        g.add((code_set_uri, RDF[f"_{i+1}"], code_uri, cohort_uri))
     # print(f"omop_id: {omop_id} for {linked_uri}")
     return g
-
-
 
 def add_solo_concept_info(g: Graph, linked_uri: URIRef, concept: Concept, cohort_uri: URIRef) -> Graph:
 
@@ -1155,6 +1093,8 @@ def add_solo_concept_info(g: Graph, linked_uri: URIRef, concept: Concept, cohort
     g.add((code_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_standardization_uri,cohort_uri))
     g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_output, code_uri,cohort_uri))
     g.add((code_uri, RDFS.label, Literal(label, datatype=XSD.string),cohort_uri))
+    g.add((linked_uri, OntologyNamespaces.SKOS.value.has_close_match, code_uri, cohort_uri))
+    g.add((code_uri, OntologyNamespaces.SIO.value.is_close_match_to, linked_uri, cohort_uri))
     # standard_label_uri = get_standard_label_uri(linked_uri, label)
     # g.add((standard_label_uri, RDF.type, OntologyNamespaces.CMEO.value.standard_label,cohort_uri))
     # g.add((code_uri, OntologyNamespaces.OBI.value.is_denoted_by, standard_label_uri,cohort_uri))
@@ -1318,24 +1258,24 @@ def add_all_derived_variables(
 #         print(f"Error processing raw data file: {e}")
 #         return None
        
-        # base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        # print(f"Base path: {base_path}")
-        # Serialize the graph to a temporary file and post it to the SPARQL endpoint
-    #     temp_file = f"{output_dir}/{cohort_name}_raw_data_graph.ttl"
-    #     serialized_graph = g.serialize(format="trig")
-    #     with open(temp_file, "w", encoding="utf-8") as f:
-    #         f.write(serialized_graph)
+#         base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#         print(f"Base path: {base_path}")
+#         Serialize the graph to a temporary file and post it to the SPARQL endpoint
+#         temp_file = f"{output_dir}/{cohort_name}_raw_data_graph.ttl"
+#         serialized_graph = g.serialize(format="trig")
+#         with open(temp_file, "w", encoding="utf-8") as f:
+#             f.write(serialized_graph)
 
-    #     print(f"Serialized raw data graph to {temp_file}")
+#         print(f"Serialized raw data graph to {temp_file}")
 
-    #     headers = {"Content-Type": "application/trig"}
-    #     response = requests.post(f"{settings.sparql_endpoint}/store?graph={cohort_uri}_pldata",
-    #                                 headers=headers, data=serialized_graph, timeout=300)
+#         headers = {"Content-Type": "application/trig"}
+#         response = requests.post(f"{settings.sparql_endpoint}/store?graph={cohort_uri}_pldata",
+#                                     headers=headers, data=serialized_graph, timeout=300)
 
-    #     if response.status_code in (201, 204):
-    #         print("Raw data successfully added to the graph.")
-    #     else:
-    #         print(f"Failed to publish raw data graph: {response.status_code}, {response.text}")
+#         if response.status_code in (201, 204):
+#             print("Raw data successfully added to the graph.")
+#         else:
+#             print(f"Failed to publish raw data graph: {response.status_code}, {response.text}")
 
-    # except Exception as e:
-    #     print(f"Error processing raw data file: {e}")
+#     except Exception as e:
+#         print(f"Error processing raw data file: {e}")
