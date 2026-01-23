@@ -4368,6 +4368,18 @@ points together with a line.</obo:IAO_0000115>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/NCIT_C103165 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C103165">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115 xml:lang="en">The kind of visit undertaken by the subject within a study, such as inpatient, outpatient, telephone, etc.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">subject visit type</obo:IAO_0000118>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/NCIT_C103165"/>
+        <rdfs:label xml:lang="en">visit type</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBA_0000001 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBA_0000001">
@@ -6985,6 +6997,40 @@ defines and states the requirements (positive or negative) for an entity to be c
     
 
 
+    <!-- http://purl.obolibrary.org/obo/SCDO_1000849 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_1000849">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C103165"/>
+        <obo:IAO_0000115 xml:lang="en">A clinical visit occuring because of an acute (severe with sudden onset) health condition.</obo:IAO_0000115>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000849"/>
+        <rdfs:label xml:lang="en">acute clinical visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_1000900 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_1000900">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C103165"/>
+        <obo:IAO_0000115 xml:lang="en">A clinical visit that is the patient&apos;s first clinical visit.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">first visit</obo:IAO_0000118>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000900"/>
+        <rdfs:label xml:lang="en">baseline visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_1000901 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_1000901">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C103165"/>
+        <obo:IAO_0000115 xml:lang="en">A clinical visit that is a follow-up for a previous visit.</obo:IAO_0000115>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/SCDO_1000901"/>
+        <rdfs:label xml:lang="en">follow-up</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/STATO_0000039 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000039">
@@ -7106,6 +7152,7 @@ Spearman&apos;s coefficient may be used when the conditions for computing Pearso
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000251">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000258"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/CMEO_0000060"/>
         <obo:IAO_0000115>A continuous variable over a particular range of the real numbers is one whose value in that range must be such that, if the variable can take values a and b in that range, then it can also take any value between a and b.</obo:IAO_0000115>
         <obo:IAO_0000116>We will link continuous variable to measurement scale.</obo:IAO_0000116>
         <obo:IAO_0000117>Jie Zheng, Yongqun He</obo:IAO_0000117>
@@ -7880,7 +7927,7 @@ The coefficient is calculated by dividing their covariance with the product of t
 
     <owl:Class rdf:about="https://w3id.org/CMEO_0000059">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
-        <rdfs:comment xml:lang="en">data type of variables such as int, float, str, datetime etc.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">data type of variables such as int, float, str, datetime etc.</obo:IAO_0000115>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">data type</rdfs:label>
     </owl:Class>
@@ -8005,6 +8052,8 @@ The coefficient is calculated by dividing their covariance with the product of t
 
     <owl:Class rdf:about="https://w3id.org/CMEO_0000071">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <obo:IAO_0000115 xml:lang="en">It refers to a benchmark or reference against which the effects of a medical intervention are compared. In clinical trials, the comparator can be a placebo (an inactive substance designed to resemble the drug being tested), a different dose or regimen of the drug being studied, or a different drug altogether. The choice of comparator is a critical aspect of clinical trial design and can significantly impact the interpretation and applicability of the trial’s results.</obo:IAO_0000115>
+        <terms:source xml:lang="en">https://viares.com/blog/clinical-research-explained/comparator/</terms:source>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/CMEO"/>
         <rdfs:label xml:lang="en">comparator specification</rdfs:label>
     </owl:Class>
@@ -8015,6 +8064,8 @@ The coefficient is calculated by dividing their covariance with the product of t
 
     <owl:Class rdf:about="https://w3id.org/CMEO_0000072">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000033"/>
+        <obo:IAO_0000115>In clinical studies, Intervention specification involves a detailed, precise, and a priori definition of the treatment, procedure, or behavioral regimen being tested to ensure reproducibility, accurate implementation, and valid evaluation of outcomes</obo:IAO_0000115>
+        <terms:source xml:lang="en">https://www.ncbi.nlm.nih.gov/books/NBK305500/</terms:source>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/CMEO"/>
         <rdfs:label xml:lang="en">intervention specification</rdfs:label>
     </owl:Class>
@@ -8066,6 +8117,7 @@ The coefficient is calculated by dividing their covariance with the product of t
 
     <owl:Class rdf:about="https://w3id.org/CMEO_0000076">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000118 rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <oboInOwl:hasRelatedSynonym xml:lang="en">domain</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:resource="https://w3id.org/CMEO_0000076"/>
         <rdfs:label xml:lang="en">category</rdfs:label>
