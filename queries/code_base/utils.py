@@ -11,11 +11,43 @@ import re
 import urllib.parse
 from enum import Enum
 from typing import Dict, Any
-
-
-
 from datetime import datetime
 
+_TEMPORAL_CONTEXT_RE = re.compile(
+    r'(?:'
+      # Pattern A: 'at <temporal-expression>' (with optional double-stamp)
+      r'\s*(?:at\s+)?at\s+(?:'
+        r'baseline\s*(?:visit)?'
+        r'|randomization'
+        r'|end\s+of\s+study'
+        r'|\d+\s*(?:months?|years?|weeks?|days?)'
+        r'|(?:visit\s+)?(?:month\s*)?\d+'
+        r'|(?:visit\s*|v)\d+'
+      r')'
+      # Pattern B: trailing bare 'Month12' (no 'at' prefix)
+      r'|\s+Month\s*\d+\s*$'
+      # Pattern C: '[N months] prior to randomization' (no 'at' prefix)
+      r'|\s+(?:\d+\s*months?\s+)?prior\s+to\s+randomization'
+    r')',
+    re.IGNORECASE
+)
+def clean_label_for_embedding(label: str) -> str:
+    if not label:
+        return label
+    
+    # Apply repeatedly for double-stamped labels like
+    # "Pulmonary valve velocity at visit month 18 at visit month 18"
+    cleaned = label
+    prev = None
+    while prev != cleaned:
+        prev = cleaned
+        cleaned = _TEMPORAL_CONTEXT_RE.sub('', cleaned)
+    
+    # Normalize whitespace and strip punctuation artifacts
+    cleaned = re.sub(r'\s+', ' ', cleaned).strip().strip(' ,;-')
+    
+    # Safety: never return empty string
+    return cleaned if cleaned else label
 def day_month_year(date_str: str) -> tuple:
     formats = [
         "%d-%m-%Y", "%Y-%m-%d", "%m-%Y", "%Y/%m/%d", "%m/%Y","%Y/%m", "%d/%m/%Y", "%m/%d/%Y", "%B %Y", "%Y"
@@ -24,9 +56,10 @@ def day_month_year(date_str: str) -> tuple:
         try:
             dt = datetime.strptime(date_str.strip(), fmt)
             return (str(dt.day).zfill(2), str(dt.month).zfill(2), str(dt.year))
-        except:
-            continue
+        except Exception as e:
+            pass
     return None
+
 class OntologyNamespaces(Enum):
     CMEO = Namespace("https://w3id.org/CMEO/")
     OMOP = Namespace("http://omop.org/OMOP/")
@@ -209,10 +242,11 @@ def determine_var_uri(g, cohort_id, var_name,multi_class_categorical, binary_cat
     elif var_name in multi_class_categorical:
         statistical_type_uri =  URIRef(var_uri + "/multi_class_variable")
         statistical_type = "multi_class_variable"
-    elif data_type  and data_type in  ["str", "datetime"]:
+    elif data_type  and data_type in  ["str"]:
         statistical_type_uri =  URIRef(var_uri + "/qualitative_variable")
         statistical_type = "qualitative_variable"
     else:
+        # date/time --- dosage/measurement variables variables
         statistical_type_uri =  URIRef(var_uri + "/continuous_variable")
         statistical_type = "continuous_variable"
     return statistical_type_uri,statistical_type
@@ -421,7 +455,7 @@ def execute_query(query: str) -> Iterable[Dict[str, Any]]:
     return sparql.query().convert()
 
 def get_embedding_model(model_name="biolord"):
-    from .lazy_model import get_model
+    from .embed_model import get_model
     return get_model(backend=model_name)
    
 def apply_rules(domain, mapping_relation, src_info, tgt_info):
@@ -693,13 +727,13 @@ def get_member_studies(study_name: str) -> URIRef | None:
                         # anchor the index study
                         ?study_design  dc:identifier ?study_name.
                         VALUES (?study_name) {{ ("{study_name}") }} 
-                    # membership in BOTH directions
+                        # membership in BOTH directions
                         {{
                         ?study_design obi:has_member ?related_study .
                         }} UNION {{
                         ?related_study obi:has_member ?study_design .
                         }} UNION {{
-                        ?study_design obi:member_of ?related_study .
+                         ?study_design obi:member_of ?related_study .
                         }} UNION {{
                         ?related_study obi:member_of ?study_design .
                         }}
@@ -1006,6 +1040,23 @@ def load_dictionary( filepath=None) -> pd.DataFrame:
         else:
             return None
    
+   
+def load_file( filepath=None) -> pd.DataFrame:
+        """Loads the input dataset."""
+        if filepath.endswith('.sav'):
+            df_input = pd.read_spss(filepath)
+            # Optionally save to Excel if needed
+         
+        elif filepath.endswith('.csv'):
+            df_input = pd.read_csv(filepath, low_memory=False)
+        elif filepath.endswith('.xlsx'):
+            df_input = pd.read_excel(filepath, sheet_name=0)
+        else:
+            raise ValueError("Unsupported file format.")
+        if not df_input.empty:
+            return df_input
+        else:
+            return None
    
          
 def export_hierarchy_to_excel(hierarchy: dict, label_map: dict, output_file: str):

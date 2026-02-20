@@ -1,19 +1,13 @@
 # from rdflib import Dataset, Namespace
 from rdflib.namespace import  XSD
 from rdflib import Graph,Literal, RDF, RDFS, URIRef, DC
-# from SPARQLWrapper import SPARQLWrapper, JSON, POST,TURTLE
 from urllib.parse import quote
 import pandas as pd
-# import chardet
 from .config import settings
 import json
-import re
-# import os
-# from validate_cde import validate_dictionary
-from .ontology_model import  Concept
+from dataclasses import dataclass
 from .study_kg import update_metadata_graph
 from .utils import (
-
     OntologyNamespaces,
     init_graph, 
     is_categorical_variable, 
@@ -28,30 +22,13 @@ from .utils import (
 )
 from typing import Optional, Any
 
-DERIVED_VARIABLES_LIST= [
-    
-     {
-                    "name": "BMI-derived",
-                    "omop_id": 3038553,           
-                    "code": "loinc:39156-5",
-                    "label": "Body mass index (BMI) [Ratio]",
-                    "unit": "kg/m2",
-                    "required_omops": [3016723, 3025315],
-                    "category": "measurement",
-                    "data_type": "continuous_variable"
-                },
-                {
-                    "name": "eGFR_CG-derived",
-                    "omop_id": 37169169,          
-                    "code": "snomed:1556501000000100",
-                    "label": "Estimated creatinine clearance calculated using actual body weight Cockcroft-Gault formula",
-                    "unit": "ml/min",
-                    "required_omops": [3016723, 3022304, 46235213],
-                    "category": "measurement",
-                    "data_type": "continuous_variable"
-                }
-]
 
+@dataclass
+class Concept:
+    standard_label: Optional[str] = None
+    code: Optional[str] = None
+    omop_id: Optional[int] = None
+    
 def add_category_annotation(g: Graph, variable_uri: URIRef, category: str, cohort_uri:URIRef) -> Graph:
     if category is None:
         return g
@@ -66,15 +43,11 @@ def process_variables_metadata_file(file_path:str, study_metadata_graph_file_pat
 
         print(f"Processing metadata file: {file_path}")
         file_path_dir = file_path.rsplit('/', 1)[0]
-        # validatation_results = validate_dictionary(file_path)
-        # if not validatation_results:
-        #     return None, None
         data = load_dictionary(file_path)
         if data is None or data.empty:
             return None, None   
         data.columns = data.columns.str.lower()
         print(f"colums: {data.columns}")
-        # cohort id is the folder name
         cohort_id = normalize_text(cohort_name)
    
         cohort_uri = get_study_uri(cohort_id)
@@ -128,13 +101,7 @@ def process_variables_metadata_file(file_path:str, study_metadata_graph_file_pat
                 code=row['variable concept code'] if pd.notna(row['variable concept code']) else None,
                 omop_id=safe_int(row['variable omop id']) if pd.notna(row['variable omop id']) else None,
             )]
-            # base_concept.extend([Concept(
-            #         standard_label=row['additional context concept name'].split("|")[i] if pd.notna(row['additional context concept name']) else None,
-            #         code=row['additional context concept code'].split("|")[i] if pd.notna(row['additional context concept code']) else None,
-            #         omop_id=safe_int(str(row['additional context omop id']).split("|")[i]) if pd.notna(row['additional context omop id']) else None,
-            #     ) for i in range(len(row['additional context concept name'].split("|")))]) if pd.notna(row['additional context concept name']) else []
-            
-            
+         
             if (pd.notna(row['additional context concept name']) and 
             pd.notna(row['additional context concept code']) and 
             pd.notna(row['additional context omop id'])):
@@ -161,12 +128,6 @@ def process_variables_metadata_file(file_path:str, study_metadata_graph_file_pat
             g=add_categories_to_graph(g=g, var_uri=var_uri, cohort_uri=cohort_graph,row=row)
 
             g=add_measurement_unit(g, var_uri=var_uri, cohort_uri=cohort_graph, row=row)
-
-            # study_metadata_graph_file_path = f"/Users/komalgilani/Desktop/chexo_knowledge_graph/data/graphs/studies_metadata.trig"
-            
-            # if metadata_graph:
-            #     metadata_graph.add((var_uri, OntologyNamespaces.CMEO.value.refersTo, cohort_uri))
-            # missing_value = row['missing'] if pd.notna(row['missing']) else None
             add_missing_value_specification(g, var_uri, row['missing'], cohort_graph)
             
             g = add_formula(g, var_uri, row['formula'], cohort_graph)
@@ -272,11 +233,12 @@ def add_variable_eda(g: Graph, var_uris: list[dict], cohort_uri: URIRef, eda_jso
                     g.add((transformed_data_uri, OntologyNamespaces.OBI.value.has_specified_input, dataset_uri, cohort_uri))
                     statistic_uri = URIRef(f"{var_uri}/statistic")
                     g.add((statistic_uri, RDF.type, OntologyNamespaces.STATO.value.statistic, cohort_uri))
+                    g.add((statistic_uri, OntologyNamespaces.IAO.value.is_about, dataset_uri, cohort_uri))
                     g.add((transformed_data_uri, OntologyNamespaces.OBI.value.has_specified_output, statistic_uri, cohort_uri))
                     g.add((statistic_uri, OntologyNamespaces.OBI.value.is_specified_output_of, transformed_data_uri, cohort_uri))
                     g = add_count_to_graph(g, statistic_uri, eda.get('count (metadata dictionary)', None), cohort_uri)
-                    g = add_min_value_to_graph(g, statistic_uri, eda.get('min', None), cohort_uri)
-                    g = add_max_value_to_graph(g, statistic_uri, eda.get('max', None), cohort_uri)
+                    g = add_min_value_to_graph(g, statistic_uri, eda.get('min', eda.get('min (metadata dictionary)', None)), cohort_uri)
+                    g = add_max_value_to_graph(g, statistic_uri, eda.get('max', eda.get('max (metadata dictionary)', None)), cohort_uri)
                     g = add_missing_value_count_to_graph(g, statistic_uri, eda.get('count empty', None), cohort_uri)
                     g = add_unique_values_count_to_graph(g, statistic_uri, eda.get('number of unique values/categories', None), cohort_uri)
                     print(f"variable type: {eda.get('type', None)} for variable {var_name}")   
@@ -309,87 +271,134 @@ def add_variable_eda(g: Graph, var_uris: list[dict], cohort_uri: URIRef, eda_jso
 
     return g
                             
-                    
+def add_numeric_statistic_generic(
+    g: Graph, 
+    statistic_uri: URIRef, 
+    value: Any, 
+    stat_rdf_type: URIRef, 
+    uri_suffix: str, 
+    cohort_uri: URIRef
+) -> Graph:
+    """
+    Generic function to add a numeric statistic to the graph.
+    Checks if value is string and convertible to float/int before adding.
+    """
+    if value is None or pd.isna(value):
+        return g
+
+    final_value = None
+    xsd_type = None
+    
+    # 1. Check logic: if str -> try convert to int, then float.
+    if isinstance(value, str):
+        value = value.strip()
+        if value.lower() == "nan" or value == "":
+            return g
+            
+        try:
+            # Try converting to integer first
+            final_value = int(value)
+            xsd_type = XSD.integer
+        except ValueError:
+            try:
+                # Try converting to float
+                final_value = float(value)
+                xsd_type = XSD.float
+            except ValueError:
+                # Not convertible, return without adding triples
+                return g
+    
+    # Handle cases where input might already be numeric (optional safety)
+    elif isinstance(value, int):
+        final_value = value
+        xsd_type = XSD.integer
+    elif isinstance(value, float):
+        final_value = value
+        xsd_type = XSD.float
+    else:
+        return g
+
+    # 2. Create the specific URI (e.g., .../average_value)
+    specific_stat_uri = URIRef(f"{statistic_uri}/{uri_suffix}")
+
+    # 3. Add Triples
+    # Add Type
+    g.add((specific_stat_uri, RDF.type, stat_rdf_type, cohort_uri))
+    
+    # Add Value
+    g.add((specific_stat_uri, OntologyNamespaces.CMEO.value.has_value, Literal(final_value, datatype=xsd_type), cohort_uri))
+    
+    # Link to Parent Statistic (Bidirectional)
+    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, specific_stat_uri, cohort_uri))
+    g.add((specific_stat_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
+
+    return g                  
 def add_count_to_graph(g: Graph, statistic_uri: URIRef, count: any, cohort_uri: URIRef) -> Graph:
  
-    if count is None or pd.isna(count):
-        return g
-    count = int(count) 
-    # print(f"count: {count}")
-    count_uri = URIRef(f"{statistic_uri}/count_")
-    g.add((count_uri, RDF.type, OntologyNamespaces.STATO.value.count_, cohort_uri))
-    g.add((count_uri, OntologyNamespaces.CMEO.value.has_value, Literal(count, datatype=XSD.integer), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, count_uri, cohort_uri))
-    g.add((count_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=count,
+        stat_rdf_type=OntologyNamespaces.STATO.value.count_,
+        uri_suffix="count_",
+        cohort_uri=cohort_uri
+    )
 
 def add_min_value_to_graph(g: Graph, statistic_uri: URIRef, min_value: any, cohort_uri: URIRef) -> Graph:
-    if min_value is None:
-        return g
-    # print(f"min value = {min_value}")
-    min_uri = URIRef(f"{statistic_uri}/minimum_value")
-
-    g.add((min_uri, RDF.type, OntologyNamespaces.STATO.value.minimum_value, cohort_uri))
-    # if isinstance(min_value, str):
-    #     g.add((min_uri, OntologyNamespaces.CMEO.value.has_value, Literal(min_value, datatype=XSD.string), cohort_uri))
-    # else:
-    g.add((min_uri, OntologyNamespaces.CMEO.value.has_value, Literal(min_value, datatype=XSD.float), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, min_uri, cohort_uri))
-    g.add((min_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
-
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=min_value,
+        stat_rdf_type=OntologyNamespaces.STATO.value.minimum_value,
+        uri_suffix="minimum_value",
+        cohort_uri=cohort_uri
+    )
 
 
 def add_max_value_to_graph(g: Graph, statistic_uri: URIRef, max_value: any, cohort_uri: URIRef) -> Graph:
-    if max_value is None:
-        return g
-    # print(f"max value = {max_value}")
-    max_uri = URIRef(f"{statistic_uri}/maximum_value")
-    g.add((max_uri, RDF.type, OntologyNamespaces.STATO.value.maximum_value, cohort_uri))
-    # if isinstance(max_value, str):
-    #     g.add((max_uri, OntologyNamespaces.CMEO.value.has_value, Literal(max_value, datatype=XSD.string), cohort_uri))
-    # else:
-    g.add((max_uri, OntologyNamespaces.CMEO.value.has_value, Literal(max_value, datatype=XSD.float), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, max_uri, cohort_uri))
-    g.add((max_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=max_value,
+        stat_rdf_type=OntologyNamespaces.STATO.value.maximum_value,
+        uri_suffix="maximum_value",
+        cohort_uri=cohort_uri
+    )
 
 def add_missing_value_count_to_graph(g: Graph, statistic_uri: URIRef, na: int, cohort_uri: URIRef) -> Graph:
-    if na is None:
-        return g
-    na = int(na.split("(")[0].strip())
-    # print(f"missing value = {na}")
-    na_uri = URIRef(f"{statistic_uri}/number_of_missing_values")
-    g.add((na_uri, RDF.type, OntologyNamespaces.CMEO.value.missing_values_count, cohort_uri))
-    g.add((na_uri, OntologyNamespaces.CMEO.value.has_value, Literal(na, datatype=XSD.integer), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, na_uri, cohort_uri))
-    g.add((na_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
+
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=na,
+        stat_rdf_type=OntologyNamespaces.CMEO.value.missing_values_count,
+        uri_suffix="number_of_missing_values",
+        cohort_uri=cohort_uri
+    )
 
 def add_missing_value_percentage_to_graph(g: Graph, statistic_uri: URIRef, missing_value_percentage: float, cohort_uri: URIRef) -> Graph:
-    if missing_value_percentage is None:
-        return g
-    print(f"missing value percentage = {missing_value_percentage}")
-    missing_value_percentage_uri = URIRef(f"{statistic_uri}/missing_value_percentage")
-    g.add((missing_value_percentage_uri, RDF.type, OntologyNamespaces.CMEO.value.missing_values_percentage, cohort_uri))
-    g.add((missing_value_percentage_uri, OntologyNamespaces.CMEO.value.has_value, Literal(missing_value_percentage, datatype=XSD.decimal), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, missing_value_percentage_uri, cohort_uri))
-    g.add((missing_value_percentage_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
+   
+    
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=missing_value_percentage,
+        stat_rdf_type=OntologyNamespaces.CMEO.value.missing_values_percentage,
+        uri_suffix="missing_value_percentage",
+        cohort_uri=cohort_uri
+    )
 
 
 def add_unique_values_count_to_graph(g: Graph, statistic_uri: URIRef, unique_values: any, cohort_uri: URIRef) -> Graph:
-    if unique_values is None:
-        return g
-    unique_values_uri = URIRef(f"{statistic_uri}/number_of_unique_values")
-    unique_values = int(unique_values)
-    # print(f"unique values = {unique_values}")
-    g.add((unique_values_uri, RDF.type, OntologyNamespaces.CMEO.value.unique_values_count, cohort_uri))
-    g.add((unique_values_uri, OntologyNamespaces.CMEO.value.has_value, Literal(unique_values, datatype=XSD.integer), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, unique_values_uri, cohort_uri))
-    g.add((unique_values_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
 
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=unique_values,
+        stat_rdf_type=OntologyNamespaces.CMEO.value.unique_values_count,
+        uri_suffix="number_of_unique_values",
+        cohort_uri=cohort_uri
+    )
 
 def add_device_senors_for_variable(g: Graph, var_uri:URIRef, data_set_uri: URIRef,  cohort_uri: URIRef, row_info:pd.Series) -> Graph:
     
@@ -422,272 +431,191 @@ def add_device_senors_for_variable(g: Graph, var_uri:URIRef, data_set_uri: URIRe
     return g
 
 def add_frequency_distribution_to_graph(g: Graph, statistic_uri: URIRef, fd:str, cohort_uri: URIRef) -> Graph:
-    if fd is None:
-        return g
-    print(f"frequency distribution = {fd}")
-    frequency_distribution_uri = URIRef(f"{statistic_uri}/frequency_distribution")
-    g.add((frequency_distribution_uri, RDF.type, OntologyNamespaces.OBCS.value.frequency_distribution, cohort_uri))
-    g.add((frequency_distribution_uri, OntologyNamespaces.CMEO.value.has_value, Literal(fd, datatype=XSD.string), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, frequency_distribution_uri, cohort_uri))
-    g.add((frequency_distribution_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
+
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=fd,
+        stat_rdf_type=OntologyNamespaces.OBCS.value.frequency_distribution,
+        uri_suffix="frequency_distribution",
+        cohort_uri=cohort_uri
+    )
 
 
 def add_mode_to_graph(g: Graph, statistic_uri: URIRef, mode: any, cohort_uri: URIRef) -> Graph:
-    if mode is None:
-        return g
-    mode_uri = URIRef(f"{statistic_uri}/mode")
-    print(f"mode: {mode}")  
-    
-    g.add((mode_uri, RDF.type, OntologyNamespaces.STATO.value.mode, cohort_uri))
-    
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, mode_uri, cohort_uri))
-    g.add((mode_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    
-    if isinstance(mode, str):
-        g.add((mode_uri, OntologyNamespaces.CMEO.value.has_value, Literal(mode, datatype=XSD.string), cohort_uri))
-    else:
-        g.add((mode_uri, OntologyNamespaces.CMEO.value.has_value, Literal(mode, datatype=XSD.float), cohort_uri))
-    return g
+
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=mode,
+        stat_rdf_type=OntologyNamespaces.STATO.value.mode,
+        uri_suffix="mode",
+        cohort_uri=cohort_uri
+    )
 
 def add_chi_square_test_statistic_to_graph(g: Graph, var_uri:URIRef, dataset_uri: URIRef, chi_square_test_statistic: Any, cohort_uri: URIRef) -> Graph:
-    if chi_square_test_statistic is None:
-        return g
-    print(f"chi square test statistic = {chi_square_test_statistic}")  
-
-    chi_square_test_process = URIRef(f"{dataset_uri}/chi_square_test")
-    g.add((chi_square_test_process, RDF.type, OntologyNamespaces.OBI.value.chi_square_test, cohort_uri))
-    g.add((dataset_uri, OntologyNamespaces.OBI.value.is_specified_input_of, chi_square_test_process, cohort_uri))
-    g.add((chi_square_test_process, OntologyNamespaces.OBI.value.has_specified_input, dataset_uri, cohort_uri))
-    chi_square_test_statistic = float(chi_square_test_statistic)    
-    chi_square_test_statistic_uri = URIRef(f"{var_uri}/chi_square_test_value")
-    g.add((chi_square_test_statistic_uri, RDF.type, OntologyNamespaces.STATO.value.chi_square_test_statistic, cohort_uri))
-    g.add((chi_square_test_process, OntologyNamespaces.OBI.value.has_specified_output, chi_square_test_statistic_uri, cohort_uri))
-    g.add((chi_square_test_statistic_uri, OntologyNamespaces.OBI.value.is_specified_output_of, chi_square_test_process, cohort_uri))
-    if isinstance(chi_square_test_statistic, str):
-        g.add((chi_square_test_statistic_uri, OntologyNamespaces.CMEO.value.has_value, Literal(chi_square_test_statistic, datatype=XSD.string), cohort_uri))
-    else:
-        g.add((chi_square_test_statistic_uri, OntologyNamespaces.CMEO.value.has_value, Literal(chi_square_test_statistic, datatype=XSD.float), cohort_uri))
-    
-    return g
+  
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=var_uri,
+        value=chi_square_test_statistic,
+        stat_rdf_type=OntologyNamespaces.STATO.value.chi_square_test_statistic,
+        uri_suffix="chi_square_test_value",
+        cohort_uri=cohort_uri
+    )
 
 
 # add standard deviation to the graph
 def add_standard_deviation_to_graph(g: Graph, statistic_uri: URIRef, std_dev: Any, cohort_uri: URIRef) -> Graph:
-    if std_dev is None:
-        return g
-    print(f"std_dev: {std_dev}")
-    std_dev_uri = URIRef(f"{statistic_uri}/standard_deviation")
-    g.add((std_dev_uri, RDF.type, OntologyNamespaces.STATO.value.standard_deviation, cohort_uri))
-    
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, std_dev_uri, cohort_uri))
-    g.add((std_dev_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-
-    if isinstance(std_dev, str):
-        g.add((std_dev_uri, OntologyNamespaces.CMEO.value.has_value, Literal(std_dev, datatype=XSD.string), cohort_uri))
-    else:
-        g.add((std_dev_uri, OntologyNamespaces.CMEO.value.has_value, Literal(std_dev, datatype=XSD.float), cohort_uri))
-    return g
+  
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=std_dev,
+        stat_rdf_type=OntologyNamespaces.STATO.value.standard_deviation,
+        uri_suffix="standard_deviation",
+        cohort_uri=cohort_uri
+    )
 
 # add mean to the graph as average_value 
 def add_mean_to_graph(g: Graph, statistic_uri: URIRef, mean: Any, cohort_uri: URIRef) -> Graph:
-    if mean is None:
-        return g
-    print(f"mean: {mean}")
-    mean_uri = URIRef(f"{statistic_uri}/average_value")
-    g.add((mean_uri, RDF.type, OntologyNamespaces.STATO.value.mean, cohort_uri))
-    if isinstance(mean, str):
-        g.add((mean_uri, OntologyNamespaces.CMEO.value.has_value, Literal(mean, datatype=XSD.string), cohort_uri))
-    else:
-        g.add((mean_uri, OntologyNamespaces.CMEO.value.has_value, Literal(mean, datatype=XSD.float), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, mean_uri, cohort_uri))
-    g.add((mean_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
+   
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=mean,
+        stat_rdf_type=OntologyNamespaces.STATO.value.mean,
+        uri_suffix="average_value",
+        cohort_uri=cohort_uri
+    )
 
 # add median to the graph
 def add_median_to_graph(g: Graph, statistic_uri: URIRef, median: Any, cohort_uri: URIRef) -> Graph:
-    if median is None:
-        return g
-    print(f"median: {median}")
-    median_uri = URIRef(f"{statistic_uri}/median")
-    g.add((median_uri, RDF.type, OntologyNamespaces.STATO.value.median, cohort_uri))
    
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, median_uri, cohort_uri))
-    g.add((median_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    
-    if isinstance(median, str):
-        g.add((median_uri, OntologyNamespaces.CMEO.value.has_value, Literal(median, datatype=XSD.string), cohort_uri))
-    else:
-        g.add((median_uri, OntologyNamespaces.CMEO.value.has_value, Literal(median, datatype=XSD.float), cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=median,
+        stat_rdf_type=OntologyNamespaces.STATO.value.median,
+        uri_suffix="median",
+        cohort_uri=cohort_uri
+    )
 
 
 # add iqr  as interquartile range to the graph
 
 def add_iqr_to_graph(g: Graph, statistic_uri: URIRef, iqr: Any, cohort_uri: URIRef) -> Graph:
-    print(f"iqr: {iqr}")
-    if iqr is None or iqr == "nan":
-        return g
    
-    iqr_uri = URIRef(f"{statistic_uri}/interquartile_range")
-    # iqr = float(iqr)
-    g.add((iqr_uri, RDF.type, OntologyNamespaces.STATO.value.interquartile_range, cohort_uri))
- 
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, iqr_uri, cohort_uri))
-    g.add((iqr_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    
-    if isinstance(iqr, str):
-         g.add((iqr_uri, OntologyNamespaces.CMEO.value.has_value, Literal(iqr, datatype=XSD.string), cohort_uri))
-    else:
-        g.add((iqr_uri, OntologyNamespaces.CMEO.value.has_value, Literal(iqr, datatype=XSD.float), cohort_uri))
-    return g
-
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=iqr,
+        stat_rdf_type=OntologyNamespaces.STATO.value.interquartile_range,
+        uri_suffix="interquartile_range",
+        cohort_uri=cohort_uri
+    )
 # add Q1 to the graph
 def add_q1_to_graph(g: Graph, statistic_uri: URIRef, q1: Any, cohort_uri: URIRef) -> Graph:
-    if q1 is None or q1 == "nan":
-        return g
-    print(f"q1: {q1}")
-    # q1 = float(q1)
-    q1_uri = URIRef(f"{statistic_uri}/first_quartile")
-    g.add((q1_uri, RDF.type, OntologyNamespaces.STATO.value.first_quartile, cohort_uri))
-    
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, q1_uri, cohort_uri))
-    g.add((q1_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    
-    if isinstance(q1, str):
-         g.add((q1_uri, OntologyNamespaces.CMEO.value.has_value, Literal(q1, datatype=XSD.string), cohort_uri))
-    else:
-        g.add((q1_uri, OntologyNamespaces.CMEO.value.has_value, Literal(q1, datatype=XSD.float), cohort_uri))
-    return g
-
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=q1,
+        stat_rdf_type=OntologyNamespaces.STATO.value.first_quartile,
+        uri_suffix="first_quartile",
+        cohort_uri=cohort_uri
+    )
 # add Q3 to the graph
 def add_q3_to_graph(g: Graph, statistic_uri: URIRef, q3: Any, cohort_uri: URIRef) -> Graph:
-    if q3 is None or q3 == "nan":
-        return g
-    print(f"q3: {q3}") 
-    # q3 = float(q3)
-    q3_uri = URIRef(f"{statistic_uri}/third_quartile")
-    g.add((q3_uri, RDF.type, OntologyNamespaces.STATO.value.third_quartile, cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, q3_uri, cohort_uri))
-    g.add((q3_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    
-    if isinstance(q3, str):
-         g.add((q3_uri, OntologyNamespaces.CMEO.value.has_value, Literal(q3, datatype=XSD.string), cohort_uri))
-    else:
-         g.add((q3_uri, OntologyNamespaces.CMEO.value.has_value, Literal(q3, datatype=XSD.float), cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=q3,
+        stat_rdf_type=OntologyNamespaces.STATO.value.third_quartile,
+        uri_suffix="third_quartile",
+        cohort_uri=cohort_uri
+    )
 
 # add outliers count by iqr to the graph
 def add_outlier_count_by_iqr_to_graph(g: Graph, statistic_uri: URIRef, outlier_count: int, cohort_uri: URIRef) -> Graph:
-    if outlier_count is None or isinstance(outlier_count, str):
-        return g
-    outlier_count = int(outlier_count.split("(")[0].strip())
-    print(f"iqr outlier_count: {outlier_count}")
-    outlier_count_uri = URIRef(f"{statistic_uri}/outlier_count_by_iqr")
-    g.add((outlier_count_uri, RDF.type, OntologyNamespaces.STATO.value.outlier_count_by_iqr, cohort_uri))
-    g.add((outlier_count_uri, OntologyNamespaces.CMEO.value.has_value, Literal(outlier_count, datatype=XSD.integer), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, outlier_count_uri, cohort_uri))
-    g.add((outlier_count_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=outlier_count,
+        stat_rdf_type=OntologyNamespaces.STATO.value.outlier_count_by_iqr,
+        uri_suffix="outlier_count_by_iqr",
+        cohort_uri=cohort_uri
+    )
 
 # add outlier count by z score to the graph
 
 def add_outlier_count_by_z_score_to_graph(g: Graph, statistic_uri: URIRef, outlier_count: Any, cohort_uri: URIRef) -> Graph:
-    if outlier_count is None or isinstance(outlier_count, str):
-        return g
-    # outlier_count = int(outlier_count.split("(")[0].strip())
-    print(f"z outlier_count: {outlier_count}")
-    outlier_count_uri = URIRef(f"{statistic_uri}/outlier_count_by_z_score")
-    g.add((outlier_count_uri, RDF.type, OntologyNamespaces.STATO.value.outlier_count_by_z_score, cohort_uri))
-    g.add((outlier_count_uri, OntologyNamespaces.CMEO.value.has_value, Literal(outlier_count, datatype=XSD.integer), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, outlier_count_uri, cohort_uri))
-    g.add((outlier_count_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=outlier_count,
+        stat_rdf_type=OntologyNamespaces.STATO.value.outlier_count_by_z_score,
+        uri_suffix="outlier_count_by_z_score",
+        cohort_uri=cohort_uri
+    )
 
 
 
 # add normality test to the graph
 def add_normality_test_to_graph(g: Graph, statistic_uri: URIRef, normality_test: str, cohort_uri: URIRef) -> Graph:
-    if normality_test is None:
-        return g
-    normality_test_uri = URIRef(f"{statistic_uri}/normality_test")
-    g.add((normality_test_uri, RDF.type, OntologyNamespaces.STATO.value.normality_test, cohort_uri))
-    g.add((normality_test_uri, OntologyNamespaces.CMEO.value.has_value, Literal(normality_test, datatype=XSD.string), cohort_uri))
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, normality_test_uri, cohort_uri))
-    g.add((normality_test_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=normality_test,
+        stat_rdf_type=OntologyNamespaces.STATO.value.normality_test,
+        uri_suffix="normality_test",
+        cohort_uri=cohort_uri
+    )
 
 
 # add wilks shapiro test to the graph
 def add_wilks_shapiro_test_to_graph(g: Graph, statistic_uri: URIRef, wilks_shapiro_test: str, cohort_uri: URIRef) -> Graph:
-    if wilks_shapiro_test is None:
-        return g
-    wilks_shapiro_test_uri = URIRef(f"{statistic_uri}/wilks_shapiro_test")
-    g.add((wilks_shapiro_test_uri, RDF.type, OntologyNamespaces.STATO.value.wilks_shapiro_test, cohort_uri))
-   
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, wilks_shapiro_test_uri, cohort_uri))
-    g.add((wilks_shapiro_test_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    if isinstance(wilks_shapiro_test, str):
-        g.add((wilks_shapiro_test_uri, OntologyNamespaces.CMEO.value.has_value, Literal(wilks_shapiro_test, datatype=XSD.string), cohort_uri))
-    else:
-        wilks_shapiro_test = float(wilks_shapiro_test)
-        g.add((wilks_shapiro_test_uri, OntologyNamespaces.CMEO.value.has_value, Literal(wilks_shapiro_test, datatype=XSD.float), cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=wilks_shapiro_test,
+        stat_rdf_type=OntologyNamespaces.STATO.value.wilks_shapiro_test,
+        uri_suffix="wilks_shapiro_test",
+        cohort_uri=cohort_uri
+    )
 
 # add skewness to the graph
 def add_skewness_to_graph(g: Graph, statistic_uri: URIRef, skewness: Any, cohort_uri: URIRef) -> Graph:
-    if skewness is None:
-        return g
-    skewness_uri = URIRef(f"{statistic_uri}/skewness")
-    g.add((skewness_uri, RDF.type, OntologyNamespaces.STATO.value.skewness, cohort_uri))
-    
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, skewness_uri, cohort_uri))
-    g.add((skewness_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    if isinstance(skewness, str):
-        g.add((skewness_uri, OntologyNamespaces.CMEO.value.has_value, Literal(skewness, datatype=XSD.string), cohort_uri))
-    else:
-        g.add((skewness_uri, OntologyNamespaces.CMEO.value.has_value, Literal(skewness, datatype=XSD.float), cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=skewness,
+        stat_rdf_type=OntologyNamespaces.STATO.value.skewness,
+        uri_suffix="skewness",
+        cohort_uri=cohort_uri
+    )
 
 # add variance to the graph
 def add_variance_to_graph(g: Graph, statistic_uri: URIRef, variance: Any, cohort_uri: URIRef) -> Graph:
-    if variance is None or variance == "nan":
-        return g
-    print(f"variance: {variance}")
-    variance_uri = URIRef(f"{statistic_uri}/variance")
-    
-    g.add((variance_uri, RDF.type, OntologyNamespaces.STATO.value.variance, cohort_uri))
-   
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, variance_uri, cohort_uri))
-    g.add((variance_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    
-    if isinstance(variance, str):   
-        g.add((variance_uri, OntologyNamespaces.CMEO.value.has_value, Literal(variance, datatype=XSD.string), cohort_uri))
-    else:
-        
-        variance = float(variance)
-        g.add((variance_uri, OntologyNamespaces.CMEO.value.has_value, Literal(variance, datatype=XSD.float), cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=variance,
+        stat_rdf_type=OntologyNamespaces.STATO.value.variance,
+        uri_suffix="variance",
+        cohort_uri=cohort_uri
+    )
 
 
 # add kurtosis to the graph
 def add_kurtosis_to_graph(g: Graph, statistic_uri: URIRef, kurtosis: Any, cohort_uri: URIRef) -> Graph:
-    if kurtosis is None:
-        return g
-    print(f"kurtosis: {kurtosis}")
-    kurtosis_uri = URIRef(f"{statistic_uri}/kurtosis")
-    g.add((kurtosis_uri, RDF.type, OntologyNamespaces.STATO.value.kurtosis, cohort_uri))
-    
-    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, kurtosis_uri, cohort_uri))
-    g.add((kurtosis_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
-    
-    
-    if isinstance(kurtosis, str):
-        g.add((kurtosis_uri, OntologyNamespaces.CMEO.value.has_value, Literal(kurtosis, datatype=XSD.string), cohort_uri))
-    else:
-        kurtosis = float(kurtosis)
-        g.add((kurtosis_uri, OntologyNamespaces.CMEO.value.has_value, Literal(kurtosis, datatype=XSD.float), cohort_uri))
-    return g
+    return add_numeric_statistic_generic(
+        g=g,
+        statistic_uri=statistic_uri,
+        value=kurtosis,
+        stat_rdf_type=OntologyNamespaces.STATO.value.kurtosis,
+        uri_suffix="kurtosis",
+        cohort_uri=cohort_uri
+    )
 
 
 def add_categorical_variable_visualization(g: Graph, var_uri: URIRef, cohort_uri: URIRef, chart_url:str, xy_axis:list[str]) -> Graph:
@@ -698,7 +626,7 @@ def add_categorical_variable_visualization(g: Graph, var_uri: URIRef, cohort_uri
     g.add((var_uri, OntologyNamespaces.OBI.value.is_specified_input_of, data_visualization_process_uri, cohort_uri))
     g.add((data_visualization_process_uri, OntologyNamespaces.OBI.value.has_specified_input, var_uri, cohort_uri))
     data_visualization_output_uri = URIRef(f"{var_uri}/bar_chart")
-    g.add((data_visualization_output_uri, RDF.type, OntologyNamespaces.CMEO.value.bar_chart, cohort_uri))
+    g.add((data_visualization_output_uri, RDF.type, OntologyNamespaces.OBCS.value.bar_chart, cohort_uri))
     g.add((data_visualization_process_uri, OntologyNamespaces.OBI.value.has_specified_output, data_visualization_output_uri, cohort_uri))
     g.add((data_visualization_output_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_visualization_process_uri, cohort_uri))
     g.add((data_visualization_output_uri, OntologyNamespaces.CMEO.value.has_value, Literal(chart_url, datatype=XSD.string), cohort_uri))
@@ -758,7 +686,7 @@ def add_histogram_visualization(g: Graph, var_uri: URIRef, cohort_uri: URIRef, c
     g.add((var_uri, OntologyNamespaces.OBI.value.is_specified_input_of, data_visualization_process_uri, cohort_uri))
     g.add((data_visualization_process_uri, OntologyNamespaces.OBI.value.has_specified_input, var_uri, cohort_uri))
     histogram_uri = URIRef(f"{var_uri}/histogram")
-    g.add((histogram_uri, RDF.type, OntologyNamespaces.CMEO.value.histogram, cohort_uri))
+    g.add((histogram_uri, RDF.type, OntologyNamespaces.IAO.value.histogram, cohort_uri))
     g.add((data_visualization_process_uri, OntologyNamespaces.OBI.value.has_specified_output, histogram_uri, cohort_uri))
     g.add((histogram_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_visualization_process_uri, cohort_uri))
     g.add((histogram_uri, OntologyNamespaces.CMEO.value.has_value, Literal(chart_url, datatype=XSD.string), cohort_uri))
@@ -787,7 +715,7 @@ def add_temporal_context(g: Graph, var_uri: URIRef, cohort_uri: URIRef, row: pd.
         if visit_not_null:
             visit_labels = normalize_text(row['visits'])
             visit_uri = get_temporal_context_uri(var_uri, visit_labels)
-            g.add((visit_uri, RDF.type, OntologyNamespaces.CMEO.value.visit_measurement_datum, cohort_uri))
+            g.add((visit_uri, RDF.type, OntologyNamespaces.CMEO.value.visit_type, cohort_uri))
             g.add((visit_uri, OntologyNamespaces.SIO.value.is_attribute_of, var_uri, cohort_uri))
             g.add((var_uri, OntologyNamespaces.SIO.value.has_attribute, visit_uri, cohort_uri))
             g.add((visit_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row['visits'], datatype=XSD.string), cohort_uri))
@@ -974,48 +902,6 @@ def get_omop_id_uri(var_uri: URIRef, omop_id: str) -> URIRef:
 
 
 
-def add_concept_info(g: Graph, linked_uri: URIRef, concepts: list[Concept], cohort_uri: URIRef) -> Graph:
-
-    # print(f"base_concept: {base_concept} additional_concepts: {additional_concepts}")
-    # data standardization is a process with has_specified_input data item and data item is output is code which has part standard label and omop id
-    data_standardization_uri = URIRef(f"{linked_uri}/data_standardization")
-    g.add((data_standardization_uri, RDF.type, OntologyNamespaces.CMEO.value.data_standardization,cohort_uri))
-    g.add((linked_uri, OntologyNamespaces.OBI.value.is_specified_input_of, data_standardization_uri,cohort_uri))
-    g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_input, linked_uri,cohort_uri))
-
-    code_set_uri = URIRef(f"{linked_uri}/code_set")
-    g.add((code_set_uri, RDF.type, OntologyNamespaces.CMEO.value.code_set,cohort_uri))
-    g.add((linked_uri, OntologyNamespaces.SKOS.value.has_close_match,code_set_uri, cohort_uri))
-    g.add((code_set_uri,  OntologyNamespaces.SIO.value.is_close_match_to,linked_uri, cohort_uri))
-    g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_output, code_set_uri,cohort_uri))
-    g.add((code_set_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_standardization_uri,cohort_uri))
-    
-
-    for i, concept in enumerate(concepts):
-        code = concept.code.strip()
-        label = concept.standard_label.strip().replace("\n","")
-        omop_id = concept.omop_id
-        if not code or not label or not omop_id:
-            continue
-        code_uri = get_code_uri(linked_uri, code)
-        g.add((code_uri, RDF.type, OntologyNamespaces.CMEO.value.code,cohort_uri))
-        g.add((code_set_uri, OntologyNamespaces.RO.value.has_part, code_uri,cohort_uri))
-        g.add((code_uri, OntologyNamespaces.RO.value.is_part_of, code_set_uri,cohort_uri))
-        g.add((code_uri, RDFS.label, Literal(label, datatype=XSD.string),cohort_uri))
-        g.add((code_uri, OntologyNamespaces.CMEO.value.has_value, Literal(code, datatype=XSD.string),cohort_uri))
-        omop_id_uri = get_omop_id_uri(linked_uri, omop_id)
-        g.add((omop_id_uri, RDF.type, OntologyNamespaces.CMEO.value.omop_id,cohort_uri))
-        g.add((code_uri, OntologyNamespaces.IAO.value.denotes, omop_id_uri,cohort_uri))
-        # g.add((standard_label_uri, OntologyNamespaces.CMEO.value.has_value, Literal(label, datatype=XSD.string),cohort_uri))
-        # g.add((code_uri, OntologyNamespaces.CMEO.value.has_value, Literal(code, datatype=XSD.string),cohort_uri))
-        print(f"omop_id: {omop_id}")
-        g.add((omop_id_uri, OntologyNamespaces.CMEO.value.has_value, Literal(omop_id, datatype=XSD.integer),cohort_uri))
-    
-    # print(f"omop_id: {omop_id} for {linked_uri}")
-    return g
-
-
-
 def add_composite_concepts_info(g: Graph, linked_uri: URIRef, concepts: list[Concept], cohort_uri: URIRef) -> Graph:
 
     data_standardization_uri = URIRef(f"{linked_uri}/data_standardization")
@@ -1025,12 +911,12 @@ def add_composite_concepts_info(g: Graph, linked_uri: URIRef, concepts: list[Con
 
     code_set_uri = URIRef(f"{linked_uri}/code_set")
 
-    g.add((code_set_uri, RDF.type, OntologyNamespaces.CMEO.value.code,cohort_uri))
+    g.add((code_set_uri, RDF.type, OntologyNamespaces.IAO.value.code_set,cohort_uri))
     # g.add((code_set_uri, RDF.type, RDF.Seq, cohort_uri))
     g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_output, code_set_uri,cohort_uri))
     g.add((code_set_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_standardization_uri,cohort_uri))
-    g.add((linked_uri, OntologyNamespaces.SKOS.value.has_close_match, code_set_uri, cohort_uri)) # for composite concepts we use closeMatch instead of exactMatch as they are not exactly defined by the code set in other vocabularies but our interpretation of them
-    g.add((code_set_uri, OntologyNamespaces.SIO.value.is_close_match_to, linked_uri, cohort_uri))
+    g.add((linked_uri, OntologyNamespaces.SKOS.value.closeMatch, code_set_uri, cohort_uri)) # for composite concepts we use closeMatch instead of exactMatch as they are not exactly defined by the code set in other vocabularies but our interpretation of them
+    # g.add((code_set_uri, OntologyNamespaces.SIO.value.is_close_match_to, linked_uri, cohort_uri))
     # print(linked_uri)
     for i, concept in enumerate(concepts):
         # print(concept)
@@ -1042,7 +928,7 @@ def add_composite_concepts_info(g: Graph, linked_uri: URIRef, concepts: list[Con
         code_uri = create_code_uri(code=code, cohort_uri=cohort_uri)
         label = concept.standard_label.strip().replace("\n","")
         omop_id = concept.omop_id
-        g.add((code_uri, RDF.type, OntologyNamespaces.CMEO.value.code,cohort_uri))
+        g.add((code_uri, RDF.type, OntologyNamespaces.SKOS.value.concept,cohort_uri))
         g.add((code_uri, RDFS.label, Literal(label, datatype=XSD.string),cohort_uri))
         g.add((code_uri, OntologyNamespaces.CMEO.value.has_value, Literal(code, datatype=XSD.string),cohort_uri))
         omop_id_uri = URIRef(f"{OntologyNamespaces.OMOP.value}{omop_id}")
@@ -1057,6 +943,49 @@ def add_composite_concepts_info(g: Graph, linked_uri: URIRef, concepts: list[Con
     # print(f"omop_id: {omop_id} for {linked_uri}")
     return g
 
+
+
+# def add_composite_concepts_info_v2(g: Graph, linked_uri: URIRef, concepts: list[Concept], cohort_uri: URIRef) -> Graph:
+
+#     data_standardization_uri = URIRef(f"{linked_uri}/data_standardization")
+#     g.add((data_standardization_uri, RDF.type, OntologyNamespaces.CMEO.value.data_standardization,cohort_uri))
+#     g.add((linked_uri, OntologyNamespaces.OBI.value.is_specified_input_of, data_standardization_uri,cohort_uri))
+#     g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_input, linked_uri,cohort_uri))
+
+#     code_set_uri = URIRef(f"{linked_uri}/code_set")
+
+#     g.add((code_set_uri, RDF.type, OntologyNamespaces.IAO.value.code_set,cohort_uri))
+#     # g.add((code_set_uri, RDF.type, RDF.Seq, cohort_uri))
+#     g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_output, code_set_uri,cohort_uri))
+#     g.add((code_set_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_standardization_uri,cohort_uri))
+#     g.add((linked_uri, OntologyNamespaces.SKOS.value.closeMatch, code_set_uri, cohort_uri)) # for composite concepts we use closeMatch instead of exactMatch as they are not exactly defined by the code set in other vocabularies but our interpretation of them
+#     # print(linked_uri)
+#     for i, concept in enumerate(concepts):
+#         # print(concept)
+#         if concept.code is None or concept.standard_label is None or concept.omop_id is None:
+#             continue
+#         code = concept.code.strip()
+#         # code_only = code.split(":")[-1]
+#         # code_only_encoded = quote(code_only, safe='')
+#         code_uri = create_code_uri(code=code, cohort_uri=cohort_uri)
+#         label = concept.standard_label.strip().replace("\n","")
+#         omop_id = concept.omop_id
+#         g.add((code_uri, RDF.type, OntologyNamespaces.CMEO.value.code,cohort_uri))
+#         g.add((code_uri, RDFS.label, Literal(label, datatype=XSD.string),cohort_uri))
+#         g.add((code_uri, OntologyNamespaces.CMEO.value.has_value, Literal(code, datatype=XSD.string),cohort_uri))
+#         omop_id_uri = URIRef(f"{OntologyNamespaces.OMOP.value}{omop_id}")
+#         g.add((omop_id_uri, RDF.type, OntologyNamespaces.CMEO.value.omop_id,cohort_uri))
+#         g.add((code_uri, OntologyNamespaces.IAO.value.denotes, omop_id_uri,cohort_uri))
+    
+#         g.add((omop_id_uri, OntologyNamespaces.CMEO.value.has_value, Literal(omop_id, datatype=XSD.integer),cohort_uri))
+
+#         g.add((code_set_uri, OntologyNamespaces.RO.value.has_part, code_uri,cohort_uri))
+#         g.add((code_uri, OntologyNamespaces.RO.value.is_part_of, code_set_uri,cohort_uri))
+#         g.add((code_set_uri, RDF[f"_{i+1}"], code_uri, cohort_uri))
+#     # print(f"omop_id: {omop_id} for {linked_uri}")
+#     return g
+
+
 def add_solo_concept_info(g: Graph, linked_uri: URIRef, concept: Concept, cohort_uri: URIRef) -> Graph:
 
 
@@ -1067,19 +996,6 @@ def add_solo_concept_info(g: Graph, linked_uri: URIRef, concept: Concept, cohort
     g.add((data_standardization_uri, RDF.type, OntologyNamespaces.CMEO.value.data_standardization,cohort_uri))
     g.add((linked_uri, OntologyNamespaces.OBI.value.is_specified_input_of, data_standardization_uri,cohort_uri))
     g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_input, linked_uri,cohort_uri))
-
-   
-    
-    # code_set_uri = URIRef(f"{linked_uri}/code_set")
-    # g.add((code_set_uri, RDF.type, OntologyNamespaces.CMEO.value.code_set,cohort_uri))
-    # g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_output, code_set_uri,cohort_uri))
-    # g.add((code_set_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_standardization_uri,cohort_uri))
-
-
- 
-    # code = normalize_text(concept.code.strip())
-    # label = concept.standard_label.strip().replace("\n","")
-    # omop_id = concept.omop_id
     if concept.code is None or concept.standard_label is None or concept.omop_id is None:
         return g
     code = concept.code.strip()
@@ -1089,12 +1005,12 @@ def add_solo_concept_info(g: Graph, linked_uri: URIRef, concept: Concept, cohort
     omop_id = concept.omop_id
     code_uri = create_code_uri(code, cohort_uri)
  
-    g.add((code_uri, RDF.type, OntologyNamespaces.CMEO.value.code,cohort_uri))
+    g.add((code_uri, RDF.type, OntologyNamespaces.SKOS.value.concept,cohort_uri))
     g.add((code_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_standardization_uri,cohort_uri))
     g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_output, code_uri,cohort_uri))
     g.add((code_uri, RDFS.label, Literal(label, datatype=XSD.string),cohort_uri))
-    g.add((linked_uri, OntologyNamespaces.SKOS.value.has_close_match, code_uri, cohort_uri))
-    g.add((code_uri, OntologyNamespaces.SIO.value.is_close_match_to, linked_uri, cohort_uri))
+    g.add((linked_uri, OntologyNamespaces.SKOS.value.closeMatch, code_uri, cohort_uri))
+    # g.add((code_uri, OntologyNamespaces.SIO.value.is_close_match_to, linked_uri, cohort_uri))
     # standard_label_uri = get_standard_label_uri(linked_uri, label)
     # g.add((standard_label_uri, RDF.type, OntologyNamespaces.CMEO.value.standard_label,cohort_uri))
     # g.add((code_uri, OntologyNamespaces.OBI.value.is_denoted_by, standard_label_uri,cohort_uri))
