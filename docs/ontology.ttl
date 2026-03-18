@@ -1,23 +1,23 @@
-@prefix : <https://w3id.org/CMEO#> .
+@prefix : <http://purl.obolibrary.org/obo/cmeo.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://w3id.org/CMEO#> .
+@base <http://purl.obolibrary.org/obo/cmeo.owl#> .
 
-<https://w3id.org/CMEO> rdf:type owl:Ontology ;
-                         owl:versionIRI <https://w3id.org/CMEO/1.0.2> ;
-                         <http://purl.obolibrary.org/obo/IAO_0000114> "production"@en ;
-                         <http://purl.org/dc/elements/1.1/contributor> "Michel Dumontier"@en ;
-                         <http://purl.org/dc/elements/1.1/creator> "Komal Gilani"@en ;
-                         <http://purl.org/dc/elements/1.1/description> """CMEO (Clinical Metadata Exploration Ontology) is an ontology for representing and querying study- and variable-level metadata from clinical cohort studies in a consistent, machine-interpretable way. CMEO models the semantics of data elements (variables) and their key metadata needed for cross-cohort discovery and harmonization—such as human-readable labels/definitions, domain/type information (e.g., condition, measurement, medication), permissible categorical values, units, visit/timepoint context, derivation/provenance (e.g., computed variables), and basic descriptive statistics. It is designed to support metadata-driven tasks including cohort cataloguing, feasibility assessment, study retrieval, and identification of compatible variables across studies—without requiring access to patient-level data.
+<http://purl.obolibrary.org/obo/cmeo.owl> rdf:type owl:Ontology ;
+                                           owl:versionIRI <http://purl.obolibrary.org/obo/cmeo/releases/2025-12-10/cmeo.owl> ;
+                                           <http://purl.obolibrary.org/obo/IAO_0000114> "production"@en ;
+                                           <http://purl.org/dc/elements/1.1/contributor> "Michel Dumontier"@en ;
+                                           <http://purl.org/dc/elements/1.1/creator> "Komal Gilani"@en ;
+                                           <http://purl.org/dc/elements/1.1/description> """CMEO (Clinical Metadata Exploration Ontology) is an ontology for representing and querying study- and variable-level metadata from clinical cohort studies in a consistent, machine-interpretable way. CMEO models the semantics of data elements (variables) and their key metadata needed for cross-cohort discovery and harmonization—such as human-readable labels/definitions, domain/type information (e.g., condition, measurement, medication), permissible categorical values, units, visit/timepoint context, derivation/provenance (e.g., computed variables), and basic descriptive statistics. It is designed to support metadata-driven tasks including cohort cataloguing, feasibility assessment, study retrieval, and identification of compatible variables across studies—without requiring access to patient-level data.
 
 CMEO is intended to interoperate with controlled vocabularies and common clinical terminologies by linking data elements and value sets to external concept identifiers (e.g., OMOP concept IDs, SNOMED CT, LOINC, RxNorm/ATC, UCUM) while remaining model-agnostic (i.e., not tied to a single CDM)."""@en ;
-                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                         <http://purl.org/dc/terms/title> "Clinical Metadata Exploration Ontology (CMEO)"@en ;
-                         rdfs:label "Clinical Metadata Exploration Ontology (CMEO)"@en ;
-                         owl:versionInfo "1.0.2"@en .
+                                           <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                           <http://purl.org/dc/terms/title> "Clinical Metadata Exploration Ontology (CMEO)"@en ;
+                                           rdfs:label "Clinical Metadata Exploration Ontology (CMEO)"@en ;
+                                           owl:versionInfo "1.0.2"@en .
 
 #################################################################
 #    Annotation properties
@@ -1859,7 +1859,7 @@ instance level relation [GOC:cjm]"""@en ;
                                             owl:deprecated "true"^^xsd:boolean .
 
 
-###  https://w3id.org/CMEO#has_annotation
+###  http://purl.obolibrary.org/obo/cmeo.owl#has_annotation
 :has_annotation rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :has_attribute ;
                 <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000255> ;
@@ -1867,7 +1867,7 @@ instance level relation [GOC:cjm]"""@en ;
                 rdfs:label "has attribute"@en .
 
 
-###  https://w3id.org/CMEO#has_attribute
+###  http://purl.obolibrary.org/obo/cmeo.owl#has_attribute
 :has_attribute rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :is_related_to ;
                <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000008> ;
@@ -1875,7 +1875,7 @@ instance level relation [GOC:cjm]"""@en ;
                rdfs:label "has attribute"@en .
 
 
-###  https://w3id.org/CMEO#has_close_match
+###  http://purl.obolibrary.org/obo/cmeo.owl#has_close_match
 :has_close_match rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :is_in_mapping_relation_with ;
                  owl:inverseOf :is_close_match_to ;
@@ -1884,7 +1884,7 @@ instance level relation [GOC:cjm]"""@en ;
                  rdfs:label "has close match"@en .
 
 
-###  https://w3id.org/CMEO#is_annotation_of
+###  http://purl.obolibrary.org/obo/cmeo.owl#is_annotation_of
 :is_annotation_of rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :is_attribute_of ;
                   <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000254> ;
@@ -1892,7 +1892,7 @@ instance level relation [GOC:cjm]"""@en ;
                   rdfs:label "is annotation of"@en .
 
 
-###  https://w3id.org/CMEO#is_attribute_of
+###  http://purl.obolibrary.org/obo/cmeo.owl#is_attribute_of
 :is_attribute_of rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :is_related_to ;
                  <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000011> ;
@@ -1900,7 +1900,7 @@ instance level relation [GOC:cjm]"""@en ;
                  rdfs:label "is attribute of"@en .
 
 
-###  https://w3id.org/CMEO#is_close_match_to
+###  http://purl.obolibrary.org/obo/cmeo.owl#is_close_match_to
 :is_close_match_to rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :is_related_to ;
                    <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/ontology/sio.owl> ;
@@ -1908,17 +1908,17 @@ instance level relation [GOC:cjm]"""@en ;
                    rdfs:label "is close match to"@en .
 
 
-###  https://w3id.org/CMEO#is_in_mapping_relation_with
+###  http://purl.obolibrary.org/obo/cmeo.owl#is_in_mapping_relation_with
 :is_in_mapping_relation_with rdf:type owl:ObjectProperty ;
-                             rdfs:domain <https://w3id.org/CMEO_0000009> ;
-                             rdfs:range <https://w3id.org/CMEO_0000026> ;
+                             rdfs:domain <http://purl.obolibrary.org/obo/CMEO_0000009> ;
+                             rdfs:range <http://purl.obolibrary.org/obo/CMEO_0000026> ;
                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://www.w3.org/2004/02/skos/core#mappingRelation> ;
                              <http://www.geneontology.org/formats/oboInOwl#id> <http://www.w3.org/2004/02/skos/core#mappingRelation> ;
                              rdfs:comment "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."@en ;
                              rdfs:label "is in mapping relation with"@en .
 
 
-###  https://w3id.org/CMEO#is_related_to
+###  http://purl.obolibrary.org/obo/cmeo.owl#is_related_to
 :is_related_to rdf:type owl:ObjectProperty ;
                <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000001> ;
                <http://www.geneontology.org/formats/oboInOwl#id> <http://semanticscience.org/resource/SIO_000001> ;
@@ -1929,9 +1929,9 @@ instance level relation [GOC:cjm]"""@en ;
 #    Data properties
 #################################################################
 
-###  https://w3id.org/CMEOhas_value
-<https://w3id.org/CMEOhas_value> rdf:type owl:DatatypeProperty ;
-                                 rdfs:label "has value"@en .
+###  http://purl.obolibrary.org/obo/cmeo.owlhas_value
+<http://purl.obolibrary.org/obo/cmeo.owlhas_value> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:label "has value"@en .
 
 
 #################################################################
@@ -2515,6 +2515,682 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
                                              <http://purl.obolibrary.org/obo/BFO_0000179> "history" ;
                                              <http://purl.obolibrary.org/obo/BFO_0000180> "History" ;
                                              rdfs:label "history"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000002
+<http://purl.obolibrary.org/obo/CMEO_0000002> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000968> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "Wearable devices such as activity trackers are an example of the Internet of things, since \"things\" such as electronics, software, sensors, and connectivity are effectors that enable objects to exchange data (including data quality[5]) through the internet with a manufacturer, operator, and/or other connected devices, without requiring human intervention."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000118> "health wearable"@en ;
+                                              rdfs:label "wearable device"@en ;
+                                              rdfs:seeAlso "https://saref.etsi.org/saref4wear/v2.1.1/WearableDevice"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/BMONT_0000079> .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000003
+<http://purl.obolibrary.org/obo/CMEO_0000003> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000002> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A sensor that is worn on the body (or embedded in a wearable item) and is designed to detect and record one or more physiological, behavioral, or environmental properties of a person over time."@en ;
+                                              rdfs:label "sensor"@en ;
+                                              rdfs:seeAlso "http://www.w3.org/ns/sosa/Sensor"@en ,
+                                                           "https://saref.etsi.org/core/Sensor"@en ,
+                                                           "https://saref.etsi.org/saref4wear/v2.1.1/WearableDevice"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000004
+<http://purl.obolibrary.org/obo/CMEO_0000004> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000117> "medical visit"@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/NCIT_C154624"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "medical encounter"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000007
+<http://purl.obolibrary.org/obo/CMEO_0000007> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "linking a concept to unique identifier in respective domain standard such as linking variable bp to blood pressure concept in SNOMED"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "data standardization"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000008
+<http://purl.obolibrary.org/obo/CMEO_0000008> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that specifies a mathematical or logical expression used to compute a derived value from one or more input variables, parameters, or constants."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/chebi/formula"@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "formula"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000009
+<http://purl.obolibrary.org/obo/CMEO_0000009> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000295> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/CMEO_0000007>
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A basic unit of information that has a unique meaning and instances (data items) of distinct value. Examples of data elements include gender, race, and geographic location in data dictionary(ref. https://cde.nlm.nih.gov/). It provides classification of data elements"@en ;
+                                              rdfs:comment "A grouping or label that provides a semantic interpretation of a data element."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "data element"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000010
+<http://purl.obolibrary.org/obo/CMEO_0000010> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000044> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A recorded statement indicating that a clinically relevant occurrence happened to a patient at a particular time or during a time interval (e.g., death, hospitalization, myocardial infarction, adverse event)."@en ;
+                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
+                                              rdfs:label "clinical event"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000011
+<http://purl.obolibrary.org/obo/CMEO_0000011> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical event in which bleeding occurs in a patient, characterized by the loss of blood from the circulatory system to an external site or into tissues or body cavities, at a specified time point or during a specified time interval."@en ;
+                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
+                                              rdfs:label "bleeding event"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000012
+<http://purl.obolibrary.org/obo/CMEO_0000012> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical event involving the heart or blood vessels that occurs in a patient at a specified time point or during a specified time interval, typically representing an acute episode or outcome relevant to cardiovascular health."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000116> """Use for outcome/event variables such as myocardial infarction, stroke, heart failure hospitalization, cardiac arrest, revascularization events, cardiovascular death, or composite endpoints (e.g., MACE) when represented as occurrences. Do not use for chronic diagnoses recorded as ongoing states (classify those as condition), nor for procedures or medication exposures unless the dataset encodes them explicitly as events.
+
+If you want a clean child hierarchy under this class, common subclasses are:
+
+myocardial infarction event
+stroke event
+heart failure hospitalization event
+revascularization event
+cardiovascular death event
+major adverse cardiovascular event (composite)"""@en ;
+                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
+                                              rdfs:label "cardiovascular event"@en ;
+                                              rdfs:seeAlso "http://snomed.info/id/405617006"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000013
+<http://purl.obolibrary.org/obo/CMEO_0000013> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/OAE_0000001"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "adverse event"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000014
+<http://purl.obolibrary.org/obo/CMEO_0000014> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000013> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/OAE_0000005> ;
+                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
+                                              rdfs:label "adverse drug event"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000015
+<http://purl.obolibrary.org/obo/CMEO_0000015> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000013> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An unintended sign, symptom, or disease (including abnormal laboratory findings) that occurs after a medical treatment or procedure."@en ;
+                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
+                                              rdfs:label "allergic reaction"@en ;
+                                              rdfs:seeAlso "http://purl.obolibrary.org/obo/NCIT_C53782"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000016
+<http://purl.obolibrary.org/obo/CMEO_0000016> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000013> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "a medical device adverse event that is induced or caused by a medical device. There is a causal relation between the adverse event and the usage of a medical device."@en ;
+                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
+                                              rdfs:label "device adverse event"@en ;
+                                              rdfs:seeAlso "http://purl.obolibrary.org/obo/OAE_0000096"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000017
+<http://purl.obolibrary.org/obo/CMEO_0000017> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical event in which a patient dies, occurring at a specified time point or during a specified time interval."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "death"@en ;
+                                              rdfs:seeAlso "http://snomed.info/id/419620001"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000018
+<http://purl.obolibrary.org/obo/CMEO_0000018> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000017> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A mortality outcome that counts or indicates death occurring in a study population regardless of the underlying cause of death."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000116> "Use for endpoints such as “death (any cause)”, “all-cause death”, “time to death”, or “vital status”. Do not restrict by etiology; any death event qualifies."@en ;
+                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
+                                              rdfs:label "all-cause mortality"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000019
+<http://purl.obolibrary.org/obo/CMEO_0000019> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000017> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A mortality outcome that counts or indicates death occurring in a study population where the death is attributed to a specified cause category (e.g., cardiovascular, cancer, infection) according to a defined attribution method."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000116> "Use when the dataset provides a cause-of-death classification (e.g., “cardiovascular death”). Record the cause category as an explicit attribute/value (or link) and, where available, note the attribution method (death certificate, adjudication committee, ICD coding). If cause is unknown/undetermined, do not treat it as cause-specific mortality."@en ;
+                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
+                                              rdfs:label "cause-specific mortality"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000021
+<http://purl.obolibrary.org/obo/CMEO_0000021> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An inpatient hospital encounter in which a patient is admitted to a hospital for care, typically characterized by an admission and a discharge."@en ;
+                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
+                                              rdfs:label "hospitalization"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000026
+<http://purl.obolibrary.org/obo/CMEO_0000026> rdf:type owl:Class ;
+                                              rdfs:subClassOf :code_set ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000219> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000030>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000312> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/CMEO_0000007>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/RO_0002350> ;
+                                                                owl:someValuesFrom :code_set
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A unique identifier assigned to a concept in a standardized vocabulary (e.g., LOINC, SNOMED)."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000118> "Concept"@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0006011> <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                              rdfs:label "code"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000027
+<http://purl.obolibrary.org/obo/CMEO_0000027> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020000> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A device identifier is an identifier that identifies some device. [Allotrope]"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "device identifier"@en ;
+                                              rdfs:seeAlso "http://purl.allotrope.org/ontologies/result#AFR_0002018"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000028
+<http://purl.obolibrary.org/obo/CMEO_0000028> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001933> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "It indicate the missing value indicator for a data element in its dataset"@en ;
+                                              rdfs:label "missing value specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000029
+<http://purl.obolibrary.org/obo/CMEO_0000029> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000578> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000219> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/CMEO_0000026>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000312> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/CMEO_0000007>
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An identifier that denotes an entity in the OMOP Common Data Model vocabulary, typically by referencing an OMOP concept identifier (concept_id) assigned to that entity."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> "omop id"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "OMOP identifier"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000030
+<http://purl.obolibrary.org/obo/CMEO_0000030> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A quantitative or ordinal assessment of some attribute of an entity (typically a patient), obtained by applying a measurement procedure, and recorded as a result value with an associated unit or scale when applicable."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "measurement"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000031
+<http://purl.obolibrary.org/obo/CMEO_0000031> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000039> ;
+                                                                owl:allValuesFrom <http://purl.obolibrary.org/obo/IAO_0000003>
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "Anthropometry is a measurement of the size, weight, and proportions of the human or other primate body."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "anthropometric measurement"@en ;
+                                              rdfs:seeAlso "http://www.ebi.ac.uk/efo/EFO_0004302"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000032
+<http://purl.obolibrary.org/obo/CMEO_0000032> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A measurement of the blood, it's contents, cells or other factors contained within the blood."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "blood measurement"@en ;
+                                              rdfs:seeAlso "http://purl.obolibrary.org/obo/CMO_0000035"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000033
+<http://purl.obolibrary.org/obo/CMEO_0000033> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000032> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A biomarker that is measured in a blood-derived specimen (e.g., whole blood, plasma, or serum) and used to indicate a biological state, physiological process, or pathological process. It includes  protein, metabolite, lipid, hormone, enzyme activity, cell count, and other analytes quantified from blood samples (e.g., troponin, HbA1c, creatinine, CRP)."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "blood biomarker"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000034
+<http://purl.obolibrary.org/obo/CMEO_0000034> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000032> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A biomarker that is a protein, or a measurable attribute of a protein (e.g., concentration or activity), used to indicate a biological state, physiological process, or pathological process. Typically measured in a biological specimen such as blood, urine, or tissue (e.g., troponin, BNP/NT-proBNP, CRP, albumin)."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "protein biomarker"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000035
+<http://purl.obolibrary.org/obo/CMEO_0000035> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A cardiovascular measurement is a measurement of some part of the cardiovascular system and is typically used in the process of disease diagnosis in human patients."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "cardiovascular measurement"@en ;
+                                              rdfs:seeAlso "http://www.ebi.ac.uk/efo/EFO_0004298"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000036
+<http://purl.obolibrary.org/obo/CMEO_0000036> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/CMO_0000426"@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "consumption measurement"@en ;
+                                              rdfs:seeAlso "http://purl.obolibrary.org/obo/CMO_0000426"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000037
+<http://purl.obolibrary.org/obo/CMEO_0000037> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information entity used in the diagnosis of medical conditions. It could be the recording of the output of a diagnostic device or the outcome of a diagnostic tool."@en ;
+                                              rdfs:isDefinedBy "https://w3id.org/cmeo#"@en ;
+                                              rdfs:label "diagnostic measurement"@en ;
+                                              rdfs:seeAlso "http://purl.obolibrary.org/obo/SCDO_0000728"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000038
+<http://purl.obolibrary.org/obo/CMEO_0000038> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A score that quantitatively summarizes functional status and/or behavioral status of a person, derived from a standardized assessment instrument and recorded as a single numeric or ordinal result (e.g., activities of daily living, mobility, self-care, NYHA class, Barthel Index, Katz ADL, MMSE, MoCA, PHQ-9, GAD-7, KCCQ, EQ-5D)."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "functional and behavioral assesment score"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000039
+<http://purl.obolibrary.org/obo/CMEO_0000039> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An assessment scale used to assign a standardized level, grade, stage, or severity category to a clinical condition, functional status, or other health-related state, typically based on predefined criteria."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "stages and scales"@en ;
+                                              rdfs:seeAlso "http://snomed.info/id/254291000" .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000040
+<http://purl.obolibrary.org/obo/CMEO_0000040> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A measurement that records the elapsed time duration from a specified reference time point (e.g., baseline, diagnosis, treatment start) to the occurrence of a specified event, typically expressed in a time unit."@en ;
+                                              rdfs:comment "The reference time point and the event type should be explicitly stated or linked (e.g., time to death, time to rehospitalization, time to first myocardial infarction)."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "time to event measurement"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000041
+<http://purl.obolibrary.org/obo/CMEO_0000041> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000080> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A medical history is a record of the events of a recipient of medical care."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0006011> "condition occurrence"@en ,
+                                                                                           "observation" ;
+                                              rdfs:label "medical history"@en ;
+                                              rdfs:seeAlso "http://semanticscience.org/resource/SIO_010673"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000042
+<http://purl.obolibrary.org/obo/CMEO_0000042> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000041> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "family history is the systematic narrative and research of past events relating to a specific family, or specific families."@en ;
+                                              rdfs:label "family history"@en ;
+                                              rdfs:seeAlso "http://semanticscience.org/resource/SIO_010060"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000043
+<http://purl.obolibrary.org/obo/CMEO_0000043> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A category for data elements that represent therapeutic interventions, including medication exposures and non-pharmacological therapies, intended to prevent, manage, or treat a clinical condition."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "drug exposure"@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000043> ;
+                                              rdfs:comment "Prescriptions, over-the-counter meds, hormonal therapy, treatment history"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "medications and therapies"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000044
+<http://purl.obolibrary.org/obo/CMEO_0000044> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A recorded clinical assertion or assessment about a patient that results from observation, examination, or reporting, and that is not primarily represented as a diagnosis, procedure, or medication exposure."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "observation"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000045
+<http://purl.obolibrary.org/obo/CMEO_0000045> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000044> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "The extent to which a patient’s behavior corresponds to an agreed therapeutic plan, such as taking medication as prescribed or following a recommended therapy regimen."@en ;
+                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
+                                              rdfs:label "compliance or adherence"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000046
+<http://purl.obolibrary.org/obo/CMEO_0000046> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000044> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A category for data elements that describe relatively stable characteristics of a person that are used to characterize individuals or populations (e.g., age, sex, ethnicity, education, occupation), typically not representing diagnoses, procedures, or measurements of physiological state."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "demographics"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000048
+<http://purl.obolibrary.org/obo/CMEO_0000048> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000044> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A category for data elements that describe a person’s habitual behaviors, exposures, or daily living patterns that may affect health (e.g., smoking, alcohol use, diet, physical activity, sleep), typically reported by the person or observed over time."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "lifestyle and behavior"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000049
+<http://purl.obolibrary.org/obo/CMEO_0000049> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000044> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A characteristic, exposure, behavior, or measurable attribute that is associated with an increased (or decreased) probability of a specified health outcome or condition."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "risk factor"@en ;
+                                              rdfs:seeAlso "http://purl.obolibrary.org/obo/NCIT_C17103"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000050
+<http://purl.obolibrary.org/obo/CMEO_0000050> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A healthcare action performed on or for a patient for diagnostic, therapeutic, preventive, or supportive purposes, occurring at a specified time point or during a specified time interval."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "procedure occurrence"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "procedure"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000051
+<http://purl.obolibrary.org/obo/CMEO_0000051> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical finding that is either an objectively observed indication of a patient’s state (a sign) or a subjectively experienced and reported complaint (a symptom)."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0006011> "condition occurrence"@en ,
+                                                                                           "observation"@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "observation"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "sign or symptom"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000052
+<http://purl.obolibrary.org/obo/CMEO_0000052> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000051> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An objective clinical finding that can be observed, measured, or elicited by an examiner or device, indicating some aspect of a patient’s state."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "sign"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000053
+<http://purl.obolibrary.org/obo/CMEO_0000053> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000052> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A sign observed or measured in clinical assessment that indicates cardiovascular function or pathology (e.g., heart murmur, gallop rhythm, elevated jugular venous pressure, peripheral edema when used as a cardiac finding)."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "cardiac sign"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000054
+<http://purl.obolibrary.org/obo/CMEO_0000054> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000052> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A sign that is not specific to a single organ system and reflects general physiological or systemic status (e.g., fever, weight loss, fatigue when treated as an observable sign, pallor)."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "general sign"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000055
+<http://purl.obolibrary.org/obo/CMEO_0000055> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000052> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A sign observed or elicited during neurological assessment that indicates nervous system function or dysfunction (e.g., abnormal reflexes, focal weakness on exam, abnormal gait, pupillary abnormalities)."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "neurological sign"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000056
+<http://purl.obolibrary.org/obo/CMEO_0000056> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000052> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A sign observed, elicited, or measured during clinical assessment that indicates respiratory system function or pathology (e.g., wheeze, crackles, use of accessory muscles, abnormal respiratory rate, low oxygen saturation when treated as a clinical sign)."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "respiratory sign"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000057
+<http://purl.obolibrary.org/obo/CMEO_0000057> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000051> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A subjective clinical finding experienced and reported by a patient (or proxy) that reflects perceived abnormality or discomfort."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "symptom"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000058
+<http://purl.obolibrary.org/obo/CMEO_0000058> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000052> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A sign that reflects basic physiological function and is routinely measured in clinical assessment (e.g., blood pressure, heart rate, respiratory rate, body temperature, oxygen saturation)."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "vital sign"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000059
+<http://purl.obolibrary.org/obo/CMEO_0000059> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "data type of variables such as int, float, str, datetime etc."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "data type"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000060
+<http://purl.obolibrary.org/obo/CMEO_0000060> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000258> ;
+                                              owl:disjointWith <http://purl.obolibrary.org/obo/STATO_0000251> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/STATO_0000252"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "categorical variable"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000061
+<http://purl.obolibrary.org/obo/CMEO_0000061> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that specifies the planned temporal structure of a study, including the sequence of study periods or visits and the timing constraints for when assessments, interventions, and outcomes are collected or evaluated."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "timeline specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000062
+<http://purl.obolibrary.org/obo/CMEO_0000062> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that specifies the set of variables (data elements) to be collected or derived in a study, as part of the overall study design, including any constraints on what is recorded, when it is recorded, and how it is represented."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "study design variable specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000063
+<http://purl.obolibrary.org/obo/CMEO_0000063> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A Study Outcome/Endpoint Specification is a Plan Specification that defines the measurable variables used to assess the effectiveness or impact of an intervention, treatment, or observation within a study. Endpoints are classified into Primary Endpoints (the main variable of interest) and Secondary Endpoints (additional measures that provide supporting information)."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "study outcome specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000064
+<http://purl.obolibrary.org/obo/CMEO_0000064> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000063> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An outcome specification that identifies the main endpoint of a study and defines how it is measured or ascertained, including the event or variable of interest, the assessment time frame, and any criteria for determining outcome occurrence."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000118> "primary endpoint specification"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "primary outcome specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000065
+<http://purl.obolibrary.org/obo/CMEO_0000065> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000063> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An outcome specification that defines an additional endpoint of a study beyond the primary outcome(s), including how it is measured or ascertained, the assessment time frame, and any criteria for determining outcome occurrence."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000118> "secondary endpoint specification"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "secondary outcome specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000066
+<http://purl.obolibrary.org/obo/CMEO_0000066> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500000> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A study in which participants with known outcomes are assessed based on data collected before the study."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "retrospective study design"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000068
+<http://purl.obolibrary.org/obo/CMEO_0000068> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500027> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A type of eligibility criteria that indicates whether people who do not have the condition/disease being studied can participate in that clinical study. Indication that participants who do not have a disease or condition, or related conditions or symptoms, under study in the clinical study are permitted to participate in the clinical study."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Komal Gilani"@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "healthy volunteer criterion"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000069
+<http://purl.obolibrary.org/obo/CMEO_0000069> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500028> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An exclusion criterion specification that defines a condition under which a participant is ineligible for a study because they have a history of a specified surgical procedure occurring before a defined reference time point, optionally within a specified look-back period."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "surgical procedure history exclusion criterion"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000070
+<http://purl.obolibrary.org/obo/CMEO_0000070> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500028> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An exclusion criterion specification that defines a condition under which a participant is ineligible for a study because they have had, currently have, or are expected to have a specified clinical exposure within a defined time frame."@en ;
+                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:label "clinical exposure exclusion criterion"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000071
+<http://purl.obolibrary.org/obo/CMEO_0000071> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "It refers to a benchmark or reference against which the effects of a medical intervention are compared. In clinical trials, the comparator can be a placebo (an inactive substance designed to resemble the drug being tested), a different dose or regimen of the drug being studied, or a different drug altogether. The choice of comparator is a critical aspect of clinical trial design and can significantly impact the interpretation and applicability of the trial’s results."@en ;
+                                              <http://purl.org/dc/terms/source> "https://viares.com/blog/clinical-research-explained/comparator/"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "comparator specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000072
+<http://purl.obolibrary.org/obo/CMEO_0000072> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "In clinical studies, Intervention specification involves a detailed, precise, and a priori definition of the treatment, procedure, or behavioral regimen being tested to ensure reproducibility, accurate implementation, and valid evaluation of outcomes" ;
+                                              <http://purl.org/dc/terms/source> "https://www.ncbi.nlm.nih.gov/books/NBK305500/"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "intervention specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000073
+<http://purl.obolibrary.org/obo/CMEO_0000073> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0200000> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A data analysis process that summarizes and visualizes data to assess distributions, data quality, missingness, and relationships among variables, typically prior to modeling or inference."@en ;
+                                              rdfs:label "exploratory data analysis"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000074
+<http://purl.obolibrary.org/obo/CMEO_0000074> rdf:type owl:Class ;
+                                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://purl.obolibrary.org/obo/cmeo.owlhas_value> ;
+                                                                    owl:someValuesFrom xsd:dateTime
+                                                                  ] ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000074> ;
+                                              rdfs:label "start time"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000075
+<http://purl.obolibrary.org/obo/CMEO_0000075> rdf:type owl:Class ;
+                                              owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty <http://purl.obolibrary.org/obo/cmeo.owlhas_value> ;
+                                                                    owl:someValuesFrom xsd:dateTime
+                                                                  ] ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000075> ;
+                                              rdfs:label "end time"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000076
+<http://purl.obolibrary.org/obo/CMEO_0000076> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A classifier used to group clinical data elements or clinical entities according to their kind of biomedical meaning (e.g., condition, procedure, medication, visit), primarily to support consistent annotation, search, and harmonization."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000118> <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "domain"@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000076> ;
+                                              rdfs:label "category"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000077
+<http://purl.obolibrary.org/obo/CMEO_0000077> rdf:type owl:Class ;
+                                              owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000100>
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://purl.obolibrary.org/obo/RO_0002351> ;
+                                                                                           owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000109>
+                                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                                       owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000312> ;
+                                                                                                                                       owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/OBCS_0000002>
+                                                                                                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                                                                                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0000059> ;
+                                                                                                                                                                                   owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/OBI_0000272>
+                                                                                                                                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                                                                                                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
+                                                                                                                                                                                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/CMEO_0000061>
+                                                                                                                                                                                                                             ]
+                                                                                                                                                                                                                           ) ;
+                                                                                                                                                                                                        rdf:type owl:Class
+                                                                                                                                                                                                      ]
+                                                                                                                                                                                 ]
+                                                                                                                                                                               ) ;
+                                                                                                                                                            rdf:type owl:Class
+                                                                                                                                                          ]
+                                                                                                                                     ]
+                                                                                                                                   ) ;
+                                                                                                                rdf:type owl:Class
+                                                                                                              ]
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ] ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000100> ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000077> ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "temporal dataset"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000078
+<http://purl.obolibrary.org/obo/CMEO_0000078> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that specifies what actions are permitted for a given agent (or role) over a specified resource, under stated conditions and constraints."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000078> ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "permission specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000079
+<http://purl.obolibrary.org/obo/CMEO_0000079> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A process in which an agent obtains authorized access to a data resource, resulting in the ability to view, retrieve, query, or otherwise use the data under specified permissions and constraints."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "data access"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000080
+<http://purl.obolibrary.org/obo/CMEO_0000080> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A representation that is either the output of a clinical history taking or a physical examination or an image finding, or some combination thereof. A clinical statement about an organism that is the result of clinical observation or assessment, including observed signs, reported symptoms, and clinician-asserted findings."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "condition occurrence"@en ;
+                                              rdfs:label "clinical finding"@en ;
+                                              rdfs:seeAlso "http://purl.obolibrary.org/obo/OGMS_0000014"@en .
 
 
 ###  http://purl.obolibrary.org/obo/DUO_0000001
@@ -3386,8 +4062,8 @@ points together with a line."""@en ;
 
 ###  http://purl.obolibrary.org/obo/IAO_0020000
 <http://purl.obolibrary.org/obo/IAO_0020000> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000028> ,
-                                                             <https://w3id.org/CMEO_0000076> ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ,
+                                                             <http://purl.obolibrary.org/obo/IAO_0000028> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "identifier"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Justin Whorton"@en ,
@@ -3408,6 +4084,15 @@ points together with a line."""@en ;
                                                 <http://purl.obolibrary.org/obo/IAO_0000118> "human" ,
                                                                                              "human being" ;
                                                 rdfs:label "Homo sapiens" .
+
+
+###  http://purl.obolibrary.org/obo/NCIT_C103165
+<http://purl.obolibrary.org/obo/NCIT_C103165> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "The kind of visit undertaken by the subject within a study, such as inpatient, outpatient, telephone, etc."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000118> "subject visit type"@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/NCIT_C103165> ;
+                                              rdfs:label "visit type"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBA_0000001
@@ -3575,6 +4260,7 @@ points together with a line."""@en ;
 ###  http://purl.obolibrary.org/obo/OBCS_0000068
 <http://purl.obolibrary.org/obo/OBCS_0000068> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000225> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/OBCS_0000068"@en ;
                                               rdfs:label "frequency distribution"@en .
 
 
@@ -3805,6 +4491,7 @@ points together with a line."""@en ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A plan specification that provides a detailed outline of how data is collected." ;
                                               <http://purl.obolibrary.org/obo/IAO_0000117> "Jie Zheng, Yongqun He" ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/OBCS_0000137"@en ;
                                               rdfs:label "data collection design"@en .
 
 
@@ -5167,6 +5854,7 @@ This issue is outside the scope of OBI.""" ;
 ###  http://purl.obolibrary.org/obo/OBI_0200000
 <http://purl.obolibrary.org/obo/OBI_0200000> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A process that converts data from one representation, structure, scale, or format to another, with the aim of improving usability, interoperability, or suitability for analysis."@en ;
                                              rdfs:label "data transformation"@en .
 
 
@@ -5473,18 +6161,46 @@ defines and states the requirements (positive or negative) for an entity to be c
                                              owl:deprecated "true"^^xsd:boolean .
 
 
+###  http://purl.obolibrary.org/obo/SCDO_1000849
+<http://purl.obolibrary.org/obo/SCDO_1000849> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/NCIT_C103165> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical visit occuring because of an acute (severe with sudden onset) health condition."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/SCDO_1000849> ;
+                                              rdfs:label "acute clinical visit"@en .
+
+
+###  http://purl.obolibrary.org/obo/SCDO_1000900
+<http://purl.obolibrary.org/obo/SCDO_1000900> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/NCIT_C103165> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical visit that is the patient's first clinical visit."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000118> "first visit"@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/SCDO_1000900> ;
+                                              rdfs:label "baseline visit"@en .
+
+
+###  http://purl.obolibrary.org/obo/SCDO_1000901
+<http://purl.obolibrary.org/obo/SCDO_1000901> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/NCIT_C103165> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical visit that is a follow-up for a previous visit."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/SCDO_1000901> ;
+                                              rdfs:label "follow-up"@en .
+
+
 ###  http://purl.obolibrary.org/obo/STATO_0000039
 <http://purl.obolibrary.org/obo/STATO_0000039> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000115> "a statistic is a measurement datum to describe a dataset or a variable. It is generated by a calculation on set of observed data."@en ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/STATO_0000039"@en ;
                                                <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/STATO_0000039> ;
                                                rdfs:label "statistic"@en .
 
 
 ###  http://purl.obolibrary.org/obo/STATO_0000087
 <http://purl.obolibrary.org/obo/STATO_0000087> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/CMEO_0000060> ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000060> ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "variable with more than two categories"@en ;
                                                <http://purl.obolibrary.org/obo/IAO_0000118> "polychotomous variable"@en ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/STATO_0000087"@en ;
                                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
                                                rdfs:label "multi class variable"@en ;
                                                rdfs:seeAlso <http://purl.obolibrary.org/obo/STATO_0000087> ;
@@ -5495,6 +6211,7 @@ defines and states the requirements (positive or negative) for an entity to be c
 <http://purl.obolibrary.org/obo/STATO_0000090> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000087> ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "variable with only two categories"@en ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/STATO_0000090"@en ;
                                                rdfs:isDefinedBy "https://w3id.org/cmeo#"@en ;
                                                rdfs:label "binary class variable"@en ;
                                                rdfs:seeAlso <http://purl.obolibrary.org/obo/STATO_0000090> ;
@@ -5547,6 +6264,7 @@ Spearman's coefficient may be used when the conditions for computing Pearson's c
 ###  http://purl.obolibrary.org/obo/STATO_0000225
 <http://purl.obolibrary.org/obo/STATO_0000225> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/OBCS_0000010"@en ;
                                                rdfs:label "probability distribution"@en .
 
 
@@ -5572,7 +6290,7 @@ Spearman's coefficient may be used when the conditions for computing Pearson's c
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                                 owl:someValuesFrom <https://w3id.org/CMEO_0000009>
+                                                                 owl:someValuesFrom <http://purl.obolibrary.org/obo/CMEO_0000009>
                                                                ] ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "A directive information entity that specifies a data item that can be measured or counted and is used in a statistical analysis." ;
                                                <http://purl.obolibrary.org/obo/IAO_0000117> "Yongqun He" ;
@@ -5610,6 +6328,30 @@ The coefficient is calculated by dividing their covariance with the product of t
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000142> ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "Matthews Correlation Coefficient (or MCC) is a correlation coefficient which is a measure of the quality of binary (two-class) classifications, introduced by biochemist Brian W. Matthews in 1975." ;
                                                rdfs:label "Matthews correlation coefficient" .
+
+
+###  http://purl.obolibrary.org/obo/cmeo.owlduration_of_observation
+<http://purl.obolibrary.org/obo/cmeo.owlduration_of_observation> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
+                                                                 rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                                                 rdfs:label "duration of observation"@en ;
+                                                                 rdfs:seeAlso <http://purl.obolibrary.org/obo/EUPATH_0000138> .
+
+
+###  http://purl.obolibrary.org/obo/cmeo.owl#code_set
+:code_set rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+          <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things."@en ;
+          <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
+          <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/IAO_0020020> ;
+          rdfs:label "code set"@en .
+
+
+###  http://purl.obolibrary.org/obo/cmeo.owl#composite_endpoint_specification
+:composite_endpoint_specification rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000063> ;
+                                  <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical endpoint specification that defines a primary or secondary endpoint as a combination of two or more distinct component outcomes, assessed jointly to evaluate a research hypothesis in a clinical study."@en ;
+                                  rdfs:label "composite endpoint specification"@en .
 
 
 ###  http://semanticscience.org/resource/SIO_000027
@@ -5657,669 +6399,6 @@ The coefficient is calculated by dividing their covariance with the product of t
 
 ###  http://www.w3.org/2002/07/owl#Thing
 owl:Thing rdf:type owl:Class .
-
-
-###  https://w3id.org/CMEO_0000001
-<https://w3id.org/CMEO_0000001> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
-                                rdfs:label "agent"@en .
-
-
-###  https://w3id.org/CMEO_0000002
-<https://w3id.org/CMEO_0000002> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000968> ;
-                                <http://purl.obolibrary.org/obo/IAO_0000115> "Wearable devices such as activity trackers are an example of the Internet of things, since \"things\" such as electronics, software, sensors, and connectivity are effectors that enable objects to exchange data (including data quality[5]) through the internet with a manufacturer, operator, and/or other connected devices, without requiring human intervention."@en ;
-                                <http://purl.obolibrary.org/obo/IAO_0000118> "health wearable"@en ;
-                                rdfs:label "wearable device"@en ;
-                                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/BMONT_0000079> .
-
-
-###  https://w3id.org/CMEO_0000003
-<https://w3id.org/CMEO_0000003> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000002> ;
-                                rdfs:label "sensor"@en .
-
-
-###  https://w3id.org/CMEO_0000004
-<https://w3id.org/CMEO_0000004> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
-                                <http://purl.obolibrary.org/obo/IAO_0000117> "medical visit"@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "medical encounter"@en .
-
-
-###  https://w3id.org/CMEO_0000005
-<https://w3id.org/CMEO_0000005> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000810> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "data use permission assignment"@en .
-
-
-###  https://w3id.org/CMEO_0000007
-<https://w3id.org/CMEO_0000007> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
-                                <http://purl.obolibrary.org/obo/IAO_0000232> "linking a concept to unique identifier in respective domain standard such as linking variable bp to blood pressure concept in SNOMED"@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "data standardization"@en .
-
-
-###  https://w3id.org/CMEO_0000008
-<https://w3id.org/CMEO_0000008> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "formula"@en .
-
-
-###  https://w3id.org/CMEO_0000009
-<https://w3id.org/CMEO_0000009> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000295> ;
-                                                  owl:someValuesFrom <https://w3id.org/CMEO_0000007>
-                                                ] ;
-                                <http://purl.obolibrary.org/obo/IAO_0000115> "A basic unit of information that has a unique meaning and instances (data items) of distinct value. Examples of data elements include gender, race, and geographic location in data dictionary(ref. https://cde.nlm.nih.gov/). It provides classification of data elements"@en ;
-                                rdfs:comment "A grouping or label that provides a semantic interpretation of a data element."@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "data element"@en .
-
-
-###  https://w3id.org/CMEO_0000010
-<https://w3id.org/CMEO_0000010> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000044> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "clinical event"@en .
-
-
-###  https://w3id.org/CMEO_0000011
-<https://w3id.org/CMEO_0000011> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000010> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "bleeding event"@en .
-
-
-###  https://w3id.org/CMEO_0000012
-<https://w3id.org/CMEO_0000012> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000010> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "cardiovascular event"@en .
-
-
-###  https://w3id.org/CMEO_0000013
-<https://w3id.org/CMEO_0000013> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000010> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "adverse event"@en .
-
-
-###  https://w3id.org/CMEO_0000014
-<https://w3id.org/CMEO_0000014> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000013> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "adverse drug reaction"@en .
-
-
-###  https://w3id.org/CMEO_0000015
-<https://w3id.org/CMEO_0000015> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000013> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "allergic reaction"@en .
-
-
-###  https://w3id.org/CMEO_0000016
-<https://w3id.org/CMEO_0000016> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000013> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "device adverse event"@en .
-
-
-###  https://w3id.org/CMEO_0000017
-<https://w3id.org/CMEO_0000017> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000010> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "death"@en .
-
-
-###  https://w3id.org/CMEO_0000018
-<https://w3id.org/CMEO_0000018> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000017> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "all-cause mortality"@en .
-
-
-###  https://w3id.org/CMEO_0000019
-<https://w3id.org/CMEO_0000019> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000017> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "cause-specific mortality"@en .
-
-
-###  https://w3id.org/CMEO_0000020
-<https://w3id.org/CMEO_0000020> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000010> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "Visit"@en .
-
-
-###  https://w3id.org/CMEO_0000021
-<https://w3id.org/CMEO_0000021> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000010> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "hospitalization"@en .
-
-
-###  https://w3id.org/CMEO_0000022
-<https://w3id.org/CMEO_0000022> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000021> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "all-cause hospitalization"@en .
-
-
-###  https://w3id.org/CMEO_0000023
-<https://w3id.org/CMEO_0000023> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000021> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "cause-specific hospitalization"@en .
-
-
-###  https://w3id.org/CMEO_0000024
-<https://w3id.org/CMEO_0000024> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000021> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "procedure related hospitalization"@en .
-
-
-###  https://w3id.org/CMEO_0000025
-<https://w3id.org/CMEO_0000025> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000021> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "readmission"@en .
-
-
-###  https://w3id.org/CMEO_0000026
-<https://w3id.org/CMEO_0000026> rdf:type owl:Class ;
-                                rdfs:subClassOf :code_set ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000219> ;
-                                                  owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000030>
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000312> ;
-                                                  owl:someValuesFrom <https://w3id.org/CMEO_0000007>
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0002350> ;
-                                                  owl:someValuesFrom :code_set
-                                                ] ;
-                                <http://purl.obolibrary.org/obo/IAO_0000115> "A unique identifier assigned to a concept in a standardized vocabulary (e.g., LOINC, SNOMED)."@en ;
-                                <http://purl.obolibrary.org/obo/IAO_0000118> "Concept"@en ;
-                                <http://purl.obolibrary.org/obo/IAO_0006011> <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "code"@en .
-
-
-###  https://w3id.org/CMEO_0000027
-<https://w3id.org/CMEO_0000027> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020000> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "device identifier"@en .
-
-
-###  https://w3id.org/CMEO_0000028
-<https://w3id.org/CMEO_0000028> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001933> ;
-                                rdfs:comment "to indicate the missing value indicator for a data element in its dataset"@en ;
-                                rdfs:label "missing value specification"@en .
-
-
-###  https://w3id.org/CMEO_0000029
-<https://w3id.org/CMEO_0000029> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000578> ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000219> ;
-                                                  owl:someValuesFrom <https://w3id.org/CMEO_0000026>
-                                                ] ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000312> ;
-                                                  owl:someValuesFrom <https://w3id.org/CMEO_0000007>
-                                                ] ;
-                                <http://www.geneontology.org/formats/oboInOwl#id> "omop id"@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "OMOP identifier"@en .
-
-
-###  https://w3id.org/CMEO_0000030
-<https://w3id.org/CMEO_0000030> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000076> ;
-                                <http://www.geneontology.org/formats/oboInOwl#id> <https://w3id.org/CMEO_0000030> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "measurement"@en .
-
-
-###  https://w3id.org/CMEO_0000031
-<https://w3id.org/CMEO_0000031> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000030> ,
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000039> ;
-                                                  owl:allValuesFrom <http://purl.obolibrary.org/obo/IAO_0000003>
-                                                ] ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "anthropometric measurement"@en .
-
-
-###  https://w3id.org/CMEO_0000032
-<https://w3id.org/CMEO_0000032> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000030> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "blood measurement"@en .
-
-
-###  https://w3id.org/CMEO_0000033
-<https://w3id.org/CMEO_0000033> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000032> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "blood biomarker"@en .
-
-
-###  https://w3id.org/CMEO_0000034
-<https://w3id.org/CMEO_0000034> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000032> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "protein biomarker"@en .
-
-
-###  https://w3id.org/CMEO_0000035
-<https://w3id.org/CMEO_0000035> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000030> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "cardiovascular measurement"@en .
-
-
-###  https://w3id.org/CMEO_0000036
-<https://w3id.org/CMEO_0000036> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000030> ;
-                                <http://purl.obolibrary.org/obo/IAO_0000115> "The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification."@en ;
-                                <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/CMO_0000426"@en ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "consumption measurement"@en .
-
-
-###  https://w3id.org/CMEO_0000037
-<https://w3id.org/CMEO_0000037> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000030> ;
-                                rdfs:isDefinedBy "https://w3id.org/cmeo#"@en ;
-                                rdfs:label "diagnostic measurement"@en .
-
-
-###  https://w3id.org/CMEO_0000038
-<https://w3id.org/CMEO_0000038> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000030> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "functional and behavioral assesment score"@en .
-
-
-###  https://w3id.org/CMEO_0000039
-<https://w3id.org/CMEO_0000039> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000030> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "stages and scales"@en .
-
-
-###  https://w3id.org/CMEO_0000040
-<https://w3id.org/CMEO_0000040> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000030> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "time to event measurement"@en .
-
-
-###  https://w3id.org/CMEO_0000041
-<https://w3id.org/CMEO_0000041> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000080> ;
-                                <http://purl.obolibrary.org/obo/IAO_0006011> "condition occurrence"@en ,
-                                                                             "observation" ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "medical history"@en .
-
-
-###  https://w3id.org/CMEO_0000042
-<https://w3id.org/CMEO_0000042> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000041> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "family history"@en .
-
-
-###  https://w3id.org/CMEO_0000043
-<https://w3id.org/CMEO_0000043> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000076> ;
-                                <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "drug exposure"@en ;
-                                <http://www.geneontology.org/formats/oboInOwl#id> <https://w3id.org/CMEO_0000043> ;
-                                rdfs:comment "Prescriptions, over-the-counter meds, hormonal therapy, treatment history"@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "medications and therapies"@en .
-
-
-###  https://w3id.org/CMEO_0000044
-<https://w3id.org/CMEO_0000044> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000076> ;
-                                <http://purl.obolibrary.org/obo/IAO_0000115> "A specific, recorded piece of information about a patient, like a lab result (e.g., blood pressure), a vital sign (e.g., temperature), or a reported symptom (e.g., pain level), forming a question-answer pair (what was measured, and what the value was)."@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "observation"@en .
-
-
-###  https://w3id.org/CMEO_0000045
-<https://w3id.org/CMEO_0000045> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000044> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "compliance or adherence"@en .
-
-
-###  https://w3id.org/CMEO_0000046
-<https://w3id.org/CMEO_0000046> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000044> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "demographics"@en .
-
-
-###  https://w3id.org/CMEO_0000047
-<https://w3id.org/CMEO_0000047> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000046> ;
-                                rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                rdfs:label "socioeconomic status"@en .
-
-
-###  https://w3id.org/CMEO_0000048
-<https://w3id.org/CMEO_0000048> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000044> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "lifestyle and behavior"@en .
-
-
-###  https://w3id.org/CMEO_0000049
-<https://w3id.org/CMEO_0000049> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000044> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "risk factor"@en .
-
-
-###  https://w3id.org/CMEO_0000050
-<https://w3id.org/CMEO_0000050> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000076> ;
-                                <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "procedure occurrence"@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "procedure"@en .
-
-
-###  https://w3id.org/CMEO_0000051
-<https://w3id.org/CMEO_0000051> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000076> ;
-                                <http://purl.obolibrary.org/obo/IAO_0006011> "condition occurrence"@en ,
-                                                                             "observation"@en ;
-                                <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "observation"@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "sign or symptom"@en .
-
-
-###  https://w3id.org/CMEO_0000052
-<https://w3id.org/CMEO_0000052> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000051> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "sign"@en .
-
-
-###  https://w3id.org/CMEO_0000053
-<https://w3id.org/CMEO_0000053> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000052> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "cardiac sign"@en .
-
-
-###  https://w3id.org/CMEO_0000054
-<https://w3id.org/CMEO_0000054> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000052> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "general sign"@en .
-
-
-###  https://w3id.org/CMEO_0000055
-<https://w3id.org/CMEO_0000055> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000052> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "neurological sign"@en .
-
-
-###  https://w3id.org/CMEO_0000056
-<https://w3id.org/CMEO_0000056> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000052> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "respiratory sign"@en .
-
-
-###  https://w3id.org/CMEO_0000057
-<https://w3id.org/CMEO_0000057> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000051> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "symptom"@en .
-
-
-###  https://w3id.org/CMEO_0000058
-<https://w3id.org/CMEO_0000058> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000051> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "vital sign"@en .
-
-
-###  https://w3id.org/CMEO_0000059
-<https://w3id.org/CMEO_0000059> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
-                                rdfs:comment "data type of variables such as int, float, str, datetime etc."@en ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "data type"@en .
-
-
-###  https://w3id.org/CMEO_0000060
-<https://w3id.org/CMEO_0000060> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000258> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "categorical variable"@en .
-
-
-###  https://w3id.org/CMEO_0000061
-<https://w3id.org/CMEO_0000061> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "timeline specification"@en .
-
-
-###  https://w3id.org/CMEO_0000062
-<https://w3id.org/CMEO_0000062> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "study design variable specification"@en .
-
-
-###  https://w3id.org/CMEO_0000063
-<https://w3id.org/CMEO_0000063> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
-                                <http://purl.obolibrary.org/obo/IAO_0000115> "A Study Outcome/Endpoint Specification is a Plan Specification that defines the measurable variables used to assess the effectiveness or impact of an intervention, treatment, or observation within a study. Endpoints are classified into Primary Endpoints (the main variable of interest) and Secondary Endpoints (additional measures that provide supporting information)."@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "study outcome specification"@en .
-
-
-###  https://w3id.org/CMEO_0000064
-<https://w3id.org/CMEO_0000064> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000063> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "primary outcome specification"@en .
-
-
-###  https://w3id.org/CMEO_0000065
-<https://w3id.org/CMEO_0000065> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000063> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "secondary outcome specification"@en .
-
-
-###  https://w3id.org/CMEO_0000066
-<https://w3id.org/CMEO_0000066> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500000> ;
-                                <http://purl.obolibrary.org/obo/IAO_0000115> "A study in which participants with known outcomes are assessed based on data collected before the study."@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "retrospective study design"@en .
-
-
-###  https://w3id.org/CMEO_0000067
-<https://w3id.org/CMEO_0000067> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500003> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "single arm cross over design"@en .
-
-
-###  https://w3id.org/CMEO_0000068
-<https://w3id.org/CMEO_0000068> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500027> ;
-                                <http://purl.obolibrary.org/obo/IAO_0000115> "A type of eligibility criteria that indicates whether people who do not have the condition/disease being studied can participate in that clinical study. Indication that participants who do not have a disease or condition, or related conditions or symptoms, under study in the clinical study are permitted to participate in the clinical study."@en ;
-                                <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Komal Gilani"@en ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "healthy volunteer criterion"@en .
-
-
-###  https://w3id.org/CMEO_0000069
-<https://w3id.org/CMEO_0000069> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500028> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "surgical procedure history exclusion criterion"@en .
-
-
-###  https://w3id.org/CMEO_0000070
-<https://w3id.org/CMEO_0000070> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500028> ;
-                                rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                rdfs:label "clinical exposure exclusion criterion"@en .
-
-
-###  https://w3id.org/CMEO_0000071
-<https://w3id.org/CMEO_0000071> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "comparator specification"@en .
-
-
-###  https://w3id.org/CMEO_0000072
-<https://w3id.org/CMEO_0000072> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "intervention specification"@en .
-
-
-###  https://w3id.org/CMEO_0000073
-<https://w3id.org/CMEO_0000073> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0200000> ;
-                                rdfs:label "exploratory data analysis"@en .
-
-
-###  https://w3id.org/CMEO_0000074
-<https://w3id.org/CMEO_0000074> rdf:type owl:Class ;
-                                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <https://w3id.org/CMEOhas_value> ;
-                                                      owl:someValuesFrom xsd:dateTime
-                                                    ] ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
-                                <http://www.geneontology.org/formats/oboInOwl#id> <https://w3id.org/CMEO_0000074> ;
-                                rdfs:label "start time"@en .
-
-
-###  https://w3id.org/CMEO_0000075
-<https://w3id.org/CMEO_0000075> rdf:type owl:Class ;
-                                owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                      owl:onProperty <https://w3id.org/CMEOhas_value> ;
-                                                      owl:someValuesFrom xsd:dateTime
-                                                    ] ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
-                                <http://www.geneontology.org/formats/oboInOwl#id> <https://w3id.org/CMEO_0000075> ;
-                                rdfs:label "end time"@en .
-
-
-###  https://w3id.org/CMEO_0000076
-<https://w3id.org/CMEO_0000076> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
-                                <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "domain"@en ;
-                                <http://www.geneontology.org/formats/oboInOwl#id> <https://w3id.org/CMEO_0000076> ;
-                                rdfs:label "category"@en .
-
-
-###  https://w3id.org/CMEO_0000077
-<https://w3id.org/CMEO_0000077> rdf:type owl:Class ;
-                                owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000100>
-                                                                           [ rdf:type owl:Restriction ;
-                                                                             owl:onProperty <http://purl.obolibrary.org/obo/RO_0002351> ;
-                                                                             owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000109>
-                                                                                                                       [ rdf:type owl:Restriction ;
-                                                                                                                         owl:onProperty <http://purl.obolibrary.org/obo/OBI_0000312> ;
-                                                                                                                         owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/OBCS_0000002>
-                                                                                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/RO_0000059> ;
-                                                                                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/OBI_0000272>
-                                                                                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
-                                                                                                                                                                                                                 owl:someValuesFrom <https://w3id.org/CMEO_0000061>
-                                                                                                                                                                                                               ]
-                                                                                                                                                                                                             ) ;
-                                                                                                                                                                                          rdf:type owl:Class
-                                                                                                                                                                                        ]
-                                                                                                                                                                   ]
-                                                                                                                                                                 ) ;
-                                                                                                                                              rdf:type owl:Class
-                                                                                                                                            ]
-                                                                                                                       ]
-                                                                                                                     ) ;
-                                                                                                  rdf:type owl:Class
-                                                                                                ]
-                                                                           ]
-                                                                         ) ;
-                                                      rdf:type owl:Class
-                                                    ] ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000100> ;
-                                <http://www.geneontology.org/formats/oboInOwl#id> <https://w3id.org/CMEO_0000077> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "temporal dataset"@en .
-
-
-###  https://w3id.org/CMEO_0000078
-<https://w3id.org/CMEO_0000078> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> ;
-                                <http://www.geneontology.org/formats/oboInOwl#id> <https://w3id.org/CMEO_0000078> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "permission specification"@en .
-
-
-###  https://w3id.org/CMEO_0000079
-<https://w3id.org/CMEO_0000079> rdf:type owl:Class ;
-                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "data access"@en .
-
-
-###  https://w3id.org/CMEO_0000080
-<https://w3id.org/CMEO_0000080> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/CMEO_0000076> ;
-                                <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "condition occurrence"@en ;
-                                rdfs:isDefinedBy <https://w3id.org/CMEO> ;
-                                rdfs:label "clinical finding"@en .
-
-
-###  https://w3id.org/CMEOduration_of_observation
-<https://w3id.org/CMEOduration_of_observation> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
-                                               rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                               rdfs:label "duration of observation"@en ;
-                                               rdfs:seeAlso <http://purl.obolibrary.org/obo/EUPATH_0000138> .
-
-
-###  https://w3id.org/CMEO#code_set
-:code_set rdf:type owl:Class ;
-          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
-          <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
-          <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/IAO_0020020> ;
-          rdfs:label "code set"@en .
 
 
 #################################################################

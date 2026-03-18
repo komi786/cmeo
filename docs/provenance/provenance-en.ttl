@@ -2,12 +2,12 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://w3id.org/CMEO/1.0.2> a prov:Entity;
+<http://purl.obolibrary.org/obo/cmeo/releases/2025-12-10/cmeo.owl> a prov:Entity;
 	 dc:title "Clinical Metadata Exploration Ontology (CMEO)";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
-	 prov:specializationOf <https://w3id.org/CMEO>;
+	 prov:specializationOf <http://purl.obolibrary.org/obo/cmeo.owl>;
 .
 :agent0 a prov:Agent; foaf:name "Komal Gilani".
 :agent1 a prov:Agent; foaf:name "Michel Dumontier".
