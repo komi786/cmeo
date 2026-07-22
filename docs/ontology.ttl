@@ -7,7 +7,7 @@
 @base <http://purl.obolibrary.org/obo/cmeo.owl#> .
 
 <http://purl.obolibrary.org/obo/cmeo.owl> rdf:type owl:Ontology ;
-                                           owl:versionIRI <http://purl.obolibrary.org/obo/cmeo/releases/2025-12-10/cmeo.owl> ;
+                                           owl:versionIRI <http://purl.obolibrary.org/obo/cmeo/releases/2026-07-21/cmeo.owl> ;
                                            <http://purl.obolibrary.org/obo/IAO_0000114> "production"@en ;
                                            <http://purl.org/dc/elements/1.1/contributor> "Michel Dumontier"@en ;
                                            <http://purl.org/dc/elements/1.1/creator> "Komal Gilani"@en ;
@@ -17,7 +17,7 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
                                            <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                            <http://purl.org/dc/terms/title> "Clinical Metadata Exploration Ontology (CMEO)"@en ;
                                            rdfs:label "Clinical Metadata Exploration Ontology (CMEO)"@en ;
-                                           owl:versionInfo "1.0.2"@en .
+                                           owl:versionInfo "1.0.3"@en .
 
 #################################################################
 #    Annotation properties
@@ -1100,6 +1100,16 @@ A continuant cannot have an occurrent as part: use 'participates in'. An occurre
                                              rdfs:label "exists at"@en .
 
 
+###  http://purl.obolibrary.org/obo/CMEO_0000084
+<http://purl.obolibrary.org/obo/CMEO_0000084> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                              rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                              rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "Relates an information content entity (a record or variable) to the occurrent (e.g. a process or event) whose occurrence it documents. A more specific form of 'is about' for records of occurrents."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "is record of"@en .
+
+
 ###  http://purl.obolibrary.org/obo/DUO_0000010
 <http://purl.obolibrary.org/obo/DUO_0000010> rdf:type owl:ObjectProperty ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A is restricted to B iff A is a consent code and B is an investigation and A may only participate in instances of a class C, of which B is an instance."@en ;
@@ -1186,7 +1196,6 @@ there is some c that is a concretization of g
 every c that is a concretization of g specifically denotes r"""@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "person:Alan Ruttenberg"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"@en ;
-                                             rdfs:comment ""@en ;
                                              rdfs:label "denotes"@en .
 
 
@@ -1196,6 +1205,16 @@ every c that is a concretization of g specifically denotes r"""@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000231> <http://purl.obolibrary.org/obo/IAO_0000103> ;
                                              rdfs:label "obsolete_materially denotes" ;
                                              owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000221
+<http://purl.obolibrary.org/obo/IAO_0000221> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000109> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "m is a quality measurement of q at t. When q is a quality, there is a measurement process p that has specified output m, a measurement datum, that is about q."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
+                                             rdfs:label "is quality measurement of"@en .
 
 
 ###  http://purl.obolibrary.org/obo/IAO_0000222
@@ -1859,79 +1878,15 @@ instance level relation [GOC:cjm]"""@en ;
                                             owl:deprecated "true"^^xsd:boolean .
 
 
-###  http://purl.obolibrary.org/obo/cmeo.owl#has_annotation
-:has_annotation rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf :has_attribute ;
-                <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000255> ;
-                <http://www.geneontology.org/formats/oboInOwl#id> <http://semanticscience.org/resource/SIO_000255> ;
-                rdfs:label "has attribute"@en .
-
-
-###  http://purl.obolibrary.org/obo/cmeo.owl#has_attribute
-:has_attribute rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf :is_related_to ;
-               <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000008> ;
-               <http://www.geneontology.org/formats/oboInOwl#id> <http://semanticscience.org/resource/SIO_000008> ;
-               rdfs:label "has attribute"@en .
-
-
-###  http://purl.obolibrary.org/obo/cmeo.owl#has_close_match
-:has_close_match rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :is_in_mapping_relation_with ;
-                 owl:inverseOf :is_close_match_to ;
-                 <http://purl.obolibrary.org/obo/IAO_0000412> <http://www.w3.org/2004/02/skos/core> ;
-                 <http://www.geneontology.org/formats/oboInOwl#id> <http://www.w3.org/2004/02/skos/core#closeMatch> ;
-                 rdfs:label "has close match"@en .
-
-
-###  http://purl.obolibrary.org/obo/cmeo.owl#is_annotation_of
-:is_annotation_of rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf :is_attribute_of ;
-                  <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000254> ;
-                  <http://www.geneontology.org/formats/oboInOwl#id> <http://semanticscience.org/resource/SIO_000254> ;
-                  rdfs:label "is annotation of"@en .
-
-
-###  http://purl.obolibrary.org/obo/cmeo.owl#is_attribute_of
-:is_attribute_of rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf :is_related_to ;
-                 <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000011> ;
-                 <http://www.geneontology.org/formats/oboInOwl#id> <http://semanticscience.org/resource/SIO_000011> ;
-                 rdfs:label "is attribute of"@en .
-
-
-###  http://purl.obolibrary.org/obo/cmeo.owl#is_close_match_to
-:is_close_match_to rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :is_related_to ;
-                   <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/ontology/sio.owl> ;
-                   <http://www.geneontology.org/formats/oboInOwl#id> <http://semanticscience.org/resource/SIO_000490> ;
-                   rdfs:label "is close match to"@en .
-
-
-###  http://purl.obolibrary.org/obo/cmeo.owl#is_in_mapping_relation_with
-:is_in_mapping_relation_with rdf:type owl:ObjectProperty ;
-                             rdfs:domain <http://purl.obolibrary.org/obo/CMEO_0000009> ;
-                             rdfs:range <http://purl.obolibrary.org/obo/CMEO_0000026> ;
-                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://www.w3.org/2004/02/skos/core#mappingRelation> ;
-                             <http://www.geneontology.org/formats/oboInOwl#id> <http://www.w3.org/2004/02/skos/core#mappingRelation> ;
-                             rdfs:comment "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."@en ;
-                             rdfs:label "is in mapping relation with"@en .
-
-
-###  http://purl.obolibrary.org/obo/cmeo.owl#is_related_to
-:is_related_to rdf:type owl:ObjectProperty ;
-               <http://purl.obolibrary.org/obo/IAO_0000412> <http://semanticscience.org/resource/SIO_000001> ;
-               <http://www.geneontology.org/formats/oboInOwl#id> <http://semanticscience.org/resource/SIO_000001> ;
-               rdfs:label "is related to"@en .
-
-
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://purl.obolibrary.org/obo/cmeo.owlhas_value
-<http://purl.obolibrary.org/obo/cmeo.owlhas_value> rdf:type owl:DatatypeProperty ;
-                                                   rdfs:label "has value"@en .
+###  http://purl.obolibrary.org/obo/CMEO_0000082
+<http://purl.obolibrary.org/obo/CMEO_0000082> rdf:type owl:DatatypeProperty ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A data property that relates an information entity to the literal value it carries (e.g., a numeric, string, boolean, or dateTime value)."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "has value"@en .
 
 
 #################################################################
@@ -2520,7 +2475,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  http://purl.obolibrary.org/obo/CMEO_0000002
 <http://purl.obolibrary.org/obo/CMEO_0000002> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000968> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "Wearable devices such as activity trackers are an example of the Internet of things, since \"things\" such as electronics, software, sensors, and connectivity are effectors that enable objects to exchange data (including data quality[5]) through the internet with a manufacturer, operator, and/or other connected devices, without requiring human intervention."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A device that is designed to be worn on, or attached to, the body of a person and that senses, records, or transmits data about the wearer's physiological, behavioral, or environmental state, continuously or intermittently."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000118> "health wearable"@en ;
                                               rdfs:label "wearable device"@en ;
                                               rdfs:seeAlso "https://saref.etsi.org/saref4wear/v2.1.1/WearableDevice"@en ;
@@ -2530,8 +2485,9 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  http://purl.obolibrary.org/obo/CMEO_0000003
 <http://purl.obolibrary.org/obo/CMEO_0000003> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000002> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A sensor that is worn on the body (or embedded in a wearable item) and is designed to detect and record one or more physiological, behavioral, or environmental properties of a person over time."@en ;
-                                              rdfs:label "sensor"@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A device that is worn on the body, or embedded in a wearable item, and that detects and records one or more physiological, behavioral, or environmental properties of a person over time."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "sensor"@en ;
+                                              rdfs:label "wearable sensor"@en ;
                                               rdfs:seeAlso "http://www.w3.org/ns/sosa/Sensor"@en ,
                                                            "https://saref.etsi.org/core/Sensor"@en ,
                                                            "https://saref.etsi.org/saref4wear/v2.1.1/WearableDevice"@en .
@@ -2540,6 +2496,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  http://purl.obolibrary.org/obo/CMEO_0000004
 <http://purl.obolibrary.org/obo/CMEO_0000004> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A process consisting of an interaction between a patient and one or more healthcare providers for the purpose of assessing, monitoring, or managing the patient's health, occurring at a point in time or over a time interval."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000117> "medical visit"@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/NCIT_C154624"@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
@@ -2549,7 +2506,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 ###  http://purl.obolibrary.org/obo/CMEO_0000007
 <http://purl.obolibrary.org/obo/CMEO_0000007> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "linking a concept to unique identifier in respective domain standard such as linking variable bp to blood pressure concept in SNOMED"@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A planned process that links a concept to a unique identifier in the respective domain standard (for example, linking the variable 'bp' to the blood pressure concept in SNOMED)."@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "data standardization"@en .
 
@@ -2558,9 +2515,9 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 <http://purl.obolibrary.org/obo/CMEO_0000008> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that specifies a mathematical or logical expression used to compute a derived value from one or more input variables, parameters, or constants."@en ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/chebi/formula"@en ;
-                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                              rdfs:label "formula"@en .
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "formula"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "variable derivation formula"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000009
@@ -2578,24 +2535,31 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000010
 <http://purl.obolibrary.org/obo/CMEO_0000010> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000044> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A recorded statement indicating that a clinically relevant occurrence happened to a patient at a particular time or during a time interval (e.g., death, hospitalization, myocardial infarction, adverse event)."@en ;
-                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                              rdfs:label "clinical event"@en .
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/CMEO_0000084> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity (a data item, e.g. a variable or record) that represents the occurrence of a clinically relevant event for a patient at a point in time or over a time interval (e.g., a death, a hospitalization, a myocardial infarction), and that is about the corresponding real-world process."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000116> "CMEO mints the information/record layer, not the occurrent. This class is the record or variable about the event; it 'is about' (IAO:0000136) the underlying process (BFO:0000015). The real-world occurrence itself is not minted in CMEO but referenced via 'is about' and, where relevant, cross-referenced to process ontologies (e.g. OAE for adverse events)."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "clinical event"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "clinical event record"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000011
 <http://purl.obolibrary.org/obo/CMEO_0000011> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical event in which bleeding occurs in a patient, characterized by the loss of blood from the circulatory system to an external site or into tissues or body cavities, at a specified time point or during a specified time interval."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical event record that represents an occurrence of bleeding in a patient — the loss of blood from the circulatory system to an external site or into tissues or body cavities — at a specified time point or during a specified time interval."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "bleeding event"@en ;
                                               rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                              rdfs:label "bleeding event"@en .
+                                              rdfs:label "bleeding event record"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000012
 <http://purl.obolibrary.org/obo/CMEO_0000012> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical event involving the heart or blood vessels that occurs in a patient at a specified time point or during a specified time interval, typically representing an acute episode or outcome relevant to cardiovascular health."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical event record that represents an occurrence involving the heart or blood vessels in a patient at a specified time point or during a specified time interval, typically an acute episode or outcome relevant to cardiovascular health."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000116> """Use for outcome/event variables such as myocardial infarction, stroke, heart failure hospitalization, cardiac arrest, revascularization events, cardiovascular death, or composite endpoints (e.g., MACE) when represented as occurrences. Do not use for chronic diagnoses recorded as ongoing states (classify those as condition), nor for procedures or medication exposures unless the dataset encodes them explicitly as events.
 
 If you want a clean child hierarchy under this class, common subclasses are:
@@ -2606,51 +2570,60 @@ heart failure hospitalization event
 revascularization event
 cardiovascular death event
 major adverse cardiovascular event (composite)"""@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "cardiovascular event"@en ;
                                               rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                              rdfs:label "cardiovascular event"@en ;
+                                              rdfs:label "cardiovascular event record"@en ;
                                               rdfs:seeAlso "http://snomed.info/id/405617006"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000013
 <http://purl.obolibrary.org/obo/CMEO_0000013> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/OAE_0000001"@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity (a data item, e.g. a variable or record) that represents an untoward or harmful occurrence in a patient following a medical intervention (such as the administration of a drug, a procedure, or the use of a medical device), whether or not judged to be caused by it, and that is about the corresponding adverse-event process."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000116> "Modelled in CMEO as an information/record layer term, not the occurrent itself. It 'is about' the underlying process (inherited from 'clinical event') and is cross-referenced via skos:exactMatch to OAE:0000001 'adverse event'. CMEO keeps its own IRI because it is used as an event/outcome descriptor in the metadata scope rather than imported as an OAE pathological process."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "adverse event"@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
-                                              rdfs:label "adverse event"@en .
+                                              rdfs:label "adverse event record"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/OAE_0000001> .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000014
 <http://purl.obolibrary.org/obo/CMEO_0000014> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000013> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/OAE_0000005> ;
-                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                              rdfs:label "adverse drug event"@en .
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An adverse event record that represents an adverse event that follows, and is associated with, the administration of a drug or biological product to a patient."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "adverse drug event"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "adverse drug event record"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/OAE_0000005> .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000015
 <http://purl.obolibrary.org/obo/CMEO_0000015> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000013> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An unintended sign, symptom, or disease (including abnormal laboratory findings) that occurs after a medical treatment or procedure."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An adverse event record that represents a hypersensitivity reaction of the immune system occurring following exposure to an allergen such as a drug, food, or environmental substance."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "allergic reaction"@en ;
                                               rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                              rdfs:label "allergic reaction"@en ;
+                                              rdfs:label "allergic reaction record"@en ;
                                               rdfs:seeAlso "http://purl.obolibrary.org/obo/NCIT_C53782"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000016
 <http://purl.obolibrary.org/obo/CMEO_0000016> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000013> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "a medical device adverse event that is induced or caused by a medical device. There is a causal relation between the adverse event and the usage of a medical device."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An adverse event record that represents an event caused by, or associated with, the use of a medical device, where there is a causal relation between the event and the use of that device."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "device adverse event"@en ;
                                               rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                              rdfs:label "device adverse event"@en ;
+                                              rdfs:label "device adverse event record"@en ;
                                               rdfs:seeAlso "http://purl.obolibrary.org/obo/OAE_0000096"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000017
 <http://purl.obolibrary.org/obo/CMEO_0000017> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical event in which a patient dies, occurring at a specified time point or during a specified time interval."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical event record that represents the death of a patient, occurring at a specified time point or during a specified time interval."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "death"@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
-                                              rdfs:label "death"@en ;
+                                              rdfs:label "death record"@en ;
                                               rdfs:seeAlso "http://snomed.info/id/419620001"@en .
 
 
@@ -2674,15 +2647,20 @@ major adverse cardiovascular event (composite)"""@en ;
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000021
 <http://purl.obolibrary.org/obo/CMEO_0000021> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An inpatient hospital encounter in which a patient is admitted to a hospital for care, typically characterized by an admission and a discharge."@en ;
-                                              rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                              rdfs:label "hospitalization"@en .
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000010> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/CMEO_0000084> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/CMEO_0000004>
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical event record that represents an inpatient hospital encounter in which a patient is admitted to a hospital for care (typically characterized by an admission and a discharge), and that is about the corresponding medical encounter process."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "hospitalization"@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "hospitalization record"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000026
 <http://purl.obolibrary.org/obo/CMEO_0000026> rdf:type owl:Class ;
-                                              rdfs:subClassOf :code_set ,
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000028> ,
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000219> ;
                                                                 owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000030>
@@ -2693,12 +2671,14 @@ major adverse cardiovascular event (composite)"""@en ;
                                                               ] ,
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty <http://purl.obolibrary.org/obo/RO_0002350> ;
-                                                                owl:someValuesFrom :code_set
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0020020>
                                                               ] ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A unique identifier assigned to a concept in a standardized vocabulary (e.g., LOINC, SNOMED)."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A symbol (a string of characters) that is assigned to a concept within a standardized terminology or classification system (e.g., a SNOMED CT or LOINC code) in order to identify and denote that concept."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000116> "Distinct from 'centrally registered identifier' (IAO:0000578): a code identifies/denotes a concept (a universal) in a terminology, not a particular registered in a central registry."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000118> "Concept"@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0006011> <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                              rdfs:label "code"@en .
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "code"@en ;
+                                              rdfs:label "concept code"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000027
@@ -2713,7 +2693,8 @@ major adverse cardiovascular event (composite)"""@en ;
 ###  http://purl.obolibrary.org/obo/CMEO_0000028
 <http://purl.obolibrary.org/obo/CMEO_0000028> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0001933> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "It indicate the missing value indicator for a data element in its dataset"@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000112> "For a weight data element, a missing value specification might state that the code \"-9\" in the dataset means the weight was not measured."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A value specification that specifies the value or code used in a dataset to indicate that the value of a data element is missing, not recorded, or not applicable (e.g., \"NA\", \"-9\", or an empty string)."@en ;
                                               rdfs:label "missing value specification"@en .
 
 
@@ -2736,7 +2717,11 @@ major adverse cardiovascular event (composite)"""@en ;
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000030
 <http://purl.obolibrary.org/obo/CMEO_0000030> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000221> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000019>
+                                                              ] ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A quantitative or ordinal assessment of some attribute of an entity (typically a patient), obtained by applying a measurement procedure, and recorded as a result value with an associated unit or scale when applicable."@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000030> ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
@@ -2756,48 +2741,20 @@ major adverse cardiovascular event (composite)"""@en ;
                                               rdfs:seeAlso "http://www.ebi.ac.uk/efo/EFO_0004302"@en .
 
 
-###  http://purl.obolibrary.org/obo/CMEO_0000032
-<http://purl.obolibrary.org/obo/CMEO_0000032> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A measurement of the blood, it's contents, cells or other factors contained within the blood."@en ;
-                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
-                                              rdfs:label "blood measurement"@en ;
-                                              rdfs:seeAlso "http://purl.obolibrary.org/obo/CMO_0000035"@en .
-
-
 ###  http://purl.obolibrary.org/obo/CMEO_0000033
 <http://purl.obolibrary.org/obo/CMEO_0000033> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000032> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A biomarker that is measured in a blood-derived specimen (e.g., whole blood, plasma, or serum) and used to indicate a biological state, physiological process, or pathological process. It includes  protein, metabolite, lipid, hormone, enzyme activity, cell count, and other analytes quantified from blood samples (e.g., troponin, HbA1c, creatinine, CRP)."@en ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMO_0000035> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A blood measurement of a biomarker, i.e., the quantification, in a blood-derived specimen (whole blood, plasma, or serum), of an analyte used to indicate a biological state, physiological process, or pathological process (e.g., troponin, HbA1c, creatinine, CRP)."@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "blood biomarker"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000034
 <http://purl.obolibrary.org/obo/CMEO_0000034> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000032> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A biomarker that is a protein, or a measurable attribute of a protein (e.g., concentration or activity), used to indicate a biological state, physiological process, or pathological process. Typically measured in a biological specimen such as blood, urine, or tissue (e.g., troponin, BNP/NT-proBNP, CRP, albumin)."@en ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A measurement of a protein biomarker, i.e., the quantification of a protein or of a measurable attribute of a protein (such as concentration or activity), used to indicate a biological state, physiological process, or pathological process, measured in a biological specimen such as blood, urine, or tissue (e.g., troponin, BNP/NT-proBNP, CRP, albumin)."@en ;
                                               rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
                                               rdfs:label "protein biomarker"@en .
-
-
-###  http://purl.obolibrary.org/obo/CMEO_0000035
-<http://purl.obolibrary.org/obo/CMEO_0000035> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A cardiovascular measurement is a measurement of some part of the cardiovascular system and is typically used in the process of disease diagnosis in human patients."@en ;
-                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                              rdfs:label "cardiovascular measurement"@en ;
-                                              rdfs:seeAlso "http://www.ebi.ac.uk/efo/EFO_0004298"@en .
-
-
-###  http://purl.obolibrary.org/obo/CMEO_0000036
-<http://purl.obolibrary.org/obo/CMEO_0000036> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification."@en ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/CMO_0000426"@en ;
-                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                              rdfs:label "consumption measurement"@en ;
-                                              rdfs:seeAlso "http://purl.obolibrary.org/obo/CMO_0000426"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000037
@@ -2813,22 +2770,28 @@ major adverse cardiovascular event (composite)"""@en ;
 <http://purl.obolibrary.org/obo/CMEO_0000038> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A score that quantitatively summarizes functional status and/or behavioral status of a person, derived from a standardized assessment instrument and recorded as a single numeric or ordinal result (e.g., activities of daily living, mobility, self-care, NYHA class, Barthel Index, Katz ADL, MMSE, MoCA, PHQ-9, GAD-7, KCCQ, EQ-5D)."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "functional and behavioral assesment score"@en ;
                                               rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                              rdfs:label "functional and behavioral assesment score"@en .
+                                              rdfs:label "functional and behavioral assessment score"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000039
 <http://purl.obolibrary.org/obo/CMEO_0000039> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An assessment scale used to assign a standardized level, grade, stage, or severity category to a clinical condition, functional status, or other health-related state, typically based on predefined criteria."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "stages and scales"@en ;
                                               rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                              rdfs:label "stages and scales"@en ;
+                                              rdfs:label "clinical assessment scale"@en ;
                                               rdfs:seeAlso "http://snomed.info/id/254291000" .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000040
 <http://purl.obolibrary.org/obo/CMEO_0000040> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/CMEO_0000084> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                              ] ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A measurement that records the elapsed time duration from a specified reference time point (e.g., baseline, diagnosis, treatment start) to the occurrence of a specified event, typically expressed in a time unit."@en ;
                                               rdfs:comment "The reference time point and the event type should be explicitly stated or linked (e.g., time to death, time to rehospitalization, time to first myocardial infarction)."@en ;
                                               rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
@@ -2837,7 +2800,7 @@ major adverse cardiovascular event (composite)"""@en ;
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000041
 <http://purl.obolibrary.org/obo/CMEO_0000041> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000080> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OGMS_0000014> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A medical history is a record of the events of a recipient of medical care."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0006011> "condition occurrence"@en ,
                                                                                            "observation" ;
@@ -2848,20 +2811,26 @@ major adverse cardiovascular event (composite)"""@en ;
 ###  http://purl.obolibrary.org/obo/CMEO_0000042
 <http://purl.obolibrary.org/obo/CMEO_0000042> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000041> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "family history is the systematic narrative and research of past events relating to a specific family, or specific families."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A medical history that records health-relevant conditions, events, or traits occurring in the biological relatives of a patient."@en ;
                                               rdfs:label "family history"@en ;
                                               rdfs:seeAlso "http://semanticscience.org/resource/SIO_010060"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000043
 <http://purl.obolibrary.org/obo/CMEO_0000043> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A category for data elements that represent therapeutic interventions, including medication exposures and non-pharmacological therapies, intended to prevent, manage, or treat a clinical condition."@en ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/CMEO_0000084> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0000011>
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity (a data item) that represents whether, and which, therapeutic intervention — a medication exposure or a non-pharmacological therapy intended to prevent, manage, or treat a clinical condition — was administered to or planned for a patient, and that is about the corresponding intervention process."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "medications and therapies"@en ,
+                                                                                                             "therapeutic intervention"@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "drug exposure"@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000043> ;
                                               rdfs:comment "Prescriptions, over-the-counter meds, hormonal therapy, treatment history"@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
-                                              rdfs:label "medications and therapies"@en .
+                                              rdfs:label "therapeutic intervention record"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000044
@@ -2876,24 +2845,27 @@ major adverse cardiovascular event (composite)"""@en ;
 <http://purl.obolibrary.org/obo/CMEO_0000045> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000044> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "The extent to which a patient’s behavior corresponds to an agreed therapeutic plan, such as taking medication as prescribed or following a recommended therapy regimen."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "compliance or adherence"@en ;
                                               rdfs:isDefinedBy "https://w3id.org/CMEO"@en ;
-                                              rdfs:label "compliance or adherence"@en .
+                                              rdfs:label "treatment adherence"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000046
 <http://purl.obolibrary.org/obo/CMEO_0000046> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000044> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A category for data elements that describe relatively stable characteristics of a person that are used to characterize individuals or populations (e.g., age, sex, ethnicity, education, occupation), typically not representing diagnoses, procedures, or measurements of physiological state."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "demographics"@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
-                                              rdfs:label "demographics"@en .
+                                              rdfs:label "demographic characteristic"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000048
 <http://purl.obolibrary.org/obo/CMEO_0000048> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000044> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A category for data elements that describe a person’s habitual behaviors, exposures, or daily living patterns that may affect health (e.g., smoking, alcohol use, diet, physical activity, sleep), typically reported by the person or observed over time."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "lifestyle and behavior"@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
-                                              rdfs:label "lifestyle and behavior"@en .
+                                              rdfs:label "lifestyle factor"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000049
@@ -2907,16 +2879,21 @@ major adverse cardiovascular event (composite)"""@en ;
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000050
 <http://purl.obolibrary.org/obo/CMEO_0000050> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A healthcare action performed on or for a patient for diagnostic, therapeutic, preventive, or supportive purposes, occurring at a specified time point or during a specified time interval."@en ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/CMEO_0000084> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0000011>
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity (a data item) that represents whether, and which, healthcare procedure was performed on or for a patient for diagnostic, therapeutic, preventive, or supportive purposes, and that is about the corresponding procedure process."@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "procedure"@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "procedure occurrence"@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
-                                              rdfs:label "procedure"@en .
+                                              rdfs:label "procedure record"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000051
 <http://purl.obolibrary.org/obo/CMEO_0000051> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OGMS_0000014> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical finding that is either an objectively observed indication of a patient’s state (a sign) or a subjectively experienced and reported complaint (a symptom)."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0006011> "condition occurrence"@en ,
                                                                                            "observation"@en ;
@@ -2984,23 +2961,18 @@ major adverse cardiovascular event (composite)"""@en ;
 ###  http://purl.obolibrary.org/obo/CMEO_0000059
 <http://purl.obolibrary.org/obo/CMEO_0000059> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "data type of variables such as int, float, str, datetime etc."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A data entity that specifies the kind of values a variable may take, such as integer, floating-point number, string, boolean, or dateTime."@en ;
                                               rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
                                               rdfs:label "data type"@en .
 
 
-###  http://purl.obolibrary.org/obo/CMEO_0000060
-<http://purl.obolibrary.org/obo/CMEO_0000060> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000258> ;
-                                              owl:disjointWith <http://purl.obolibrary.org/obo/STATO_0000251> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/STATO_0000252"@en ;
-                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
-                                              rdfs:label "categorical variable"@en .
-
-
 ###  http://purl.obolibrary.org/obo/CMEO_0000061
 <http://purl.obolibrary.org/obo/CMEO_0000061> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0500000>
+                                                              ] ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that specifies the planned temporal structure of a study, including the sequence of study periods or visits and the timing constraints for when assessments, interventions, and outcomes are collected or evaluated."@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "timeline specification"@en .
@@ -3008,7 +2980,11 @@ major adverse cardiovascular event (composite)"""@en ;
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000062
 <http://purl.obolibrary.org/obo/CMEO_0000062> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0500000>
+                                                              ] ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that specifies the set of variables (data elements) to be collected or derived in a study, as part of the overall study design, including any constraints on what is recorded, when it is recorded, and how it is represented."@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "study design variable specification"@en .
@@ -3016,7 +2992,11 @@ major adverse cardiovascular event (composite)"""@en ;
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000063
 <http://purl.obolibrary.org/obo/CMEO_0000063> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0500000>
+                                                              ] ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A Study Outcome/Endpoint Specification is a Plan Specification that defines the measurable variables used to assess the effectiveness or impact of an intervention, treatment, or observation within a study. Endpoints are classified into Primary Endpoints (the main variable of interest) and Secondary Endpoints (additional measures that provide supporting information)."@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "study outcome specification"@en .
@@ -3050,7 +3030,7 @@ major adverse cardiovascular event (composite)"""@en ;
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000068
 <http://purl.obolibrary.org/obo/CMEO_0000068> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500027> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0002453> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A type of eligibility criteria that indicates whether people who do not have the condition/disease being studied can participate in that clinical study. Indication that participants who do not have a disease or condition, or related conditions or symptoms, under study in the clinical study are permitted to participate in the clinical study."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Komal Gilani"@en ;
                                               rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
@@ -3100,22 +3080,25 @@ major adverse cardiovascular event (composite)"""@en ;
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000074
 <http://purl.obolibrary.org/obo/CMEO_0000074> rdf:type owl:Class ;
-                                              owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://purl.obolibrary.org/obo/cmeo.owlhas_value> ;
-                                                                    owl:someValuesFrom xsd:dateTime
-                                                                  ] ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/CMEO_0000082> ;
+                                                                owl:someValuesFrom xsd:dateTime
+                                                              ] ;
+                                              owl:disjointWith <http://purl.obolibrary.org/obo/CMEO_0000075> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamped measurement datum that records the dateTime at which a process, interval, observation, or study period begins."@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000074> ;
                                               rdfs:label "start time"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000075
 <http://purl.obolibrary.org/obo/CMEO_0000075> rdf:type owl:Class ;
-                                              owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                    owl:onProperty <http://purl.obolibrary.org/obo/cmeo.owlhas_value> ;
-                                                                    owl:someValuesFrom xsd:dateTime
-                                                                  ] ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/CMEO_0000082> ;
+                                                                owl:someValuesFrom xsd:dateTime
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamped measurement datum that records the dateTime at which a process, interval, observation, or study period ends."@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000075> ;
                                               rdfs:label "end time"@en .
 
@@ -3162,6 +3145,7 @@ major adverse cardiovascular event (composite)"""@en ;
                                                                     rdf:type owl:Class
                                                                   ] ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000100> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A homogeneous data collection whose member measurement data are collected over time according to a study protocol that has a timeline specification, so that observations are associated with visits or timepoints."@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMEO_0000077> ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "temporal dataset"@en .
@@ -3179,18 +3163,72 @@ major adverse cardiovascular event (composite)"""@en ;
 ###  http://purl.obolibrary.org/obo/CMEO_0000079
 <http://purl.obolibrary.org/obo/CMEO_0000079> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A process in which an agent obtains authorized access to a data resource, resulting in the ability to view, retrieve, query, or otherwise use the data under specified permissions and constraints."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A planned process in which an agent obtains access to a data resource, resulting in the ability to view, retrieve, query, or otherwise use the data; such access may be governed by specified permissions and constraints."@en ;
                                               rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "data access"@en .
 
 
-###  http://purl.obolibrary.org/obo/CMEO_0000080
-<http://purl.obolibrary.org/obo/CMEO_0000080> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A representation that is either the output of a clinical history taking or a physical examination or an image finding, or some combination thereof. A clinical statement about an organism that is the result of clinical observation or assessment, including observed signs, reported symptoms, and clinician-asserted findings."@en ;
-                                              <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "condition occurrence"@en ;
-                                              rdfs:label "clinical finding"@en ;
-                                              rdfs:seeAlso "http://purl.obolibrary.org/obo/OGMS_0000014"@en .
+###  http://purl.obolibrary.org/obo/CMEO_0000081
+<http://purl.obolibrary.org/obo/CMEO_0000081> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamped measurement datum that records the length of the time interval over which a participant or entity is observed or followed up in a study (e.g., total follow-up time)."@en ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "duration of observation"@en ;
+                                              rdfs:seeAlso <http://purl.obolibrary.org/obo/EUPATH_0000138> .
+
+
+###  http://purl.obolibrary.org/obo/CMEO_0000083
+<http://purl.obolibrary.org/obo/CMEO_0000083> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000063> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical endpoint specification that defines a primary or secondary endpoint as a combination of two or more distinct component outcomes, assessed jointly to evaluate a research hypothesis in a clinical study."@en ;
+                                              rdfs:label "composite endpoint specification"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMO_0000001
+<http://purl.obolibrary.org/obo/CMO_0000001> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A cardiovascular measurement is a measurement of some part of the cardiovascular system and is typically used in the process of disease diagnosis in human patients."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/cmo.owl> ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMO_0000001> ;
+                                             rdfs:label "cardiovascular measurement"@en ;
+                                             rdfs:seeAlso "http://www.ebi.ac.uk/efo/EFO_0004298"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMO_0000035
+<http://purl.obolibrary.org/obo/CMO_0000035> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A measurement of the blood, it's contents, cells or other factors contained within the blood."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/cmo.owl> ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMO_0000035> ;
+                                             rdfs:label "blood measurement"@en .
+
+
+###  http://purl.obolibrary.org/obo/CMO_0000426
+<http://purl.obolibrary.org/obo/CMO_0000426> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/cmo.owl> ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/CMO_0000426> ;
+                                             rdfs:label "consumption measurement"@en .
+
+
+###  http://purl.obolibrary.org/obo/COB_0000022
+<http://purl.obolibrary.org/obo/COB_0000022> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000111> "organism"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000112> "animal"@en ,
+                                                                                          "fungus"@en ,
+                                                                                          "plant"@en ,
+                                                                                          "virus"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000116> "10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and 'other organisms')" ,
+                                                                                          """13-02-2009:
+OBI doesn't take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
+This issue is outside the scope of OBI.""" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000117> "GROUP: OBI Biomaterial Branch" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000119> "WEB: http://en.wikipedia.org/wiki/Organism"@en ;
+                                             rdfs:label "organism"@en .
 
 
 ###  http://purl.obolibrary.org/obo/DUO_0000001
@@ -3225,30 +3263,40 @@ This is better done by Schemablocks and constraining the pattern of usage of DUO
 ###  http://purl.obolibrary.org/obo/DUO_0000004
 <http://purl.obolibrary.org/obo/DUO_0000004> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000001> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "This data use permission indicates there is no restriction on use." ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000004" ;
                                              rdfs:label "no restriction"@en .
 
 
 ###  http://purl.obolibrary.org/obo/DUO_0000006
 <http://purl.obolibrary.org/obo/DUO_0000006> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000042> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry." ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000006" ;
                                              rdfs:label "health or medical or biomedical research"@en .
 
 
 ###  http://purl.obolibrary.org/obo/DUO_0000007
 <http://purl.obolibrary.org/obo/DUO_0000007> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000006> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "This data use permission indicates that use is allowed provided it is related to the specified disease." ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000007" ;
                                              rdfs:label "disease specific research"@en .
 
 
 ###  http://purl.obolibrary.org/obo/DUO_0000011
 <http://purl.obolibrary.org/obo/DUO_0000011> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000001> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "This data use permission indicates that use of the data is limited to the study of population origins or ancestry." ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000011" ;
                                              rdfs:label "population origins or ancestry research only"@en .
 
 
 ###  http://purl.obolibrary.org/obo/DUO_0000016
 <http://purl.obolibrary.org/obo/DUO_0000016> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000017> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "This data use modifier indicates that use is limited to genetic studies only (i.e., studies that include genotype research alone or both genotype and phenotype research, but not phenotype research exclusively)" ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000016" ;
                                              rdfs:label "genetic studies only"@en .
 
 
@@ -3263,12 +3311,16 @@ This is better done by Schemablocks and constraining the pattern of usage of DUO
 ###  http://purl.obolibrary.org/obo/DUO_0000021
 <http://purl.obolibrary.org/obo/DUO_0000021> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000017> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval." ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000021" ;
                                              rdfs:label "ethical approval required"@en .
 
 
 ###  http://purl.obolibrary.org/obo/DUO_0000022
 <http://purl.obolibrary.org/obo/DUO_0000022> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000017> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "This data use modifier indicates that use is limited to within a specific geographic region." ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000022" ;
                                              rdfs:label "geographical restrictions"@en .
 
 
@@ -3378,6 +3430,8 @@ This is better done by Schemablocks and constraining the pattern of usage of DUO
 ###  http://purl.obolibrary.org/obo/DUO_0000042
 <http://purl.obolibrary.org/obo/DUO_0000042> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/DUO_0000001> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "This data use permission indicates that use is allowed for general research use for any research purpose." ;
+                                             <http://www.geneontology.org/formats/oboInOwl#id> "DUO:0000042" ;
                                              rdfs:label "general research use"@en .
 
 
@@ -3758,7 +3812,6 @@ XML document; The instructions in a XSD file\""""@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000118> "data list" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "OBI_0000042"@en ,
                                                                                           "group:OBI"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0100001> "" ;
                                              rdfs:label "dataset"@en .
 
 
@@ -4005,7 +4058,10 @@ points together with a line."""@en ;
 ###  http://purl.obolibrary.org/obo/IAO_0000578
 <http://purl.obolibrary.org/obo/IAO_0000578> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020000> ,
-                                                             :code_set ;
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/RO_0002350> ;
+                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0020020>
+                                                             ] ;
                                              <http://purl.obolibrary.org/obo/IAO_0000112> "The sentence \"The article has Pubmed ID 12345.\" contains a CRID that has two parts: one part is the CRID symbol, which is '12345'; the other part denotes the CRID registry, which is Pubmed."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that consists of a CRID symbol and additional information about the CRID registry to which it belongs."@en ;
@@ -4016,7 +4072,8 @@ points together with a line."""@en ;
                                                                                           "PERSON: Bill Hogan"@en ,
                                                                                           "PERSON: Bjoern Peters"@en ,
                                                                                           "PERSON: Melanie Courtot"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000118> "CRID" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000118> "code"@en ,
+                                                                                          "CRID" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "Original proposal from Bjoern, discussions at IAO calls"@en ;
                                              rdfs:label "centrally registered identifier"@en .
 
@@ -4077,9 +4134,17 @@ points together with a line."""@en ;
                                              rdfs:label "identifier"@en .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0020020
+<http://purl.obolibrary.org/obo/IAO_0020020> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
+                                             rdfs:label "code set"@en .
+
+
 ###  http://purl.obolibrary.org/obo/NCBITaxon_9606
 <http://purl.obolibrary.org/obo/NCBITaxon_9606> rdf:type owl:Class ;
-                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0100026> ;
+                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000022> ;
                                                 <http://purl.obolibrary.org/obo/IAO_0000111> "Homo sapiens" ;
                                                 <http://purl.obolibrary.org/obo/IAO_0000118> "human" ,
                                                                                              "human being" ;
@@ -4110,6 +4175,15 @@ points together with a line."""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000118> "data collection"@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000119> "WEB: http://en.wikipedia.org/wiki/Data_collection" ;
                                               rdfs:label "data collection"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBCS_0000010
+<http://purl.obolibrary.org/obo/OBCS_0000010> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that refers to a distribution of a random variable that can be described using a mathematical formula."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/obcs.owl> ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/OBCS_0000010> ;
+                                              rdfs:label "probability distribution"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBCS_0000013
@@ -4259,7 +4333,7 @@ points together with a line."""@en ;
 
 ###  http://purl.obolibrary.org/obo/OBCS_0000068
 <http://purl.obolibrary.org/obo/OBCS_0000068> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000225> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBCS_0000010> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/OBCS_0000068"@en ;
                                               rdfs:label "frequency distribution"@en .
 
@@ -4448,7 +4522,7 @@ points together with a line."""@en ;
 ###  http://purl.obolibrary.org/obo/OBCS_0000118
 <http://purl.obolibrary.org/obo/OBCS_0000118> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000071> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A quantitative confidence value that expresses how many times more likely the data are under one model than the other. " ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A quantitative confidence value that expresses how many times more likely the data are under one model than the other." ;
                                               <http://purl.obolibrary.org/obo/IAO_0000117> "Yongqun He" ;
                                               <http://purl.obolibrary.org/obo/IAO_0000119> "WEB: http://en.wikipedia.org/wiki/Likelihood-ratio_test" ;
                                               rdfs:label "likelihood ratio" .
@@ -5580,8 +5654,7 @@ https://sourceforge.net/tracker/?func=detail&aid=3512891&group_id=177891&atid=88
                                                              ] ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "measurand role"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A role borne by a material entity and realized in an assay which achieves the objective to measure the magnitude/concentration/amount of the measurand in the entity bearing evaluant role."@en ,
-                                                                                          "A role borne by a material entity and realized in an assay which achieves the objective to measure the magnitude/concentration/amount of the measurand in the entity bearing evaluant role." ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A role borne by a material entity and realized in an assay which achieves the objective to measure the magnitude/concentration/amount of the measurand in the entity bearing evaluant role."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Person: Alan Ruttenberg, Jie Zheng" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wiktionary.org/wiki/measurand" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/obi-ontology/obi/issues/778" ;
@@ -5778,25 +5851,6 @@ https://sourceforge.net/tracker/?func=detail&aid=3512891&group_id=177891&atid=88
                                              owl:deprecated "true"^^xsd:boolean .
 
 
-###  http://purl.obolibrary.org/obo/OBI_0100026
-<http://purl.obolibrary.org/obo/OBI_0100026> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000111> "organism"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000112> "animal"@en ,
-                                                                                          "fungus"@en ,
-                                                                                          "plant"@en ,
-                                                                                          "virus"@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs."@en ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000116> "10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and 'other organisms')" ,
-                                                                                          """13-02-2009:
-OBI doesn't take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
-This issue is outside the scope of OBI.""" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000117> "GROUP: OBI Biomaterial Branch" ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000119> "WEB: http://en.wikipedia.org/wiki/Organism"@en ;
-                                             rdfs:label "organism"@en .
-
-
 ###  http://purl.obolibrary.org/obo/OBI_0100051
 <http://purl.obolibrary.org/obo/OBI_0100051> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
@@ -5804,8 +5858,7 @@ This issue is outside the scope of OBI.""" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000112> "Biobanking of blood taken and stored in a freezer for potential future investigations stores specimen; collecting a stone from a site."@en ,
                                                                                           "Biobanking of blood taken and stored in a freezer for potential future investigations stores specimen." ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A material entity that has the specimen role."@en ,
-                                                                                          "A material entity that is collected for potential use as an input upon which measurements or observations are performed."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A material entity that has the specimen role."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000116> "Note: definition is in specimen creation objective which is defined as an objective to obtain and store a material entity for potential use as an input during an investigation." ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: James Malone" ,
                                                                                           "PERSON: Philippe Rocca-Serra" ;
@@ -5900,8 +5953,7 @@ information_encoding
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "observation design" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000112> "PMID: 12387964.Lancet. 2002 Oct 12;360(9340):1144-9.Deficiency of antibacterial peptides in patients with morbus Kostmann: an observation study." ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "observation design is a study design in which subjects are monitored in the absence of any active intervention by experimentalists."@en ,
-                                                                                          "observation design is a study design in which subjects are monitored in the absence of any active intervention by experimentalists." ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "observation design is a study design in which subjects are monitored in the absence of any active intervention by experimentalists."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Philippe Rocca-Serra" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "OBI branch derived" ;
                                              rdfs:label "observational design"@en .
@@ -5917,8 +5969,7 @@ information_encoding
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "study design"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000112> "a matched pairs study design describes criteria by which subjects are identified as pairs which then undergo the same protocols, and the data generated is analyzed by comparing the differences between the paired subjects, which constitute the results of the executed study design."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution."@en ,
-                                                                                          "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution." ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000116> "Editor note: there is at least an implicit restriction on the kind of data transformations that can be done based on the measured data available." ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Chris Stoeckert" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000118> "experimental design"@en ;
@@ -5945,8 +5996,7 @@ information_encoding
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "repeated measure design" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000112> "PMID: 10959922.J Biopharm Stat. 2000 Aug;10(3):433-45.Equivalence in test assay method comparisons for the repeated-measure, matched-pair design in medical device studies: statistical considerations." ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "a study design which use the same individuals and exposure them to a set of conditions. The effect of order and practice can be confounding factor in such designs"@en ,
-                                                                                          "a study design which use the same individuals and exposure them to a set of conditions. The effect of order and practice can be confounding factor in such designs" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "a study design which use the same individuals and exposure them to a set of conditions. The effect of order and practice can be confounding factor in such designs"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "PlanAndPlannedProcess Branch" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "http://www.holah.karoo.net/experimentaldesigns.htm" ;
                                              rdfs:label "repeated measure design" .
@@ -5958,8 +6008,7 @@ information_encoding
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "cross over design" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000112> "PMID: 17601993-Objective: HIV-infected patients with lipodystrophy (HIV-lipodystrophy) are insulin resistant and have elevated plasma free fatty acid (FFA) concentrations. We aimed to explore the mechanisms underlying FFA-induced insulin resistance in patients with HIV-lipodystrophy. Research Design and Methods: Using a randomized placebo-controlled cross-over design, we studied the effects of an overnight acipimox-induced suppression of FFA on glucose and FFA metabolism by using stable isotope labelled tracer techniques during basal conditions and a two-stage euglycemic, hyperinsulinemic clamp (20 mU insulin/m(2)/min; 50 mU insulin/m(2)/min) in nine patients with nondiabetic HIV-lipodystrophy. All patients received antiretroviral therapy. Biopsies from the vastus lateralis muscle were obtained during each stage of the clamp. Results: Acipimox treatment reduced basal FFA rate of appearance by 68.9% (52.6%-79.5%) and decreased plasma FFA concentration by 51.6 % (42.0%-58.9%), (both, P < 0.0001). Endogenous glucose production was not influenced by acipimox. During the clamp the increase in glucose-uptake was significantly greater after acipimox treatment compared to placebo (acipimox: 26.85 (18.09-39.86) vs placebo: 20.30 (13.67-30.13) mumol/kg/min; P < 0.01). Insulin increased phosphorylation of Akt (Thr(308)) and GSK-3beta (Ser(9)), decreased phosphorylation of glycogen synthase (GS) site 3a+b and increased GS-activity (I-form) in skeletal muscle (P < 0.01). Acipimox decreased phosphorylation of GS (site 3a+b) (P < 0.02) and increased GS-activity (P < 0.01) in muscle. Conclusion: The present study provides direct evidence that suppression of lipolysis in patients with HIV-lipodystrophy improves insulin-stimulated peripheral glucose-uptake. The increased glucose-uptake may in part be explained by increased dephosphorylation of GS (site 3a+b) resulting in increased GS activity." ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "a repeated measure design which ensures that experimental units receive, in sequence, the treatment (or the control), and then, after a specified time interval (aka *wash-out periods*), switch to the control (or treatment). In this design, subjects (patients in human context) serve as their own controls, and randomization may be used to determine the ordering which a subject receives the treatment and control"@en ,
-                                                                                          "a repeated measure design which ensures that experimental units receive, in sequence, the treatment (or the control), and then, after a specified time interval (aka *wash-out periods*), switch to the control (or treatment). In this design, subjects (patients in human context) serve as their own controls, and randomization may be used to determine the ordering which a subject receives the treatment and control" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "a repeated measure design which ensures that experimental units receive, in sequence, the treatment (or the control), and then, after a specified time interval (aka *wash-out periods*), switch to the control (or treatment). In this design, subjects (patients in human context) serve as their own controls, and randomization may be used to determine the ordering which a subject receives the treatment and control"@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Philippe Rocca-Serra" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "(source: http://www.sbu.se/Filer/Content0/publikationer/1/literaturesearching_1993/glossary.html)" ;
                                              rdfs:label "cross over design" .
@@ -5970,8 +6019,7 @@ information_encoding
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500003> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "n-to-1 design" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "N-of-1 design is a cross-over design in which the same patient is repeatedly randomised to receive either the experimental treatment or its control (Senn, 1993)."@en ,
-                                                                                          "N-of-1 design is a cross-over design in which the same patient is repeatedly randomised to receive either the experimental treatment or its control (Senn, 1993)." ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "N-of-1 design is a cross-over design in which the same patient is repeatedly randomised to receive either the experimental treatment or its control (Senn, 1993)."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Philippe Rocca-Serra" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from  http://www.childrens-mercy.org/stats/definitions/crossover.htm and source:http://symptomresearch.nih.gov/chapter_6/sec1/csss1pg1.htm)" ;
                                              rdfs:label "n-to-1 design" .
@@ -5983,8 +6031,7 @@ information_encoding
                                              <http://purl.obolibrary.org/obo/IAO_0000111> "randomized complete block design" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000112> "http://www.stats.gla.ac.uk/steps/glossary/anova.html,(A researcher is carrying out a study of the effectiveness of four different skin creams for the treatment of a certain skin disease. He has eighty subjects and plans to divide them into 4 treatment groups of twenty subjects each. Using a randomised blocks& design, the subjects are assessed and put in blocks of four according to how severe their skin condition is; the four most severe cases are the first block, the next four most severe cases are the second block, and so on to the twentieth block. The four &members of each block are then randomly assigned, one to each of the four treatment groups. http://www.stats.gla.ac.uk/steps/glossary/anova.html#rbd))" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
-                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A randomized complete block design is_a study design which assigns randomly treatments to block. The number of units per block equals the number of treatment so each block receives each treatment exactly once (hence the qualifier 'complete'). The design was originally devised from field trials used in agronomy and agriculture. The analysis assumes that there is no interaction between block and treatment. The method was then used in other settings So The randomised complete block design is a design in which the subjects are matched according to a variable which the experimenter wishes to control. The subjects are put into groups (blocks) of the same size as the number of treatments. The members of each block are then randomly assigned to different treatment groups."@en ,
-                                                                                          "A randomized complete block design is_a study design which assigns randomly treatments to block. The number of units per block equals the number of treatment so each block receives each treatment exactly once (hence the qualifier 'complete'). The design was originally devised from field trials used in agronomy and agriculture. The analysis assumes that there is no interaction between block and treatment. The method was then used in other settings So The randomised complete block design is a design in which the subjects are matched according to a variable which the experimenter wishes to control. The subjects are put into groups (blocks) of the same size as the number of treatments. The members of each block are then randomly assigned to different treatment groups." ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A randomized complete block design is_a study design which assigns randomly treatments to block. The number of units per block equals the number of treatment so each block receives each treatment exactly once (hence the qualifier 'complete'). The design was originally devised from field trials used in agronomy and agriculture. The analysis assumes that there is no interaction between block and treatment. The method was then used in other settings So The randomised complete block design is a design in which the subjects are matched according to a variable which the experimenter wishes to control. The subjects are put into groups (blocks) of the same size as the number of treatments. The members of each block are then randomly assigned to different treatment groups."@en ;
                                              <http://purl.obolibrary.org/obo/IAO_0000117> "Philippe Rocca-Serra" ;
                                              <http://purl.obolibrary.org/obo/IAO_0000119> "http://www.tufts.edu/~gdallal/ranblock.htm" ;
                                              rdfs:label "randomized complete block design" .
@@ -6063,6 +6110,20 @@ defines and states the requirements (positive or negative) for an entity to be c
                                              rdfs:label "donor role"@en .
 
 
+###  http://purl.obolibrary.org/obo/OGMS_0000014
+<http://purl.obolibrary.org/obo/OGMS_0000014> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000076> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000016>
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A representation that is either the output of a clinical history taking or a physical examination or an image finding, or some combination thereof. A clinical statement about an organism that is the result of clinical observation or assessment, including observed signs, reported symptoms, and clinician-asserted findings."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/ogms.owl> ;
+                                              <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "condition occurrence"@en ;
+                                              <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/OGMS_0000014> ;
+                                              rdfs:label "clinical finding"@en .
+
+
 ###  http://purl.obolibrary.org/obo/OGMS_0000023
 <http://purl.obolibrary.org/obo/OGMS_0000023> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
@@ -6076,8 +6137,7 @@ defines and states the requirements (positive or negative) for an entity to be c
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/PATO_0001241> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000111> "morphology" ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A quality of a single physical entity inhering in the bearer by virtue of the bearer's size or shape or structure." ;
-                                              rdfs:label "morphology"@en ,
-                                                         "morphology" .
+                                              rdfs:label "morphology"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0000125
@@ -6094,6 +6154,13 @@ defines and states the requirements (positive or negative) for an entity to be c
                                               <http://purl.obolibrary.org/obo/IAO_0000111> "physical quality" ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities." ;
                                               rdfs:label "physical quality" .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0001236
+<http://purl.obolibrary.org/obo/PATO_0001236> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A quality which inheres in a process."@en ;
+                                              rdfs:label "process quality"@en .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0001241
@@ -6197,7 +6264,12 @@ defines and states the requirements (positive or negative) for an entity to be c
 
 ###  http://purl.obolibrary.org/obo/STATO_0000087
 <http://purl.obolibrary.org/obo/STATO_0000087> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000060> ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000252> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/OBI_0001938> ;
+                                                                 owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                                                                 owl:onClass <http://purl.obolibrary.org/obo/OBI_0001930>
+                                                               ] ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "variable with more than two categories"@en ;
                                                <http://purl.obolibrary.org/obo/IAO_0000118> "polychotomous variable"@en ;
                                                <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/STATO_0000087"@en ;
@@ -6209,7 +6281,12 @@ defines and states the requirements (positive or negative) for an entity to be c
 
 ###  http://purl.obolibrary.org/obo/STATO_0000090
 <http://purl.obolibrary.org/obo/STATO_0000090> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000087> ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000252> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/OBI_0001938> ;
+                                                                 owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                 owl:onClass <http://purl.obolibrary.org/obo/OBI_0001930>
+                                                               ] ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "variable with only two categories"@en ;
                                                <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/STATO_0000090"@en ;
                                                rdfs:isDefinedBy "https://w3id.org/cmeo#"@en ;
@@ -6227,7 +6304,7 @@ defines and states the requirements (positive or negative) for an entity to be c
 
 ###  http://purl.obolibrary.org/obo/STATO_0000142
 <http://purl.obolibrary.org/obo/STATO_0000142> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000071> ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000039> ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "The correlation coefficient of two variables in a data sample is their covariance divided by the product of their individual standard deviations. It is a normalized measurement of how the two are linearly related."@en ;
                                                rdfs:label "correlation coefficient"@en .
 
@@ -6261,13 +6338,6 @@ Spearman's coefficient may be used when the conditions for computing Pearson's c
                                                rdfs:label "tetrachoric correlation coefficient"@en .
 
 
-###  http://purl.obolibrary.org/obo/STATO_0000225
-<http://purl.obolibrary.org/obo/STATO_0000225> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
-                                               <http://purl.obolibrary.org/obo/IAO_0000412> "http://purl.obolibrary.org/obo/OBCS_0000010"@en ;
-                                               rdfs:label "probability distribution"@en .
-
-
 ###  http://purl.obolibrary.org/obo/STATO_0000240
 <http://purl.obolibrary.org/obo/STATO_0000240> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000142> ;
@@ -6277,12 +6347,30 @@ Spearman's coefficient may be used when the conditions for computing Pearson's c
 
 ###  http://purl.obolibrary.org/obo/STATO_0000251
 <http://purl.obolibrary.org/obo/STATO_0000251> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000258> ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000258> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/OBI_0001938> ;
+                                                                 owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0001931>
+                                                               ] ;
+                                               owl:disjointWith <http://purl.obolibrary.org/obo/STATO_0000252> ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "A continuous variable over a particular range of the real numbers is one whose value in that range must be such that, if the variable can take values a and b in that range, then it can also take any value between a and b." ;
                                                <http://purl.obolibrary.org/obo/IAO_0000116> "We will link continuous variable to measurement scale." ;
                                                <http://purl.obolibrary.org/obo/IAO_0000117> "Jie Zheng, Yongqun He" ;
                                                <http://purl.obolibrary.org/obo/IAO_0000119> "WEB: https://en.wikipedia.org/wiki/Continuous_and_discrete_variables" ;
                                                rdfs:label "continuous variable"@en .
+
+
+###  http://purl.obolibrary.org/obo/STATO_0000252
+<http://purl.obolibrary.org/obo/STATO_0000252> rdf:type owl:Class ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000258> ,
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty <http://purl.obolibrary.org/obo/OBI_0001938> ;
+                                                                 owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0001930>
+                                                               ] ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A variable that can take one of a limited, usually fixed, number of possible values, assigning each unit of observation to a particular group or category on the basis of some qualitative property."@en ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/stato.owl> ;
+                                               <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/STATO_0000252> ;
+                                               rdfs:label "categorical variable"@en .
 
 
 ###  http://purl.obolibrary.org/obo/STATO_0000258
@@ -6328,37 +6416,6 @@ The coefficient is calculated by dividing their covariance with the product of t
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/STATO_0000142> ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "Matthews Correlation Coefficient (or MCC) is a correlation coefficient which is a measure of the quality of binary (two-class) classifications, introduced by biochemist Brian W. Matthews in 1975." ;
                                                rdfs:label "Matthews correlation coefficient" .
-
-
-###  http://purl.obolibrary.org/obo/cmeo.owlduration_of_observation
-<http://purl.obolibrary.org/obo/cmeo.owlduration_of_observation> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000416> ;
-                                                                 rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                                                 rdfs:label "duration of observation"@en ;
-                                                                 rdfs:seeAlso <http://purl.obolibrary.org/obo/EUPATH_0000138> .
-
-
-###  http://purl.obolibrary.org/obo/cmeo.owl#code_set
-:code_set rdf:type owl:Class ;
-          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
-          <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things."@en ;
-          <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/iao.owl> ;
-          <http://www.geneontology.org/formats/oboInOwl#id> <http://purl.obolibrary.org/obo/IAO_0020020> ;
-          rdfs:label "code set"@en .
-
-
-###  http://purl.obolibrary.org/obo/cmeo.owl#composite_endpoint_specification
-:composite_endpoint_specification rdf:type owl:Class ;
-                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000063> ;
-                                  <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical endpoint specification that defines a primary or secondary endpoint as a combination of two or more distinct component outcomes, assessed jointly to evaluate a research hypothesis in a clinical study."@en ;
-                                  rdfs:label "composite endpoint specification"@en .
-
-
-###  http://semanticscience.org/resource/SIO_000027
-<http://semanticscience.org/resource/SIO_000027> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
-                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A process quality is quality that is associated with a process."@en ;
-                                                 rdfs:label "process quality"@en .
 
 
 ###  http://semanticscience.org/resource/SIO_000033
@@ -6733,6 +6790,15 @@ rdfs:label <http://purl.obolibrary.org/obo/IAO_0000111> "label" ;
   owl:members ( <http://purl.obolibrary.org/obo/BFO_0000142>
                 <http://purl.obolibrary.org/obo/BFO_0000146>
                 <http://purl.obolibrary.org/obo/BFO_0000147>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/CMEO_0000030>
+                <http://purl.obolibrary.org/obo/CMEO_0000043>
+                <http://purl.obolibrary.org/obo/CMEO_0000050>
+                <http://purl.obolibrary.org/obo/OGMS_0000014>
               )
 ] .
 

@@ -2,13 +2,86 @@
   "@id" : "_:genid100",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/RO_0000087"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000202"
+  } ]
+}, {
+  "@id" : "_:genid102",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000293"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid103"
+  } ]
+}, {
+  "@id" : "_:genid103",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000219"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid104"
+  } ]
+}, {
+  "@id" : "_:genid104",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/RO_0000053"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000097"
+  } ]
+}, {
+  "@id" : "_:genid105",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000293"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+  } ]
+}, {
+  "@id" : "_:genid106",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/RO_0000057"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid101"
+    "@id" : "_:genid107"
   } ]
 }, {
-  "@id" : "_:genid101",
+  "@id" : "_:genid107",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/RO_0000087"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000202"
+  } ]
+}, {
+  "@id" : "_:genid108",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid113"
+    }, {
+      "@id" : "_:genid110"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid110",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/RO_0000057"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid111"
+  } ]
+}, {
+  "@id" : "_:genid111",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/RO_0000087"
@@ -17,7 +90,7 @@
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000097"
   } ]
 }, {
-  "@id" : "_:genid103",
+  "@id" : "_:genid113",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000050"
@@ -26,7 +99,7 @@
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000810"
   } ]
 }, {
-  "@id" : "_:genid104",
+  "@id" : "_:genid114",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0001938"
@@ -35,7 +108,7 @@
     "@id" : "http://purl.obolibrary.org/obo/OBI_0001930"
   } ]
 }, {
-  "@id" : "_:genid105",
+  "@id" : "_:genid115",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -45,7 +118,7 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000039"
   } ]
 }, {
-  "@id" : "_:genid106",
+  "@id" : "_:genid116",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/RO_0000081"
@@ -54,87 +127,23 @@
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000040"
   } ]
 }, {
-  "@id" : "_:genid107",
+  "@id" : "_:genid117",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://purl.obolibrary.org/obo/IAO_0020000"
     }, {
-      "@id" : "_:genid109"
+      "@id" : "_:genid119"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid109",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/IAO_0000219"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid110"
-  } ]
-}, {
-  "@id" : "_:genid110",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0000087"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000097"
-  } ]
-}, {
-  "@id" : "_:genid112",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/IAO_0000027"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000293"
-  } ]
-}, {
-  "@id" : "_:genid113",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid114"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000299"
-  } ]
-}, {
-  "@id" : "_:genid114",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.obolibrary.org/obo/IAO_0000038"
-    }, {
-      "@id" : "http://purl.obolibrary.org/obo/IAO_0000101"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid117",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/BFO_0000051"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000272"
-  } ]
-}, {
-  "@id" : "_:genid118",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/IAO_0000136"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000009"
   } ]
 }, {
   "@id" : "_:genid119",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/IAO_0000136"
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000219"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/BFO_0000015"
+    "@id" : "_:genid120"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -148,6 +157,123 @@
   } ]
 }, {
   "@id" : "_:genid120",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/RO_0000087"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000097"
+  } ]
+}, {
+  "@id" : "_:genid122",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000027"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000293"
+  } ]
+}, {
+  "@id" : "_:genid123",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid124"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000299"
+  } ]
+}, {
+  "@id" : "_:genid124",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.obolibrary.org/obo/IAO_0000038"
+    }, {
+      "@id" : "http://purl.obolibrary.org/obo/IAO_0000101"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid127",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000051"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000272"
+  } ]
+}, {
+  "@id" : "_:genid128",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000136"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000016"
+  } ]
+}, {
+  "@id" : "_:genid129",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0001930"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0001938"
+  } ]
+}, {
+  "@id" : "_:genid130",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0001930"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0001938"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "_:genid131",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0001938"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0001931"
+  } ]
+}, {
+  "@id" : "_:genid132",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0001938"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0001930"
+  } ]
+}, {
+  "@id" : "_:genid133",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000136"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000009"
+  } ]
+}, {
+  "@id" : "_:genid134",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000136"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000015"
+  } ]
+}, {
+  "@id" : "_:genid135",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -159,7 +285,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid124",
+  "@id" : "_:genid139",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -171,7 +297,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid128",
+  "@id" : "_:genid143",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -185,7 +311,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid133",
+  "@id" : "_:genid148",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -199,7 +325,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid138",
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.obolibrary.org/obo/BFO_0000004"
+    }, {
+      "@id" : "_:genid17"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid153",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -211,22 +347,36 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid142",
+  "@id" : "_:genid157",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030"
+    }, {
+      "@id" : "http://purl.obolibrary.org/obo/CMEO_0000043"
+    }, {
+      "@id" : "http://purl.obolibrary.org/obo/CMEO_0000050"
+    }, {
+      "@id" : "http://purl.obolibrary.org/obo/OGMS_0000014"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid162",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid146"
+      "@id" : "_:genid166"
     }, {
-      "@id" : "_:genid144"
+      "@id" : "_:genid164"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid148"
+      "@id" : "_:genid168"
     } ]
   } ]
 }, {
-  "@id" : "_:genid144",
+  "@id" : "_:genid164",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#d"
@@ -235,7 +385,7 @@
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000016"
   } ]
 }, {
-  "@id" : "_:genid146",
+  "@id" : "_:genid166",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -247,7 +397,7 @@
     "@id" : "http://purl.obolibrary.org/obo/RO_0000053"
   } ]
 }, {
-  "@id" : "_:genid148",
+  "@id" : "_:genid168",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -259,32 +409,28 @@
     "@id" : "http://purl.obolibrary.org/obo/RO_0000091"
   } ]
 }, {
-  "@id" : "_:genid149",
+  "@id" : "_:genid169",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid153"
+      "@id" : "_:genid173"
     }, {
-      "@id" : "_:genid151"
+      "@id" : "_:genid171"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid155"
+      "@id" : "_:genid175"
     } ]
   } ]
 }, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.obolibrary.org/obo/BFO_0000004"
-    }, {
-      "@id" : "_:genid17"
-    } ]
+  "http://www.w3.org/2002/07/owl#complementOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000006"
   } ]
 }, {
-  "@id" : "_:genid151",
+  "@id" : "_:genid171",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#d"
@@ -293,7 +439,7 @@
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000019"
   } ]
 }, {
-  "@id" : "_:genid153",
+  "@id" : "_:genid173",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -305,7 +451,7 @@
     "@id" : "http://purl.obolibrary.org/obo/RO_0000053"
   } ]
 }, {
-  "@id" : "_:genid155",
+  "@id" : "_:genid175",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -317,22 +463,22 @@
     "@id" : "http://purl.obolibrary.org/obo/RO_0000086"
   } ]
 }, {
-  "@id" : "_:genid156",
+  "@id" : "_:genid176",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid160"
+      "@id" : "_:genid180"
     }, {
-      "@id" : "_:genid158"
+      "@id" : "_:genid178"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid162"
+      "@id" : "_:genid182"
     } ]
   } ]
 }, {
-  "@id" : "_:genid158",
+  "@id" : "_:genid178",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#d"
@@ -341,7 +487,7 @@
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000023"
   } ]
 }, {
-  "@id" : "_:genid160",
+  "@id" : "_:genid180",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -353,7 +499,7 @@
     "@id" : "http://purl.obolibrary.org/obo/RO_0000053"
   } ]
 }, {
-  "@id" : "_:genid162",
+  "@id" : "_:genid182",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -365,22 +511,22 @@
     "@id" : "http://purl.obolibrary.org/obo/RO_0000087"
   } ]
 }, {
-  "@id" : "_:genid163",
+  "@id" : "_:genid183",
   "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
   "http://www.w3.org/2003/11/swrl#body" : [ {
     "@list" : [ {
-      "@id" : "_:genid167"
+      "@id" : "_:genid187"
     }, {
-      "@id" : "_:genid165"
+      "@id" : "_:genid185"
     } ]
   } ],
   "http://www.w3.org/2003/11/swrl#head" : [ {
     "@list" : [ {
-      "@id" : "_:genid169"
+      "@id" : "_:genid189"
     } ]
   } ]
 }, {
-  "@id" : "_:genid165",
+  "@id" : "_:genid185",
   "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#d"
@@ -389,7 +535,7 @@
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000034"
   } ]
 }, {
-  "@id" : "_:genid167",
+  "@id" : "_:genid187",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -401,7 +547,7 @@
     "@id" : "http://purl.obolibrary.org/obo/RO_0000053"
   } ]
 }, {
-  "@id" : "_:genid169",
+  "@id" : "_:genid189",
   "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
   "http://www.w3.org/2003/11/swrl#argument1" : [ {
     "@id" : "urn:swrl#e"
@@ -411,12 +557,6 @@
   } ],
   "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
     "@id" : "http://purl.obolibrary.org/obo/RO_0000085"
-  } ]
-}, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#complementOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/BFO_0000006"
   } ]
 }, {
   "@id" : "_:genid19",
@@ -501,13 +641,31 @@
   "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000084"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000015"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000084"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000004"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000219"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
   } ]
 }, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000312"
@@ -516,16 +674,16 @@
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000007"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/RO_0002350"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#code_set"
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0020020"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000219"
@@ -534,7 +692,7 @@
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000026"
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000312"
@@ -543,7 +701,16 @@
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000007"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000221"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000019"
+  } ]
+}, {
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000003"
@@ -552,86 +719,83 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000039"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owlhas_value"
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000084"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "_:genid37",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owlhas_value"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
-  } ]
-}, {
-  "@id" : "_:genid38",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.obolibrary.org/obo/IAO_0000100"
-    }, {
-      "@id" : "_:genid40"
-    } ]
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000015"
   } ]
 }, {
   "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0002351"
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000084"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid41"
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
   } ]
 }, {
   "@id" : "_:genid41",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.obolibrary.org/obo/IAO_0000109"
-    }, {
-      "@id" : "_:genid43"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000084"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000050"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0500000"
   } ]
 }, {
   "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000312"
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000050"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid44"
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0500000"
   } ]
 }, {
   "@id" : "_:genid44",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.obolibrary.org/obo/OBCS_0000002"
-    }, {
-      "@id" : "_:genid46"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000050"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0500000"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000082"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0000059"
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000082"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid47"
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://purl.obolibrary.org/obo/OBI_0000272"
+      "@id" : "http://purl.obolibrary.org/obo/IAO_0000100"
     }, {
       "@id" : "_:genid49"
     } ]
@@ -640,23 +804,80 @@
   "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/RO_0002351"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid50"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.obolibrary.org/obo/IAO_0000109"
+    }, {
+      "@id" : "_:genid52"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000312"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid53"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.obolibrary.org/obo/OBCS_0000002"
+    }, {
+      "@id" : "_:genid55"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/RO_0000059"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid56"
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.obolibrary.org/obo/OBI_0000272"
+    }, {
+      "@id" : "_:genid58"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid58",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000051"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000061"
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://purl.obolibrary.org/obo/BFO_0000019"
     }, {
-      "@id" : "_:genid56"
+      "@id" : "_:genid65"
     } ]
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/RO_0000059"
@@ -665,7 +886,7 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000136"
@@ -674,55 +895,60 @@
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000017"
   } ]
 }, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://purl.obolibrary.org/obo/IAO_0000027"
     }, {
-      "@id" : "_:genid61"
+      "@id" : "_:genid70"
     } ]
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid7",
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000295"
+  } ]
+}, {
+  "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/RO_0002351"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid62"
+    "@id" : "_:genid71"
   } ]
 }, {
-  "@id" : "_:genid62",
+  "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://purl.obolibrary.org/obo/IAO_0000109"
     }, {
-      "@id" : "_:genid64"
+      "@id" : "_:genid73"
     } ]
   } ]
 }, {
-  "@id" : "_:genid64",
+  "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000312"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid65"
+    "@id" : "_:genid74"
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid74",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://purl.obolibrary.org/obo/OBCS_0000002"
     }, {
-      "@id" : "_:genid67"
+      "@id" : "_:genid76"
     } ]
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/RO_0000059"
@@ -731,12 +957,12 @@
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000272"
   } ]
 }, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid8",
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000295"
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000312"
   } ]
 }, {
-  "@id" : "_:genid71",
+  "@id" : "_:genid80",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000295"
@@ -745,7 +971,7 @@
     "@id" : "http://purl.obolibrary.org/obo/OBI_0200111"
   } ]
 }, {
-  "@id" : "_:genid72",
+  "@id" : "_:genid81",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000051"
@@ -754,7 +980,16 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000005"
   } ]
 }, {
-  "@id" : "_:genid73",
+  "@id" : "_:genid82",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/RO_0002350"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0020020"
+  } ]
+}, {
+  "@id" : "_:genid83",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000293"
@@ -763,7 +998,7 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
   } ]
 }, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid84",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000299"
@@ -772,19 +1007,19 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
   } ]
 }, {
-  "@id" : "_:genid75",
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "http://purl.obolibrary.org/obo/IAO_0000027"
     }, {
-      "@id" : "_:genid79"
+      "@id" : "_:genid89"
     }, {
-      "@id" : "_:genid77"
+      "@id" : "_:genid87"
     } ]
   } ]
 }, {
-  "@id" : "_:genid77",
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -797,74 +1032,13 @@
     "@id" : "http://purl.obolibrary.org/obo/RO_0002351"
   } ]
 }, {
-  "@id" : "_:genid79",
+  "@id" : "_:genid89",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000100"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/RO_0002351"
-  } ]
-}, {
-  "@id" : "_:genid8",
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000312"
-  } ]
-}, {
-  "@id" : "_:genid81",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/BFO_0000051"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000471"
-  } ]
-}, {
-  "@id" : "_:genid82",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
-    }, {
-      "@id" : "_:genid84"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid84",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/BFO_0000055"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid85"
-  } ]
-}, {
-  "@id" : "_:genid85",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0000059"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0500000"
-  } ]
-}, {
-  "@id" : "_:genid87",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid92"
-    }, {
-      "@id" : "_:genid89"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid89",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0000057"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid90"
   } ]
 }, {
   "@id" : "_:genid9",
@@ -877,77 +1051,60 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid90",
+  "@id" : "_:genid91",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0000087"
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000051"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000202"
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0000471"
   } ]
 }, {
   "@id" : "_:genid92",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000293"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid93"
-  } ]
-}, {
-  "@id" : "_:genid93",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/IAO_0000219"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid94"
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
+    }, {
+      "@id" : "_:genid94"
+    } ]
   } ]
 }, {
   "@id" : "_:genid94",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0000053"
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000055"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000097"
+    "@id" : "_:genid95"
   } ]
 }, {
   "@id" : "_:genid95",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000293"
+    "@id" : "http://purl.obolibrary.org/obo/RO_0000059"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/NCBITaxon_9606"
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0500000"
   } ]
 }, {
-  "@id" : "_:genid96",
+  "@id" : "_:genid97",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid102"
+    }, {
+      "@id" : "_:genid99"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid99",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.obolibrary.org/obo/RO_0000057"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid97"
-  } ]
-}, {
-  "@id" : "_:genid97",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/RO_0000087"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000202"
-  } ]
-}, {
-  "@id" : "_:genid98",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid103"
-    }, {
-      "@id" : "_:genid100"
-    } ]
+    "@id" : "_:genid100"
   } ]
 }, {
   "@id" : "http://protege.stanford.edu/plugins/owl/protege#defaultLanguage",
@@ -2681,7 +2838,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "Wearable devices such as activity trackers are an example of the Internet of things, since \"things\" such as electronics, software, sensors, and connectivity are effectors that enable objects to exchange data (including data quality[5]) through the internet with a manufacturer, operator, and/or other connected devices, without requiring human intervention."
+    "@value" : "A device that is designed to be worn on, or attached to, the body of a person and that senses, records, or transmits data about the wearer's physiological, behavioral, or environmental state, continuously or intermittently."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000118" : [ {
     "@language" : "en",
@@ -2706,11 +2863,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A sensor that is worn on the body (or embedded in a wearable item) and is designed to detect and record one or more physiological, behavioral, or environmental properties of a person over time."
+    "@value" : "A device that is worn on the body, or embedded in a wearable item, and that detects and records one or more physiological, behavioral, or environmental properties of a person over time."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "sensor"
+    "@value" : "wearable sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -2728,6 +2889,10 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000004",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A process consisting of an interaction between a patient and one or more healthcare providers for the purpose of assessing, monitoring, or managing the patient's health, occurring at a point in time or over a time interval."
+  } ],
   "http://purl.obolibrary.org/obo/IAO_0000117" : [ {
     "@language" : "en",
     "@value" : "medical visit"
@@ -2751,7 +2916,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "linking a concept to unique identifier in respective domain standard such as linking variable bp to blood pressure concept in SNOMED"
+    "@value" : "A planned process that links a concept to a unique identifier in the respective domain standard (for example, linking the variable 'bp' to the blood pressure concept in SNOMED)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
@@ -2770,16 +2935,16 @@
     "@language" : "en",
     "@value" : "An information content entity that specifies a mathematical or logical expression used to compute a derived value from one or more input variables, parameters, or constants."
   } ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
     "@language" : "en",
-    "@value" : "http://purl.obolibrary.org/obo/chebi/formula"
+    "@value" : "formula"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/cmeo#"
+    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "formula"
+    "@value" : "variable derivation formula"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
@@ -2812,25 +2977,38 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A recorded statement indicating that a clinically relevant occurrence happened to a patient at a particular time or during a time interval (e.g., death, hospitalization, myocardial infarction, adverse event)."
+    "@value" : "An information content entity (a data item, e.g. a variable or record) that represents the occurrence of a clinically relevant event for a patient at a point in time or over a time interval (e.g., a death, a hospitalization, a myocardial infarction), and that is about the corresponding real-world process."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+  "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
     "@language" : "en",
-    "@value" : "https://w3id.org/CMEO"
+    "@value" : "CMEO mints the information/record layer, not the occurrent. This class is the record or variable about the event; it 'is about' (IAO:0000136) the underlying process (BFO:0000015). The real-world occurrence itself is not minted in CMEO but referenced via 'is about' and, where relevant, cross-referenced to process ontologies (e.g. OAE for adverse events)."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
     "@language" : "en",
     "@value" : "clinical event"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "clinical event record"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000044"
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000027"
+  }, {
+    "@id" : "_:genid30"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000011",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A clinical event in which bleeding occurs in a patient, characterized by the loss of blood from the circulatory system to an external site or into tissues or body cavities, at a specified time point or during a specified time interval."
+    "@value" : "A clinical event record that represents an occurrence of bleeding in a patient — the loss of blood from the circulatory system to an external site or into tissues or body cavities — at a specified time point or during a specified time interval."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "bleeding event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
@@ -2838,7 +3016,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "bleeding event"
+    "@value" : "bleeding event record"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000010"
@@ -2848,11 +3026,15 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A clinical event involving the heart or blood vessels that occurs in a patient at a specified time point or during a specified time interval, typically representing an acute episode or outcome relevant to cardiovascular health."
+    "@value" : "A clinical event record that represents an occurrence involving the heart or blood vessels in a patient at a specified time point or during a specified time interval, typically an acute episode or outcome relevant to cardiovascular health."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
     "@language" : "en",
     "@value" : "Use for outcome/event variables such as myocardial infarction, stroke, heart failure hospitalization, cardiac arrest, revascularization events, cardiovascular death, or composite endpoints (e.g., MACE) when represented as occurrences. Do not use for chronic diagnoses recorded as ongoing states (classify those as condition), nor for procedures or medication exposures unless the dataset encodes them explicitly as events.\n\nIf you want a clean child hierarchy under this class, common subclasses are:\n\nmyocardial infarction event\nstroke event\nheart failure hospitalization event\nrevascularization event\ncardiovascular death event\nmajor adverse cardiovascular event (composite)"
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "cardiovascular event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
@@ -2860,7 +3042,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "cardiovascular event"
+    "@value" : "cardiovascular event record"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -2872,43 +3054,65 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000013",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "http://purl.obolibrary.org/obo/OAE_0000001"
+    "@value" : "An information content entity (a data item, e.g. a variable or record) that represents an untoward or harmful occurrence in a patient following a medical intervention (such as the administration of a drug, a procedure, or the use of a medical device), whether or not judged to be caused by it, and that is about the corresponding adverse-event process."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
+    "@language" : "en",
+    "@value" : "Modelled in CMEO as an information/record layer term, not the occurrent itself. It 'is about' the underlying process (inherited from 'clinical event') and is cross-referenced via skos:exactMatch to OAE:0000001 'adverse event'. CMEO keeps its own IRI because it is used as an event/outcome descriptor in the metadata scope rather than imported as an OAE pathological process."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "adverse event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "adverse event"
+    "@value" : "adverse event record"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000010"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OAE_0000001"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000014",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OAE_0000005"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "https://w3id.org/CMEO"
+    "@value" : "An adverse event record that represents an adverse event that follows, and is associated with, the administration of a drug or biological product to a patient."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
     "@language" : "en",
     "@value" : "adverse drug event"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "adverse drug event record"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000013"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OAE_0000005"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000015",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "An unintended sign, symptom, or disease (including abnormal laboratory findings) that occurs after a medical treatment or procedure."
+    "@value" : "An adverse event record that represents a hypersensitivity reaction of the immune system occurring following exposure to an allergen such as a drug, food, or environmental substance."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "allergic reaction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
@@ -2916,7 +3120,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "allergic reaction"
+    "@value" : "allergic reaction record"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -2930,7 +3134,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "a medical device adverse event that is induced or caused by a medical device. There is a causal relation between the adverse event and the usage of a medical device."
+    "@value" : "An adverse event record that represents an event caused by, or associated with, the use of a medical device, where there is a causal relation between the event and the use of that device."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "device adverse event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
@@ -2938,7 +3146,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "device adverse event"
+    "@value" : "device adverse event record"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -2952,14 +3160,18 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A clinical event in which a patient dies, occurring at a specified time point or during a specified time interval."
+    "@value" : "A clinical event record that represents the death of a patient, occurring at a specified time point or during a specified time interval."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "death"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "death"
+    "@value" : "death record"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
@@ -3017,25 +3229,34 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "An inpatient hospital encounter in which a patient is admitted to a hospital for care, typically characterized by an admission and a discharge."
+    "@value" : "A clinical event record that represents an inpatient hospital encounter in which a patient is admitted to a hospital for care (typically characterized by an admission and a discharge), and that is about the corresponding medical encounter process."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@language" : "en",
-    "@value" : "https://w3id.org/CMEO"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
     "@language" : "en",
     "@value" : "hospitalization"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hospitalization record"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000010"
+  }, {
+    "@id" : "_:genid31"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000026",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A unique identifier assigned to a concept in a standardized vocabulary (e.g., LOINC, SNOMED)."
+    "@value" : "A symbol (a string of characters) that is assigned to a concept within a standardized terminology or classification system (e.g., a SNOMED CT or LOINC code) in order to identify and denote that concept."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
+    "@language" : "en",
+    "@value" : "Distinct from 'centrally registered identifier' (IAO:0000578): a code identifies/denotes a concept (a universal) in a terminology, not a particular registered in a central registry."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000118" : [ {
     "@language" : "en",
@@ -3044,18 +3265,22 @@
   "http://purl.obolibrary.org/obo/IAO_0006011" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
     "@language" : "en",
     "@value" : "code"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "concept code"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#code_set"
-  }, {
-    "@id" : "_:genid30"
-  }, {
-    "@id" : "_:genid31"
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000028"
   }, {
     "@id" : "_:genid32"
+  }, {
+    "@id" : "_:genid33"
+  }, {
+    "@id" : "_:genid34"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000027",
@@ -3081,9 +3306,13 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000028",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000112" : [ {
+    "@language" : "en",
+    "@value" : "For a weight data element, a missing value specification might state that the code \"-9\" in the dataset means the weight was not measured."
+  } ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "It indicate the missing value indicator for a data element in its dataset"
+    "@value" : "A value specification that specifies the value or code used in a dataset to indicate that the value of a data element is missing, not recorded, or not applicable (e.g., \"NA\", \"-9\", or an empty string)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3113,9 +3342,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000578"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid35"
   }, {
-    "@id" : "_:genid34"
+    "@id" : "_:genid36"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030",
@@ -3136,6 +3365,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000076"
+  }, {
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000031",
@@ -3158,35 +3389,14 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030"
   }, {
-    "@id" : "_:genid35"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/CMEO_0000032",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@language" : "en",
-    "@value" : "A measurement of the blood, it's contents, cells or other factors contained within the blood."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "blood measurement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@language" : "en",
-    "@value" : "http://purl.obolibrary.org/obo/CMO_0000035"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030"
+    "@id" : "_:genid38"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000033",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A biomarker that is measured in a blood-derived specimen (e.g., whole blood, plasma, or serum) and used to indicate a biological state, physiological process, or pathological process. It includes  protein, metabolite, lipid, hormone, enzyme activity, cell count, and other analytes quantified from blood samples (e.g., troponin, HbA1c, creatinine, CRP)."
+    "@value" : "A blood measurement of a biomarker, i.e., the quantification, in a blood-derived specimen (whole blood, plasma, or serum), of an analyte used to indicate a biological state, physiological process, or pathological process (e.g., troponin, HbA1c, creatinine, CRP)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
@@ -3196,14 +3406,14 @@
     "@value" : "blood biomarker"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000032"
+    "@id" : "http://purl.obolibrary.org/obo/CMO_0000035"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000034",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A biomarker that is a protein, or a measurable attribute of a protein (e.g., concentration or activity), used to indicate a biological state, physiological process, or pathological process. Typically measured in a biological specimen such as blood, urine, or tissue (e.g., troponin, BNP/NT-proBNP, CRP, albumin)."
+    "@value" : "A measurement of a protein biomarker, i.e., the quantification of a protein or of a measurable attribute of a protein (such as concentration or activity), used to indicate a biological state, physiological process, or pathological process, measured in a biological specimen such as blood, urine, or tissue (e.g., troponin, BNP/NT-proBNP, CRP, albumin)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/cmeo#"
@@ -3211,52 +3421,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "protein biomarker"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000032"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/CMEO_0000035",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@language" : "en",
-    "@value" : "A cardiovascular measurement is a measurement of some part of the cardiovascular system and is typically used in the process of disease diagnosis in human patients."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/cmeo#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "cardiovascular measurement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@language" : "en",
-    "@value" : "http://www.ebi.ac.uk/efo/EFO_0004298"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/CMEO_0000036",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@language" : "en",
-    "@value" : "The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification."
-  } ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@language" : "en",
-    "@value" : "http://purl.obolibrary.org/obo/CMO_0000426"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/cmeo#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "consumption measurement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@language" : "en",
-    "@value" : "http://purl.obolibrary.org/obo/CMO_0000426"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030"
@@ -3290,12 +3454,16 @@
     "@language" : "en",
     "@value" : "A score that quantitatively summarizes functional status and/or behavioral status of a person, derived from a standardized assessment instrument and recorded as a single numeric or ordinal result (e.g., activities of daily living, mobility, self-care, NYHA class, Barthel Index, Katz ADL, MMSE, MoCA, PHQ-9, GAD-7, KCCQ, EQ-5D)."
   } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "functional and behavioral assesment score"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/cmeo#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "functional and behavioral assesment score"
+    "@value" : "functional and behavioral assessment score"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030"
@@ -3307,12 +3475,16 @@
     "@language" : "en",
     "@value" : "An assessment scale used to assign a standardized level, grade, stage, or severity category to a clinical condition, functional status, or other health-related state, typically based on predefined criteria."
   } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "stages and scales"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/cmeo#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "stages and scales"
+    "@value" : "clinical assessment scale"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@value" : "http://snomed.info/id/254291000"
@@ -3340,6 +3512,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030"
+  }, {
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000041",
@@ -3363,14 +3537,14 @@
     "@value" : "http://semanticscience.org/resource/SIO_010673"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000080"
+    "@id" : "http://purl.obolibrary.org/obo/OGMS_0000014"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000042",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "family history is the systematic narrative and research of past events relating to a specific family, or specific families."
+    "@value" : "A medical history that records health-relevant conditions, events, or traits occurring in the biological relatives of a patient."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3388,7 +3562,14 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A category for data elements that represent therapeutic interventions, including medication exposures and non-pharmacological therapies, intended to prevent, manage, or treat a clinical condition."
+    "@value" : "An information content entity (a data item) that represents whether, and which, therapeutic intervention — a medication exposure or a non-pharmacological therapy intended to prevent, manage, or treat a clinical condition — was administered to or planned for a patient, and that is about the corresponding intervention process."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "medications and therapies"
+  }, {
+    "@language" : "en",
+    "@value" : "therapeutic intervention"
   } ],
   "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym" : [ {
     "@language" : "en",
@@ -3406,10 +3587,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "medications and therapies"
+    "@value" : "therapeutic intervention record"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000076"
+  }, {
+    "@id" : "_:genid40"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000044",
@@ -3435,13 +3618,17 @@
     "@language" : "en",
     "@value" : "The extent to which a patient’s behavior corresponds to an agreed therapeutic plan, such as taking medication as prescribed or following a recommended therapy regimen."
   } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "compliance or adherence"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@language" : "en",
     "@value" : "https://w3id.org/CMEO"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "compliance or adherence"
+    "@value" : "treatment adherence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000044"
@@ -3453,12 +3640,16 @@
     "@language" : "en",
     "@value" : "A category for data elements that describe relatively stable characteristics of a person that are used to characterize individuals or populations (e.g., age, sex, ethnicity, education, occupation), typically not representing diagnoses, procedures, or measurements of physiological state."
   } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "demographics"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "demographics"
+    "@value" : "demographic characteristic"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000044"
@@ -3470,12 +3661,16 @@
     "@language" : "en",
     "@value" : "A category for data elements that describe a person’s habitual behaviors, exposures, or daily living patterns that may affect health (e.g., smoking, alcohol use, diet, physical activity, sleep), typically reported by the person or observed over time."
   } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "lifestyle and behavior"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "lifestyle and behavior"
+    "@value" : "lifestyle factor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000044"
@@ -3506,7 +3701,11 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A healthcare action performed on or for a patient for diagnostic, therapeutic, preventive, or supportive purposes, occurring at a specified time point or during a specified time interval."
+    "@value" : "An information content entity (a data item) that represents whether, and which, healthcare procedure was performed on or for a patient for diagnostic, therapeutic, preventive, or supportive purposes, and that is about the corresponding procedure process."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" : [ {
+    "@language" : "en",
+    "@value" : "procedure"
   } ],
   "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym" : [ {
     "@language" : "en",
@@ -3517,10 +3716,12 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "procedure"
+    "@value" : "procedure record"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000076"
+  }, {
+    "@id" : "_:genid41"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000051",
@@ -3548,7 +3749,7 @@
     "@value" : "sign or symptom"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000076"
+    "@id" : "http://purl.obolibrary.org/obo/OGMS_0000014"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000052",
@@ -3674,7 +3875,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "data type of variables such as int, float, str, datetime etc."
+    "@value" : "A data entity that specifies the kind of values a variable may take, such as integer, floating-point number, string, boolean, or dateTime."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "https://w3id.org/cmeo#"
@@ -3685,26 +3886,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000027"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/CMEO_0000060",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@language" : "en",
-    "@value" : "http://purl.obolibrary.org/obo/STATO_0000252"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "categorical variable"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/STATO_0000258"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/STATO_0000251"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000061",
@@ -3722,6 +3903,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000104"
+  }, {
+    "@id" : "_:genid42"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000062",
@@ -3739,6 +3922,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000104"
+  }, {
+    "@id" : "_:genid43"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000063",
@@ -3756,6 +3941,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000104"
+  }, {
+    "@id" : "_:genid44"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000064",
@@ -3835,7 +4022,7 @@
     "@value" : "healthy volunteer criterion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0500027"
+    "@id" : "http://purl.obolibrary.org/obo/OBI_0002453"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000069",
@@ -3929,6 +4116,10 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000074",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A time stamped measurement datum that records the dateTime at which a process, interval, observation, or study period begins."
+  } ],
   "http://www.geneontology.org/formats/oboInOwl#id" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000074"
   } ],
@@ -3938,13 +4129,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000416"
+  }, {
+    "@id" : "_:genid45"
   } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid36"
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000075"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000075",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A time stamped measurement datum that records the dateTime at which a process, interval, observation, or study period ends."
+  } ],
   "http://www.geneontology.org/formats/oboInOwl#id" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000075"
   } ],
@@ -3954,9 +4151,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000416"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid37"
+  }, {
+    "@id" : "_:genid46"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000076",
@@ -3985,6 +4181,10 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000077",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A homogeneous data collection whose member measurement data are collected over time according to a study protocol that has a timeline specification, so that observations are associated with visits or timepoints."
+  } ],
   "http://www.geneontology.org/formats/oboInOwl#id" : [ {
     "@id" : "http://purl.obolibrary.org/obo/CMEO_0000077"
   } ],
@@ -3999,7 +4199,7 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000100"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid38"
+    "@id" : "_:genid47"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000078",
@@ -4026,7 +4226,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A process in which an agent obtains authorized access to a data resource, resulting in the ability to view, retrieve, query, or otherwise use the data under specified permissions and constraints."
+    "@value" : "A planned process in which an agent obtains access to a data resource, resulting in the ability to view, retrieve, query, or otherwise use the data; such access may be governed by specified permissions and constraints."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
@@ -4039,26 +4239,185 @@
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
   } ]
 }, {
-  "@id" : "http://purl.obolibrary.org/obo/CMEO_0000080",
+  "@id" : "http://purl.obolibrary.org/obo/CMEO_0000081",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A representation that is either the output of a clinical history taking or a physical examination or an image finding, or some combination thereof. A clinical statement about an organism that is the result of clinical observation or assessment, including observed signs, reported symptoms, and clinician-asserted findings."
+    "@value" : "A time stamped measurement datum that records the length of the time interval over which a participant or entity is observed or followed up in a study (e.g., total follow-up time)."
   } ],
-  "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym" : [ {
-    "@language" : "en",
-    "@value" : "condition occurrence"
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "clinical finding"
+    "@value" : "duration of observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/EUPATH_0000138"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000416"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/CMEO_0000082",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A data property that relates an information entity to the literal value it carries (e.g., a numeric, string, boolean, or dateTime value)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has value"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/CMEO_0000083",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A clinical endpoint specification that defines a primary or secondary endpoint as a combination of two or more distinct component outcomes, assessed jointly to evaluate a research hypothesis in a clinical study."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "composite endpoint specification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000063"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/CMEO_0000084",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "Relates an information content entity (a record or variable) to the occurrent (e.g. a process or event) whose occurrence it documents. A more specific form of 'is about' for records of occurrents."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is record of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000136"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/CMO_0000001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A cardiovascular measurement is a measurement of some part of the cardiovascular system and is typically used in the process of disease diagnosis in human patients."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/cmo.owl"
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMO_0000001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cardiovascular measurement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@language" : "en",
-    "@value" : "http://purl.obolibrary.org/obo/OGMS_0000014"
+    "@value" : "http://www.ebi.ac.uk/efo/EFO_0004298"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000076"
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/CMO_0000035",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A measurement of the blood, it's contents, cells or other factors contained within the blood."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/cmo.owl"
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMO_0000035"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "blood measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/CMO_0000426",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/cmo.owl"
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMO_0000426"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "consumption measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000030"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/COB_0000022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000111" : [ {
+    "@language" : "en",
+    "@value" : "organism"
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000112" : [ {
+    "@language" : "en",
+    "@value" : "animal"
+  }, {
+    "@language" : "en",
+    "@value" : "fungus"
+  }, {
+    "@language" : "en",
+    "@value" : "plant"
+  }, {
+    "@language" : "en",
+    "@value" : "virus"
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000114" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000122"
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
+    "@value" : "10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and 'other organisms')"
+  }, {
+    "@value" : "13-02-2009:\nOBI doesn't take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.\nThis issue is outside the scope of OBI."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000117" : [ {
+    "@value" : "GROUP: OBI Biomaterial Branch"
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000119" : [ {
+    "@language" : "en",
+    "@value" : "WEB: http://en.wikipedia.org/wiki/Organism"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "organism"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000040"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/DUO_0000001",
@@ -4121,6 +4480,12 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/DUO_0000004",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "This data use permission indicates there is no restriction on use."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@value" : "DUO:0000004"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "no restriction"
@@ -4131,6 +4496,12 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/DUO_0000006",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "This data use permission indicates that use is allowed for health/medical/biomedical purposes; does not include the study of population origins or ancestry."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@value" : "DUO:0000006"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "health or medical or biomedical research"
@@ -4141,6 +4512,12 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/DUO_0000007",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "This data use permission indicates that use is allowed provided it is related to the specified disease."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@value" : "DUO:0000007"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "disease specific research"
@@ -4170,6 +4547,12 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/DUO_0000011",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "This data use permission indicates that use of the data is limited to the study of population origins or ancestry."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@value" : "DUO:0000011"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "population origins or ancestry research only"
@@ -4180,6 +4563,12 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/DUO_0000016",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "This data use modifier indicates that use is limited to genetic studies only (i.e., studies that include genotype research alone or both genotype and phenotype research, but not phenotype research exclusively)"
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@value" : "DUO:0000016"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "genetic studies only"
@@ -4207,6 +4596,12 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/DUO_0000021",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@value" : "DUO:0000021"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "ethical approval required"
@@ -4217,6 +4612,12 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/DUO_0000022",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "This data use modifier indicates that use is limited to within a specific geographic region."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@value" : "DUO:0000022"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "geographical restrictions"
@@ -4453,6 +4854,12 @@
 }, {
   "@id" : "http://purl.obolibrary.org/obo/DUO_0000042",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@value" : "This data use permission indicates that use is allowed for general research use for any research purpose."
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@value" : "DUO:0000042"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "general research use"
@@ -4678,7 +5085,7 @@
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000019"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid54"
+    "@id" : "_:genid63"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/IAO_0000018",
@@ -4933,7 +5340,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
   }, {
-    "@id" : "_:genid58"
+    "@id" : "_:genid67"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/IAO_0000037",
@@ -5354,9 +5761,6 @@
     "@language" : "en",
     "@value" : "group:OBI"
   } ],
-  "http://purl.obolibrary.org/obo/IAO_0100001" : [ {
-    "@value" : ""
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "dataset"
@@ -5364,10 +5768,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000027"
   }, {
-    "@id" : "_:genid71"
+    "@id" : "_:genid80"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid59"
+    "@id" : "_:genid68"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/IAO_0000101",
@@ -5511,7 +5915,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000033"
   }, {
-    "@id" : "_:genid72"
+    "@id" : "_:genid81"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/IAO_0000109",
@@ -6245,10 +6649,6 @@
     "@language" : "en",
     "@value" : "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : ""
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
   } ],
@@ -6280,6 +6680,29 @@
   "http://www.w3.org/2002/07/owl#deprecated" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
     "@value" : "true"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/IAO_0000221",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "m is a quality measurement of q at t. When q is a quality, there is a measurement process p that has specified output m, a measurement datum, that is about q."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/iao.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000109"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is quality measurement of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000136"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/IAO_0000222",
@@ -6829,6 +7252,9 @@
     "@value" : "PERSON: Melanie Courtot"
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000118" : [ {
+    "@language" : "en",
+    "@value" : "code"
+  }, {
     "@value" : "CRID"
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000119" : [ {
@@ -6842,7 +7268,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0020000"
   }, {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#code_set"
+    "@id" : "_:genid82"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/IAO_0000581",
@@ -7115,9 +7541,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
   }, {
-    "@id" : "_:genid73"
+    "@id" : "_:genid83"
   }, {
-    "@id" : "_:genid74"
+    "@id" : "_:genid84"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/IAO_0000700",
@@ -7311,6 +7737,23 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000028"
   } ]
 }, {
+  "@id" : "http://purl.obolibrary.org/obo/IAO_0020020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/iao.owl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "code set"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
+  } ]
+}, {
   "@id" : "http://purl.obolibrary.org/obo/IAO_0100001",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
   "http://purl.obolibrary.org/obo/IAO_0000111" : [ {
@@ -7355,7 +7798,7 @@
     "@value" : "Homo sapiens"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0100026"
+    "@id" : "http://purl.obolibrary.org/obo/COB_0000022"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/NCIT_C103165",
@@ -7413,6 +7856,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/OBCS_0000010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "An information content entity that refers to a distribution of a random variable that can be described using a mathematical formula."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/obcs.owl"
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OBCS_0000010"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "probability distribution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBCS_0000013",
@@ -7724,7 +8187,7 @@
     "@value" : "frequency distribution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/STATO_0000225"
+    "@id" : "http://purl.obolibrary.org/obo/OBCS_0000010"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBCS_0000071",
@@ -8100,7 +8563,7 @@
   "@id" : "http://purl.obolibrary.org/obo/OBCS_0000118",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@value" : "A quantitative confidence value that expresses how many times more likely the data are under one model than the other. "
+    "@value" : "A quantitative confidence value that expresses how many times more likely the data are under one model than the other."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000117" : [ {
     "@value" : "Yongqun He"
@@ -8137,7 +8600,7 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000027"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid75"
+    "@id" : "_:genid85"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBCS_0000126",
@@ -8530,7 +8993,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
   }, {
-    "@id" : "_:genid81"
+    "@id" : "_:genid91"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0000071",
@@ -10125,7 +10588,7 @@
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid82"
+    "@id" : "_:genid92"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0000577",
@@ -10424,7 +10887,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000810"
   }, {
-    "@id" : "_:genid87"
+    "@id" : "_:genid97"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0000810",
@@ -10457,9 +10920,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
   }, {
-    "@id" : "_:genid95"
+    "@id" : "_:genid105"
   }, {
-    "@id" : "_:genid96"
+    "@id" : "_:genid106"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0000842",
@@ -10492,7 +10955,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000810"
   }, {
-    "@id" : "_:genid98"
+    "@id" : "_:genid108"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0000850",
@@ -10963,7 +11426,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000009"
   }, {
-    "@id" : "_:genid104"
+    "@id" : "_:genid114"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0000968",
@@ -11552,7 +12015,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0001933"
   }, {
-    "@id" : "_:genid105"
+    "@id" : "_:genid115"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0001933",
@@ -11797,8 +12260,6 @@
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
     "@value" : "A role borne by a material entity and realized in an assay which achieves the objective to measure the magnitude/concentration/amount of the measurand in the entity bearing evaluant role."
-  }, {
-    "@value" : "A role borne by a material entity and realized in an assay which achieves the objective to measure the magnitude/concentration/amount of the measurand in the entity bearing evaluant role."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000117" : [ {
     "@value" : "Person: Alan Ruttenberg, Jie Zheng"
@@ -11816,7 +12277,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/BFO_0000023"
   }, {
-    "@id" : "_:genid106"
+    "@id" : "_:genid116"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0002453",
@@ -12201,7 +12662,7 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0020000"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid107"
+    "@id" : "_:genid117"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0003086",
@@ -12268,52 +12729,6 @@
     "@value" : "true"
   } ]
 }, {
-  "@id" : "http://purl.obolibrary.org/obo/OBI_0100026",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000111" : [ {
-    "@language" : "en",
-    "@value" : "organism"
-  } ],
-  "http://purl.obolibrary.org/obo/IAO_0000112" : [ {
-    "@language" : "en",
-    "@value" : "animal"
-  }, {
-    "@language" : "en",
-    "@value" : "fungus"
-  }, {
-    "@language" : "en",
-    "@value" : "plant"
-  }, {
-    "@language" : "en",
-    "@value" : "virus"
-  } ],
-  "http://purl.obolibrary.org/obo/IAO_0000114" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/IAO_0000122"
-  } ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@language" : "en",
-    "@value" : "A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs."
-  } ],
-  "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
-    "@value" : "10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and 'other organisms')"
-  }, {
-    "@value" : "13-02-2009:\nOBI doesn't take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.\nThis issue is outside the scope of OBI."
-  } ],
-  "http://purl.obolibrary.org/obo/IAO_0000117" : [ {
-    "@value" : "GROUP: OBI Biomaterial Branch"
-  } ],
-  "http://purl.obolibrary.org/obo/IAO_0000119" : [ {
-    "@language" : "en",
-    "@value" : "WEB: http://en.wikipedia.org/wiki/Organism"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "organism"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/BFO_0000030"
-  } ]
-}, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0100051",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000111" : [ {
@@ -12332,9 +12747,6 @@
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
     "@value" : "A material entity that has the specimen role."
-  }, {
-    "@language" : "en",
-    "@value" : "A material entity that is collected for potential use as an input upon which measurements or observations are performed."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
     "@value" : "Note: definition is in specimen creation objective which is defined as an objective to obtain and store a material entity for potential use as an input during an investigation."
@@ -12518,9 +12930,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/OBI_0000011"
   }, {
-    "@id" : "_:genid112"
+    "@id" : "_:genid122"
   }, {
-    "@id" : "_:genid113"
+    "@id" : "_:genid123"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0300311",
@@ -12536,8 +12948,6 @@
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "observation design is a study design in which subjects are monitored in the absence of any active intervention by experimentalists."
-  }, {
     "@value" : "observation design is a study design in which subjects are monitored in the absence of any active intervention by experimentalists."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000117" : [ {
@@ -12570,8 +12980,6 @@
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
     "@value" : "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution."
-  }, {
-    "@value" : "A plan specification comprised of protocols (which may specify how and what kinds of data will be gathered) that are executed as part of an investigation and is realized during a study design execution."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
     "@value" : "Editor note: there is at least an implicit restriction on the kind of data transformations that can be done based on the measured data available."
@@ -12594,7 +13002,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000104"
   }, {
-    "@id" : "_:genid117"
+    "@id" : "_:genid127"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/OBI_0500001",
@@ -12642,8 +13050,6 @@
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
     "@value" : "a study design which use the same individuals and exposure them to a set of conditions. The effect of order and practice can be confounding factor in such designs"
-  }, {
-    "@value" : "a study design which use the same individuals and exposure them to a set of conditions. The effect of order and practice can be confounding factor in such designs"
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000117" : [ {
     "@value" : "PlanAndPlannedProcess Branch"
@@ -12672,8 +13078,6 @@
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
     "@value" : "a repeated measure design which ensures that experimental units receive, in sequence, the treatment (or the control), and then, after a specified time interval (aka *wash-out periods*), switch to the control (or treatment). In this design, subjects (patients in human context) serve as their own controls, and randomization may be used to determine the ordering which a subject receives the treatment and control"
-  }, {
-    "@value" : "a repeated measure design which ensures that experimental units receive, in sequence, the treatment (or the control), and then, after a specified time interval (aka *wash-out periods*), switch to the control (or treatment). In this design, subjects (patients in human context) serve as their own controls, and randomization may be used to determine the ordering which a subject receives the treatment and control"
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000117" : [ {
     "@value" : "Philippe Rocca-Serra"
@@ -12698,8 +13102,6 @@
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "N-of-1 design is a cross-over design in which the same patient is repeatedly randomised to receive either the experimental treatment or its control (Senn, 1993)."
-  }, {
     "@value" : "N-of-1 design is a cross-over design in which the same patient is repeatedly randomised to receive either the experimental treatment or its control (Senn, 1993)."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000117" : [ {
@@ -12728,8 +13130,6 @@
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "A randomized complete block design is_a study design which assigns randomly treatments to block. The number of units per block equals the number of treatment so each block receives each treatment exactly once (hence the qualifier 'complete'). The design was originally devised from field trials used in agronomy and agriculture. The analysis assumes that there is no interaction between block and treatment. The method was then used in other settings So The randomised complete block design is a design in which the subjects are matched according to a variable which the experimenter wishes to control. The subjects are put into groups (blocks) of the same size as the number of treatments. The members of each block are then randomly assigned to different treatment groups."
-  }, {
     "@value" : "A randomized complete block design is_a study design which assigns randomly treatments to block. The number of units per block equals the number of treatment so each block receives each treatment exactly once (hence the qualifier 'complete'). The design was originally devised from field trials used in agronomy and agriculture. The analysis assumes that there is no interaction between block and treatment. The method was then used in other settings So The randomised complete block design is a design in which the subjects are matched according to a variable which the experimenter wishes to control. The subjects are put into groups (blocks) of the same size as the number of treatments. The members of each block are then randomly assigned to different treatment groups."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000117" : [ {
@@ -13006,6 +13406,32 @@
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000118"
   } ]
 }, {
+  "@id" : "http://purl.obolibrary.org/obo/OGMS_0000014",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A representation that is either the output of a clinical history taking or a physical examination or an image finding, or some combination thereof. A clinical statement about an organism that is the result of clinical observation or assessment, including observed signs, reported symptoms, and clinician-asserted findings."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/ogms.owl"
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym" : [ {
+    "@language" : "en",
+    "@value" : "condition occurrence"
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/OGMS_0000014"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "clinical finding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000076"
+  }, {
+    "@id" : "_:genid128"
+  } ]
+}, {
   "@id" : "http://purl.obolibrary.org/obo/OGMS_0000023",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000111" : [ {
@@ -13073,8 +13499,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "morphology"
-  }, {
-    "@value" : "morphology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/PATO_0001241"
@@ -13108,6 +13532,20 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/PATO_0001241"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/PATO_0001236",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A quality which inheres in a process."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "process quality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/BFO_0000019"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/PATO_0001241",
@@ -14112,7 +14550,9 @@
     "@id" : "http://purl.obolibrary.org/obo/STATO_0000087"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000060"
+    "@id" : "http://purl.obolibrary.org/obo/STATO_0000252"
+  }, {
+    "@id" : "_:genid129"
   } ],
   "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
     "@id" : "http://purl.obolibrary.org/obo/STATO_0000087"
@@ -14140,7 +14580,9 @@
     "@id" : "http://purl.obolibrary.org/obo/STATO_0000090"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/STATO_0000087"
+    "@id" : "http://purl.obolibrary.org/obo/STATO_0000252"
+  }, {
+    "@id" : "_:genid130"
   } ],
   "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
     "@id" : "http://purl.obolibrary.org/obo/STATO_0000090"
@@ -14171,7 +14613,7 @@
     "@value" : "correlation coefficient"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0000071"
+    "@id" : "http://purl.obolibrary.org/obo/STATO_0000039"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/STATO_0000159",
@@ -14228,20 +14670,6 @@
     "@id" : "http://purl.obolibrary.org/obo/STATO_0000269"
   } ]
 }, {
-  "@id" : "http://purl.obolibrary.org/obo/STATO_0000225",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@language" : "en",
-    "@value" : "http://purl.obolibrary.org/obo/OBCS_0000010"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "probability distribution"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
-  } ]
-}, {
   "@id" : "http://purl.obolibrary.org/obo/STATO_0000240",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
@@ -14276,6 +14704,33 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/STATO_0000258"
+  }, {
+    "@id" : "_:genid131"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/STATO_0000252"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/STATO_0000252",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
+    "@language" : "en",
+    "@value" : "A variable that can take one of a limited, usually fixed, number of possible values, assigning each unit of observation to a particular group or category on the basis of some qualitative property."
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/stato.owl"
+  } ],
+  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/STATO_0000252"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "categorical variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/STATO_0000258"
+  }, {
+    "@id" : "_:genid132"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/STATO_0000258",
@@ -14304,7 +14759,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000027"
   }, {
-    "@id" : "_:genid118"
+    "@id" : "_:genid133"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/STATO_0000267",
@@ -14390,203 +14845,11 @@
     "@value" : "Clinical Metadata Exploration Ontology (CMEO)"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo/releases/2025-12-10/cmeo.owl"
+    "@id" : "http://purl.obolibrary.org/obo/cmeo/releases/2026-07-21/cmeo.owl"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "1.0.2"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#code_set",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@language" : "en",
-    "@value" : "An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things."
-  } ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/iao.owl"
-  } ],
-  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/IAO_0020020"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "code set"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#composite_endpoint_specification",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@language" : "en",
-    "@value" : "A clinical endpoint specification that defines a primary or secondary endpoint as a combination of two or more distinct component outcomes, assessed jointly to evaluate a research hypothesis in a clinical study."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "composite endpoint specification"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000063"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#has_annotation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000255"
-  } ],
-  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000255"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has attribute"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#has_attribute"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#has_attribute",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000008"
-  } ],
-  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000008"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has attribute"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_related_to"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#has_close_match",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core"
-  } ],
-  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#closeMatch"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has close match"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_in_mapping_relation_with"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_close_match_to"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_annotation_of",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000254"
-  } ],
-  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000254"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "is annotation of"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_attribute_of"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_attribute_of",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000011"
-  } ],
-  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000011"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "is attribute of"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_related_to"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_close_match_to",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@id" : "http://semanticscience.org/ontology/sio.owl"
-  } ],
-  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000490"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "is close match to"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_related_to"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_in_mapping_relation_with",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#mappingRelation"
-  } ],
-  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#mappingRelation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000009"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "is in mapping relation with"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000026"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owl#is_related_to",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.obolibrary.org/obo/IAO_0000412" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000001"
-  } ],
-  "http://www.geneontology.org/formats/oboInOwl#id" : [ {
-    "@id" : "http://semanticscience.org/resource/SIO_000001"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "is related to"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owlduration_of_observation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "https://w3id.org/cmeo#"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "duration of observation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/EUPATH_0000138"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/IAO_0000416"
-  } ]
-}, {
-  "@id" : "http://purl.obolibrary.org/obo/cmeo.owlhas_value",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has value"
+    "@value" : "1.0.3"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/contributor",
@@ -14865,20 +15128,6 @@
     "@value" : "title"
   } ]
 }, {
-  "@id" : "http://semanticscience.org/resource/SIO_000027",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
-    "@language" : "en",
-    "@value" : "A process quality is quality that is associated with a process."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "process quality"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/BFO_0000019"
-  } ]
-}, {
   "@id" : "http://semanticscience.org/resource/SIO_000033",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
@@ -14895,7 +15144,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.obolibrary.org/obo/IAO_0000030"
   }, {
-    "@id" : "_:genid119"
+    "@id" : "_:genid134"
   } ]
 }, {
   "@id" : "http://semanticscience.org/resource/SIO_000034",
