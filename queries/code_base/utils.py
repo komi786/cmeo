@@ -61,6 +61,9 @@ def day_month_year(date_str: str) -> tuple:
     return None
 
 _ONTOLOGY_TERM_IRIS = {
+    "binary_class_variable": "http://purl.obolibrary.org/obo/STATO_0000090",
+    "continuous_variable": "http://purl.obolibrary.org/obo/STATO_0000251",
+    "multi_class_variable": "http://purl.obolibrary.org/obo/STATO_0000087",
     "bar_chart": "http://purl.obolibrary.org/obo/STATO_0000166",
     "categorical_value_specification": "http://purl.obolibrary.org/obo/OBI_0001930",
     "category": "http://purl.obolibrary.org/obo/CMEO_0000076",

@@ -80,7 +80,7 @@ def process_variables_metadata_file(file_path:str, study_metadata_graph_file_pat
             
             statistical_type_uri,statistical_type = determine_var_uri(g, cohort_id, var_name, multi_class_categorical, binary_categorical, data_type=row['vartype'])
             
-            g.add((statistical_type_uri, RDF.type, URIRef(f"{OntologyNamespaces.CMEO.value}{statistical_type}"), cohort_graph))
+            g.add((statistical_type_uri, RDF.type, OntologyNamespaces.CMEO.value[statistical_type], cohort_graph))
             g.add((statistical_type_uri, OntologyNamespaces.CMEO.value.has_value, Literal(statistical_type, datatype=XSD.string), cohort_graph))
             g.add((var_uri, OntologyNamespaces.IAO.value.is_denoted_by, statistical_type_uri, cohort_graph))
             g.add((statistical_type_uri, OntologyNamespaces.IAO.value.denotes, var_uri, cohort_graph))
