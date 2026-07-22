@@ -1484,6 +1484,19 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CMEO_0000084 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CMEO_0000084">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <w3id:IAO_0000115 xml:lang="en">Relates an information content entity (a record or variable) to the occurrent (e.g. a process or event) whose occurrence it documents. A more specific form of &apos;is about&apos; for records of occurrents.</w3id:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
+        <rdfs:label xml:lang="en">is record of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/DUO_0000010 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/DUO_0000010">
@@ -1595,6 +1608,19 @@ every c that is a concretization of g specifically denotes r</w3id:IAO_0000116>
         <w3id:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <rdfs:label>obsolete_materially denotes</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000221 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000221">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <w3id:IAO_0000115 xml:lang="en">m is a quality measurement of q at t. When q is a quality, there is a measurement process p that has specified output m, a measurement datum, that is about q.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">is quality measurement of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2434,30 +2460,36 @@ instance level relation [GOC:cjm]</w3id:IAO_0000115>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CMEO_0000084 -->
+    <!-- http://semanticscience.org/resource/SIO_000001 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/CMEO_0000084">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
-        <w3id:IAO_0000115 xml:lang="en">Relates an information content entity (a record or variable) to the occurrent (e.g. a process or event) whose occurrence it documents. A more specific form of 'is about' for records of occurrents.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
-        <rdfs:label xml:lang="en">is record of</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000001">
+        <w3id:IAO_0000115 xml:lang="en">A is related to B iff there is some relation between A and B.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <rdfs:label xml:lang="en">is related to</rdfs:label>
     </owl:ObjectProperty>
+    
 
 
+    <!-- http://semanticscience.org/resource/SIO_000008 -->
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000221 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000221">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000109"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <w3id:IAO_0000115 xml:lang="en">m is a quality measurement of q at t. When q is a quality, there is a measurement process p that has specified output m, a measurement datum, that is about q.</w3id:IAO_0000115>
-        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
-        <rdfs:label xml:lang="en">is quality measurement of</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000008">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000001"/>
+        <w3id:IAO_0000115 xml:lang="en">has attribute is a relation that associates a entity with an attribute where an attribute is an intrinsic characteristic such as a quality, capability, disposition, function, or is an externally derived attribute determined from some descriptor (e.g. a quantity, position, label/identifier) either directly or indirectly through generalization of entities of the same type.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+        <rdfs:label>has attribute</rdfs:label>
     </owl:ObjectProperty>
+    
 
+
+    <!-- http://semanticscience.org/resource/SIO_000255 -->
+
+    <owl:ObjectProperty rdf:about="http://semanticscience.org/resource/SIO_000255">
+        <rdfs:subPropertyOf rdf:resource="http://semanticscience.org/resource/SIO_000008"/>
+        <w3id:IAO_0000115 xml:lang="en">has annotation is a relation between an entity and some textual anntotation.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://semanticscience.org/resource/SIO_000255"/>
+        <rdfs:label xml:lang="en">has annotation</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
     <!-- 
@@ -3189,7 +3221,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000968"/>
-        <w3id:IAO_0000115 xml:lang="en">A device that is designed to be worn on, or attached to, the body of a person and that senses, records, or transmits data about the wearer's physiological, behavioral, or environmental state, continuously or intermittently.</w3id:IAO_0000115>
+        <w3id:IAO_0000115 xml:lang="en">A device that is designed to be worn on, or attached to, the body of a person and that senses, records, or transmits data about the wearer&apos;s physiological, behavioral, or environmental state, continuously or intermittently.</w3id:IAO_0000115>
         <w3id:IAO_0000118 xml:lang="en">health wearable</w3id:IAO_0000118>
         <rdfs:label xml:lang="en">wearable device</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://saref.etsi.org/saref4wear/v2.1.1/WearableDevice</rdfs:seeAlso>
@@ -3216,7 +3248,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000004">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
-        <w3id:IAO_0000115 xml:lang="en">A process consisting of an interaction between a patient and one or more healthcare providers for the purpose of assessing, monitoring, or managing the patient's health, occurring at a point in time or over a time interval.</w3id:IAO_0000115>
+        <w3id:IAO_0000115 xml:lang="en">A process consisting of an interaction between a patient and one or more healthcare providers for the purpose of assessing, monitoring, or managing the patient&apos;s health, occurring at a point in time or over a time interval.</w3id:IAO_0000115>
         <w3id:IAO_0000117 xml:lang="en">medical visit</w3id:IAO_0000117>
         <w3id:IAO_0000412 xml:lang="en">http://purl.obolibrary.org/obo/NCIT_C154624</w3id:IAO_0000412>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
@@ -3229,7 +3261,7 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000007">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
-        <w3id:IAO_0000115 xml:lang="en">A planned process that links a concept to a unique identifier in the respective domain standard (for example, linking the variable 'bp' to the blood pressure concept in SNOMED).</w3id:IAO_0000115>
+        <w3id:IAO_0000115 xml:lang="en">A planned process that links a concept to a unique identifier in the respective domain standard (for example, linking the variable &apos;bp&apos; to the blood pressure concept in SNOMED).</w3id:IAO_0000115>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">data standardization</rdfs:label>
     </owl:Class>
@@ -3241,8 +3273,8 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <w3id:IAO_0000115 xml:lang="en">An information content entity that specifies a mathematical or logical expression used to compute a derived value from one or more input variables, parameters, or constants.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">formula</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">variable derivation formula</rdfs:label>
     </owl:Class>
     
@@ -3277,9 +3309,9 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
             </owl:Restriction>
         </rdfs:subClassOf>
         <w3id:IAO_0000115 xml:lang="en">An information content entity (a data item, e.g. a variable or record) that represents the occurrence of a clinically relevant event for a patient at a point in time or over a time interval (e.g., a death, a hospitalization, a myocardial infarction), and that is about the corresponding real-world process.</w3id:IAO_0000115>
-        <w3id:IAO_0000116 xml:lang="en">CMEO mints the information/record layer, not the occurrent. This class is the record or variable about the event; it 'is about' (IAO:0000136) the underlying process (BFO:0000015). The real-world occurrence itself is not minted in CMEO but referenced via 'is about' and, where relevant, cross-referenced to process ontologies (e.g. OAE for adverse events).</w3id:IAO_0000116>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
+        <w3id:IAO_0000116 xml:lang="en">CMEO mints the information/record layer, not the occurrent. This class is the record or variable about the event; it &apos;is about&apos; (IAO:0000136) the underlying process (BFO:0000015). The real-world occurrence itself is not minted in CMEO but referenced via &apos;is about&apos; and, where relevant, cross-referenced to process ontologies (e.g. OAE for adverse events).</w3id:IAO_0000116>
         <oboInOwl:hasExactSynonym xml:lang="en">clinical event</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">clinical event record</rdfs:label>
     </owl:Class>
     
@@ -3290,8 +3322,8 @@ BFO 2 Reference: Each object is such that there are entities of which we can ass
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000011">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000010"/>
         <w3id:IAO_0000115 xml:lang="en">A clinical event record that represents an occurrence of bleeding in a patient — the loss of blood from the circulatory system to an external site or into tissues or body cavities — at a specified time point or during a specified time interval.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/CMEO</rdfs:isDefinedBy>
         <oboInOwl:hasExactSynonym xml:lang="en">bleeding event</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/CMEO</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">bleeding event record</rdfs:label>
     </owl:Class>
     
@@ -3312,8 +3344,8 @@ heart failure hospitalization event
 revascularization event
 cardiovascular death event
 major adverse cardiovascular event (composite)</w3id:IAO_0000116>
-        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/CMEO</rdfs:isDefinedBy>
         <oboInOwl:hasExactSynonym xml:lang="en">cardiovascular event</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/CMEO</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">cardiovascular event record</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://snomed.info/id/405617006</rdfs:seeAlso>
     </owl:Class>
@@ -3325,11 +3357,11 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000010"/>
         <w3id:IAO_0000115 xml:lang="en">An information content entity (a data item, e.g. a variable or record) that represents an untoward or harmful occurrence in a patient following a medical intervention (such as the administration of a drug, a procedure, or the use of a medical device), whether or not judged to be caused by it, and that is about the corresponding adverse-event process.</w3id:IAO_0000115>
-        <w3id:IAO_0000116 xml:lang="en">Modelled in CMEO as an information/record layer term, not the occurrent itself. It 'is about' the underlying process (inherited from 'clinical event') and is cross-referenced via skos:exactMatch to OAE:0000001 'adverse event'. CMEO keeps its own IRI because it is used as an event/outcome descriptor in the metadata scope rather than imported as an OAE pathological process.</w3id:IAO_0000116>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/OAE_0000001"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
+        <w3id:IAO_0000116 xml:lang="en">Modelled in CMEO as an information/record layer term, not the occurrent itself. It &apos;is about&apos; the underlying process (inherited from &apos;clinical event&apos;) and is cross-referenced via skos:exactMatch to OAE:0000001 &apos;adverse event&apos;. CMEO keeps its own IRI because it is used as an event/outcome descriptor in the metadata scope rather than imported as an OAE pathological process.</w3id:IAO_0000116>
         <oboInOwl:hasExactSynonym xml:lang="en">adverse event</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">adverse event record</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/OAE_0000001"/>
     </owl:Class>
     
 
@@ -3339,10 +3371,10 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000013"/>
         <w3id:IAO_0000115 xml:lang="en">An adverse event record that represents an adverse event that follows, and is associated with, the administration of a drug or biological product to a patient.</w3id:IAO_0000115>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/OAE_0000005"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">adverse drug event</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">adverse drug event record</rdfs:label>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/OAE_0000005"/>
     </owl:Class>
     
 
@@ -3352,8 +3384,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000015">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000013"/>
         <w3id:IAO_0000115 xml:lang="en">An adverse event record that represents a hypersensitivity reaction of the immune system occurring following exposure to an allergen such as a drug, food, or environmental substance.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/CMEO</rdfs:isDefinedBy>
         <oboInOwl:hasExactSynonym xml:lang="en">allergic reaction</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/CMEO</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">allergic reaction record</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://purl.obolibrary.org/obo/NCIT_C53782</rdfs:seeAlso>
     </owl:Class>
@@ -3365,8 +3397,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000016">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000013"/>
         <w3id:IAO_0000115 xml:lang="en">An adverse event record that represents an event caused by, or associated with, the use of a medical device, where there is a causal relation between the event and the use of that device.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/CMEO</rdfs:isDefinedBy>
         <oboInOwl:hasExactSynonym xml:lang="en">device adverse event</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/CMEO</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">device adverse event record</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://purl.obolibrary.org/obo/OAE_0000096</rdfs:seeAlso>
     </owl:Class>
@@ -3378,8 +3410,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000017">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000010"/>
         <w3id:IAO_0000115 xml:lang="en">A clinical event record that represents the death of a patient, occurring at a specified time point or during a specified time interval.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">death</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">death record</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://snomed.info/id/419620001</rdfs:seeAlso>
     </owl:Class>
@@ -3421,8 +3453,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
             </owl:Restriction>
         </rdfs:subClassOf>
         <w3id:IAO_0000115 xml:lang="en">A clinical event record that represents an inpatient hospital encounter in which a patient is admitted to a hospital for care (typically characterized by an admission and a discharge), and that is about the corresponding medical encounter process.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">hospitalization</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">hospitalization record</rdfs:label>
     </owl:Class>
     
@@ -3451,10 +3483,10 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
             </owl:Restriction>
         </rdfs:subClassOf>
         <w3id:IAO_0000115 xml:lang="en">A symbol (a string of characters) that is assigned to a concept within a standardized terminology or classification system (e.g., a SNOMED CT or LOINC code) in order to identify and denote that concept.</w3id:IAO_0000115>
-        <w3id:IAO_0000116 xml:lang="en">Distinct from 'centrally registered identifier' (IAO:0000578): a code identifies/denotes a concept (a universal) in a terminology, not a particular registered in a central registry.</w3id:IAO_0000116>
+        <w3id:IAO_0000116 xml:lang="en">Distinct from &apos;centrally registered identifier&apos; (IAO:0000578): a code identifies/denotes a concept (a universal) in a terminology, not a particular registered in a central registry.</w3id:IAO_0000116>
         <w3id:IAO_0000118 xml:lang="en">Concept</w3id:IAO_0000118>
-        <oboInOwl:hasExactSynonym xml:lang="en">code</oboInOwl:hasExactSynonym>
         <w3id:IAO_0006011 rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <oboInOwl:hasExactSynonym xml:lang="en">code</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">concept code</rdfs:label>
     </owl:Class>
     
@@ -3476,8 +3508,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000028">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0001933"/>
-        <w3id:IAO_0000115 xml:lang="en">A value specification that specifies the value or code used in a dataset to indicate that the value of a data element is missing, not recorded, or not applicable (e.g., "NA", "-9", or an empty string).</w3id:IAO_0000115>
-        <w3id:IAO_0000112 xml:lang="en">For a weight data element, a missing value specification might state that the code "-9" in the dataset means the weight was not measured.</w3id:IAO_0000112>
+        <w3id:IAO_0000112 xml:lang="en">For a weight data element, a missing value specification might state that the code &quot;-9&quot; in the dataset means the weight was not measured.</w3id:IAO_0000112>
+        <w3id:IAO_0000115 xml:lang="en">A value specification that specifies the value or code used in a dataset to indicate that the value of a data element is missing, not recorded, or not applicable (e.g., &quot;NA&quot;, &quot;-9&quot;, or an empty string).</w3id:IAO_0000115>
         <rdfs:label xml:lang="en">missing value specification</rdfs:label>
     </owl:Class>
     
@@ -3543,18 +3575,6 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CMO_0000035 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000035">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000030"/>
-        <w3id:IAO_0000115 xml:lang="en">A measurement of the blood, it&apos;s contents, cells or other factors contained within the blood.</w3id:IAO_0000115>
-        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
-        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/CMO_0000035"/>
-        <rdfs:label xml:lang="en">blood measurement</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/CMEO_0000033 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000033">
@@ -3577,31 +3597,6 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CMO_0000001 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000001">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000030"/>
-        <w3id:IAO_0000115 xml:lang="en">A cardiovascular measurement is a measurement of some part of the cardiovascular system and is typically used in the process of disease diagnosis in human patients.</w3id:IAO_0000115>
-        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
-        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/CMO_0000001"/>
-        <rdfs:label xml:lang="en">cardiovascular measurement</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">http://www.ebi.ac.uk/efo/EFO_0004298</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CMO_0000426 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000426">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000030"/>
-        <w3id:IAO_0000115 xml:lang="en">The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification.</w3id:IAO_0000115>
-        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
-        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/CMO_0000426"/>
-        <rdfs:label xml:lang="en">consumption measurement</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/CMEO_0000037 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000037">
@@ -3619,8 +3614,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000038">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000030"/>
         <w3id:IAO_0000115 xml:lang="en">A score that quantitatively summarizes functional status and/or behavioral status of a person, derived from a standardized assessment instrument and recorded as a single numeric or ordinal result (e.g., activities of daily living, mobility, self-care, NYHA class, Barthel Index, Katz ADL, MMSE, MoCA, PHQ-9, GAD-7, KCCQ, EQ-5D).</w3id:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <oboInOwl:hasExactSynonym xml:lang="en">functional and behavioral assesment score</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">functional and behavioral assessment score</rdfs:label>
     </owl:Class>
     
@@ -3631,8 +3626,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000039">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000030"/>
         <w3id:IAO_0000115 xml:lang="en">An assessment scale used to assign a standardized level, grade, stage, or severity category to a clinical condition, functional status, or other health-related state, typically based on predefined criteria.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <oboInOwl:hasExactSynonym xml:lang="en">stages and scales</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">clinical assessment scale</rdfs:label>
         <rdfs:seeAlso>http://snomed.info/id/254291000</rdfs:seeAlso>
     </owl:Class>
@@ -3692,12 +3687,12 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
             </owl:Restriction>
         </rdfs:subClassOf>
         <w3id:IAO_0000115 xml:lang="en">An information content entity (a data item) that represents whether, and which, therapeutic intervention — a medication exposure or a non-pharmacological therapy intended to prevent, manage, or treat a clinical condition — was administered to or planned for a patient, and that is about the corresponding intervention process.</w3id:IAO_0000115>
+        <oboInOwl:hasExactSynonym xml:lang="en">medications and therapies</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym xml:lang="en">therapeutic intervention</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym xml:lang="en">drug exposure</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000043"/>
         <rdfs:comment xml:lang="en">Prescriptions, over-the-counter meds, hormonal therapy, treatment history</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
-        <oboInOwl:hasExactSynonym xml:lang="en">medications and therapies</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym xml:lang="en">therapeutic intervention</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">therapeutic intervention record</rdfs:label>
     </owl:Class>
     
@@ -3719,8 +3714,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000045">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000044"/>
         <w3id:IAO_0000115 xml:lang="en">The extent to which a patient’s behavior corresponds to an agreed therapeutic plan, such as taking medication as prescribed or following a recommended therapy regimen.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/CMEO</rdfs:isDefinedBy>
         <oboInOwl:hasExactSynonym xml:lang="en">compliance or adherence</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/CMEO</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">treatment adherence</rdfs:label>
     </owl:Class>
     
@@ -3731,8 +3726,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000046">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000044"/>
         <w3id:IAO_0000115 xml:lang="en">A category for data elements that describe relatively stable characteristics of a person that are used to characterize individuals or populations (e.g., age, sex, ethnicity, education, occupation), typically not representing diagnoses, procedures, or measurements of physiological state.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">demographics</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">demographic characteristic</rdfs:label>
     </owl:Class>
     
@@ -3743,8 +3738,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000048">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000044"/>
         <w3id:IAO_0000115 xml:lang="en">A category for data elements that describe a person’s habitual behaviors, exposures, or daily living patterns that may affect health (e.g., smoking, alcohol use, diet, physical activity, sleep), typically reported by the person or observed over time.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <oboInOwl:hasExactSynonym xml:lang="en">lifestyle and behavior</oboInOwl:hasExactSynonym>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">lifestyle factor</rdfs:label>
     </owl:Class>
     
@@ -3773,8 +3768,8 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
             </owl:Restriction>
         </rdfs:subClassOf>
         <w3id:IAO_0000115 xml:lang="en">An information content entity (a data item) that represents whether, and which, healthcare procedure was performed on or for a patient for diagnostic, therapeutic, preventive, or supportive purposes, and that is about the corresponding procedure process.</w3id:IAO_0000115>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">procedure occurrence</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym xml:lang="en">procedure</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">procedure occurrence</oboInOwl:hasRelatedSynonym>
         <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">procedure record</rdfs:label>
     </owl:Class>
@@ -3879,25 +3874,6 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
         <w3id:IAO_0000115 xml:lang="en">A data entity that specifies the kind of values a variable may take, such as integer, floating-point number, string, boolean, or dateTime.</w3id:IAO_0000115>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">data type</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/STATO_0000252 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000252">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000258"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001938"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/STATO_0000251"/>
-        <w3id:IAO_0000115 xml:lang="en">A variable that can take one of a limited, usually fixed, number of possible values, assigning each unit of observation to a particular group or category on the basis of some qualitative property.</w3id:IAO_0000115>
-        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
-        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/STATO_0000252"/>
-        <rdfs:label xml:lang="en">categorical variable</rdfs:label>
     </owl:Class>
     
 
@@ -4066,6 +4042,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000075"/>
         <w3id:IAO_0000115 xml:lang="en">A time stamped measurement datum that records the dateTime at which a process, interval, observation, or study period begins.</w3id:IAO_0000115>
         <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000074"/>
         <rdfs:label xml:lang="en">start time</rdfs:label>
@@ -4083,7 +4060,6 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000074"/>
         <w3id:IAO_0000115 xml:lang="en">A time stamped measurement datum that records the dateTime at which a process, interval, observation, or study period ends.</w3id:IAO_0000115>
         <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000075"/>
         <rdfs:label xml:lang="en">end time</rdfs:label>
@@ -4180,21 +4156,83 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OGMS_0000014 -->
+    <!-- http://purl.obolibrary.org/obo/CMEO_0000081 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000014">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000076"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <w3id:IAO_0000115 xml:lang="en">A representation that is either the output of a clinical history taking or a physical examination or an image finding, or some combination thereof. A clinical statement about an organism that is the result of clinical observation or assessment, including observed signs, reported symptoms, and clinician-asserted findings.</w3id:IAO_0000115>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">condition occurrence</oboInOwl:hasRelatedSynonym>
-        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
-        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000014"/>
-        <rdfs:label xml:lang="en">clinical finding</rdfs:label>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000081">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
+        <w3id:IAO_0000115 xml:lang="en">A time stamped measurement datum that records the length of the time interval over which a participant or entity is observed or followed up in a study (e.g., total follow-up time).</w3id:IAO_0000115>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
+        <rdfs:label xml:lang="en">duration of observation</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/EUPATH_0000138"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CMEO_0000083 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000083">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000063"/>
+        <w3id:IAO_0000115 xml:lang="en">A clinical endpoint specification that defines a primary or secondary endpoint as a combination of two or more distinct component outcomes, assessed jointly to evaluate a research hypothesis in a clinical study.</w3id:IAO_0000115>
+        <rdfs:label xml:lang="en">composite endpoint specification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CMO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000030"/>
+        <w3id:IAO_0000115 xml:lang="en">A cardiovascular measurement is a measurement of some part of the cardiovascular system and is typically used in the process of disease diagnosis in human patients.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/CMO_0000001"/>
+        <rdfs:label xml:lang="en">cardiovascular measurement</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">http://www.ebi.ac.uk/efo/EFO_0004298</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CMO_0000035 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000035">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000030"/>
+        <w3id:IAO_0000115 xml:lang="en">A measurement of the blood, it&apos;s contents, cells or other factors contained within the blood.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/CMO_0000035"/>
+        <rdfs:label xml:lang="en">blood measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CMO_0000426 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMO_0000426">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000030"/>
+        <w3id:IAO_0000115 xml:lang="en">The quantification of any morphological or physiological parameter related to intake or ingestion, especially of food or drink, or a value resulting from such a quantification.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/cmo.owl"/>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/CMO_0000426"/>
+        <rdfs:label xml:lang="en">consumption measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/COB_0000022 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/COB_0000022">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+        <w3id:IAO_0000111 xml:lang="en">organism</w3id:IAO_0000111>
+        <w3id:IAO_0000112 xml:lang="en">animal</w3id:IAO_0000112>
+        <w3id:IAO_0000112 xml:lang="en">fungus</w3id:IAO_0000112>
+        <w3id:IAO_0000112 xml:lang="en">plant</w3id:IAO_0000112>
+        <w3id:IAO_0000112 xml:lang="en">virus</w3id:IAO_0000112>
+        <w3id:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <w3id:IAO_0000115 xml:lang="en">A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.</w3id:IAO_0000115>
+        <w3id:IAO_0000116>10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and &apos;other organisms&apos;)</w3id:IAO_0000116>
+        <w3id:IAO_0000116>13-02-2009:
+OBI doesn&apos;t take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
+This issue is outside the scope of OBI.</w3id:IAO_0000116>
+        <w3id:IAO_0000117>GROUP: OBI Biomaterial Branch</w3id:IAO_0000117>
+        <w3id:IAO_0000119 xml:lang="en">WEB: http://en.wikipedia.org/wiki/Organism</w3id:IAO_0000119>
+        <rdfs:label xml:lang="en">organism</rdfs:label>
     </owl:Class>
     
 
@@ -5327,6 +5365,17 @@ points together with a line.</w3id:IAO_0000115>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0020020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <w3id:IAO_0000115 xml:lang="en">An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <rdfs:label xml:lang="en">code set</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_9606 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606">
@@ -5370,6 +5419,18 @@ points together with a line.</w3id:IAO_0000115>
         <w3id:IAO_0000118 xml:lang="en">data collection</w3id:IAO_0000118>
         <w3id:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Data_collection</w3id:IAO_0000119>
         <rdfs:label xml:lang="en">data collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <w3id:IAO_0000115 xml:lang="en">An information content entity that refers to a distribution of a random variable that can be described using a mathematical formula.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obcs.owl"/>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000010"/>
+        <rdfs:label xml:lang="en">probability distribution</rdfs:label>
     </owl:Class>
     
 
@@ -7488,28 +7549,6 @@ https://sourceforge.net/tracker/?func=detail&amp;aid=3512891&amp;group_id=177891
     
 
 
-    <!-- http://purl.obolibrary.org/obo/COB_0000022 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/COB_0000022">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
-        <w3id:IAO_0000111 xml:lang="en">organism</w3id:IAO_0000111>
-        <w3id:IAO_0000112 xml:lang="en">animal</w3id:IAO_0000112>
-        <w3id:IAO_0000112 xml:lang="en">fungus</w3id:IAO_0000112>
-        <w3id:IAO_0000112 xml:lang="en">plant</w3id:IAO_0000112>
-        <w3id:IAO_0000112 xml:lang="en">virus</w3id:IAO_0000112>
-        <w3id:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
-        <w3id:IAO_0000115 xml:lang="en">A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.</w3id:IAO_0000115>
-        <w3id:IAO_0000116>10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and &apos;other organisms&apos;)</w3id:IAO_0000116>
-        <w3id:IAO_0000116>13-02-2009:
-OBI doesn&apos;t take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
-This issue is outside the scope of OBI.</w3id:IAO_0000116>
-        <w3id:IAO_0000117>GROUP: OBI Biomaterial Branch</w3id:IAO_0000117>
-        <w3id:IAO_0000119 xml:lang="en">WEB: http://en.wikipedia.org/wiki/Organism</w3id:IAO_0000119>
-        <rdfs:label xml:lang="en">organism</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OBI_0100051 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0100051">
@@ -7835,6 +7874,25 @@ defines and states the requirements (positive or negative) for an entity to be c
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000014 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000014">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000076"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <w3id:IAO_0000115 xml:lang="en">A representation that is either the output of a clinical history taking or a physical examination or an image finding, or some combination thereof. A clinical statement about an organism that is the result of clinical observation or assessment, including observed signs, reported symptoms, and clinician-asserted findings.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">condition occurrence</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000014"/>
+        <rdfs:label xml:lang="en">clinical finding</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OGMS_0000023 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000023">
@@ -7875,6 +7933,16 @@ defines and states the requirements (positive or negative) for an entity to be c
         <w3id:IAO_0000111>physical quality</w3id:IAO_0000111>
         <w3id:IAO_0000115>A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.</w3id:IAO_0000115>
         <rdfs:label>physical quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001236 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001236">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <w3id:IAO_0000115 xml:lang="en">A quality which inheres in a process.</w3id:IAO_0000115>
+        <rdfs:label xml:lang="en">process quality</rdfs:label>
     </owl:Class>
     
 
@@ -8112,9 +8180,6 @@ Spearman&apos;s coefficient may be used when the conditions for computing Pearso
     
 
 
-    
-
-
     <!-- http://purl.obolibrary.org/obo/STATO_0000240 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000240">
@@ -8135,11 +8200,30 @@ Spearman&apos;s coefficient may be used when the conditions for computing Pearso
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001931"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/STATO_0000252"/>
         <w3id:IAO_0000115>A continuous variable over a particular range of the real numbers is one whose value in that range must be such that, if the variable can take values a and b in that range, then it can also take any value between a and b.</w3id:IAO_0000115>
         <w3id:IAO_0000116>We will link continuous variable to measurement scale.</w3id:IAO_0000116>
         <w3id:IAO_0000117>Jie Zheng, Yongqun He</w3id:IAO_0000117>
         <w3id:IAO_0000119>WEB: https://en.wikipedia.org/wiki/Continuous_and_discrete_variables</w3id:IAO_0000119>
         <rdfs:label xml:lang="en">continuous variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000252 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000252">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000258"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0001938"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0001930"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <w3id:IAO_0000115 xml:lang="en">A variable that can take one of a limited, usually fixed, number of possible values, assigning each unit of observation to a particular group or category on the basis of some qualitative property.</w3id:IAO_0000115>
+        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
+        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/STATO_0000252"/>
+        <rdfs:label xml:lang="en">categorical variable</rdfs:label>
     </owl:Class>
     
 
@@ -8202,49 +8286,6 @@ The coefficient is calculated by dividing their covariance with the product of t
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000142"/>
         <w3id:IAO_0000115>Matthews Correlation Coefficient (or MCC) is a correlation coefficient which is a measure of the quality of binary (two-class) classifications, introduced by biochemist Brian W. Matthews in 1975.</w3id:IAO_0000115>
         <rdfs:label>Matthews correlation coefficient</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CMEO_0000081 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000081">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000416"/>
-        <w3id:IAO_0000115 xml:lang="en">A time stamped measurement datum that records the length of the time interval over which a participant or entity is observed or followed up in a study (e.g., total follow-up time).</w3id:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
-        <rdfs:label xml:lang="en">duration of observation</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/EUPATH_0000138"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0020020 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020020">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <w3id:IAO_0000115 xml:lang="en">An information content entity that is a collection of other information content entities that has been created to identify or annotate things in a specified domain, and where the intention of its creators is that the collection has a one-to-one correspondence with those things.</w3id:IAO_0000115>
-        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
-        <rdfs:label xml:lang="en">code set</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/CMEO_0000083 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000083">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000063"/>
-        <w3id:IAO_0000115 xml:lang="en">A clinical endpoint specification that defines a primary or secondary endpoint as a combination of two or more distinct component outcomes, assessed jointly to evaluate a research hypothesis in a clinical study.</w3id:IAO_0000115>
-        <rdfs:label xml:lang="en">composite endpoint specification</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001236 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001236">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
-        <w3id:IAO_0000115 xml:lang="en">A quality which inheres in a process.</w3id:IAO_0000115>
-        <rdfs:label xml:lang="en">process quality</rdfs:label>
     </owl:Class>
     
 
@@ -8684,6 +8725,15 @@ The coefficient is calculated by dividing their covariance with the product of t
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000147"/>
         </owl:members>
     </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CMEO_0000030"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CMEO_0000043"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CMEO_0000050"/>
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000014"/>
+        </owl:members>
+    </rdf:Description>
     
 
 
@@ -8873,30 +8923,6 @@ The coefficient is calculated by dividing their covariance with the product of t
             </rdf:Description>
         </swrl:head>
     </rdf:Description>
-
-
-    <!-- http://purl.obolibrary.org/obo/OBCS_0000010 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000010">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <w3id:IAO_0000115 xml:lang="en">An information content entity that refers to a distribution of a random variable that can be described using a mathematical formula.</w3id:IAO_0000115>
-        <w3id:IAO_0000412 rdf:resource="http://purl.obolibrary.org/obo/obcs.owl"/>
-        <oboInOwl:id rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000010"/>
-        <rdfs:label xml:lang="en">probability distribution</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- Disjointness among the top-level data-element categories (added for QC / design principles) -->
-
-    <owl:AllDisjointClasses>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CMEO_0000030"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CMEO_0000043"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CMEO_0000050"/>
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OGMS_0000014"/>
-        </owl:members>
-    </owl:AllDisjointClasses>
 </rdf:RDF>
 
 
