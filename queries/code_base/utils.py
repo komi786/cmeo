@@ -60,29 +60,127 @@ def day_month_year(date_str: str) -> tuple:
             pass
     return None
 
+_ONTOLOGY_TERM_IRIS = {
+    "bar_chart": "http://purl.obolibrary.org/obo/STATO_0000166",
+    "categorical_value_specification": "http://purl.obolibrary.org/obo/OBI_0001930",
+    "category": "http://purl.obolibrary.org/obo/CMEO_0000076",
+    "code": "http://purl.obolibrary.org/obo/CMEO_0000026",
+    "code_set": "http://purl.obolibrary.org/obo/IAO_0020020",
+    "comparator_specification": "http://purl.obolibrary.org/obo/CMEO_0000071",
+    "concretizes": "http://purl.obolibrary.org/obo/RO_0000059",
+    "data_collection": "http://purl.obolibrary.org/obo/OBCS_0000002",
+    "data_element": "http://purl.obolibrary.org/obo/CMEO_0000009",
+    "data_format_specification": "http://purl.obolibrary.org/obo/IAO_0000098",
+    "data_standardization": "http://purl.obolibrary.org/obo/CMEO_0000007",
+    "data_transformation": "http://purl.obolibrary.org/obo/OBI_0200000",
+    "data_type": "http://purl.obolibrary.org/obo/CMEO_0000059",
+    "data_use_modifier": "http://purl.obolibrary.org/obo/DUO_0000017",
+    "data_use_permission": "http://purl.obolibrary.org/obo/DUO_0000001",
+    "dataset": "http://purl.obolibrary.org/obo/IAO_0000100",
+    "denotes": "http://purl.obolibrary.org/obo/IAO_0000219",
+    "duration_of_observation": "http://purl.obolibrary.org/obo/CMEO_0000081",
+    "eligibility_criterion": "http://purl.obolibrary.org/obo/OBI_0500026",
+    "email_address": "http://purl.obolibrary.org/obo/IAO_0000429",
+    "end_time": "http://purl.obolibrary.org/obo/CMEO_0000075",
+    "exclusion_criterion": "http://purl.obolibrary.org/obo/OBI_0500028",
+    "exploratory_data_analysis": "http://purl.obolibrary.org/obo/CMEO_0000073",
+    "formula": "http://purl.obolibrary.org/obo/CMEO_0000008",
+    "frequency_distribution": "http://purl.obolibrary.org/obo/OBCS_0000068",
+    "has_annotation": "http://semanticscience.org/resource/SIO_000255",
+    "has_attribute": "http://semanticscience.org/resource/SIO_000008",
+    "has_characteristic": "http://purl.obolibrary.org/obo/RO_0000053",
+    "has_measurement_unit_label": "http://purl.obolibrary.org/obo/IAO_0000039",
+    "has_member": "http://purl.obolibrary.org/obo/RO_0002351",
+    "has_part": "http://purl.obolibrary.org/obo/BFO_0000051",
+    "has_participant": "http://purl.obolibrary.org/obo/RO_0000057",
+    "has_role": "http://purl.obolibrary.org/obo/RO_0000087",
+    "has_specified_input": "http://purl.obolibrary.org/obo/OBI_0000293",
+    "has_specified_output": "http://purl.obolibrary.org/obo/OBI_0000299",
+    "has_time_stamp": "http://purl.obolibrary.org/obo/IAO_0000581",
+    "has_value": "http://purl.obolibrary.org/obo/CMEO_0000082",
+    "has_value_specification": "http://purl.obolibrary.org/obo/OBI_0001938",
+    "histogram": "http://purl.obolibrary.org/obo/IAO_0000179",
+    "homo_sapiens": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
+    "human_subject_enrollment": "http://purl.obolibrary.org/obo/OBI_0600004",
+    "inclusion_criterion": "http://purl.obolibrary.org/obo/OBI_0500027",
+    "intervention_specification": "http://purl.obolibrary.org/obo/CMEO_0000072",
+    "is_about": "http://purl.obolibrary.org/obo/IAO_0000136",
+    "is_attribute_of": "http://semanticscience.org/resource/SIO_000011",
+    "is_specified_input_of": "http://purl.obolibrary.org/obo/OBI_0000295",
+    "is_specified_output_of": "http://purl.obolibrary.org/obo/OBI_0000312",
+    "measurement_datum": "http://purl.obolibrary.org/obo/IAO_0000109",
+    "measurement_unit_label": "http://purl.obolibrary.org/obo/IAO_0000003",
+    "member_of": "http://purl.obolibrary.org/obo/RO_0002350",
+    "missing_value_specification": "http://purl.obolibrary.org/obo/CMEO_0000028",
+    "mixed_sex": "http://purl.obolibrary.org/obo/PATO_0001338",
+    "morbidity": "http://purl.obolibrary.org/obo/PATO_0001415",
+    "objective_specification": "http://purl.obolibrary.org/obo/IAO_0000005",
+    "occurs_in": "http://purl.obolibrary.org/obo/BFO_0000066",
+    "omop_id": "http://purl.obolibrary.org/obo/CMEO_0000029",
+    "ongoing": "http://semanticscience.org/resource/SIO_000035",
+    "organization": "http://purl.obolibrary.org/obo/OBI_0000245",
+    "part_of": "http://purl.obolibrary.org/obo/BFO_0000050",
+    "participant_identifier": "http://purl.obolibrary.org/obo/OBI_0003071",
+    "participant_under_investigation_role": "http://purl.obolibrary.org/obo/OBI_0000097",
+    "plan": "http://purl.obolibrary.org/obo/OBI_0000260",
+    "population": "http://purl.obolibrary.org/obo/OBI_0000181",
+    "primary_outcome_specification": "http://purl.obolibrary.org/obo/CMEO_0000064",
+    "protocol": "http://purl.obolibrary.org/obo/OBI_0000272",
+    "realizes": "http://purl.obolibrary.org/obo/BFO_0000055",
+    "role_of": "http://purl.obolibrary.org/obo/RO_0000081",
+    "secondary_outcome_specification": "http://purl.obolibrary.org/obo/CMEO_0000065",
+    "sensor": "http://purl.obolibrary.org/obo/CMEO_0000003",
+    "site": "http://purl.obolibrary.org/obo/BFO_0000029",
+    "specifies_value_of": "http://purl.obolibrary.org/obo/OBI_0001927",
+    "start_time": "http://purl.obolibrary.org/obo/CMEO_0000074",
+    "statistic": "http://purl.obolibrary.org/obo/STATO_0000039",
+    "study_design": "http://purl.obolibrary.org/obo/OBI_0500000",
+    "study_design_execution": "http://purl.obolibrary.org/obo/OBI_0000471",
+    "study_design_variable_specification": "http://purl.obolibrary.org/obo/CMEO_0000062",
+    "timeline_specification": "http://purl.obolibrary.org/obo/CMEO_0000061",
+    "visit_type": "http://purl.obolibrary.org/obo/NCIT_C103165",
+    "wearable_device": "http://purl.obolibrary.org/obo/CMEO_0000002",
+}
+
+
+class _OntologyTermNamespace(str):
+    """rdflib Namespace drop-in that resolves known friendly term names to the exact
+    IRIs declared in cmeo.owl, so the knowledge graph uses the SAME identifiers as the
+    ontology. Unknown names fall back to <base><name> (previous behaviour)."""
+    __slots__ = ()
+    def __getattr__(self, name):
+        if name.startswith('_'):
+            raise AttributeError(name)
+        return self[name]
+    def __getitem__(self, name):
+        iri = _ONTOLOGY_TERM_IRIS.get(name)
+        return URIRef(iri) if iri is not None else URIRef(str(self) + name)
+    def term(self, name):
+        return self[name]
+
 class OntologyNamespaces(Enum):
-    CMEO = Namespace("https://w3id.org/CMEO/")
+    CMEO = _OntologyTermNamespace("https://w3id.org/CMEO/")
     OMOP = Namespace("http://omop.org/OMOP/")
     ATC = Namespace("http://purl.bioontology.org/ontology/ATC/")
     RXNORM = Namespace("http://purl.bioontology.org/ontology/RXNORM/")
     UCUM = Namespace("http://unitsofmeasure.org/")
     OMOP_EXT = Namespace("http://omop.org/omopextension/")
     OWL = Namespace("http://www.w3.org/2002/07/owl#")
-    OBI = Namespace("http://purl.obolibrary.org/obo/obi.owl/")
-    OBCS = Namespace("http://purl.obolibrary.org/obo/obcs.owl/")
-    BFO = Namespace("http://purl.obolibrary.org/obo/bfo.owl/")
-    STATO = Namespace("http://purl.obolibrary.org/obo/stato.owl/")
+    OBI = _OntologyTermNamespace("http://purl.obolibrary.org/obo/obi.owl/")
+    OBCS = _OntologyTermNamespace("http://purl.obolibrary.org/obo/obcs.owl/")
+    BFO = _OntologyTermNamespace("http://purl.obolibrary.org/obo/bfo.owl/")
+    STATO = _OntologyTermNamespace("http://purl.obolibrary.org/obo/stato.owl/")
     DEFAULT_VALUE = 'Unmapped'
     SNOMEDCT = Namespace("http://purl.bioontology.org/ontology/SNOMEDCT/")
-    LOINC = Namespace("http://purl.bioontology.org/ontology/LNC/") 
-    RO = Namespace("http://purl.obolibrary.org/obo/ro.owl/")
-    IAO = Namespace("http://purl.obolibrary.org/obo/iao.owl/")
+    LOINC = Namespace("http://purl.bioontology.org/ontology/LNC/")
+    RO = _OntologyTermNamespace("http://purl.obolibrary.org/obo/ro.owl/")
+    IAO = _OntologyTermNamespace("http://purl.obolibrary.org/obo/iao.owl/")
     TIME = Namespace("http://www.w3.org/2006/time#")
-    SIO = Namespace("http://semanticscience.org/ontology/sio.owl/")
+    SIO = _OntologyTermNamespace("http://semanticscience.org/ontology/sio.owl/")
     ICD10 = Namespace("http://purl.bioontology.org/ontology/ICD10/")
     ICD9 = Namespace("http://purl.bioontology.org/ontology/ICD9CM/")
-    DUO = Namespace("http://purl.obolibrary.org/obo/duo.owl/")
-    NCBI = Namespace("http://purl.bioontology.org/ontology/NCBITAXON/")
+    DUO = _OntologyTermNamespace("http://purl.obolibrary.org/obo/duo.owl/")
+    NCBI = _OntologyTermNamespace("http://purl.bioontology.org/ontology/NCBITAXON/")
     SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
     # UCUM = Namespace("http://purl.bioontology.org/ontology/UCUM/")
     # RXNORM = Namespace("http://purl.bioontology.org/ontology/RXNORM/")
