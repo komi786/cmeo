@@ -60,106 +60,222 @@ def day_month_year(date_str: str) -> tuple:
             pass
     return None
 
+OBO = "http://purl.obolibrary.org/obo/"
+SIO = "http://semanticscience.org/resource/"
+CMEO_KG = "https://w3id.org/CMEO/"   # base for instance data and for KG-local terms (no ontology class)
+
+# Friendly name -> ontology IRI. Checked against cmeo_v2.owl (2026-10-14 release) and the
+# source ontologies (STATO, OBI, IAO, RO, SIO, DUO). A name missing from this table is a
+# KG-local term and resolves to CMEO_KG + name (see _LOCAL_TERMS).
 _ONTOLOGY_TERM_IRIS = {
-    "binary_class_variable": "http://purl.obolibrary.org/obo/STATO_0000090",
-    "continuous_variable": "http://purl.obolibrary.org/obo/STATO_0000251",
-    "multi_class_variable": "http://purl.obolibrary.org/obo/STATO_0000087",
-    "bar_chart": "http://purl.obolibrary.org/obo/STATO_0000166",
-    "categorical_value_specification": "http://purl.obolibrary.org/obo/OBI_0001930",
-    "category": "http://purl.obolibrary.org/obo/CMEO_0000076",
-    "code": "http://purl.obolibrary.org/obo/CMEO_0000026",
-    "code_set": "http://purl.obolibrary.org/obo/IAO_0020020",
-    "comparator_specification": "http://purl.obolibrary.org/obo/CMEO_0000071",
-    "concretizes": "http://purl.obolibrary.org/obo/RO_0000059",
-    "data_collection": "http://purl.obolibrary.org/obo/OBCS_0000002",
-    "data_element": "http://purl.obolibrary.org/obo/CMEO_0000009",
-    "data_format_specification": "http://purl.obolibrary.org/obo/IAO_0000098",
-    "data_standardization": "http://purl.obolibrary.org/obo/CMEO_0000007",
-    "data_transformation": "http://purl.obolibrary.org/obo/OBI_0200000",
-    "data_type": "http://purl.obolibrary.org/obo/CMEO_0000059",
-    "data_use_modifier": "http://purl.obolibrary.org/obo/DUO_0000017",
-    "data_use_permission": "http://purl.obolibrary.org/obo/DUO_0000001",
-    "dataset": "http://purl.obolibrary.org/obo/IAO_0000100",
-    "denotes": "http://purl.obolibrary.org/obo/IAO_0000219",
-    "duration_of_observation": "http://purl.obolibrary.org/obo/CMEO_0000081",
-    "eligibility_criterion": "http://purl.obolibrary.org/obo/OBI_0500026",
-    "email_address": "http://purl.obolibrary.org/obo/IAO_0000429",
-    "end_time": "http://purl.obolibrary.org/obo/CMEO_0000075",
-    "exclusion_criterion": "http://purl.obolibrary.org/obo/OBI_0500028",
-    "exploratory_data_analysis": "http://purl.obolibrary.org/obo/CMEO_0000073",
-    "formula": "http://purl.obolibrary.org/obo/CMEO_0000008",
-    "frequency_distribution": "http://purl.obolibrary.org/obo/OBCS_0000068",
-    "has_annotation": "http://semanticscience.org/resource/SIO_000255",
-    "has_attribute": "http://semanticscience.org/resource/SIO_000008",
-    "has_characteristic": "http://purl.obolibrary.org/obo/RO_0000053",
-    "has_measurement_unit_label": "http://purl.obolibrary.org/obo/IAO_0000039",
-    "has_member": "http://purl.obolibrary.org/obo/RO_0002351",
-    "has_part": "http://purl.obolibrary.org/obo/BFO_0000051",
-    "has_participant": "http://purl.obolibrary.org/obo/RO_0000057",
-    "has_role": "http://purl.obolibrary.org/obo/RO_0000087",
-    "has_specified_input": "http://purl.obolibrary.org/obo/OBI_0000293",
-    "has_specified_output": "http://purl.obolibrary.org/obo/OBI_0000299",
-    "has_time_stamp": "http://purl.obolibrary.org/obo/IAO_0000581",
-    "has_value": "http://purl.obolibrary.org/obo/CMEO_0000082",
-    "has_value_specification": "http://purl.obolibrary.org/obo/OBI_0001938",
-    "histogram": "http://purl.obolibrary.org/obo/IAO_0000179",
-    "homo_sapiens": "http://purl.obolibrary.org/obo/NCBITaxon_9606",
-    "human_subject_enrollment": "http://purl.obolibrary.org/obo/OBI_0600004",
-    "inclusion_criterion": "http://purl.obolibrary.org/obo/OBI_0500027",
-    "intervention_specification": "http://purl.obolibrary.org/obo/CMEO_0000072",
-    "is_about": "http://purl.obolibrary.org/obo/IAO_0000136",
-    "is_attribute_of": "http://semanticscience.org/resource/SIO_000011",
-    "is_specified_input_of": "http://purl.obolibrary.org/obo/OBI_0000295",
-    "is_specified_output_of": "http://purl.obolibrary.org/obo/OBI_0000312",
-    "measurement_datum": "http://purl.obolibrary.org/obo/IAO_0000109",
-    "measurement_unit_label": "http://purl.obolibrary.org/obo/IAO_0000003",
-    "member_of": "http://purl.obolibrary.org/obo/RO_0002350",
-    "missing_value_specification": "http://purl.obolibrary.org/obo/CMEO_0000028",
-    "mixed_sex": "http://purl.obolibrary.org/obo/PATO_0001338",
-    "morbidity": "http://purl.obolibrary.org/obo/PATO_0001415",
-    "objective_specification": "http://purl.obolibrary.org/obo/IAO_0000005",
-    "occurs_in": "http://purl.obolibrary.org/obo/BFO_0000066",
-    "omop_id": "http://purl.obolibrary.org/obo/CMEO_0000029",
-    "ongoing": "http://semanticscience.org/resource/SIO_000035",
-    "organization": "http://purl.obolibrary.org/obo/OBI_0000245",
-    "part_of": "http://purl.obolibrary.org/obo/BFO_0000050",
-    "participant_identifier": "http://purl.obolibrary.org/obo/OBI_0003071",
-    "participant_under_investigation_role": "http://purl.obolibrary.org/obo/OBI_0000097",
-    "plan": "http://purl.obolibrary.org/obo/OBI_0000260",
-    "population": "http://purl.obolibrary.org/obo/OBI_0000181",
-    "primary_outcome_specification": "http://purl.obolibrary.org/obo/CMEO_0000064",
-    "protocol": "http://purl.obolibrary.org/obo/OBI_0000272",
-    "realizes": "http://purl.obolibrary.org/obo/BFO_0000055",
-    "role_of": "http://purl.obolibrary.org/obo/RO_0000081",
-    "secondary_outcome_specification": "http://purl.obolibrary.org/obo/CMEO_0000065",
-    "sensor": "http://purl.obolibrary.org/obo/CMEO_0000003",
-    "site": "http://purl.obolibrary.org/obo/BFO_0000029",
-    "specifies_value_of": "http://purl.obolibrary.org/obo/OBI_0001927",
-    "start_time": "http://purl.obolibrary.org/obo/CMEO_0000074",
-    "statistic": "http://purl.obolibrary.org/obo/STATO_0000039",
-    "study_design": "http://purl.obolibrary.org/obo/OBI_0500000",
-    "study_design_execution": "http://purl.obolibrary.org/obo/OBI_0000471",
-    "study_design_variable_specification": "http://purl.obolibrary.org/obo/CMEO_0000062",
-    "timeline_specification": "http://purl.obolibrary.org/obo/CMEO_0000061",
-    "visit_type": "http://purl.obolibrary.org/obo/NCIT_C103165",
-    "wearable_device": "http://purl.obolibrary.org/obo/CMEO_0000002",
+    "binary_class_variable": OBO + "STATO_0000090",  # dichotomous variable
+    "continuous_variable": OBO + "STATO_0000251",  # continuous variable
+    "multi_class_variable": OBO + "STATO_0000087",  # polychotomous variable
+    "qualitative_variable": OBO + "STATO_0000252",  # categorical variable
+    "categorical_variable": OBO + "STATO_0000252",  # categorical variable
+    "statistic": OBO + "STATO_0000039",  # statistic
+    "count": OBO + "STATO_0000047",  # count
+    "count_": OBO + "STATO_0000047",  # count
+    "missing_values_count": OBO + "STATO_0000047",  # count (of missing values)
+    "unique_values_count": OBO + "STATO_0000047",  # count (of unique values)
+    "outlier_count_by_iqr": OBO + "STATO_0000047",  # count (of outliers, IQR rule)
+    "outlier_count_by_z_score": OBO + "STATO_0000047",  # count (of outliers, z-score rule)
+    "missing_values_percentage": OBO + "STATO_0000639",  # percentage
+    "minimum_value": OBO + "STATO_0000150",  # minimum observed value
+    "maximum_value": OBO + "STATO_0000151",  # maximum observed value
+    "mean": OBO + "STATO_0000401",  # sample mean
+    "mode": OBO + "STATO_0000033",  # mode
+    "first_quartile": OBO + "STATO_0000167",  # first quartile
+    "third_quartile": OBO + "STATO_0000170",  # third quartile
+    "interquartile_range": OBO + "STATO_0000164",  # inter quartile range
+    "standard_deviation": OBO + "STATO_0000237",  # standard deviation
+    "variance": OBO + "STATO_0000113",  # variance
+    "skewness": OBO + "STATO_0000068",  # skewness
+    "kurtosis": OBO + "STATO_0000178",  # kurtosis
+    "chi_square_test_statistic": OBO + "STATO_0000030",  # Chi-Squared statistic
+    "wilks_shapiro_test": OBO + "OBCS_0000013",  # test statistic (Shapiro-Wilk W)
+    "frequency_distribution": OBO + "OBCS_0000068",  # frequency distribution
+    "data_visualization_process": OBO + "OBI_0200111",  # data visualization
+    "bar_chart": OBO + "STATO_0000166",  # bar chart
+    "histogram": OBO + "IAO_0000179",  # histogram
+    "x_axis": OBO + "STATO_0000006",  # x-axis
+    "y_axis": OBO + "STATO_0000008",  # y-axis
+    "code": OBO + "CMEO_0000026",  # concept code
+    "comparator_specification": OBO + "CMEO_0000071",  # comparator specification
+    "data_element": OBO + "CMEO_0000009",  # data element
+    "data_mapping": OBO + "CMEO_0000007",  # data mapping
+    "data_standardization": OBO + "CMEO_0000007",  # data mapping (old key)
+    "data_type": OBO + "CMEO_0000059",  # data type
+    "duration_of_observation": OBO + "CMEO_0000081",  # duration of observation
+    "end_time": OBO + "CMEO_0000075",  # end time
+    "exploratory_data_analysis": OBO + "CMEO_0000073",  # exploratory data analysis
+    "formula": OBO + "CMEO_0000008",  # variable derivation formula
+    "intervention_specification": OBO + "CMEO_0000072",  # intervention specification
+    "missing_value_specification": OBO + "CMEO_0000028",  # missing value specification
+    "omop_id": OBO + "CMEO_0000029",  # OMOP identifier
+    "outcome_specification": OBO + "CMEO_0000063",  # study outcome specification
+    "primary_outcome_specification": OBO + "CMEO_0000064",  # primary outcome specification
+    "secondary_outcome_specification": OBO + "CMEO_0000065",  # secondary outcome specification
+    "sensor": OBO + "CMEO_0000003",  # wearable sensor
+    "wearable_sensor": OBO + "CMEO_0000003",  # wearable sensor
+    "start_time": OBO + "CMEO_0000074",  # start time
+    "study_design_variable_specification": OBO + "CMEO_0000062",  # study design variable specification
+    "timeline_specification": OBO + "CMEO_0000061",  # timeline specification
+    "wearable_device": OBO + "CMEO_0000002",  # wearable device
+    "study_design": OBO + "OBI_0500000",  # study design
+    "study_design_execution": OBO + "OBI_0000471",  # study design execution
+    "observational_study_design": OBO + "OBI_0300311",  # observation design
+    "randomized_controlled_trial_design": OBO + "OBCS_0000107",  # randomized controlled trial design
+    "cohort_study_design": OBO + "OBCS_0000106",  # cohort study design
+    "case_control_study_design": OBO + "OBI_0002624",  # case-control study design
+    "retrospective_study_design": OBO + "CMEO_0000066",  # retrospective study design
+    "protocol": OBO + "OBI_0000272",  # protocol
+    "plan": OBO + "OBI_0000260",  # plan
+    "objective_specification": OBO + "IAO_0000005",  # objective specification
+    "eligibility_criterion": OBO + "OBI_0500026",  # eligibility criterion
+    "inclusion_criterion": OBO + "OBI_0500027",  # inclusion criterion
+    "exclusion_criterion": OBO + "OBI_0500028",  # exclusion criterion
+    "age_group_inclusion_criterion": OBO + "OBI_0002555",  # age group inclusion criterion
+    "health_status_inclusion_criterion": OBO + "OBI_0002453",  # health status inclusion criterion
+    "minimum_age_value_specification": OBO + "OBI_0002556",  # minimum age value specification
+    "maximum_age_value_specification": OBO + "OBI_0002557",  # maximum age value specification
+    "human_subject_enrollment": OBO + "OBI_0600004",  # human subject enrollment
+    "population": OBO + "OBI_0000181",  # population
+    "number_of_participants": OBO + "STATO_0000088",  # study group population size
+    "organization": OBO + "OBI_0000245",  # organization
+    "study_contact_person_role": OBO + "OBI_0001687",  # contact representative role
+    "participant_identifier": OBO + "OBI_0003071",  # participant identifier
+    "participant_under_investigation_role": OBO + "OBI_0000097",  # participant under investigation role
+    "data_collection": OBO + "OBCS_0000002",  # data collection
+    "data_transformation": OBO + "OBI_0200000",  # data transformation
+    "categorical_value_specification": OBO + "OBI_0001930",  # categorical value specification
+    "code_set": OBO + "IAO_0020020",  # code set
+    "data_format_specification": OBO + "IAO_0000098",  # data format specification
+    "dataset": OBO + "IAO_0000100",  # homogenous data collection (was 'data set')
+    "email_address": OBO + "IAO_0000429",  # email address
+    "measurement_datum": OBO + "IAO_0000109",  # measurement datum
+    "measurement_unit_label": OBO + "IAO_0000003",  # measurement unit label
+    "mixed_sex": OBO + "PATO_0001338",  # mixed sex
+    "morbidity": OBO + "PATO_0001415",  # morbidity
+    "data_use_permission": OBO + "DUO_0000001",  # data use permission
+    "data_use_modifier": OBO + "DUO_0000017",  # data use modifier
+    "site": OBO + "BFO_0000029",  # site
+    "homo_sapiens": OBO + "NCBITaxon_9606",  # Homo sapiens
+    "body_region": OBO + "UBERON_0001062",  # anatomical entity
+    "visit_type": OBO + "NCIT_C103165",  # Subject Visit Type
+    "has_value": OBO + "STATO_0000129",  # has value (data property; replaces obsolete CMEO:0000082)
+    "concretizes": OBO + "RO_0000059",  # concretizes
+    "is_concretized_by": OBO + "RO_0000058",  # is concretized as
+    "denotes": OBO + "IAO_0000219",  # denotes
+    "is_denoted_by": OBO + "IAO_0000235",  # denoted by
+    "is_about": OBO + "IAO_0000136",  # is about
+    "has_measurement_unit_label": OBO + "IAO_0000039",  # has measurement unit label
+    "has_time_stamp": OBO + "IAO_0000581",  # has time stamp
+    "has_member": OBO + "RO_0002351",  # has member
+    "member_of": OBO + "RO_0002350",  # member of
+    "has_part": OBO + "BFO_0000051",  # has part
+    "part_of": OBO + "BFO_0000050",  # part of
+    "is_part_of": OBO + "BFO_0000050",  # part of
+    "has_participant": OBO + "RO_0000057",  # has participant
+    "has_role": OBO + "RO_0000087",  # has role
+    "role_of": OBO + "RO_0000081",  # role of
+    "has_characteristic": OBO + "RO_0000053",  # has characteristic
+    "is_characteristic_of": OBO + "RO_0000052",  # characteristic of
+    "has_input": OBO + "RO_0002233",  # has input
+    "has_output": OBO + "RO_0002234",  # has output
+    "is_located_in": OBO + "RO_0001025",  # located in
+    "occurs_in": OBO + "BFO_0000066",  # occurs in
+    "realizes": OBO + "BFO_0000055",  # realizes
+    "has_specified_input": OBO + "OBI_0000293",  # has specified input
+    "has_specified_output": OBO + "OBI_0000299",  # has specified output
+    "is_specified_input_of": OBO + "OBI_0000295",  # is specified input of
+    "is_specified_output_of": OBO + "OBI_0000312",  # is specified output of
+    "has_value_specification": OBO + "OBI_0001938",  # has value specification
+    "specifies_value_of": OBO + "OBI_0001927",  # specifies value of
+    "median": SIO + "SIO_001110",  # median
+    "descriptor": SIO + "SIO_000133",  # descriptor
+    "administrator_role": SIO + "SIO_000726",  # administrative role
+    "has_annotation": SIO + "SIO_000255",  # has annotation
+    "has_attribute": SIO + "SIO_000008",  # has attribute
+    "is_attribute_of": SIO + "SIO_000011",  # is attribute of
+    "ongoing": SIO + "SIO_000035",  # ongoing
 }
+
+# Names used in the code that have no matching ontology class. They resolve to CMEO_KG + name.
+_LOCAL_TERMS = {
+    "age_distribution", "bin_edges", "number_of_bins", "normality_test",
+    "data_use_permission_assignment", "has_omop_id", "category_annotation",
+}
+
+# DUO terms by label, so DUO policies and modifiers get the real DUO class.
+DUO_TERMS = {
+    "no restriction": OBO + "DUO_0000004",
+    "general research use": OBO + "DUO_0000042",
+    "health or medical or biomedical research": OBO + "DUO_0000006",
+    "disease specific research": OBO + "DUO_0000007",
+    "population origins or ancestry research only": OBO + "DUO_0000011",
+    "population origins or ancestry research prohibited": OBO + "DUO_00000044",
+    "research specific restrictions": OBO + "DUO_0000012",
+    "no general methods research": OBO + "DUO_0000015",
+    "genetic studies only": OBO + "DUO_0000016",
+    "not for profit, non commercial use only": OBO + "DUO_0000018",
+    "publication required": OBO + "DUO_0000019",
+    "collaboration required": OBO + "DUO_0000020",
+    "ethics approval required": OBO + "DUO_0000021",
+    "geographical restriction": OBO + "DUO_0000022",
+    "publication moratorium": OBO + "DUO_0000024",
+    "time limit on use": OBO + "DUO_0000025",
+    "user specific restriction": OBO + "DUO_0000026",
+    "project specific restriction": OBO + "DUO_0000027",
+    "institution specific restriction": OBO + "DUO_0000028",
+    "return to database or resource": OBO + "DUO_0000029",
+    "clinical care use": OBO + "DUO_0000043",
+    "not for profit organisation use only": OBO + "DUO_0000045",
+    "non-commercial use only": OBO + "DUO_0000046",
+}
+
+_warned_unknown = set()
+
+
+def term_iri(name: str) -> URIRef:
+    """IRI for a friendly term name. Unknown names become KG-local CMEO terms."""
+    iri = _ONTOLOGY_TERM_IRIS.get(name)
+    if iri is not None:
+        return URIRef(iri)
+    is_term_name = re.fullmatch(r"[a-z][a-z0-9_]*", name) is not None   # not an instance path like "time-chf/age"
+    if is_term_name and name not in _LOCAL_TERMS and name not in _warned_unknown:
+        _warned_unknown.add(name)
+        print(f"[ontology] '{name}' has no ontology IRI; using {CMEO_KG}{name}")
+    return URIRef(CMEO_KG + name)
+
+
+def sparql_prefixes() -> str:
+    """Standard PREFIX block for queries against the KG."""
+    return (
+        "PREFIX obo:  <http://purl.obolibrary.org/obo/>\n"
+        "PREFIX sio:  <http://semanticscience.org/resource/>\n"
+        "PREFIX cmeo: <https://w3id.org/CMEO/>\n"
+        "PREFIX dc:   <http://purl.org/dc/elements/1.1/>\n"
+        "PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
+        "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
+        "PREFIX skos: <http://www.w3.org/2004/02/skos/core#>\n"
+        "PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>\n"
+    )
 
 
 class _OntologyTermNamespace(str):
-    """rdflib Namespace drop-in that resolves known friendly term names to the exact
-    IRIs declared in cmeo.owl, so the knowledge graph uses the SAME identifiers as the
-    ontology. Unknown names fall back to <base><name> (previous behaviour)."""
+    """rdflib Namespace drop-in. Attribute access (NS.value.data_element) resolves the
+    friendly name to the ontology IRI in _ONTOLOGY_TERM_IRIS, whichever namespace object it
+    is called on. String use (NS.value + "x") still gives <base>x, for instance IRIs."""
     __slots__ = ()
     def __getattr__(self, name):
         if name.startswith('_'):
             raise AttributeError(name)
-        return self[name]
+        return term_iri(name)
     def __getitem__(self, name):
-        iri = _ONTOLOGY_TERM_IRIS.get(name)
-        return URIRef(iri) if iri is not None else URIRef(str(self) + name)
+        return term_iri(name)
     def term(self, name):
-        return self[name]
+        return term_iri(name)
 
 class OntologyNamespaces(Enum):
     CMEO = _OntologyTermNamespace("https://w3id.org/CMEO/")
@@ -191,12 +307,25 @@ class OntologyNamespaces(Enum):
 
 
 STUDY_TYPES = {
-    "observational study": URIRef(f"{OntologyNamespaces.CMEO.value}observational_study_design"),
-    "randomized controlled trial": URIRef(f"{OntologyNamespaces.CMEO.value}randomized_controlled_trial_design"),
-    "RCT": URIRef(f"{OntologyNamespaces.CMEO.value}randomized_controlled_trial_design"),
-    "federated database": URIRef(f"{OntologyNamespaces.CMEO.value}federated_database"),
-    "single-arm cross-over randomized intervention": URIRef(f"{OntologyNamespaces.CMEO.value}single_arm_cross_over_design"),
+    # study design value (as written in the metadata file, normalized) -> ontology class
+    "observational study": term_iri("observational_study_design"),
+    "observational": term_iri("observational_study_design"),
+    "randomized controlled trial": term_iri("randomized_controlled_trial_design"),
+    "rct": term_iri("randomized_controlled_trial_design"),
+    "cohort study": term_iri("cohort_study_design"),
+    "case-control study": term_iri("case_control_study_design"),
+    "case control study": term_iri("case_control_study_design"),
+    "retrospective study": term_iri("retrospective_study_design"),
+    # no ontology class: KG-local
+    "federated database": URIRef(CMEO_KG + "federated_database"),
+    "single-arm cross-over randomized intervention": URIRef(CMEO_KG + "single_arm_cross_over_design"),
 }
+
+
+def study_design_class(study_design_value: str) -> URIRef:
+    """Ontology class for a study design value; OBI 'study design' if not recognised."""
+    key = (study_design_value or "").strip().lower().replace("_", " ")
+    return STUDY_TYPES.get(key, term_iri("study_design"))
 
 
 
@@ -251,6 +380,8 @@ def init_graph(default_graph_identifier: str | None = "https://w3id.org/CMEO/gra
     """Initialize a new RDF graph for nquads with the voc namespace bindings."""
     g = Dataset(store="Oxigraph")
     g.bind("cmeo", OntologyNamespaces.CMEO.value)
+    g.bind("obo", OBO)
+    g.bind("sioterm", SIO)
     g.bind("bfo", OntologyNamespaces.BFO.value)
     g.bind("obi", OntologyNamespaces.OBI.value)
     g.bind("stato", OntologyNamespaces.STATO.value)
@@ -818,9 +949,8 @@ def apply_rules(domain, mapping_relation, src_info, tgt_info):
 
 def get_member_studies(study_name: str) -> URIRef | None:
     query = f"""PREFIX dc:   <http://purl.org/dc/elements/1.1/>
-                    PREFIX obi:  <http://purl.obolibrary.org/obo/obi.owl/>
-                    PREFIX ro:   <http://purl.obolibrary.org/obo/ro.owl/>
-                    PREFIX iao:  <http://purl.obolibrary.org/obo/iao.owl/>
+                    PREFIX obo:  <http://purl.obolibrary.org/obo/>
+                    # obo:RO_0002351 has member, obo:RO_0002350 member of
 
                     SELECT DISTINCT ?related_study
                     WHERE {{
@@ -830,13 +960,13 @@ def get_member_studies(study_name: str) -> URIRef | None:
                         VALUES (?study_name) {{ ("{study_name}") }} 
                         # membership in BOTH directions
                         {{
-                        ?study_design obi:has_member ?related_study .
+                        ?study_design obo:RO_0002351 ?related_study .
                         }} UNION {{
-                        ?related_study obi:has_member ?study_design .
+                        ?related_study obo:RO_0002351 ?study_design .
                         }} UNION {{
-                         ?study_design obi:member_of ?related_study .
+                         ?study_design obo:RO_0002350 ?related_study .
                         }} UNION {{
-                        ?related_study obi:member_of ?study_design .
+                        ?related_study obo:RO_0002350 ?study_design .
                         }}
                         # ensure the target is a study and not the same as the anchor
                         FILTER(?related_study != ?study_design)
@@ -1099,17 +1229,18 @@ def find_related_studies(study_name:str) -> list[str]:
     query = f"""
 
     PREFIX dc:  <http://purl.org/dc/elements/1.1/>
-    PREFIX ro:  <http://purl.obolibrary.org/obo/ro.owl/>
+    PREFIX obo: <http://purl.obolibrary.org/obo/>
+    # obo:BFO_0000051 has part, obo:BFO_0000050 part of
 
     SELECT DISTINCT ?parent_name
     WHERE {{
     GRAPH <https://w3id.org/CMEO/graph/studies_metadata> {{
-        VALUES (?q) { (study_name) }
+        VALUES ?q {{ "{study_name}" }}
         ?design dc:identifier ?study_name .
         FILTER(LCASE(STR(?study_name)) = LCASE(?q))
 
         # Only true parents of the design (protocol is not linked this way)
-        ?design (ro:has_part|ro:part_of) ?parent_design .
+        ?design (obo:BFO_0000051|obo:BFO_0000050) ?parent_design .
         ?parent_design dc:identifier ?parent_name .
     }}
     }}

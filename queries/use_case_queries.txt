@@ -1,468 +1,480 @@
-CQ1: What are the protocol specifications of the randomized controlled trials?
-PREFIX obi:  <http://purl.obolibrary.org/obo/obi.owl/>
+Competency question queries for the CMEO knowledge graph
+Updated 2026-10-14 for CMEO release 2026-10-14.
+
+All ontology terms are now real OBO / SIO IRIs (obo:XXX_0000000). Earlier versions used
+made-up IRIs such as obi.owl/protocol or cmeo:has_value, which no longer match the graph.
+The prefix cmeo: is only used for instance data and KG-local terms that have no ontology class.
+
+Common prefixes (repeated in every query so each one runs on its own):
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX sio:  <http://semanticscience.org/resource/>
+PREFIX cmeo: <https://w3id.org/CMEO/>
 PREFIX dc:   <http://purl.org/dc/elements/1.1/>
-PREFIX bfo:  <http://purl.obolibrary.org/obo/bfo.owl/>
-PREFIX cmeo: <https://w3id.org/CMEO/> 
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX ro: <http://purl.obolibrary.org/obo/ro.owl/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-SELECT
-    ?study_name
-(GROUP_CONCAT(DISTINCT COALESCE(?part_uri); separator=";") AS ?all_parts_uri)
-(GROUP_CONCAT(DISTINCT COALESCE(?part_value); separator=";") AS ?all_parts_value)
+Terms used below
+  obo:STATO_0000129  has value                  (replaces obsolete CMEO:0000082)
+  obo:BFO_0000051    has part
+  obo:BFO_0000050    part of
+  obo:IAO_0000136    is about
+  obo:IAO_0000219    denotes
+  obo:IAO_0000235    denoted by
+  obo:RO_0000058     is concretized as
+  obo:RO_0002234     has output
+  obo:RO_0000053     has characteristic
+  obo:OBI_0000293    has specified input
+  obo:OBI_0000299    has specified output
+  obo:OBI_0000295    is specified input of
+  obo:OBI_0001938    has value specification
+  obo:OBI_0001927    specifies value of
+  obo:IAO_0000039    has measurement unit label
+  sio:SIO_000008     has attribute
+  sio:SIO_000255     has annotation
+  obo:OBCS_0000107   randomized controlled trial design
+  obo:OBI_0000272    protocol
+  obo:IAO_0000005    objective specification
+  obo:OBI_0500026    eligibility criterion
+  obo:OBI_0500027    inclusion criterion
+  obo:OBI_0002453    health status inclusion criterion
+  obo:OBI_0002555    age group inclusion criterion
+  obo:OBI_0002556    minimum age value specification
+  obo:OBI_0002557    maximum age value specification
+  obo:OBI_0000181    population
+  obo:CMEO_0000072   intervention specification
+  obo:CMEO_0000071   comparator specification
+  obo:CMEO_0000063   study outcome specification
+  obo:CMEO_0000009   data element
+  obo:CMEO_0000028   missing value specification
+  obo:CMEO_0000059   data type
+  obo:CMEO_0000073   exploratory data analysis
+  obo:CMEO_0000002   wearable device
+  obo:STATO_0000090  dichotomous variable
+  obo:STATO_0000087  polychotomous variable
+  obo:STATO_0000039  statistic
+  obo:STATO_0000150  minimum observed value
+  obo:STATO_0000151  maximum observed value
+  obo:OBCS_0000068   frequency distribution
+  obo:OBCS_0000002   data collection
+  obo:IAO_0000100    homogenous data collection (formerly 'data set')
+  obo:OBI_0000471    study design execution
+  obo:OBI_0001930    categorical value specification
+  obo:DUO_0000001    data use permission
+  obo:DUO_0000007    disease specific research
+  obo:DUO_0000017    data use modifier
+  obo:DUO_0000021    ethics approval required
 
+
+CQ1: What are the protocol specifications of the randomized controlled trials?
+
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
+
+SELECT ?study_name
+  (GROUP_CONCAT(DISTINCT STR(?part_uri); separator=";") AS ?all_parts_uri)
+  (GROUP_CONCAT(DISTINCT STR(?part_value); separator=";") AS ?all_parts_value)
 WHERE {
   GRAPH <https://w3id.org/CMEO/graph/studies_metadata> {
-      ?study  a cmeo:randomized_controlled_trial;
-      			ro:has_part   ?protocol;
-              dc:identifier ?study_name.
-      ?protocol a obi:protocol;
-              (ro:has_part)+ ?part_uri .
-      ?part_uri cmeo:has_value ?part_value.
-    
-   
-   
+    ?study a obo:OBCS_0000107 ;                 # randomized controlled trial design
+           obo:BFO_0000051 ?protocol ;          # has part
+           dc:identifier ?study_name .
+    ?protocol a obo:OBI_0000272 ;               # protocol
+              obo:BFO_0000051+ ?part_uri .
+    ?part_uri obo:STATO_0000129 ?part_value .   # has value
   }
 }
 GROUP BY ?study_name
 
 
-CQ2:Which studies investigated heart failure condition?
-PREFIX obi:  <http://purl.obolibrary.org/obo/obi.owl/>
+CQ2: Which studies investigated heart failure condition?
+
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
 PREFIX dc:   <http://purl.org/dc/elements/1.1/>
-PREFIX bfo:  <http://purl.obolibrary.org/obo/bfo.owl/>
-PREFIX cmeo: <https://w3id.org/CMEO/> 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX ro: <http://purl.obolibrary.org/obo/ro.owl/>
-PREFIX sio: <http://semanticscience.org/ontology/sio.owl/>
 
 SELECT DISTINCT ?study_name ?description
-WHERE { 
-    GRAPH <https://w3id.org/CMEO/graph/studies_metadata> {
-        ?study_design dc:identifier ?study_name;
-            iao:is_about ?descriptor;
-            ro:has_part ?prot .
-        ?descriptor rdfs:label ?description.
-        ?prot a obi:protocol;
-          ro:has_part ?obj_spec.
-        ?obj_spec a obi:objective_specification ;
-            cmeo:has_value ?obj_val.
-        ?prot ro:has_part ?ec.
-        ?ec a obi:eligibility_criterion;
-            ro:has_part ?inc.
-        ?inc a obi:inclusion_criterion;
-            ro:has_part ?spec_inc.
-        ?spec_inc  cmeo:has_value ?inc_value.
-    
-    FILTER(contains  (?obj_val,"heart failure") || contains  (?inc_value,"heart failure"))
-    
+WHERE {
+  GRAPH <https://w3id.org/CMEO/graph/studies_metadata> {
+    ?study_design dc:identifier ?study_name ;
+                  obo:IAO_0000136 ?descriptor ;   # is about
+                  obo:BFO_0000051 ?prot .
+    ?descriptor rdfs:label ?description .
+    ?prot a obo:OBI_0000272 ;
+          obo:BFO_0000051 ?obj_spec .
+    ?obj_spec a obo:IAO_0000005 ;                 # objective specification
+              obo:STATO_0000129 ?obj_val .
+    ?prot obo:BFO_0000051 ?ec .
+    ?ec a obo:OBI_0500026 ;                       # eligibility criterion
+        obo:BFO_0000051 ?inc .
+    ?inc a obo:OBI_0500027 ;                      # inclusion criterion
+         obo:BFO_0000051 ?spec_inc .
+    ?spec_inc obo:STATO_0000129 ?inc_value .
+    FILTER(CONTAINS(?obj_val, "heart failure") || CONTAINS(?inc_value, "heart failure"))
   }
 }
 
 
-CQ3:What are the population characteristics in different studies
+CQ3: What are the population characteristics in different studies?
 
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX obi: <http://purl.obolibrary.org/obo/obi.owl/>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX bfo: <http://purl.obolibrary.org/obo/bfo.owl/>
-PREFIX cmeo: <https://w3id.org/CMEO/> 
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX ro: <http://purl.obolibrary.org/obo/ro.owl/>
 
-SELECT ?study_name (GROUP_CONCAT(DISTINCT LCASE(STR(?quality_value)); separator="; ") AS ?qualities)
-(GROUP_CONCAT(DISTINCT LCASE(STR(?quality_type)); separator="; ") AS ?quality_type)
+SELECT ?study_name
+  (GROUP_CONCAT(DISTINCT LCASE(STR(?characteristic_value)); separator="; ") AS ?qualities)
+  (GROUP_CONCAT(DISTINCT STR(?characteristic_type); separator="; ") AS ?quality_types)
 WHERE {
-GRAPH <https://w3id.org/CMEO/graph/studies_metadata> {
-	 ?study_design dc:identifier ?study_name ;
-            ro:has_part ?prot .
-        ?prot a obi:protocol ;
-            ro:has_part ?ec .
-        ?ec a obi:eligibility_criterion ;
-            ro:is_concretized_by ?hse_uri .
-        ?hse_uri ro:has_output ?population .
-        ?population a obi:population ;
-            ro:has_characteristic ?quality .
-        OPTIONAL { ?quality rdfs:label ?characteristic_value }
-        OPTIONAL { ?quality a  ?characteristic_type }
-}
+  GRAPH <https://w3id.org/CMEO/graph/studies_metadata> {
+    ?study_design dc:identifier ?study_name ;
+                  obo:BFO_0000051 ?prot .
+    ?prot a obo:OBI_0000272 ;
+          obo:BFO_0000051 ?ec .
+    ?ec a obo:OBI_0500026 ;
+        obo:RO_0000058 ?hse_uri .                 # is concretized as (human subject enrollment)
+    ?hse_uri obo:RO_0002234 ?population .         # has output
+    ?population a obo:OBI_0000181 ;               # population
+                obo:RO_0000053 ?quality .         # has characteristic
+    OPTIONAL { ?quality rdfs:label ?characteristic_value }
+    OPTIONAL { ?quality a ?characteristic_type }
+  }
 }
 GROUP BY ?study_name
 LIMIT 3
 
 
+CQ4: Which studies match the PICO criteria?
 
-CQ4:Which studies match the PICO criteria?
-PREFIX obi:  <http://purl.obolibrary.org/obo/obi.owl/>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
 PREFIX dc:   <http://purl.org/dc/elements/1.1/>
-PREFIX bfo:  <http://purl.obolibrary.org/obo/bfo.owl/>
-PREFIX cmeo: <https://w3id.org/CMEO/> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX ro: <http://purl.obolibrary.org/obo/ro.owl/>
-PREFIX sio: <http://semanticscience.org/ontology/sio/v1.59/sio-release.owl#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-SSELECT DISTINCT ?study_name 
-(GROUP_CONCAT(DISTINCT CONCAT(LCASE(STR(?diagnosis_value)), " [", STR(?min_val), "-", STR(?max_value), "]"); SEPARATOR="; ") AS ?population)
-(GROUP_CONCAT(DISTINCT LCASE(STR(?intervention_value)); separator="; ") AS ?interventions)
-(GROUP_CONCAT(DISTINCT LCASE(STR(?comparator_value)); separator="; ") AS ?comparators)
-(GROUP_CONCAT(DISTINCT LCASE(STR(?outcome_value)); separator="; ") AS ?outcomes)
-WHERE {  
-    GRAPH <https://w3id.org/CMEO/graph/studies_metadata> {
-        ?study_design dc:identifier ?study_name;
-             ro:has_part ?prot .
-        ?prot a obi:protocol; 
-        # Population from inclusion criteria
-        	ro:has_part ?eligibility_criterion .
-        ?eligibility_criterion a obi:eligibility_criterion ;
-            ro:has_part ?inclusion_criteria .
-        ?inclusion_criteria a obi:inclusion_criterion ;
-            ro:has_part ?inc_part.
-    
-    	#DIAGNOSTIC INCLUSION
-    	OPTIONAL{
-      	
-         ?inc_part a obi:health_status_inclusion_criterion;
-              cmeo:has_value ?diagnosis_value .
-         FILTER(contains  (?diagnosis_value, "nyha class ii"))
-      }
-      #AGE INCLUSION
-      OPTIONAL{
-      	
-         ?inc_part a obi:age_group_inclusion_criterion;
-            ro:has_part ?min_val_specification, ?max_value_specification.	
-          ?min_val_specification a obi:minimum_age_value_specification; 
-              cmeo:has_value ?min_val.
-          ?max_value_specification a obi:maximum_age_value_specification; 
-              cmeo:has_value  ?max_value.
-          FILTER(xsd:integar(?min_val) >= 60 && xsd:integar(?max_value) <= 85)
-      }
-     # Intervention
-    	OPTIONAL{
-      
-        ?prot ro:has_part ?intervention .
-        ?intervention a cmeo:intervention_specification; cmeo:has_value ?intervention_value .
-        FILTER(contains  (?intervention_value,"intensified"))
-      
-     }
-        # Comparator
-        ?prot ro:has_part ?comparator .
-        ?comparator a cmeo:comparator_specification ;cmeo:has_value ?comparator_value .
-        FILTER(contains  (?comparator_value,"standard guided"))
-        # Outcomes
-     }
-      OPTIONAL{
-        ?prot ro:has_part ?outcome .
-        ?outcome a cmeo:outcome_specification ;
-                ro:has_part ?suboutcome_uri.
-        ?suboutcome_uri  cmeo:has_value ?outcome_value .
-        FILTER(contains  (?outcome_value,"survival"))
-      
+SELECT DISTINCT ?study_name
+  (GROUP_CONCAT(DISTINCT CONCAT(LCASE(COALESCE(STR(?diagnosis_value), "")), " [", COALESCE(STR(?min_val), "?"), "-", COALESCE(STR(?max_value), "?"), "]"); separator="; ") AS ?population)
+  (GROUP_CONCAT(DISTINCT LCASE(STR(?intervention_value)); separator="; ") AS ?interventions)
+  (GROUP_CONCAT(DISTINCT LCASE(STR(?comparator_value)); separator="; ") AS ?comparators)
+  (GROUP_CONCAT(DISTINCT LCASE(STR(?outcome_value)); separator="; ") AS ?outcomes)
+WHERE {
+  GRAPH <https://w3id.org/CMEO/graph/studies_metadata> {
+    ?study_design dc:identifier ?study_name ;
+                  obo:BFO_0000051 ?prot .
+    ?prot a obo:OBI_0000272 ;
+          obo:BFO_0000051 ?eligibility_criterion .
+    ?eligibility_criterion a obo:OBI_0500026 ;
+                           obo:BFO_0000051 ?inclusion_criteria .
+    ?inclusion_criteria a obo:OBI_0500027 .
+
+    # Diagnostic inclusion
+    OPTIONAL {
+      ?inclusion_criteria obo:BFO_0000051 ?diag_part .
+      ?diag_part a obo:OBI_0002453 ;               # health status inclusion criterion
+                obo:STATO_0000129 ?diagnosis_value .
+      FILTER(CONTAINS(?diagnosis_value, "nyha class ii"))
     }
+    # Age inclusion
+    OPTIONAL {
+      ?inclusion_criteria obo:BFO_0000051 ?age_part .
+      ?age_part a obo:OBI_0002555 ;               # age group inclusion criterion
+                obo:BFO_0000051 ?min_val_specification, ?max_value_specification .
+      ?min_val_specification a obo:OBI_0002556 ;  # minimum age value specification
+                             obo:STATO_0000129 ?min_val .
+      ?max_value_specification a obo:OBI_0002557 ;  # maximum age value specification
+                               obo:STATO_0000129 ?max_value .
+      FILTER(xsd:decimal(?min_val) >= 60 && xsd:decimal(?max_value) <= 85)
+    }
+    # Intervention
+    OPTIONAL {
+      ?prot obo:BFO_0000051 ?intervention .
+      ?intervention a obo:CMEO_0000072 ;          # intervention specification
+                    obo:STATO_0000129 ?intervention_value .
+      FILTER(CONTAINS(?intervention_value, "intensified"))
+    }
+    # Comparator
+    ?prot obo:BFO_0000051 ?comparator .
+    ?comparator a obo:CMEO_0000071 ;              # comparator specification
+                obo:STATO_0000129 ?comparator_value .
+    FILTER(CONTAINS(?comparator_value, "standard guided"))
+    # Outcomes
+    OPTIONAL {
+      ?prot obo:BFO_0000051 ?outcome .
+      ?outcome a obo:CMEO_0000063 ;               # study outcome specification
+               obo:BFO_0000051 ?suboutcome_uri .
+      ?suboutcome_uri obo:STATO_0000129 ?outcome_value .
+      FILTER(CONTAINS(?outcome_value, "survival"))
+    }
+  }
 }
 GROUP BY ?study_name
 
 
-CQ5:How are missing values encoded in study A?
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX cdi: <http://ddialliance.org/Specification/DDI-CDI/1.0/RDF/>
-PREFIX cd: <http://citydata.wu.ac.at/ns#>
-PREFIX obi: <http://purl.obolibrary.org/obo/obi.owl/>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX bfo: <http://purl.obolibrary.org/obo/bfo.owl/>
-PREFIX cdio: <https://w3id.org/CMEO/> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX ro: <http://purl.obolibrary.org/obo/ro.owl/>
+CQ5: How are missing values encoded in study A?
+
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
 
 SELECT DISTINCT ?variable ?missing_value
 WHERE {
-    GRAPH <.../time-chf>  {
-        ?dataElement a cmeo:data_element;
-            dc:identifier ?variable ;
-         obi:has_value_specification ?missingSpec .
-        ?missingSpec a cmeo:missing_value_specification;
-            cmeo:has_value ?missing_value .
+  GRAPH <https://w3id.org/CMEO/graph/time-chf> {
+    ?dataElement a obo:CMEO_0000009 ;             # data element
+                 dc:identifier ?variable ;
+                 obo:OBI_0001938 ?missingSpec .   # has value specification
+    ?missingSpec a obo:CMEO_0000028 ;             # missing value specification
+                 obo:STATO_0000129 ?missing_value .
+  }
 }
-} 
 LIMIT 3
 
 
 CQ6: Which categorical variables does time-chf include, and what are their distributions?
 
-PREFIX obcs: <http://purl.obolibrary.org/obo/obcs.owl/>
-PREFIX stato: <http://purl.obolibrary.org/obo/stato.owl/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX cd: <http://citydata.wu.ac.at/ns#>
-PREFIX obi: <http://purl.obolibrary.org/obo/obi.owl/>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
-PREFIX bfo: <http://purl.obolibrary.org/obo/bfo.owl/>
-PREFIX cmeo: <https://w3id.org/CMEO/> 
-PREFIX ro: <http://purl.obolibrary.org/obo/ro.owl/> 
-PREFIX iao: <http://purl.obolibrary.org/obo/iao.owl/>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
+
 SELECT ?variable ?fq_value
 WHERE {
-    GRAPH <https://w3id.org/CMEO/graph/time-chf> {
-		?dataElement a cmeo:data_element ;
-             dc:identifier ?variable.
-             
-        ?statistical_variable a ?type;
-        	iao:denotes ?dataElement.
-        VALUES ?type { cmeo:binary_class_variable cmeo:multi_class_variable }
-    	
-        ?ds a iao:dataset ;
-             iao:is_about ?statistical_variable ;
-             obi:is_specified_input_of ?eda_proc .
-        
-         ?eda_proc a cmeo:exploratory_data_analysis;
-            obi:has_specified_output ?stats .
-       
-        ?stats a stato:statistic ;
-            ro:has_part ?part_uri .
-      OPTIONAL{
-        ?part_uri a obcs:frequency_distribution;
-            cmeo:has_value ?fq_value .
-    }
-      
+  GRAPH <https://w3id.org/CMEO/graph/time-chf> {
+    ?dataElement a obo:CMEO_0000009 ;
+                 dc:identifier ?variable .
+    ?statistical_variable a ?type ;
+                          obo:IAO_0000219 ?dataElement .   # denotes
+    VALUES ?type { obo:STATO_0000090 obo:STATO_0000087 }   # dichotomous / polychotomous variable
+    ?ds a obo:IAO_0000100 ;                                 # homogenous data collection
+        obo:IAO_0000136 ?statistical_variable ;
+        obo:OBI_0000295 ?eda_proc .                         # is specified input of
+    ?eda_proc a obo:CMEO_0000073 ;                          # exploratory data analysis
+              obo:OBI_0000299 ?stats .                      # has specified output
+    ?stats a obo:STATO_0000039 ;                            # statistic
+           obo:BFO_0000051 ?part_uri .
+    ?part_uri a obo:OBCS_0000068 ;                          # frequency distribution
+              obo:STATO_0000129 ?fq_value .
   }
 }
 LIMIT 3
 
-    
 
+CQ7: Which variables are similar between selected studies (time-chf and gissi-hf)?
+(template: {graph_repo}, {source}, {target} are filled in by the code)
+Each side is aggregated on its own and then joined on the OMOP id. The old version put both
+sides in one GROUP_CONCAT; Oxigraph returns nothing for a GROUP_CONCAT that meets an unbound
+value, so source/target columns came back empty.
 
-CQ7:Which variables are similar between selected studies (time-chf and gissi-hf)?
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX sio:  <http://semanticscience.org/resource/>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
-    SELECT ?omop_id
-            (SAMPLE(?lbl) AS ?code_label)
-            (SAMPLE(?val) AS ?code_value)
-            (GROUP_CONCAT(DISTINCT ?src_de_str; SEPARATOR="||") AS ?source_de_uris)
-            (GROUP_CONCAT(DISTINCT ?tgt_de_str; SEPARATOR="||") AS ?target_de_uris)
-            (GROUP_CONCAT(DISTINCT ?src_combined; SEPARATOR="||") AS ?source_definition)
-            (GROUP_CONCAT(DISTINCT ?tgt_combined; SEPARATOR="||") AS ?target_definition)
-            (GROUP_CONCAT(DISTINCT ?src_val; SEPARATOR="||") AS ?source_domain)
-            (GROUP_CONCAT(DISTINCT ?tgt_val; SEPARATOR="||") AS ?target_domain)
-            WHERE {
-                {
-                    SELECT ?omop_id  ?lbl ?val ?src_de_str  ?src_combined ?src_val 
-                    WHERE {
-                        GRAPH <{graph_repo}/{source}> {
-                             ?deA a cmeo:data_element ; 
-                                rdfs:label ?src_var_label ;
-                                dc:identifier ?src_var ;
-                                  skos:closeMatch ?codeSetA .
-                             ?codeSetA rdf:_1 ?codeNodeA .
-                             ?codeNodeA rdfs:label ?lbl ;
-                                        cmeo:has_value ?val ;
-                                        iao:denotes/cmeo:has_value ?omop_id .
-                             OPTIONAL { ?deA sio:has_attribute/skos:closeMatch/rdfs:label ?src_vis_label . }
-                             OPTIONAL { ?deA sio:has_annotation/cmeo:has_value ?src_val . }
-                            BIND(IF(BOUND(?src_vis_label), 
-                                CONCAT(?src_var, ";;", ?src_var_label, ";;", ?src_vis_label), 
-                                CONCAT(?src_var, ";;", ?src_var_label, ";;N/A")
-                            ) AS ?src_combined)
-
-                            BIND(STR(?deA) AS ?src_de_str)
-                        }
-                    }
-                }
-                UNION
-                {
-                     SELECT ?omop_id ?lbl ?val ?tgt_de_str ?tgt_combined ?tgt_val 
-                    WHERE {
-                        GRAPH <{graph_repo}/{target}> {
-                             ?deB a cmeo:data_element ; 
-                                rdfs:label ?tgt_var_label ;
-                                dc:identifier ?tgt_var ;
-                                  skos:closeMatch ?codeSetB .
-                             ?codeSetB rdf:_1 ?codeNodeB .
-                             ?codeNodeB rdfs:label ?lbl ;
-                                        cmeo:has_value ?val ;
-                                        iao:denotes/cmeo:has_value ?omop_id .
-                             OPTIONAL { ?deB sio:has_attribute/skos:closeMatch/rdfs:label ?tgt_vis_label . }
-                             OPTIONAL { ?deB sio:has_annotation/cmeo:has_value ?tgt_val . }
-                            BIND(IF(BOUND(?tgt_vis_label), 
-                            CONCAT(?tgt_var, ";;", ?tgt_var_label, ";;", ?tgt_vis_label), 
-                            CONCAT(?tgt_var, ";;", ?tgt_var_label, ";;N/A")
-                        ) AS ?tgt_combined)
-
-                        BIND(STR(?deB) AS ?tgt_de_str)
-                        }
-                    }
-                }
-            }
-            GROUP BY ?omop_id
-            ORDER BY ?omop_id
+SELECT ?omop_id
+  (COALESCE(?src_lbl, ?tgt_lbl) AS ?code_label)
+  (COALESCE(?src_val, ?tgt_val) AS ?code_value)
+  (?src_de_uris AS ?source_de_uris)
+  (?tgt_de_uris AS ?target_de_uris)
+  (?src_definition AS ?source_definition)
+  (?tgt_definition AS ?target_definition)
+  (?src_domain AS ?source_domain)
+  (?tgt_domain AS ?target_domain)
+WHERE {
+  {
+    SELECT DISTINCT ?omop_id WHERE {
+      { GRAPH <{graph_repo}/{source}> { ?de a obo:CMEO_0000009 ; skos:closeMatch/rdf:_1/obo:IAO_0000219/obo:STATO_0000129 ?omop_id . } }
+      UNION
+      { GRAPH <{graph_repo}/{target}> { ?de a obo:CMEO_0000009 ; skos:closeMatch/rdf:_1/obo:IAO_0000219/obo:STATO_0000129 ?omop_id . } }
+    }
+  }
+  OPTIONAL {
+      SELECT ?omop_id (SAMPLE(?lbl) AS ?src_lbl) (SAMPLE(?val) AS ?src_val)
+        (GROUP_CONCAT(DISTINCT ?de_str; SEPARATOR="||") AS ?src_de_uris)
+        (GROUP_CONCAT(DISTINCT ?combined; SEPARATOR="||") AS ?src_definition)
+        (GROUP_CONCAT(DISTINCT ?dom; SEPARATOR="||") AS ?src_domain)
+      WHERE {
+        GRAPH <{graph_repo}/{source}> {
+          ?de a obo:CMEO_0000009 ;                       # data element
+              rdfs:label ?var_label ;
+              dc:identifier ?var ;
+              skos:closeMatch ?codeSet .
+          ?codeSet rdf:_1 ?codeNode .
+          ?codeNode rdfs:label ?lbl ;
+                    obo:STATO_0000129 ?val ;             # has value
+                    obo:IAO_0000219/obo:STATO_0000129 ?omop_id .
+          OPTIONAL { ?de sio:SIO_000008/skos:closeMatch/rdfs:label ?vis_label . }   # has attribute (visit)
+          OPTIONAL { ?de sio:SIO_000255/obo:STATO_0000129 ?dom_raw . }               # has annotation (domain)
+          BIND(COALESCE(?dom_raw, "") AS ?dom)
+          BIND(CONCAT(?var, ";;", ?var_label, ";;", COALESCE(?vis_label, "N/A")) AS ?combined)
+          BIND(STR(?de) AS ?de_str)
+        }
+      }
+      GROUP BY ?omop_id
+  }
+  OPTIONAL {
+      SELECT ?omop_id (SAMPLE(?lbl) AS ?tgt_lbl) (SAMPLE(?val) AS ?tgt_val)
+        (GROUP_CONCAT(DISTINCT ?de_str; SEPARATOR="||") AS ?tgt_de_uris)
+        (GROUP_CONCAT(DISTINCT ?combined; SEPARATOR="||") AS ?tgt_definition)
+        (GROUP_CONCAT(DISTINCT ?dom; SEPARATOR="||") AS ?tgt_domain)
+      WHERE {
+        GRAPH <{graph_repo}/{target}> {
+          ?de a obo:CMEO_0000009 ;                       # data element
+              rdfs:label ?var_label ;
+              dc:identifier ?var ;
+              skos:closeMatch ?codeSet .
+          ?codeSet rdf:_1 ?codeNode .
+          ?codeNode rdfs:label ?lbl ;
+                    obo:STATO_0000129 ?val ;             # has value
+                    obo:IAO_0000219/obo:STATO_0000129 ?omop_id .
+          OPTIONAL { ?de sio:SIO_000008/skos:closeMatch/rdfs:label ?vis_label . }   # has attribute (visit)
+          OPTIONAL { ?de sio:SIO_000255/obo:STATO_0000129 ?dom_raw . }               # has annotation (domain)
+          BIND(COALESCE(?dom_raw, "") AS ?dom)
+          BIND(CONCAT(?var, ";;", ?var_label, ";;", COALESCE(?vis_label, "N/A")) AS ?combined)
+          BIND(STR(?de) AS ?de_str)
+        }
+      }
+      GROUP BY ?omop_id
+  }
+}
+ORDER BY ?omop_id
 
 -----------------------------------------------
 
-CQ8:Which studies have variables measured with wearable devices?
+CQ8: Which studies have variables measured with wearable devices?
 
-
-PREFIX obcs: <http://purl.obolibrary.org/obo/obcs.owl>        # adjust if you use OBCS_… IDs
-PREFIX stato: <http://purl.obolibrary.org/obo/stato.owl/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX obi: <http://purl.obolibrary.org/obo/obi.owl/>
-PREFIX dc:  <http://purl.org/dc/elements/1.1/>
-PREFIX bfo: <http://purl.obolibrary.org/obo/bfo.owl/>
-PREFIX cmeo:<https://w3id.org/CMEO/> 
-PREFIX ro:  <http://purl.obolibrary.org/obo/ro.owl/> 
-PREFIX iao: <http://purl.obolibrary.org/obo/iao.owl/>         # if your data used iao.owl as base
-SELECT DISTINCT (?g as ?study_name) ?var_name ?device_id
+
+SELECT DISTINCT (?g AS ?study_name) ?var_name ?device_id
 WHERE {
-    GRAPH ?g {
-        # Start with the data collection process
-        ?dacq_proc a obcs:data_collection;
-                   obi:has_specified_input ?device;      # Find the device used AS INPUT by the process
-                   obi:has_specified_output ?ds.
-
-        # Now, qualify the device and get its info
-        ?device a cmeo:wearable_device;
-                cmeo:has_value ?device_id.
-
-        # Continue the chain from the process output to the variable name
-        ?ds a iao:dataset;
-            iao:is_about ?stat_var.
-
-        ?stat_var iao:denotes ?de.
-
-        ?de a cmeo:data_element;
-            rdfs:label ?var_name.
-
-        # (Optional) You can still ensure the device has a sensor if needed
-        # This is now just a filter, not part of the main traversal path
-        ?device ro:has_part ?sensor.
+  GRAPH ?g {
+    ?dacq_proc a obo:OBCS_0000002 ;               # data collection
+               obo:OBI_0000293 ?device ;          # has specified input
+               obo:OBI_0000299 ?ds .              # has specified output
+    ?device a obo:CMEO_0000002 ;                  # wearable device
+            obo:STATO_0000129 ?device_id .
+    ?ds a obo:IAO_0000100 ;
+        obo:IAO_0000136 ?stat_var .
+    ?stat_var obo:IAO_0000219 ?de .
+    ?de a obo:CMEO_0000009 ;
+        rdfs:label ?var_name .
+    ?device obo:BFO_0000051 ?sensor .             # device has part sensor
   }
 }
 LIMIT 5
 
 
-CQ9: What studies permit data access for research on congestive heart failure, subject to ethics-approval?
+CQ9: What studies permit data access for research on congestive heart failure, subject to ethics approval?
 
-
-
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX cmeo: <https://w3id.org/CMEO/>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX obi: <http://purl.obolibrary.org/obo/obi.owl/>
-PREFIX dc:  <http://purl.org/dc/elements/1.1/>
-PREFIX cmeo:<https://w3id.org/CMEO/> 
-PREFIX iao: <http://purl.obolibrary.org/obo/iao.owl/>         
-PREFIX duo:  <http://purl.obolibrary.org/obo/duo/>
 
-SELECT ?study_name
+SELECT DISTINCT ?study_name
 WHERE {
   GRAPH <https://w3id.org/CMEO/graph/studies_metadata> {
-
-    ?assignment a cmeo:data_use_permission_assignment ;
-                iao:is_about ?x_study ;
-                obi:has_specified_output ?data_policy ;
-                obi:has_specified_output ?data_modifier .
-    ?x_study a obi:study_design_execution ;
+    ?assignment a cmeo:data_use_permission_assignment ;   # KG-local, no ontology class
+                obo:IAO_0000136 ?x_study ;
+                obo:OBI_0000299 ?data_policy , ?data_modifier .
+    ?x_study a obo:OBI_0000471 ;                           # study design execution
              dc:identifier ?study_name .
-    ?data_policy a duo:data_use_permission ;
-                 rdfs:label "disease specific research"^^xsd:string ;
-                 iao:is_about ?disease_code .
-    ?data_modifier a duo:data_use_modifier ;
-                   rdfs:label "ethics approval required"^^xsd:string .
-
-    OPTIONAL { ?disease_code rdfs:label "congestive heart failure"^^xsd:string }
-    OPTIONAL { ?disease_code cmeo:has_value "42343007"^^xsd:string }
+    ?data_policy a obo:DUO_0000007 ;                       # disease specific research
+                 obo:IAO_0000136 ?disease_code .
+    ?data_modifier a obo:DUO_0000021 .                     # ethics approval required
+    OPTIONAL { ?disease_code rdfs:label ?disease_label }
+    OPTIONAL { ?disease_code obo:STATO_0000129 ?disease_value }
+    FILTER(LCASE(STR(?disease_label)) = "congestive heart failure" || STR(?disease_value) = "42343007")
   }
 }
 ORDER BY ?study_name
 
 
-CQ10 -- Retrieve Variable Profile of Group of Variables
+CQ10: Retrieve variable profile of a group of variables
+(template: {graph_repo}, {source}, {values_str} are filled in by the code)
 
-SELECT 
-        ?identifier 
-        (SAMPLE(?_stat_label)    AS ?stat_label)
-        (SAMPLE(?_unit_label)    AS ?unit_label)
-        (SAMPLE(?_data_type_val) AS ?data_type_val)
-        (MAX(?_min_v)            AS ?min_val)
-        (MAX(?_max_v)            AS ?max_val)
-        (GROUP_CONCAT(DISTINCT STR(?cat_omop_id); SEPARATOR="||") AS ?cat_omop_ids)
-        (GROUP_CONCAT(DISTINCT ?_catL; SEPARATOR="||") AS ?all_cat_labels)
-        (GROUP_CONCAT(DISTINCT ?_catV; SEPARATOR="||") AS ?all_original_cat_values)
-        (SAMPLE(?_ordered_code_labels) AS ?code_label)
-        (SAMPLE(?_ordered_code_values) AS ?code_value)
-        (SAMPLE(?_ordered_omop_ids) AS ?omop_ids)
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+PREFIX sio:  <http://semanticscience.org/resource/>
+PREFIX dc:   <http://purl.org/dc/elements/1.1/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-        WHERE {
-            GRAPH <{graph_repo}/{source}> {
-            VALUES ?identifier { {values_str} }
-            ?dataElement a cmeo:data_element ;
-                dc:identifier ?identifier .
+SELECT ?identifier
+  (SAMPLE(?_stat_label)    AS ?stat_label)
+  (SAMPLE(?_unit_label)    AS ?unit_label)
+  (SAMPLE(?_data_type_val) AS ?data_type_val)
+  (MAX(?_min_v)            AS ?min_val)
+  (MAX(?_max_v)            AS ?max_val)
+  (GROUP_CONCAT(DISTINCT STR(?cat_omop_id); SEPARATOR="||") AS ?cat_omop_ids)
+  (GROUP_CONCAT(DISTINCT ?_catL; SEPARATOR="||") AS ?all_cat_labels)
+  (GROUP_CONCAT(DISTINCT ?_catV; SEPARATOR="||") AS ?all_original_cat_values)
+  (SAMPLE(?_ordered_code_labels) AS ?code_label)
+  (SAMPLE(?_ordered_code_values) AS ?code_value)
+  (SAMPLE(?_ordered_omop_ids) AS ?omop_ids)
+WHERE {
+  GRAPH <{graph_repo}/{source}> {
+    VALUES ?identifier { {values_str} }
+    ?dataElement a obo:CMEO_0000009 ;
+                 dc:identifier ?identifier .
 
-            OPTIONAL {
-            ?dataElement iao:is_denoted_by/cmeo:has_value ?_stat_label .
-        }
+    OPTIONAL { ?dataElement obo:IAO_0000235/obo:STATO_0000129 ?_stat_label . }   # denoted by
 
-            OPTIONAL {
-            ?dataElement sio:has_attribute ?dt .
-            ?dt a cmeo:data_type ;
-            cmeo:has_value ?_data_type_val .
-        }
+    OPTIONAL {
+      ?dataElement sio:SIO_000008 ?dt .
+      ?dt a obo:CMEO_0000059 ;                     # data type
+          obo:STATO_0000129 ?_data_type_val .
+    }
 
-            BIND(URI(CONCAT(STR(?dataElement), "/statistic")) AS ?statUri)
+    BIND(URI(CONCAT(STR(?dataElement), "/statistic")) AS ?statUri)
 
-            OPTIONAL {
-            ?statUri ro:has_part ?minPart .
-            ?minPart a stato:minimum_value ;
-            cmeo:has_value ?_min_v .
-        }
+    OPTIONAL {
+      ?statUri obo:BFO_0000051 ?minPart .
+      ?minPart a obo:STATO_0000150 ;               # minimum observed value
+               obo:STATO_0000129 ?_min_v .
+    }
+    OPTIONAL {
+      ?statUri obo:BFO_0000051 ?maxPart .
+      ?maxPart a obo:STATO_0000151 ;               # maximum observed value
+               obo:STATO_0000129 ?_max_v .
+    }
 
-            OPTIONAL {
-            ?statUri ro:has_part ?maxPart .
-            ?maxPart a stato:maximum_value ;
-            cmeo:has_value ?_max_v .
-        }
+    OPTIONAL { ?dataElement obo:IAO_0000039/skos:closeMatch/obo:STATO_0000129 ?_unit_label . }
 
-            OPTIONAL {
-            ?dataElement obi:has_measurement_unit_label/skos:closeMatch/cmeo:has_value ?_unit_label .
-        }
+    # Categories
+    OPTIONAL {
+      ?cat_val a obo:OBI_0001930 ;                 # categorical value specification
+               obo:OBI_0001927 ?dataElement ;      # specifies value of
+               obo:STATO_0000129 ?_catV .
+      OPTIONAL {
+        ?cat_val skos:closeMatch ?cat_code .
+        ?cat_code a skos:Concept ;
+                  rdfs:label ?_catL .
+        OPTIONAL { ?cat_code obo:IAO_0000219/obo:STATO_0000129 ?cat_omop_id . }
+      }
+    }
 
-            # Categories
-            OPTIONAL {
-            ?cat_val a obi:categorical_value_specification ;
-            obi:specifies_value_of ?dataElement ;
-            cmeo:has_value ?_catV .
-            OPTIONAL {
-            ?cat_val skos:closeMatch ?cat_code .
-            ?cat_code a skos:concept ;
-            rdfs:label ?_catL .
-            OPTIONAL { ?cat_code iao:denotes/cmeo:has_value ?cat_omop_id . }
-        
-        }
-        }
-
-            # Codes subquery - OUTSIDE the GRAPH block but joined on ?dataElement
-            OPTIONAL {
-            SELECT ?dataElement 
-            (GROUP_CONCAT(?cL; SEPARATOR="||") AS ?_ordered_code_labels)
-            (GROUP_CONCAT(?cV; SEPARATOR="||") AS ?_ordered_code_values)
-            (GROUP_CONCAT(str(?omop_id); SEPARATOR="||") AS ?_ordered_omop_ids)
-            WHERE {
-            GRAPH <{graph_repo}/{source}> {
-            SELECT ?dataElement ?cL ?cV ?omop_id ?seqNum WHERE {
+    # Codes in sequence order
+    OPTIONAL {
+      SELECT ?dataElement
+        (GROUP_CONCAT(?cL; SEPARATOR="||") AS ?_ordered_code_labels)
+        (GROUP_CONCAT(?cV; SEPARATOR="||") AS ?_ordered_code_values)
+        (GROUP_CONCAT(STR(?omop_id); SEPARATOR="||") AS ?_ordered_omop_ids)
+      WHERE {
+        GRAPH <{graph_repo}/{source}> {
+          SELECT ?dataElement ?cL ?cV ?omop_id ?seqNum WHERE {
             ?dataElement skos:closeMatch ?codeSet .
             ?codeSet ?seqPred ?codeNode .
-            ?codeNode a skos:concept ;
-            rdfs:label ?cL ;
-            cmeo:has_value ?cV;
-            iao:denotes/cmeo:has_value ?omop_id.
+            ?codeNode a skos:Concept ;
+                      rdfs:label ?cL ;
+                      obo:STATO_0000129 ?cV ;
+                      obo:IAO_0000219/obo:STATO_0000129 ?omop_id .
             FILTER(STRSTARTS(STR(?seqPred), CONCAT(STR(rdf:), "_")))
             BIND(xsd:integer(STRAFTER(STR(?seqPred), CONCAT(STR(rdf:), "_"))) AS ?seqNum)
+          }
+          ORDER BY ?dataElement ?seqNum
         }
-            ORDER BY ?dataElement ?seqNum
-        }
-        }
-            GROUP BY ?dataElement
-        }
-        }
-        }
-        GROUP BY ?identifier
-        ORDER BY ?identifier
+      }
+      GROUP BY ?dataElement
+    }
+  }
+}
+GROUP BY ?identifier
+ORDER BY ?identifier

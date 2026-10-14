@@ -34,7 +34,9 @@ def add_category_annotation(g: Graph, variable_uri: URIRef, category: str, cohor
         return g
     category_ = category.strip().lower().replace(' ','_')
     category_uri = URIRef(f"{variable_uri}/category/{category_}")
-    g.add((category_uri, RDF.type, OntologyNamespaces.CMEO.value.category, cohort_uri))
+    # CMEO:0000076 'category' is obsolete (grouping is now the subset CMEO:0000085 in the
+    # ontology). The variable's domain stays an annotation node, typed as a SKOS concept.
+    g.add((category_uri, RDF.type, OntologyNamespaces.SKOS.value.Concept, cohort_uri))
     g.add((variable_uri, OntologyNamespaces.SIO.value.has_annotation, category_uri, cohort_uri))
     g.add((category_uri, OntologyNamespaces.CMEO.value.has_value, Literal(category_), cohort_uri))
     return g
@@ -259,7 +261,7 @@ def add_variable_eda(g: Graph, var_uris: list[dict], cohort_uri: URIRef, eda_jso
                             g = add_outlier_count_by_z_score_to_graph(g, statistic_uri, eda.get('outliers (z)', None), cohort_uri)
                             g = add_normality_test_to_graph(g, statistic_uri, eda.get('normality test', None), cohort_uri)
                             g = add_wilks_shapiro_test_to_graph(g, statistic_uri, eda.get('w_test', None), cohort_uri)
-                            g = add_standard_deviation_to_graph(g, statistic_uri, eda.get('Std Dev', None), cohort_uri)
+                            g = add_standard_deviation_to_graph(g, statistic_uri, eda.get('std dev', None), cohort_uri)
                             g = add_mean_to_graph(g, statistic_uri, eda.get('mean', None), cohort_uri)
                             g = add_median_to_graph(g, statistic_uri, eda.get('median', None), cohort_uri)
                             g = add_iqr_to_graph(g, statistic_uri, eda.get('iqr', None), cohort_uri)
@@ -322,8 +324,9 @@ def add_numeric_statistic_generic(
     specific_stat_uri = URIRef(f"{statistic_uri}/{uri_suffix}")
 
     # 3. Add Triples
-    # Add Type
+    # Add Type (several statistics share a STATO class, e.g. count; the label keeps them apart)
     g.add((specific_stat_uri, RDF.type, stat_rdf_type, cohort_uri))
+    g.add((specific_stat_uri, RDFS.label, Literal(uri_suffix.strip("_").replace("_", " "), datatype=XSD.string), cohort_uri))
     
     # Add Value
     g.add((specific_stat_uri, OntologyNamespaces.CMEO.value.has_value, Literal(final_value, datatype=xsd_type), cohort_uri))
@@ -431,15 +434,17 @@ def add_device_senors_for_variable(g: Graph, var_uri:URIRef, data_set_uri: URIRe
     return g
 
 def add_frequency_distribution_to_graph(g: Graph, statistic_uri: URIRef, fd:str, cohort_uri: URIRef) -> Graph:
-
-    return add_numeric_statistic_generic(
-        g=g,
-        statistic_uri=statistic_uri,
-        value=fd,
-        stat_rdf_type=OntologyNamespaces.OBCS.value.frequency_distribution,
-        uri_suffix="frequency_distribution",
-        cohort_uri=cohort_uri
-    )
+    # The class balance is text such as "(0.0, 'Unknown') -> 79%"; the numeric helper dropped
+    # it, so it is stored here as a string.
+    if fd is None or pd.isna(fd) or str(fd).strip() == "":
+        return g
+    fd_uri = URIRef(f"{statistic_uri}/frequency_distribution")
+    g.add((fd_uri, RDF.type, OntologyNamespaces.OBCS.value.frequency_distribution, cohort_uri))
+    g.add((fd_uri, RDFS.label, Literal("frequency distribution", datatype=XSD.string), cohort_uri))
+    g.add((fd_uri, OntologyNamespaces.CMEO.value.has_value, Literal(str(fd), datatype=XSD.string), cohort_uri))
+    g.add((statistic_uri, OntologyNamespaces.RO.value.has_part, fd_uri, cohort_uri))
+    g.add((fd_uri, OntologyNamespaces.RO.value.is_part_of, statistic_uri, cohort_uri))
+    return g
 
 
 def add_mode_to_graph(g: Graph, statistic_uri: URIRef, mode: any, cohort_uri: URIRef) -> Graph:
@@ -928,7 +933,7 @@ def add_composite_concepts_info(g: Graph, linked_uri: URIRef, concepts: list[Con
         code_uri = create_code_uri(code=code, cohort_uri=cohort_uri)
         label = concept.standard_label.strip().replace("\n","")
         omop_id = concept.omop_id
-        g.add((code_uri, RDF.type, OntologyNamespaces.SKOS.value.concept,cohort_uri))
+        g.add((code_uri, RDF.type, OntologyNamespaces.SKOS.value.Concept,cohort_uri))
         g.add((code_uri, RDFS.label, Literal(label, datatype=XSD.string),cohort_uri))
         g.add((code_uri, OntologyNamespaces.CMEO.value.has_value, Literal(code, datatype=XSD.string),cohort_uri))
         omop_id_uri = URIRef(f"{OntologyNamespaces.OMOP.value}{omop_id}")
@@ -1005,7 +1010,7 @@ def add_solo_concept_info(g: Graph, linked_uri: URIRef, concept: Concept, cohort
     omop_id = concept.omop_id
     code_uri = create_code_uri(code, cohort_uri)
  
-    g.add((code_uri, RDF.type, OntologyNamespaces.SKOS.value.concept,cohort_uri))
+    g.add((code_uri, RDF.type, OntologyNamespaces.SKOS.value.Concept,cohort_uri))
     g.add((code_uri, OntologyNamespaces.OBI.value.is_specified_output_of, data_standardization_uri,cohort_uri))
     g.add((data_standardization_uri, OntologyNamespaces.OBI.value.has_specified_output, code_uri,cohort_uri))
     g.add((code_uri, RDFS.label, Literal(label, datatype=XSD.string),cohort_uri))

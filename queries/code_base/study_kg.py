@@ -6,6 +6,8 @@ from .utils import (
     OntologyNamespaces, 
     normalize_text, 
     STUDY_TYPES, 
+    study_design_class,
+    DUO_TERMS,
     graph_exists,
     save_graph_to_trig_file, 
     check_triple_exists, 
@@ -65,9 +67,11 @@ def generate_studies_kg(filepath: str) -> Graph:
             g.add((study_design_uri , OntologyNamespaces.CMEO.value.has_value, Literal(study_design_value, datatype=XSD.string), metadata_graph))
 
             g.add((study_design_uri, DC.identifier, Literal(study_name, datatype=XSD.string), metadata_graph))
-            dynamic_class_uri = URIRef(OntologyNamespaces.CMEO.value + study_design_value)
-            
-            g.add((study_design_uri, RDF.type, dynamic_class_uri, metadata_graph))
+            design_class = study_design_class(study_design_value)
+            g.add((study_design_uri, RDF.type, design_class, metadata_graph))
+            if design_class == OntologyNamespaces.OBI.value.study_design:
+                # design not in the ontology: keep the specific value as a KG-local class too
+                g.add((study_design_uri, RDF.type, URIRef(OntologyNamespaces.CMEO.value + study_design_value), metadata_graph))
             protocol_uri = URIRef(study_uri + "/" + study_design_value + "/protocol")
             g.add((protocol_uri, RDF.type, OntologyNamespaces.OBI.value.protocol, metadata_graph))
             g.add((study_design_uri,OntologyNamespaces.RO.value.has_part, protocol_uri, metadata_graph))
@@ -157,7 +161,7 @@ def generate_studies_kg(filepath: str) -> Graph:
             if pd.notna(row["administrator"]):
                 administrator_person_uri = URIRef(study_uri + "/" + normalize_text(row["administrator"]))
                 g.add((administrator_person_uri, RDF.type, OntologyNamespaces.NCBI.value.homo_sapiens,metadata_graph))
-                g.add((contact_uri, OntologyNamespaces.OBI.value.member_of, organization_uri,metadata_graph))
+                g.add((administrator_person_uri, OntologyNamespaces.OBI.value.member_of, organization_uri,metadata_graph))
             
                 g.add((administrator_person_uri, OntologyNamespaces.CMEO.value.has_value, Literal(row["administrator"], datatype=XSD.string),metadata_graph))
                 administrator_role_uri =  URIRef(study_uri + "/administrator_role")
@@ -313,7 +317,7 @@ def add_eligibility_criterion(g: Graph, row: pd.Series, study_uri: URIRef, proto
     for morbidity in morbidities:
         morbidity = morbidity.strip()
         if morbidity:
-            dynamic_morbidity_uri = URIRef(OntologyNamespaces.OBI.value + normalize_text(morbidity))
+            dynamic_morbidity_uri = URIRef(output_population_uri + "/morbidity/" + normalize_text(morbidity))
             g.add((output_population_uri, OntologyNamespaces.RO.value.has_characteristic, dynamic_morbidity_uri, metadata_graph))
             g.add((dynamic_morbidity_uri, OntologyNamespaces.RO.value.is_characteristic_of, output_population_uri, metadata_graph))
             g.add((dynamic_morbidity_uri, RDF.type, OntologyNamespaces.OBI.value.morbidity, metadata_graph))
@@ -371,7 +375,8 @@ def add_inclusion_criterion(g: Graph, row: pd.Series, study_uri: URIRef, eligibi
         if "age" in inclusion_criterion_name:
             add_age_group_inclusion_criterion(g, study_uri, inclusion_criterion_uri, metadata_graph, row[col])
         else:
-            dynamic_inclusion_criterion_type = URIRef(OntologyNamespaces.CMEO.value + inclusion_criterion_name)
+            # ontology class when the column name matches one (e.g. health status inclusion criterion), else KG-local
+            dynamic_inclusion_criterion_type = OntologyNamespaces.CMEO.value[inclusion_criterion_name]
             inclusion_criteria_value = row[col].lower().strip() if pd.notna(row[col]) else ""
             inc_all_values = inclusion_criteria_value.split(";") if pd.notna(row[col]) else ""
             for inclusion_criteria_value in inc_all_values:
@@ -436,7 +441,7 @@ def add_exclusion_criterion(g: Graph, row: pd.Series, study_uri: URIRef, eligibi
     exclusion_criteria_columns = [col for col in row.index if "exclusion criterion" in col.lower()]
     for col in exclusion_criteria_columns:
         exclusion_criterion_name = normalize_text(col)
-        dynamic_exclusion_criterion_type = URIRef(OntologyNamespaces.CMEO.value + "/" + exclusion_criterion_name)
+        dynamic_exclusion_criterion_type = OntologyNamespaces.CMEO.value[exclusion_criterion_name]
         ec_all_values = row[col].lower().split(";") if pd.notna(row[col]) else ""
         for exclusion_criteria_value in ec_all_values:
             exclusion_criteria_value = exclusion_criteria_value.strip()
@@ -496,8 +501,8 @@ def update_metadata_graph(endpoint_url, cohort_uri, variable_uris, metadata_grap
         return None
     
     # Construct SPARQL `INSERT DATA` query
-    inserts = "\n".join([f"<{study_variable_design_specification_uri}> <http://purl.obolibrary.org/obo/ro.owl/has_part> <{var}> ." for var in variable_uris])
-    # inserts = "\n".join([f"<{var}> <http://purl.obolibrary.org/obo/ro.owl/part_of> <{study_variable_design_specification_uri}> ." for var in variable_uris])
+    has_part = OntologyNamespaces.RO.value.has_part
+    inserts = "\n".join([f"<{study_variable_design_specification_uri}> <{has_part}> <{var}> ." for var in variable_uris])
     query = f"""
         INSERT DATA {{
             GRAPH <{graph_uri}> {{
@@ -636,8 +641,10 @@ def create_policy_assignment(cohort_uri:URIRef,study_design_execution_uri: URIRe
         g.add((policy_assignment_uri, RDF.type, OntologyNamespaces.CMEO.value.data_use_permission_assignment, cohort_uri))
         for policy in data_policy:
             policy = policy.strip().lower()
-            policy_uri = URIRef(OntologyNamespaces.DUO.value + normalize_text(policy))
+            policy_uri = URIRef(f"{cohort_uri}/data_use_permission/{normalize_text(policy)}")
             g.add((policy_uri, RDF.type, OntologyNamespaces.DUO.value.data_use_permission, cohort_uri))
+            if policy in DUO_TERMS:
+                g.add((policy_uri, RDF.type, URIRef(DUO_TERMS[policy]), cohort_uri))
             g.add((policy_uri, RDFS.label, Literal(policy, datatype=XSD.string), cohort_uri))
             g.add((policy_assignment_uri, OntologyNamespaces.OBI.value.has_specified_output, policy_uri, cohort_uri))
             g.add((policy_uri, OntologyNamespaces.OBI.value.is_specified_output_of, policy_assignment_uri, cohort_uri))
@@ -653,9 +660,12 @@ def create_policy_assignment(cohort_uri:URIRef,study_design_execution_uri: URIRe
                     g.add((disease_concept_uri, OntologyNamespaces.IAO.value.denotes, Literal(disease_concept_omop_id, datatype=XSD.string), cohort_uri))
                 g.add((policy_uri, OntologyNamespaces.RO.value.has_specified_output, disease_concept_uri, cohort_uri))
         for modifier in data_modifier:
-            modifier_uri = URIRef(OntologyNamespaces.DUO.value + normalize_text(modifier))
+            modifier = modifier.strip().lower()
+            modifier_uri = URIRef(f"{cohort_uri}/data_use_modifier/{normalize_text(modifier)}")
             print(modifier_uri)
             g.add((modifier_uri, RDF.type, OntologyNamespaces.DUO.value.data_use_modifier, cohort_uri))
+            if modifier in DUO_TERMS:
+                g.add((modifier_uri, RDF.type, URIRef(DUO_TERMS[modifier]), cohort_uri))
             g.add((modifier_uri, RDFS.label, Literal(modifier, datatype=XSD.string), cohort_uri))
             g.add((policy_assignment_uri, OntologyNamespaces.OBI.value.has_specified_output, modifier_uri, cohort_uri))
             g.add((modifier_uri, OntologyNamespaces.OBI.value.is_specified_output_of, policy_assignment_uri, cohort_uri))
