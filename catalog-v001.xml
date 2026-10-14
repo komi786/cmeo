@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/bfo_import.owl" uri="imports/bfo_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/cob_import.owl" uri="imports/cob_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/cto_import.owl" uri="imports/cto_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/duo_import.owl" uri="imports/duo_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/efo_import.owl" uri="imports/efo_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/iao_import.owl" uri="imports/iao_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/ncit_import.owl" uri="imports/ncit_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/oae_import.owl" uri="imports/oae_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/obcs_import.owl" uri="imports/obcs_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/obi_import.owl" uri="imports/obi_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/ogms_import.owl" uri="imports/ogms_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/omo_import.owl" uri="imports/omo_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/pato_import.owl" uri="imports/pato_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/ro_import.owl" uri="imports/ro_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/scdo_import.owl" uri="imports/scdo_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/sio_import.owl" uri="imports/sio_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl" uri="imports/stato_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/symp_import.owl" uri="imports/symp_import.owl"/>
+</catalog>

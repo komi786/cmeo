@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/cmeo/imports/obcs_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/cmeo/imports/obcs_import.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cmeo/imports/obcs_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/obcs_import.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000055 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000055"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000293"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000299 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000299"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000312 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000312"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000417 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000417"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000059 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000059"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0002351 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002351"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000005"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000100 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000100"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000104 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000104"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000001">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000417"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBCS_0000124"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0200078"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
+        <obo:IAO_0000115>A data transformation that has input of mulitple data and report overall trend of the data.</obo:IAO_0000115>
+        <obo:IAO_0000117>Jie Zheng, Oliver He</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB: https://en.wikipedia.org/wiki/Statistics</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">statistical data analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000002">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000127"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000055"/>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000059"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000137"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A planned process that gathers and measures information on variables of interest, in an established systematic fashion that enables one to answer stated research questions, test hypotheses, and evaluate outcomes. Data collection results in a collection of data.</obo:IAO_0000115>
+        <obo:IAO_0000117>Jie Zheng, Oliver He</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Data_collection</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">data collection</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000070 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000070">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000071"/>
+        <obo:IAO_0000115>A quantitative confidence value that refers to an interval give values within which there is a high probability (95 percent by convention) that the true population value can be found. The calculation of a confidence interval considers the standard deviation of the data and the number of observations. Thus, a confidence interval narrows as the number of observations increases, or its variance (dispersion) decreases.</obo:IAO_0000115>
+        <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB: http://www.uptodate.com/contents/glossary-of-common-biostatistical-and-epidemiological-terms</obo:IAO_0000119>
+        <rdfs:label>confidence interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000120 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000120">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>A data item that is more specifically a rectangular array of numbers, symbols, or expressions, arranged in rows and columns.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Oliver He, Jie Zheng</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">set of data sets</obo:IAO_0000118>
+        <obo:IAO_0000119>WEB: https://en.wikipedia.org/wiki/Matrix_(mathematics)</obo:IAO_0000119>
+        <rdfs:label>data matrix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000121 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000121">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000124"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A statistical data analysis that uses patterns in the sample data to draw inferences about the population represented, accounting for randomness.</obo:IAO_0000115>
+        <obo:IAO_0000117>Jie Zheng, Oliver He</obo:IAO_0000117>
+        <obo:IAO_0000118>significantly statistical data analysis</obo:IAO_0000118>
+        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Statistics</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">inferential statistical data analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000122 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000122">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000123"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000123"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>A data item that consists of two or more data sets that are produced as the output of a data transformation.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Oliver He, Jie Zheng</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">set of transformed data sets</obo:IAO_0000118>
+        <rdfs:label>transformed data matrix</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000123 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000123">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000100"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000233"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002351"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000233"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A data set that is produced as the output of a data transformation.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Jie Zheng, Oliver He</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">transformed data set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000124 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000124">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0200166"/>
+        <obo:IAO_0000115>A statistical data analysis objective where the aim is to make inference using population sample data. </obo:IAO_0000115>
+        <obo:IAO_0000117>Jie Zheng, Oliver He</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">inferential statistical data analysis objective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000127 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000127">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
+        <obo:IAO_0000115>An objective specification where the aim is to collect data. </obo:IAO_0000115>
+        <obo:IAO_0000117>Jie Zheng, Oliver He</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">data collection objective</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000137 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000137">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <obo:IAO_0000115>A plan specification that provides a detailed outline of how data is collected.</obo:IAO_0000115>
+        <obo:IAO_0000117>Jie Zheng, Yongqun He</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">data collection design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000218 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000218">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000233"/>
+        <obo:IAO_0000115>A data item that is derived from a statistical data analysis.</obo:IAO_0000115>
+        <obo:IAO_0000117>Jie Zheng, Yongqun He, Marcy Harris, Asiyah Yu Lin</obo:IAO_0000117>
+        <obo:IAO_0000118>statistic</obo:IAO_0000118>
+        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Statistic</obo:IAO_0000119>
+        <obo:IAO_0000119>WEB: http://www.ask.com/question/what-is-numerical-data</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">derived data from statistical analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000219 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000219">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0200184"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000123"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000218"/>
+        <obo:IAO_0000115>A data item that is derived from a descriptive statistical data analysis.</obo:IAO_0000115>
+        <obo:IAO_0000117>Jie Zheng, Yongqun He</obo:IAO_0000117>
+        <obo:IAO_0000118>descriptive statistic</obo:IAO_0000118>
+        <obo:IAO_0000119>WEB: http://www.ask.com/question/what-is-numerical-data</obo:IAO_0000119>
+        <obo:IAO_0000119>WEB: https://en.wikipedia.org/wiki/Descriptive_statistics</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">derived data from descriptive statistical analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000220 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000220">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000121"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000218"/>
+        <obo:IAO_0000115>A data item that is derived from an inferential statistical data analysis.</obo:IAO_0000115>
+        <obo:IAO_0000117>Jie Zheng, Yongqun He</obo:IAO_0000117>
+        <obo:IAO_0000118>inferential statistic</obo:IAO_0000118>
+        <obo:IAO_0000119>WEB: http://psc.dss.ucdavis.edu/sommerb/sommerdemo/stat_inf/intro.htm</obo:IAO_0000119>
+        <obo:IAO_0000119>WEB: http://www.ask.com/question/what-is-numerical-data</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">derived data from inferential statistical analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000233 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000233">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0200000"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000115>A data item that is produced as the output of a data transformation.</obo:IAO_0000115>
+        <obo:IAO_0000117>Person: Jie Zheng, Oliver He</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">transformed data item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000011"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000071 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000071"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200000"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200078 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200078"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200166 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200166"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0200184 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200184"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000228 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OBCS_0000228">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000070"/>
+        <obo:IAO_0000115>An confidence interval with 95 percent probability that the true population value can be found.</obo:IAO_0000115>
+        <obo:IAO_0000117>Jie Zheng</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">95% confidence interval</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

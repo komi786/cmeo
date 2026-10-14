@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/cmeo/imports/pato_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/cmeo/imports/pato_import.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cmeo/imports/pato_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/pato_import.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasAlternativeId"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000001">
+        <obo:IAO_0000115>The properties, attributes, or modifiers used to describe an entity or process or some aspect of an entity or process.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>PATO:0000072</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>quality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0000001</oboInOwl:id>
+        <rdfs:label>characteristic</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The properties, attributes, or modifiers used to describe an entity or process or some aspect of an entity or process.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://github.com/pato-ontology/pato/issues/602</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>quality</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>OBO:legacy</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000051 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000051">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <obo:IAO_0000115>A characterisitic of a single physical entity inhering in the bearer by virtue of the bearer&apos;s size or shape or structure.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0000051</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <rdfs:label>morphology</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000051"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A characterisitic of a single physical entity inhering in the bearer by virtue of the bearer&apos;s size or shape or structure.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000125 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0000125">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <obo:IAO_0000115>A physical quality that inheres in a bearer by virtue of the proportion of the bearer&apos;s amount of matter.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0000125</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#relational_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
+        <rdfs:comment>For any biological use of PATO, the concept that should be used is &apos;mass&apos; and not &apos;weight&apos;. For example, increased weight of an organism.</rdfs:comment>
+        <rdfs:label>mass</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A physical quality that inheres in a bearer by virtue of the proportion of the bearer&apos;s amount of matter.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001018 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001018">
+        <obo:IAO_0000115>OBSOLETE. A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.</obo:IAO_0000115>
+        <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <oboInOwl:hasAlternativeId>PATO:0002079</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>Wikipedia:Physical_property</oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>physical quality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>relational physical quality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0001018</oboInOwl:id>
+        <rdfs:comment>Obsoleted in https://github.com/pato-ontology/pato/issues/602. The &apos;physical level of organisation in relation to other entities&apos; criterion has never been operationalised, and existing classification was haphazard (time, flavor, odor, movement quality, neuron projection quality all sat under physical quality despite not being &apos;physical level&apos; in any defensible sense). Children have been moved up to physical object characteristic; outliers (time, movement quality, neuron projection quality) require a follow-up sweep to find more appropriate parents.</rdfs:comment>
+        <rdfs:label>obsolete physical quality</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>OBSOLETE. A quality of a physical entity that exists through action of continuants at the physical level of organisation in relation to other entities.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001018"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>physical quality</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>OBO:legacy</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001236 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001236">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <obo:IAO_0000115>A characteristic which inheres in a process.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>PATO:0001239</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>PATO:0001240</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>process quality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>quality of a process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>quality of occurrent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>quality of process</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>relational quality of occurrent</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0001236</oboInOwl:id>
+        <rdfs:comment>See comments of relational characteristic of a physical entity.</rdfs:comment>
+        <rdfs:label>process characteristic</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001236"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A characteristic which inheres in a process.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001236"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>process quality</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>OBO:legacy</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001241 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001241">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+        <obo:IAO_0000115>A characteristic which inheres in a continuant.</obo:IAO_0000115>
+        <oboInOwl:hasAlternativeId>PATO:0001237</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>PATO:0001238</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasExactSynonym>monadic quality of a continuant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>multiply inhering quality of a physical entity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>physical object quality</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>quality of a continuant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>quality of a single physical entity</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>quality of an object</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>quality of continuant</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym>monadic quality of an object</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>monadic quality of continuant</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0001241</oboInOwl:id>
+        <rdfs:comment>Relational characteristics are characteristics that hold between multiple entities. Normal (monadic) characteristics such as the shape of a eyeball exist purely as a characteristic of that eyeball. A relational characteristic such as sensitivity to light is a characteristic of that eyeball (and connecting nervous system) as it relates to incoming light waves/particles.</rdfs:comment>
+        <rdfs:label>physical object characteristic</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+        <owl:annotatedTarget>physical object quality</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>OBO:legacy</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A characteristic which inheres in a continuant.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001338 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001338">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002003"/>
+        <obo:IAO_0000115>A biological sex quality inhering in a population of multiple sexes.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0001338</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#value_slim"/>
+        <rdfs:comment>For example a mixture of females and male or males and hermaphrodites.</rdfs:comment>
+        <rdfs:label>mixed sex</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001338"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A biological sex quality inhering in a population of multiple sexes.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>MGED:MGED</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001415 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001415">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0002003"/>
+        <obo:IAO_0000115>A quality inhering in a population by virtue of the proportion of its members that are ill at a given time.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0001415</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#scalar_slim"/>
+        <rdfs:label>morbidity</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0001415"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quality inhering in a population by virtue of the proportion of its members that are ill at a given time.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0002003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0002003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001241"/>
+        <obo:IAO_0000115>A quality that inheres in an entire population or part of a population.</obo:IAO_0000115>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id>PATO:0002003</oboInOwl:id>
+        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/pato#attribute_slim"/>
+        <rdfs:label>population quality</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/PATO_0002003"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A quality that inheres in an entire population or part of a population.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>PATOC:GVG</oboInOwl:hasDbXref>
+    </owl:Axiom>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

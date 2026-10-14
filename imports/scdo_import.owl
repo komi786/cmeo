@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/cmeo/imports/scdo_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/cmeo/imports/scdo_import.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cmeo/imports/scdo_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/scdo_import.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_0000303 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SCDO_0000303"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_0000340 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SCDO_0000340"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_1000288 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SCDO_1000288"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_1000910 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/SCDO_1000910"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C103165 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C103165"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_0000379 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_0000379">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SCDO_0001000"/>
+        <obo:IAO_0000115>Diagnostic tools (including the instruments, laboratory assays and methods of patient examination) used for differential diagnosis, the measurements obtained using these tools, and the diagnostic devices used in obtaining the measurements.</obo:IAO_0000115>
+        <obo:SCDO_0000303>Request inclusion into relevant ontology.</obo:SCDO_0000303>
+        <obo:SCDO_1000288>None</obo:SCDO_1000288>
+        <dc:creator>SCDO (Jade Hotchkiss)</dc:creator>
+        <rdfs:label>Diagnostics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_0000728 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_0000728">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SCDO_0000379"/>
+        <obo:IAO_0000115>An information entity used in the diagnosis of medical conditions. It could be the recording of the output of a diagnostic device or the outcome of a diagnostic tool.</obo:IAO_0000115>
+        <obo:SCDO_0000303>Request inclusion into relevant ontology.</obo:SCDO_0000303>
+        <obo:SCDO_1000288>None</obo:SCDO_1000288>
+        <dc:creator>SCDO (Jade Hotchkiss)</dc:creator>
+        <oboInOwl:hasExactSynonym>Diagnostic Quantitative Measurement</oboInOwl:hasExactSynonym>
+        <rdfs:label>Diagnostic Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_0001000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_0001000">
+        <obo:IAO_0000115>Root of all terms in the Sickle Cell Disease Ontology, an effort of unambiguously describing all concepts and unifying up-to-date knowledge in sickle cell disease.</obo:IAO_0000115>
+        <obo:SCDO_1000288>None</obo:SCDO_1000288>
+        <dc:creator>SCDO (Gaston K. Mazandu)</dc:creator>
+        <oboInOwl:hasExactSynonym>Sickle Cell Disease Ontology</oboInOwl:hasExactSynonym>
+        <rdfs:label>SCDO</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_0006339 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_0006339">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/SCDO_0001000"/>
+        <obo:IAO_0000115>Critical and exhaustive investigation or experimentation, having for its aim the discovery of new facts and their correct interpretation, the revision of accepted conclusions, theories, or laws in the light of newly discovered facts, or the practical application of such new or revised conclusions, theories, or laws.</obo:IAO_0000115>
+        <obo:SCDO_0000340>http://purl.bioontology.org/ontology/MESH/D012106</obo:SCDO_0000340>
+        <obo:SCDO_1000288>Sufficient</obo:SCDO_1000288>
+        <obo:SCDO_1000910>SCDO:0006339</obo:SCDO_1000910>
+        <oboInOwl:hasDbXref>MESH:D012106</oboInOwl:hasDbXref>
+        <rdfs:label>Research</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_1000849 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_1000849">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C103165"/>
+        <obo:IAO_0000115>A clinical visit occuring because of an acute (severe with sudden onset) health condition.</obo:IAO_0000115>
+        <obo:SCDO_1000288>Few but definitions not specific enough</obo:SCDO_1000288>
+        <dc:creator>SCDO (Jade Hotchkiss)</dc:creator>
+        <rdfs:label>Acute Clinical Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_1000900 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_1000900">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C103165"/>
+        <obo:IAO_0000115>A clinical visit that is the patient&apos;s first clinical visit.</obo:IAO_0000115>
+        <obo:SCDO_1000288>None</obo:SCDO_1000288>
+        <dc:creator>SCDO (Jade Hotchkiss)</dc:creator>
+        <rdfs:label>First Visit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/SCDO_1000901 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/SCDO_1000901">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C103165"/>
+        <obo:IAO_0000115>A clinical visit that is a follow-up for a previous visit.</obo:IAO_0000115>
+        <obo:SCDO_1000288>Not relevant to context of sickle cell</obo:SCDO_1000288>
+        <dc:creator>SCDO (Jade Hotchkiss)</dc:creator>
+        <oboInOwl:hasExactSynonym>Review Visit</oboInOwl:hasExactSynonym>
+        <rdfs:label>Follow-Up Visit</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

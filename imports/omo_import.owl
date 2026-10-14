@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/cmeo/imports/omo_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/cmeo/imports/omo_import.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cmeo/imports/omo_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/omo_import.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000234 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000234"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMO_0001001 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OMO_0001001">
+        <obo:IAO_0000115>This is an annotation used on an object property to indicate a logical characterstic beyond what is possible in OWL.</obo:IAO_0000115>
+        <obo:IAO_0000119>OBO Operations call</obo:IAO_0000119>
+        <oboInOwl:created_by rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <rdfs:label>logical characteristic of object property</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMO_0002000 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OMO_0002000">
+        <obo:IAO_0000112>&apos;part disjoint with&apos; &apos;defined by construct&apos; &quot;&quot;&quot;
+    PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+    PREFIX : &lt;http://example.org/
+    CONSTRUCT {
+      [
+        a owl:Restriction ;
+        owl:onProperty :part_of ;
+        owl:someValuesFrom ?a ;
+        owl:disjointWith [
+          a owl:Restriction ;
+          owl:onProperty :part_of ;
+          owl:someValuesFrom ?b
+        ]
+      ]
+    }
+    WHERE {
+      ?a :part_disjoint_with ?b .
+    }</obo:IAO_0000112>
+        <obo:IAO_0000115>Links an annotation property to a SPARQL CONSTRUCT query which is meant to provide semantics for a shortcut relation.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:resource="https://github.com/ontodev/robot/issues/963"/>
+        <dc:contributor rdf:resource="https://orcid.org/0000-0002-7356-1779"/>
+        <dc:contributor rdf:resource="https://orcid.org/0000-0002-8688-6599"/>
+        <rdfs:label>defined by construct</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMO_0004000 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OMO_0004000">
+        <obo:IAO_0000112>A serial number such as &quot;12324X&quot;; a stop sign; a written proper name such as &quot;OBI</obo:IAO_0000112>
+        <obo:IAO_0000115>An information content entity that is a mark(s) or character(s) used as a conventional representation of another entity.</obo:IAO_0000115>
+        <obo:IAO_0000233 rdf:resource="https://github.com/information-artifact-ontology/ontology-metadata/issues/144"/>
+        <terms:contributor rdf:resource="https://orcid.org/0000-0002-6523-4866"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-25</terms:created>
+        <rdfs:label>has symbol</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#created_by"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000225 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000225"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMO_0001000 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OMO_0001000">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
+        <obo:IAO_0000115 xml:lang="en">The term was added to the ontology on the assumption it was in scope, but it turned out later that it was not.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">This obsolesence reason should be used conservatively. Typical valid examples in disease ontologies are: unnecessary class grouping; mistaked creation of a disease associated to a phenotype.</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0001-5208-3432"/>
+        <obo:IAO_0000233>https://github.com/information-artifact-ontology/ontology-metadata/issues/77</obo:IAO_0000233>
+        <obo:IAO_0000234>https://orcid.org/0000-0001-5208-3432</obo:IAO_0000234>
+        <dc:contributor rdf:resource="https://orcid.org/0000-0001-6875-5360"/>
+        <dc:contributor rdf:resource="https://orcid.org/0000-0002-7356-1779"/>
+        <rdfs:label>out of scope</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMO_0001002 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.obolibrary.org/obo/OMO_0001002">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000225"/>
+        <obo:IAO_0000115 xml:lang="en">The term was added to the ontology on the assumption it was a valid domain entity, but it turns out the entity does not exist in reality.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">This obsolesence reason should be used conservatively. For example: Obsoleting class that describes a breed of cow based on a record in an existing database, that was later retracted as faulty (breed does not exist). Do not use this term to obsolete a historic concept (that was once valid, but not anymore). </obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:resource="http://orcid.org/0000-0002-4142-7153"/>
+        <obo:IAO_0000233>https://github.com/information-artifact-ontology/ontology-metadata/issues/136</obo:IAO_0000233>
+        <obo:IAO_0000234>https://orcid.org/0000-0002-4142-7153</obo:IAO_0000234>
+        <rdfs:label>domain entity does not exist</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

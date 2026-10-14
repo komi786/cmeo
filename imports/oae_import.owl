@@ -1,0 +1,553 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/cmeo/imports/oae_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/cmeo/imports/oae_import.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cmeo/imports/oae_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/oae_import.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0001849 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OAE_0001849"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0004334 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/OAE_0004334"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000062 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000062"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000066 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000066"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000025 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OAE_0000025">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+        <obo:IAO_0000115>a preceded_by relation that indicates that one process (e.g., an adverse event) is causally preceded by (induced by) another process (e.g., a medical intervention) and there is a causal relation between these two processes. This relation indicates the existence of a causal chain, meaning many processes may occur in between these two processes.</obo:IAO_0000115>
+        <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
+        <obo:IAO_0000118>induced by</obo:IAO_0000118>
+        <rdfs:label>induced_by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0001788 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OAE_0001788">
+        <obo:IAO_0000112>An adverse event has a participant quality, such as a hyperkalemia AE has a participatn quality blood potassium increased.</obo:IAO_0000112>
+        <obo:IAO_0000115>an object property that represents a relation between a process and a quality, in which the process has a participant that has the quality.</obo:IAO_0000115>
+        <obo:IAO_0000116>This is a shortcut relation of the following full version: 
+&apos;has participant&apos; some (participant &apos;has quality&apos; )
+in: process &apos;has participant&apos; some (participant &apos;has quality&apos; some quality)</obo:IAO_0000116>
+        <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">has participant quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0002081 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OAE_0002081">
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
+        <obo:IAO_0000115>a &apos;occurs in&apos; relation that is applied at the adverse event setting and indicates where an adverse event occurs in.</obo:IAO_0000115>
+        <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
+        <obo:IAO_0000118>adverse event occurs in</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">AE occurs in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000001 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000001">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OGMS_0000061"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OAE_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>a pathological bodily process that occurs after a medical intervention. An adverse event is likely caused by the medical intervention; however, such a causal association is not required to be an adverse event.</obo:IAO_0000115>
+        <obo:IAO_0000116>Melanie Courtot and YH: More work is needed on how to restrict the scope of a term to be an &apos;adverse event&apos;, notably regarding temporal association. When is an appropirate time interval between a medical intervention and an adverse event observed? One week, one month, one year, or a lifetime? For some well-studied medical interventions (e.g., administration of many vaccines or drugs), we probably have a general idea. For many new interventions, we don&apos;t know much. In OAE, this issue is associated with defining the &apos;adverse event incubation time&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000116>YH: An adverse event is a process that has specified output of some adverse medical outcome (e.g., symptom, sign or accident) after a medical intervention (or process) (e.g., administration of drug or vaccine). The medical intervention can be an administration of a drug, a vaccine (i.e., vaccination), or a special nutritional product (for example, dietary supplement, infant formula, medical food), surgery, or usage of a medical device.</obo:IAO_0000116>
+        <obo:IAO_0000116>YH: An adverse event is possibly induced by the medical intervention. It can be caused by the medical intervention, or may not be caused by the medical intervention. One ultimate goal (or the goal in clinics) of study adverse events is to assess if the adverse event outcome is due to the medical intervention.</obo:IAO_0000116>
+        <obo:IAO_0000116>YH: In development of OAE, we initially use vaccine adverse event as our use case. A vaccine adverse event is associated with a vaccination (i.e. a medical intervention), regardless of whether it is considered vaccine-related, and includes any side effect, injury, toxicity, or sensitivity reaction or significant failure of immunization (i.e., a pharmacologic action).
+Ref: Baylor NW and Midthum K. Regulation and testing of vaccines. In: Vaccines (Editors: Plotkin S, Orenstein W, and Offit P). 2008.  p1623.</obo:IAO_0000116>
+        <obo:IAO_0000116>YH: The current term &apos;adverse event&apos; is different from the term definition shown in our paper: He Y, Xiang Z, Sarntivijai S, Toldo L, Ceusters W. OAE: a realism-based biomedical ontology for the representation of adverse events. Adverse Event Representation Workshop, International Conference on Biomedical Ontologies (ICBO), University at Buffalo, NY, July 26-30, 2011. Full lenghth conference proceeding paper.  
+
+We  made the name changing in order to make OAE cover the broader sense of the &apos;adverse event&apos; which does not assume definite causal effect between an adverse event and a medical intervention. In current definition, the adverse event emphasizes the time association and assumes a likelihood of such a causal association. This term &apos;adverse event&apos; is stil under the OGMS:pathological bodily process.
+
+The &apos;adverse event&apos; defined in the above paper has now been changed to a new term: &apos;causal adverse event&apos;. See more information in the new publication: Yongqun He Y, Sirarat Sarntivijai, Yu Lin, Zuoshuang Xiang, Abra Guo, Shelley Zhang, Desikan Jagannathan, Luca Toldo, Cui Tao and Barry Smith. OAE: The Ontology of Adverse Events. Journal of Biomedical Semantics. 2014, 5:29  doi:10.1186/2041-1480-5-29. PMID: 25093068.PMCID: PMC4120740.</obo:IAO_0000116>
+        <obo:IAO_0000116>YH: The main scope of OAE includes: (1) represent terms and relations in the area of adverse events, (2) assess possible associations between an adverse event and a medical intervention, particularly, identify any causal effect of a medical intervention to an adverse event; and (2) understand the mechanism (including molecular mechanisms) of causal adverse events.</obo:IAO_0000116>
+        <obo:IAO_0000116>YH: There has been discussion regarding whether the term &apos;side effect&apos; is an alternative term for &apos;adverse event&apos;. In AERO, the term &apos;AERO:adverse event&apos; represents a subset of those adverse events for which causality has been established. In OAE, an adverse event for which causality has been established is called &apos;causal adverse event&apos;.</obo:IAO_0000116>
+        <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
+        <obo:IAO_0000118>AE</obo:IAO_0000118>
+        <obo:IAO_0000118>adverse reaction</obo:IAO_0000118>
+        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Adverse_event</obo:IAO_0000119>
+        <obo:IAO_0000119>WEB: http://www.fda.gov/Safety/MedWatch/HowToReport/ucm053087.htm</obo:IAO_0000119>
+        <obo:IAO_0000119>WEB: http://www.ncbi.nlm.nih.gov/pubmed/25093068</obo:IAO_0000119>
+        <rdfs:comment>The OAE official website is: http://www.oae-ontology.org/.</rdfs:comment>
+        <rdfs:label>adverse event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000002 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000002">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
+        <obo:IAO_0000115>medical intervention is a planned process that has the goal of diagnosing, preventing or relieving illness or injury.</obo:IAO_0000115>
+        <obo:IAO_0000116>The act of intervening, interfering or interceding with the intent of modifying the outcome. In medicine, an intervention is usually undertaken to help treat or cure a condition. For example, &quot;Acupuncture as a therapeutic intervention is widely practiced in the United States,&quot; 
+Reference:
+http://www.medterms.com/script/main/art.asp?articlekey=34214 . Some interventions can be used for diagnosis. </obo:IAO_0000116>
+        <obo:IAO_0000117>YH</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB: http://wiki.answers.com/Q/What_is_medical_intervention</obo:IAO_0000119>
+        <rdfs:label>medical intervention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000003">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0000001"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OAE_0000025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OAE_0000002"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000001"/>
+        <obo:IAO_0000115>an adverse event which is a causal adverse event, a pathological bodily process that is induced by a medical intervention.</obo:IAO_0000115>
+        <obo:IAO_0000116>YH: The term &apos;causal adverse event&apos; has the same meaning as we previously defined as &apos;adverse event&apos;. Reference: He Y, Xiang Z, Sarntivijai S, Toldo L, Ceusters W. OAE: a realism-based biomedical ontology for the representation of adverse events. Adverse Event Representation Workshop, International Conference on Biomedical Ontologies (ICBO), University at Buffalo, NY, July 26-30, 2011. Full lenghth conference proceeding paper.  
+
+We made the name changing as a way to make OAE cover the broader sense of the &apos;adverse event&apos; which does not assume definite causal effect between an adverse event and a medical intervention.</obo:IAO_0000116>
+        <obo:IAO_0000117>YH</obo:IAO_0000117>
+        <obo:IAO_0000118>adverse effect</obo:IAO_0000118>
+        <obo:IAO_0000119>He Y, Xiang Z, Sarntivijai S, Toldo L, Ceusters W. OAE: a realism-based biomedical ontology for the representation of adverse events. Adverse Event Representation Workshop, International Conference on Biomedical Ontologies (ICBO), University at Buffalo, NY, July 26-30, 2011. Full lenghth conference proceeding paper.</obo:IAO_0000119>
+        <rdfs:comment>YH: the term &quot;adverse effect&quot; has the  same meaning of &quot;causal adverse event&quot;. </rdfs:comment>
+        <rdfs:label>causal adverse event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000005 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000005">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OAE_0000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>an adverse event that occurs after a drug administration</obo:IAO_0000115>
+        <obo:IAO_0000117>YH, JX</obo:IAO_0000117>
+        <obo:IAO_0000118>ADE</obo:IAO_0000118>
+        <obo:IAO_0000118>ADR</obo:IAO_0000118>
+        <obo:IAO_0000118>adverse drug reaction</obo:IAO_0000118>
+        <obo:IAO_0000118>drug adverse event</obo:IAO_0000118>
+        <rdfs:label>adverse drug event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000002"/>
+        <obo:IAO_0000115>a medical intervention where a patient is administered with a drug</obo:IAO_0000115>
+        <obo:IAO_0000117>YH</obo:IAO_0000117>
+        <rdfs:label>drug administration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000012 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000012">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000002"/>
+        <obo:IAO_0000115>a medical intervention that uses a medical device</obo:IAO_0000115>
+        <obo:IAO_0000117>YH</obo:IAO_0000117>
+        <rdfs:label>medical device usage for medical intervention</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000040">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000001"/>
+        <obo:IAO_0000115>an adverse event that shows a complication that occurs after a medical procedure such as a surgery.</obo:IAO_0000115>
+        <obo:IAO_0000117>SS, YH</obo:IAO_0000117>
+        <obo:IAO_0000118>post-procedural AE</obo:IAO_0000118>
+        <obo:IAO_0000118>procedural disorder AE</obo:IAO_0000118>
+        <obo:IAO_0000118>procedure AE</obo:IAO_0000118>
+        <rdfs:label>procedural complication AE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000095 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000095">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0000005"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OAE_0000025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OAE_0000011"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000005"/>
+        <obo:IAO_0000117>YH</obo:IAO_0000117>
+        <obo:IAO_0000117>a drug adverse event that is caused by a drug adiministration. Here a causal effect is established between the drug administration and the adverse event.</obo:IAO_0000117>
+        <rdfs:label>causal adverse drug event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000096 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000096">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0002617"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OAE_0000025"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OAE_0000012"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000003"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0002617"/>
+        <obo:IAO_0000115>a medical device adverse event that is induced or caused by a medical device. There is a causal relation between the adverse event and the usage of a medical device.</obo:IAO_0000115>
+        <obo:IAO_0000117>YH</obo:IAO_0000117>
+        <rdfs:label>adverse event induced by medical device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000476 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000476">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OAE_0002081"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000001"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OAE_0001788"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0001836"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0001837"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0001838"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0001839"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0001840"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>an AE that occurs in immune system.</obo:IAO_0000115>
+        <obo:IAO_0000116>According to the Vaccine Adverse Event Reporting System (VAERS), &apos;immune system disorder&apos; was mentioned in 292 VAERS reports (0.2%) during1991-2001 (Reference: PMID: 12825543).</obo:IAO_0000116>
+        <obo:IAO_0000117>YH</obo:IAO_0000117>
+        <obo:IAO_0000118>immune system disorder AE</obo:IAO_0000118>
+        <rdfs:label>immune system AE</rdfs:label>
+        <rdfs:seeAlso>HPO: HP_0002715</rdfs:seeAlso>
+        <rdfs:seeAlso>SIDER: C0021053</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000568 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000568">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000584"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OAE_0001788"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0001836"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0001837"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0001838"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0001839"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OAE_0001840"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">a hypersensitivity AE which results in an allergic response showing a marked increase in reactivity to an antigen upon subsequent exposure.</obo:IAO_0000115>
+        <obo:IAO_0000117>JX, LW, YH</obo:IAO_0000117>
+        <obo:IAO_0000118>allergic reaction AE</obo:IAO_0000118>
+        <obo:IAO_0000118>allergic response AE</obo:IAO_0000118>
+        <obo:IAO_0000118>anaphylactic reaction AE</obo:IAO_0000118>
+        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Allergy</obo:IAO_0000119>
+        <obo:OAE_0001849>变态反应</obo:OAE_0001849>
+        <obo:OAE_0001849>过敏反应</obo:OAE_0001849>
+        <obo:OAE_0004334>10001718</obo:OAE_0004334>
+        <obo:OAE_0004334>10001738</obo:OAE_0004334>
+        <rdfs:label>allergy AE</rdfs:label>
+        <rdfs:seeAlso>CTCAE: E11248</rdfs:seeAlso>
+        <rdfs:seeAlso>MP: MP_0001878</rdfs:seeAlso>
+        <rdfs:seeAlso>NCIt: C3114</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0000584 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0000584">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000476"/>
+        <obo:IAO_0000115>Hypersensitivity AE is a immune system AE that is a set of undesirable reactions produced by the normal immune system, including allergies and autoimmunity. These reactions may be damaging, uncomfortable, or occasionally fatal.</obo:IAO_0000115>
+        <obo:IAO_0000117>JX, LW, YH</obo:IAO_0000117>
+        <obo:IAO_0000118>hypersensitivity reaction AE</obo:IAO_0000118>
+        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Hypersensitivity</obo:IAO_0000119>
+        <obo:OAE_0001849>超敏反应</obo:OAE_0001849>
+        <obo:OAE_0004334>10020751</obo:OAE_0004334>
+        <rdfs:label>hypersensitivity AE</rdfs:label>
+        <rdfs:seeAlso>HPO: HP_0100326</rdfs:seeAlso>
+        <rdfs:seeAlso>MP: MP_0002148</rdfs:seeAlso>
+        <rdfs:seeAlso>SIDER: C0020517</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0001750 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0001750">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/PATO_0001236"/>
+        <obo:IAO_0000115>a process quality that represents the level of severity of an adverse event.</obo:IAO_0000115>
+        <obo:IAO_0000117>YH, SS</obo:IAO_0000117>
+        <obo:IAO_0000118>AE severity</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">severity of adverse event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0001836 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0001836">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0001750"/>
+        <obo:IAO_0000115>a severity of AE that shows asymptomatic, or involves mild or minor symptoms, or is of marginal clinical relevance, or consists of clinical or diagnostic observations alone, or where intervention is not indicated, or where only non-prescription intervention is indicated.</obo:IAO_0000115>
+        <obo:IAO_0000117>YH, SS</obo:IAO_0000117>
+        <obo:IAO_0000118>AE severity Grade 1</obo:IAO_0000118>
+        <obo:IAO_0000119> Web: http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae.owl#Grade_1_Adverse_Event</obo:IAO_0000119>
+        <rdfs:comment>Note the AE severity Grade 1 equals to CTCAE G1 AE severity.</rdfs:comment>
+        <rdfs:label xml:lang="en">AE severity G1</rdfs:label>
+        <rdfs:seeAlso>CTCAE4: E10005 (Grade 1 Adverse Event)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0001837 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0001837">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0001750"/>
+        <obo:IAO_0000115>a severity of AE for which only minimal, local, or noninvasive intervention (e.g. packing, cautery) is indicated, or that limits instrumental activities of daily living (ADLs, e.g., shopping, laundry, transportation, or ability to conduct finances).</obo:IAO_0000115>
+        <obo:IAO_0000117>YH, SS</obo:IAO_0000117>
+        <obo:IAO_0000118>AE severity Grade 2</obo:IAO_0000118>
+        <obo:IAO_0000119> Web: http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae.owl#Grade_2_Adverse_Event</obo:IAO_0000119>
+        <rdfs:comment>Note the AE severity Grade 2 equals to CTCAE G2 AE severity.</rdfs:comment>
+        <rdfs:label xml:lang="en">AE severity G2</rdfs:label>
+        <rdfs:seeAlso>CTCAE4: E10006 (Grade 2 Adverse Event)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0001838 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0001838">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0001750"/>
+        <obo:IAO_0000115>a severity of AE that shows an outcome which is medically significant but not life-threatening; or for which inpatient care or prolongation of hospitalization are indicated; or that is an important medical event that does not result in hospitalization, but may jeopardize the patient or may require intervention either to prevent hospitalization, to prevent the AE from becoming life-threatening or causing death; or that is disabling; or that results in persistent or significant disability, incapacity, or limitation of self care activities of daily living (ADLs, getting in and out of bed, dressing, eating, getting around inside, bathing, or using the toilet).</obo:IAO_0000115>
+        <obo:IAO_0000117>YH, SS</obo:IAO_0000117>
+        <obo:IAO_0000118>AE severity Grade 3</obo:IAO_0000118>
+        <obo:IAO_0000119> Web: http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae.owl#Grade_3_Adverse_Event</obo:IAO_0000119>
+        <rdfs:comment>Note the AE severity Grade 3 equals to CTCAE G3 AE severity.</rdfs:comment>
+        <rdfs:label xml:lang="en">AE severity G3</rdfs:label>
+        <rdfs:seeAlso>CTCAE4: E10007 (Grade 3 Adverse Event)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0001839 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0001839">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0001750"/>
+        <obo:IAO_0000115>a severity of AE that has life-threatening consequences, for which urgent intervention is indicated, that puts the patient is at risk of death at the time of the event if immediate intervention is not undertaken, or that causes blindness or deafness (need to decide if unilateral or bilateral).</obo:IAO_0000115>
+        <obo:IAO_0000117>YH, SS</obo:IAO_0000117>
+        <obo:IAO_0000118>AE severity Grade 4</obo:IAO_0000118>
+        <obo:IAO_0000119> Web: http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae.owl#Grade_4_Adverse_Event</obo:IAO_0000119>
+        <rdfs:comment>Note the AE severity Grade 4 equals to CTCAE G4 AE severity.</rdfs:comment>
+        <rdfs:label xml:lang="en">AE severity G4</rdfs:label>
+        <rdfs:seeAlso>CTCAE4: E10008 (Grade 4 Adverse Event)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0001840 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0001840">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0001750"/>
+        <obo:IAO_0000115>a severity of AE that results in death.</obo:IAO_0000115>
+        <obo:IAO_0000117>YH, SS</obo:IAO_0000117>
+        <obo:IAO_0000118>AE severity Grade 5</obo:IAO_0000118>
+        <obo:IAO_0000119> Web: http://ncicb.nci.nih.gov/xml/owl/EVS/ctcae.owl#Grade_5_Adverse_Event</obo:IAO_0000119>
+        <rdfs:comment>Note the AE severity Grade 5 equals to CTCAE G5 AE severity.</rdfs:comment>
+        <rdfs:label xml:lang="en">AE severity G5</rdfs:label>
+        <rdfs:seeAlso>CTCAE4: E10009 (Grade 5 Adverse Event)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OAE_0002617 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OAE_0002617">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OAE_0000040"/>
+        <obo:IAO_0000115>a procedural complication AE that occurs after the usage of a medical device.</obo:IAO_0000115>
+        <obo:IAO_0000117>YH</obo:IAO_0000117>
+        <obo:IAO_0000118>device AE</obo:IAO_0000118>
+        <obo:IAO_0000118>device adverse event</obo:IAO_0000118>
+        <rdfs:label xml:lang="en">medical device adverse event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000011"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000061 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OGMS_0000061"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001236 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/PATO_0001236"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UBERON_0002405 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/UBERON_0002405"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

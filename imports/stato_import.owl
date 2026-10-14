@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl#"
+     xml:base="http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl">
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000114"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000032 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000032">
+        <obo:IAO_0000115 xml:lang="en">an alternative term used for STATO statistical ontology and ISA team</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">STATO alternative term</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000129 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000129">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <obo:IAO_0000115 xml:lang="en">A relationship (data property) between an entity and its value.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000258 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000258">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000741"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a variable is a data item which can assume any of a set of values, either as determined by an agent or as randomly occuring through observation.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">adapted from wolfram-alpha (http://www.wolframalpha.com/input/?i=variable) definition 2.
+
+and from Oxford English Dictionary:
+http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <rdfs:label xml:lang="en">variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000741 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000741">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
+        <obo:IAO_0000116>A statistical model is defined as a set of mathematical relationships that express assumptions related to the generation of the observed data and that sets constraints for the analysis of the data.
+Statistical model components include graphical structures (e.g. directed acyclic graph), equations (e.g. regression model form), components of equations (e.g. covariate term), and distributional assumptions (e.g. regression error distribution)</obo:IAO_0000116>
+        <obo:IAO_0000117>Harold Lehmann, Brian S. Alper, Kenneth Wilkins</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <rdfs:label>statistical model component</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+
