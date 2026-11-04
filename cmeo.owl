@@ -58,8 +58,8 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title xml:lang="en">Clinical Metadata Exploration Ontology (CMEO)</terms:title>
         <terms:abstract xml:lang="en">CMEO describes the metadata of clinical studies: study design and protocol, eligibility criteria, outcomes, the variables collected and how they are specified (data type, units, codes, visits, missing values), and data access and use conditions. Each study can be represented as a knowledge graph, so that studies and variables can be found, compared and assessed for harmonization across studies.</terms:abstract>
-        <terms:issued>2026-10-14</terms:issued>
-        <terms:modified>2026-10-14</terms:modified>
+        <terms:issued>2026-11-04</terms:issued>
+        <terms:modified>2026-11-04</terms:modified>
         <terms:publisher rdf:resource="https://obofoundry.org"/>
         <terms:bibliographicCitation xml:lang="en">Gilani K, Wei W, Peters C, Verket M, Brunner-La Rocca HP, Nicolis E, Colombo M, Marx-Schütt K, Urovi V, Dumontier M. CMEO: a metadata-centric ontology for clinical studies exploration and harmonization assessment. BMC Med Inform Decis Mak. 2025;26(1):8. doi:10.1186/s12911-025-03272-5</terms:bibliographicCitation>
         <bibo:doi>10.1186/s12911-025-03272-5</bibo:doi>
