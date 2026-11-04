@@ -24,9 +24,13 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:apollo_sv="http://purl.obolibrary.org/obo/apollo_sv.owl/"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
+     
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cmeo.owl">
-        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cmeo/releases/2026-10-14/cmeo.owl"/>
+        <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cmeo/releases/2026-11-04/cmeo.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/bfo_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/cob_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/cto_import.owl"/>
@@ -53,8 +57,35 @@
 CMEO is intended to interoperate with controlled vocabularies and common clinical terminologies by linking data elements and value sets to external concept identifiers (e.g., OMOP concept IDs, SNOMED CT, LOINC, RxNorm/ATC, UCUM) while remaining model-agnostic (i.e., not tied to a single CDM).</dc:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title xml:lang="en">Clinical Metadata Exploration Ontology (CMEO)</terms:title>
+        <terms:abstract xml:lang="en">CMEO describes the metadata of clinical studies: study design and protocol, eligibility criteria, outcomes, the variables collected and how they are specified (data type, units, codes, visits, missing values), and data access and use conditions. Each study can be represented as a knowledge graph, so that studies and variables can be found, compared and assessed for harmonization across studies.</terms:abstract>
+        <terms:issued>2026-10-14</terms:issued>
+        <terms:modified>2026-10-14</terms:modified>
+        <terms:publisher rdf:resource="https://obofoundry.org"/>
+        <terms:bibliographicCitation xml:lang="en">Gilani K, Wei W, Peters C, Verket M, Brunner-La Rocca HP, Nicolis E, Colombo M, Marx-Schütt K, Urovi V, Dumontier M. CMEO: a metadata-centric ontology for clinical studies exploration and harmonization assessment. BMC Med Inform Decis Mak. 2025;26(1):8. doi:10.1186/s12911-025-03272-5</terms:bibliographicCitation>
+        <bibo:doi>10.1186/s12911-025-03272-5</bibo:doi>
+        <bibo:status>Production</bibo:status>
+        <vann:preferredNamespacePrefix>CMEO</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>http://purl.obolibrary.org/obo/CMEO_</vann:preferredNamespaceUri>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/cob.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/cto.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/duo.owl"/>
+        <voaf:extends rdf:resource="http://www.ebi.ac.uk/efo/efo.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/ncit.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/oae.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/obcs.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/obi.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/ogms.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/omo.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/scdo.owl"/>
+        <voaf:extends rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
+        <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/symp.owl"/>
         <rdfs:label xml:lang="en">Clinical Metadata Exploration Ontology (CMEO)</rdfs:label>
-        <owl:versionInfo xml:lang="en">1.1</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">2026-11-04</owl:versionInfo>
     </owl:Ontology>
     
 
