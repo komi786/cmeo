@@ -1817,17 +1817,21 @@
     "@value" : "surgical procedure history exclusion criterion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/OBI_0500028"
+    "@id" : "http://purl.obolibrary.org/obo/CMEO_0000070"
   } ]
 }, {
   "@id" : "http://purl.obolibrary.org/obo/CMEO_0000070",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.obolibrary.org/obo/IAO_0000115" : [ {
     "@language" : "en",
-    "@value" : "An exclusion criterion that defines a condition under which a participant is ineligible for a study because they have had, currently have, or are expected to have a specified clinical exposure within a defined time frame."
+    "@value" : "An exclusion criterion that excludes a participant who has received, is receiving, or is scheduled to receive a specified medical intervention."
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000116" : [ {
     "@value" : "\"Requested for inclusion in OBI; to be replaced by the OBI term once released.\""
+  } ],
+  "http://purl.obolibrary.org/obo/IAO_0000118" : [ {
+    "@language" : "en",
+    "@value" : "prior medical intervention exclusion criterion"
   } ],
   "http://purl.obolibrary.org/obo/IAO_0000233" : [ {
     "@id" : "https://github.com/obi-ontology/obi/issues/2014"
@@ -2348,12 +2352,78 @@
     "@language" : "en",
     "@value" : "CMEO (Clinical Metadata Exploration Ontology) is an ontology for representing and querying study- and variable-level metadata from clinical cohort studies in a consistent, machine-interpretable way. CMEO models the semantics of data elements (variables) and their key metadata needed for cross-cohort discovery and harmonization - such as human-readable labels/definitions, domain/type information (e.g., condition, measurement, medication), permissible categorical values, units, visit/timepoint context, derivation/provenance (e.g., computed variables), and basic descriptive statistics. It is designed to support metadata-driven tasks including cohort cataloguing, feasibility assessment, study retrieval, and identification of compatible variables across studies - without requiring access to patient-level data.\n\nCMEO is intended to interoperate with controlled vocabularies and common clinical terminologies by linking data elements and value sets to external concept identifiers (e.g., OMOP concept IDs, SNOMED CT, LOINC, RxNorm/ATC, UCUM) while remaining model-agnostic (i.e., not tied to a single CDM)."
   } ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@language" : "en",
+    "@value" : "CMEO describes the metadata of clinical studies: study design and protocol, eligibility criteria, outcomes, the variables collected and how they are specified (data type, units, codes, visits, missing values), and data access and use conditions. Each study can be represented as a knowledge graph, so that studies and variables can be found, compared and assessed for harmonization across studies."
+  } ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@language" : "en",
+    "@value" : "Gilani K, Wei W, Peters C, Verket M, Brunner-La Rocca HP, Nicolis E, Colombo M, Marx-Schütt K, Urovi V, Dumontier M. CMEO: a metadata-centric ontology for clinical studies exploration and harmonization assessment. BMC Med Inform Decis Mak. 2025;26(1):8. doi:10.1186/s12911-025-03272-5"
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@value" : "2026-11-04"
+  } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@value" : "2026-11-04"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@id" : "https://obofoundry.org"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
     "@value" : "Clinical Metadata Exploration Ontology (CMEO)"
+  } ],
+  "http://purl.org/ontology/bibo/doi" : [ {
+    "@value" : "10.1186/s12911-025-03272-5"
+  } ],
+  "http://purl.org/ontology/bibo/status" : [ {
+    "@value" : "Production"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "CMEO"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://purl.obolibrary.org/obo/CMEO_"
+  } ],
+  "http://purl.org/vocommons/voaf#extends" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/bfo.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/cob.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/cto.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/duo.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/iao.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/ncit.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/oae.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/obcs.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/obi.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/ogms.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/omo.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/pato.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/ro.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/scdo.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/stato.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/symp.owl"
+  }, {
+    "@id" : "http://semanticscience.org/ontology/sio.owl"
+  }, {
+    "@id" : "http://www.ebi.ac.uk/efo/efo.owl"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2397,11 +2467,11 @@
     "@id" : "http://purl.obolibrary.org/obo/cmeo/imports/symp_import.owl"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "http://purl.obolibrary.org/obo/cmeo/releases/2026-10-14/cmeo.owl"
+    "@id" : "http://purl.obolibrary.org/obo/cmeo/releases/2026-11-04/cmeo.owl"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "1.1"
+    "@value" : "2026-11-04"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/contributor",
@@ -2413,13 +2483,43 @@
   "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/abstract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/source",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/ontology/bibo/doi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/ontology/bibo/status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocommons/voaf#extends",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://semanticscience.org/resource/SIO_010060",

@@ -7,7 +7,7 @@
 @base <http://purl.obolibrary.org/obo/cmeo.owl#> .
 
 <http://purl.obolibrary.org/obo/cmeo.owl> rdf:type owl:Ontology ;
-                                           owl:versionIRI <http://purl.obolibrary.org/obo/cmeo/releases/2026-10-14/cmeo.owl> ;
+                                           owl:versionIRI <http://purl.obolibrary.org/obo/cmeo/releases/2026-11-04/cmeo.owl> ;
                                            owl:imports <http://purl.obolibrary.org/obo/cmeo/imports/bfo_import.owl> ,
                                                        <http://purl.obolibrary.org/obo/cmeo/imports/cob_import.owl> ,
                                                        <http://purl.obolibrary.org/obo/cmeo/imports/cto_import.owl> ,
@@ -32,10 +32,37 @@
                                            <http://purl.org/dc/elements/1.1/description> """CMEO (Clinical Metadata Exploration Ontology) is an ontology for representing and querying study- and variable-level metadata from clinical cohort studies in a consistent, machine-interpretable way. CMEO models the semantics of data elements (variables) and their key metadata needed for cross-cohort discovery and harmonization - such as human-readable labels/definitions, domain/type information (e.g., condition, measurement, medication), permissible categorical values, units, visit/timepoint context, derivation/provenance (e.g., computed variables), and basic descriptive statistics. It is designed to support metadata-driven tasks including cohort cataloguing, feasibility assessment, study retrieval, and identification of compatible variables across studies - without requiring access to patient-level data.
 
 CMEO is intended to interoperate with controlled vocabularies and common clinical terminologies by linking data elements and value sets to external concept identifiers (e.g., OMOP concept IDs, SNOMED CT, LOINC, RxNorm/ATC, UCUM) while remaining model-agnostic (i.e., not tied to a single CDM)."""@en ;
+                                           <http://purl.org/dc/terms/abstract> "CMEO describes the metadata of clinical studies: study design and protocol, eligibility criteria, outcomes, the variables collected and how they are specified (data type, units, codes, visits, missing values), and data access and use conditions. Each study can be represented as a knowledge graph, so that studies and variables can be found, compared and assessed for harmonization across studies."@en ;
+                                           <http://purl.org/dc/terms/bibliographicCitation> "Gilani K, Wei W, Peters C, Verket M, Brunner-La Rocca HP, Nicolis E, Colombo M, Marx-Schütt K, Urovi V, Dumontier M. CMEO: a metadata-centric ontology for clinical studies exploration and harmonization assessment. BMC Med Inform Decis Mak. 2025;26(1):8. doi:10.1186/s12911-025-03272-5"@en ;
+                                           <http://purl.org/dc/terms/issued> "2026-11-04" ;
                                            <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                           <http://purl.org/dc/terms/modified> "2026-11-04" ;
+                                           <http://purl.org/dc/terms/publisher> <https://obofoundry.org> ;
                                            <http://purl.org/dc/terms/title> "Clinical Metadata Exploration Ontology (CMEO)"@en ;
+                                           <http://purl.org/ontology/bibo/doi> "10.1186/s12911-025-03272-5" ;
+                                           <http://purl.org/ontology/bibo/status> "Production" ;
+                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "CMEO" ;
+                                           <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.obolibrary.org/obo/CMEO_" ;
+                                           <http://purl.org/vocommons/voaf#extends> <http://purl.obolibrary.org/obo/bfo.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/cob.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/cto.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/duo.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/iao.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/ncit.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/oae.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/obcs.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/obi.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/ogms.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/omo.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/pato.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/ro.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/scdo.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/stato.owl> ,
+                                                                                    <http://purl.obolibrary.org/obo/symp.owl> ,
+                                                                                    <http://semanticscience.org/ontology/sio.owl> ,
+                                                                                    <http://www.ebi.ac.uk/efo/efo.owl> ;
                                            rdfs:label "Clinical Metadata Exploration Ontology (CMEO)"@en ;
-                                           owl:versionInfo "1.1"@en .
+                                           owl:versionInfo "2026-11-04"@en .
 
 #################################################################
 #    Annotation properties
@@ -108,8 +135,28 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/source
@@ -118,6 +165,26 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
 
 ###  http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocommons/voaf#extends
+<http://purl.org/vocommons/voaf#extends> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.geneontology.org/formats/oboInOwl#SubsetProperty
@@ -896,7 +963,7 @@ major adverse cardiovascular event (composite)"""@en ;
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000069
 <http://purl.obolibrary.org/obo/CMEO_0000069> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500028> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000070> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An exclusion criterion that defines a condition under which a participant is ineligible for a study because they have a history of a specified surgical procedure occurring before a defined reference time point, optionally within a specified look-back period."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000116> "\"Requested for inclusion in OBI; to be replaced by the OBI term once released.\""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/obi-ontology/obi/issues/2014> ;
@@ -907,8 +974,9 @@ major adverse cardiovascular event (composite)"""@en ;
 ###  http://purl.obolibrary.org/obo/CMEO_0000070
 <http://purl.obolibrary.org/obo/CMEO_0000070> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0500028> ;
-                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An exclusion criterion that defines a condition under which a participant is ineligible for a study because they have had, currently have, or are expected to have a specified clinical exposure within a defined time frame."@en ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "An exclusion criterion that excludes a participant who has received, is receiving, or is scheduled to receive a specified medical intervention."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000116> "\"Requested for inclusion in OBI; to be replaced by the OBI term once released.\"" ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000118> "prior medical intervention exclusion criterion"@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/obi-ontology/obi/issues/2014> ;
                                               rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
                                               rdfs:label "clinical exposure exclusion criterion"@en .
