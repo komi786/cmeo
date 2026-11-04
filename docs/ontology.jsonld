@@ -2442,6 +2442,8 @@
   }, {
     "@id" : "http://purl.obolibrary.org/obo/cmeo/imports/iao_import.owl"
   }, {
+    "@id" : "http://purl.obolibrary.org/obo/cmeo/imports/ncbitaxon_import.owl"
+  }, {
     "@id" : "http://purl.obolibrary.org/obo/cmeo/imports/ncit_import.owl"
   }, {
     "@id" : "http://purl.obolibrary.org/obo/cmeo/imports/oae_import.owl"
@@ -2465,6 +2467,8 @@
     "@id" : "http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl"
   }, {
     "@id" : "http://purl.obolibrary.org/obo/cmeo/imports/symp_import.owl"
+  }, {
+    "@id" : "http://purl.obolibrary.org/obo/cmeo/imports/uberon_import.owl"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "http://purl.obolibrary.org/obo/cmeo/releases/2026-11-04/cmeo.owl"

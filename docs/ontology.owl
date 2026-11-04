@@ -22,6 +22,7 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/duo_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/efo_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/iao_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/ncbitaxon_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/ncit_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/oae_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/obcs_import.owl"/>
@@ -34,6 +35,7 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/sio_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/symp_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/uberon_import.owl"/>
         <obo:IAO_0000114 xml:lang="en">production</obo:IAO_0000114>
         <dc:contributor xml:lang="en">Michel Dumontier</dc:contributor>
         <dc:creator xml:lang="en">Komal Gilani</dc:creator>
