@@ -6,6 +6,7 @@
   <uri name="http://purl.obolibrary.org/obo/cmeo/imports/duo_import.owl" uri="imports/duo_import.owl"/>
   <uri name="http://purl.obolibrary.org/obo/cmeo/imports/efo_import.owl" uri="imports/efo_import.owl"/>
   <uri name="http://purl.obolibrary.org/obo/cmeo/imports/iao_import.owl" uri="imports/iao_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/ncbitaxon_import.owl" uri="imports/ncbitaxon_import.owl"/>
   <uri name="http://purl.obolibrary.org/obo/cmeo/imports/ncit_import.owl" uri="imports/ncit_import.owl"/>
   <uri name="http://purl.obolibrary.org/obo/cmeo/imports/oae_import.owl" uri="imports/oae_import.owl"/>
   <uri name="http://purl.obolibrary.org/obo/cmeo/imports/obcs_import.owl" uri="imports/obcs_import.owl"/>
