@@ -1246,7 +1246,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/CMEO_0000069 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000069">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000070"/>
         <w3id:IAO_0000115 xml:lang="en">An exclusion criterion that defines a condition under which a participant is ineligible for a study because they have a history of a specified surgical procedure occurring before a defined reference time point, optionally within a specified look-back period.</w3id:IAO_0000115>
         <w3id:IAO_0000116 xml:lang="en">&quot;Requested for inclusion in OBI; to be replaced by the OBI term once released.&quot;</w3id:IAO_0000116>
         <w3id:IAO_0000233 rdf:resource="https://github.com/obi-ontology/obi/issues/2014"/>
@@ -1260,8 +1260,9 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000070">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500028"/>
-        <w3id:IAO_0000115 xml:lang="en">An exclusion criterion that defines a condition under which a participant is ineligible for a study because they have had, currently have, or are expected to have a specified clinical exposure within a defined time frame.</w3id:IAO_0000115>
+        <w3id:IAO_0000115 xml:lang="en">An exclusion criterion that excludes a participant who has received, is receiving, or is scheduled to receive a specified medical intervention.</w3id:IAO_0000115>
         <w3id:IAO_0000116>&quot;Requested for inclusion in OBI; to be replaced by the OBI term once released.&quot;</w3id:IAO_0000116>
+        <w3id:IAO_0000118 xml:lang="en">prior medical intervention exclusion criterion</w3id:IAO_0000118>
         <w3id:IAO_0000233 rdf:resource="https://github.com/obi-ontology/obi/issues/2014"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
         <rdfs:label xml:lang="en">clinical exposure exclusion criterion</rdfs:label>
