@@ -18,4 +18,5 @@
   <uri name="http://purl.obolibrary.org/obo/cmeo/imports/sio_import.owl" uri="imports/sio_import.owl"/>
   <uri name="http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl" uri="imports/stato_import.owl"/>
   <uri name="http://purl.obolibrary.org/obo/cmeo/imports/symp_import.owl" uri="imports/symp_import.owl"/>
+  <uri name="http://purl.obolibrary.org/obo/cmeo/imports/uberon_import.owl" uri="imports/uberon_import.owl"/>
 </catalog>

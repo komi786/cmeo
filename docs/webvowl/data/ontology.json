@@ -55,27 +55,7 @@
       "extends" : [ {
         "identifier" : "extends",
         "language" : "undefined",
-        "value" : "http://semanticscience.org/ontology/sio.owl",
-        "type" : "iri"
-      }, {
-        "identifier" : "extends",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/oae.owl",
-        "type" : "iri"
-      }, {
-        "identifier" : "extends",
-        "language" : "undefined",
         "value" : "http://purl.obolibrary.org/obo/obi.owl",
-        "type" : "iri"
-      }, {
-        "identifier" : "extends",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/pato.owl",
-        "type" : "iri"
-      }, {
-        "identifier" : "extends",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/bfo.owl",
         "type" : "iri"
       }, {
         "identifier" : "extends",
@@ -90,16 +70,6 @@
       }, {
         "identifier" : "extends",
         "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/stato.owl",
-        "type" : "iri"
-      }, {
-        "identifier" : "extends",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/cob.owl",
-        "type" : "iri"
-      }, {
-        "identifier" : "extends",
-        "language" : "undefined",
         "value" : "http://purl.obolibrary.org/obo/scdo.owl",
         "type" : "iri"
       }, {
@@ -110,22 +80,27 @@
       }, {
         "identifier" : "extends",
         "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/ro.owl",
-        "type" : "iri"
-      }, {
-        "identifier" : "extends",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/omo.owl",
-        "type" : "iri"
-      }, {
-        "identifier" : "extends",
-        "language" : "undefined",
         "value" : "http://purl.obolibrary.org/obo/symp.owl",
         "type" : "iri"
       }, {
         "identifier" : "extends",
         "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/ogms.owl",
+        "value" : "http://purl.obolibrary.org/obo/bfo.owl",
+        "type" : "iri"
+      }, {
+        "identifier" : "extends",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/oae.owl",
+        "type" : "iri"
+      }, {
+        "identifier" : "extends",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/ro.owl",
+        "type" : "iri"
+      }, {
+        "identifier" : "extends",
+        "language" : "undefined",
+        "value" : "http://semanticscience.org/ontology/sio.owl",
         "type" : "iri"
       }, {
         "identifier" : "extends",
@@ -135,12 +110,37 @@
       }, {
         "identifier" : "extends",
         "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/ncit.owl",
+        "value" : "http://purl.obolibrary.org/obo/stato.owl",
+        "type" : "iri"
+      }, {
+        "identifier" : "extends",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/pato.owl",
+        "type" : "iri"
+      }, {
+        "identifier" : "extends",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/ogms.owl",
+        "type" : "iri"
+      }, {
+        "identifier" : "extends",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/omo.owl",
+        "type" : "iri"
+      }, {
+        "identifier" : "extends",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/cob.owl",
         "type" : "iri"
       }, {
         "identifier" : "extends",
         "language" : "undefined",
         "value" : "http://www.ebi.ac.uk/efo/efo.owl",
+        "type" : "iri"
+      }, {
+        "identifier" : "extends",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/ncit.owl",
         "type" : "iri"
       } ],
       "IAO_0000114" : [ {
@@ -155,17 +155,17 @@
         "value" : "CMEO",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2026-11-04",
-        "type" : "label"
-      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
         "value" : "https://obofoundry.org",
         "type" : "iri"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-11-04",
+        "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
@@ -185,16 +185,16 @@
         "value" : "2026-11-04",
         "type" : "label"
       } ],
-      "status" : [ {
-        "identifier" : "status",
-        "language" : "undefined",
-        "value" : "Production",
-        "type" : "label"
-      } ],
       "doi" : [ {
         "identifier" : "doi",
         "language" : "undefined",
         "value" : "10.1186/s12911-025-03272-5",
+        "type" : "label"
+      } ],
+      "status" : [ {
+        "identifier" : "status",
+        "language" : "undefined",
+        "value" : "Production",
         "type" : "label"
       } ]
     }
@@ -285,10 +285,10 @@
     "id" : "51",
     "type" : "owl:Class"
   }, {
-    "id" : "52",
+    "id" : "22",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
+    "id" : "52",
     "type" : "owl:Class"
   }, {
     "id" : "32",
@@ -300,11 +300,11 @@
     "id" : "60",
     "type" : "owl:Class"
   }, {
-    "id" : "61",
-    "type" : "owl:intersectionOf"
-  }, {
     "id" : "53",
     "type" : "owl:Class"
+  }, {
+    "id" : "61",
+    "type" : "owl:intersectionOf"
   }, {
     "id" : "54",
     "type" : "owl:Class"
@@ -315,10 +315,10 @@
     "id" : "64",
     "type" : "owl:Class"
   }, {
-    "id" : "56",
+    "id" : "65",
     "type" : "owl:Class"
   }, {
-    "id" : "65",
+    "id" : "56",
     "type" : "owl:Class"
   }, {
     "id" : "69",
@@ -372,10 +372,10 @@
     "id" : "34",
     "type" : "owl:Class"
   }, {
-    "id" : "103",
+    "id" : "100",
     "type" : "owl:Class"
   }, {
-    "id" : "100",
+    "id" : "103",
     "type" : "owl:Class"
   }, {
     "id" : "120",
@@ -528,16 +528,16 @@
     "baseIri" : "http://purl.obolibrary.org/obo",
     "instances" : 0,
     "annotations" : {
-      "exactMatch" : [ {
-        "identifier" : "exactMatch",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/BMONT_0000079",
-        "type" : "iri"
-      } ],
       "IAO_0000233" : [ {
         "identifier" : "IAO_0000233",
         "language" : "undefined",
         "value" : "https://github.com/obi-ontology/obi/issues/2014",
+        "type" : "iri"
+      } ],
+      "exactMatch" : [ {
+        "identifier" : "exactMatch",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/BMONT_0000079",
         "type" : "iri"
       } ],
       "IAO_0000115" : [ {
@@ -645,17 +645,17 @@
       "seeAlso" : [ {
         "identifier" : "seeAlso",
         "language" : "en",
+        "value" : "http://www.w3.org/ns/sosa/Sensor",
+        "type" : "label"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "en",
         "value" : "https://saref.etsi.org/saref4wear/v2.1.1/WearableDevice",
         "type" : "label"
       }, {
         "identifier" : "seeAlso",
         "language" : "en",
         "value" : "https://saref.etsi.org/core/Sensor",
-        "type" : "label"
-      }, {
-        "identifier" : "seeAlso",
-        "language" : "en",
-        "value" : "http://www.w3.org/ns/sosa/Sensor",
         "type" : "label"
       } ]
     },
@@ -916,7 +916,7 @@
     "comment" : {
       "en" : "Obsoleted in response to OBO Foundry review (OBOFoundry.github.io#2822): duplicate of an existing OBO term. Use the replacement term."
     },
-    "attributes" : [ "deprecated", "external" ],
+    "attributes" : [ "external", "deprecated" ],
     "id" : "28"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000066",
@@ -1115,6 +1115,16 @@
     "id" : "51",
     "superClasses" : [ "52" ]
   }, {
+    "iri" : "http://purl.obolibrary.org/obo/IAO_0000104",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IAO_0000104"
+    },
+    "subClasses" : [ "21", "25", "27" ],
+    "attributes" : [ "external" ],
+    "id" : "22"
+  }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000052",
     "baseIri" : "http://purl.obolibrary.org/obo",
     "instances" : 0,
@@ -1146,16 +1156,6 @@
     "attributes" : [ "external" ],
     "id" : "52",
     "superClasses" : [ "32" ]
-  }, {
-    "iri" : "http://purl.obolibrary.org/obo/IAO_0000104",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IAO_0000104"
-    },
-    "subClasses" : [ "21", "25", "27" ],
-    "attributes" : [ "external" ],
-    "id" : "22"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000051",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1216,16 +1216,16 @@
         "value" : "http://purl.obolibrary.org/obo/cmeo.owl",
         "type" : "iri"
       } ],
-      "hasExactSynonym" : [ {
-        "identifier" : "hasExactSynonym",
-        "language" : "en",
-        "value" : "procedure",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "An information content entity (a data item) that documents whether, and which, healthcare procedure was performed on or for a patient for diagnostic, therapeutic, preventive, or supportive purposes, and that is about the corresponding procedure process.",
+        "type" : "label"
+      } ],
+      "hasExactSynonym" : [ {
+        "identifier" : "hasExactSynonym",
+        "language" : "en",
+        "value" : "procedure",
         "type" : "label"
       } ],
       "hasRelatedSynonym" : [ {
@@ -1273,19 +1273,8 @@
     "comment" : {
       "en" : "Obsoleted in response to OBO Foundry review (OBOFoundry.github.io#2822): duplicate of an existing OBO term. Use the replacement term."
     },
-    "attributes" : [ "deprecated", "external" ],
+    "attributes" : [ "external", "deprecated" ],
     "id" : "60"
-  }, {
-    "iri" : "http://purl.obolibrary.org/obo/IAO_0000100",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IAO_0000100"
-    },
-    "subClasses" : [ "62" ],
-    "intersection" : [ "12" ],
-    "attributes" : [ "external", "intersection" ],
-    "id" : "61"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000056",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1317,6 +1306,17 @@
     "attributes" : [ "external" ],
     "id" : "53",
     "superClasses" : [ "52" ]
+  }, {
+    "iri" : "http://purl.obolibrary.org/obo/IAO_0000100",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IAO_0000100"
+    },
+    "subClasses" : [ "62" ],
+    "intersection" : [ "12" ],
+    "attributes" : [ "intersection", "external" ],
+    "id" : "61"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000055",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1405,6 +1405,16 @@
     "id" : "64",
     "superClasses" : [ "12" ]
   }, {
+    "iri" : "http://purl.obolibrary.org/obo/IAO_0000582",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IAO_0000582"
+    },
+    "subClasses" : [ "49", "45", "66", "67" ],
+    "attributes" : [ "external" ],
+    "id" : "65"
+  }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000058",
     "baseIri" : "http://purl.obolibrary.org/obo",
     "instances" : 0,
@@ -1435,16 +1445,6 @@
     "attributes" : [ "external" ],
     "id" : "56",
     "superClasses" : [ "52" ]
-  }, {
-    "iri" : "http://purl.obolibrary.org/obo/IAO_0000582",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IAO_0000582"
-    },
-    "subClasses" : [ "49", "45", "66", "67" ],
-    "attributes" : [ "external" ],
-    "id" : "65"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/OAE_0000005",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1737,7 +1737,7 @@
       "en" : "temporal dataset"
     },
     "intersection" : [ "61" ],
-    "attributes" : [ "external", "intersection" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "62",
     "superClasses" : [ "61" ]
   }, {
@@ -1816,16 +1816,6 @@
     "id" : "34",
     "superClasses" : [ "114" ]
   }, {
-    "iri" : "http://purl.obolibrary.org/obo/IAO_0000033",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "IAO_0000033"
-    },
-    "subClasses" : [ "102", "106", "112" ],
-    "attributes" : [ "external" ],
-    "id" : "103"
-  }, {
     "iri" : "http://purl.obolibrary.org/obo/OBI_0200000",
     "baseIri" : "http://purl.obolibrary.org/obo",
     "instances" : 0,
@@ -1835,6 +1825,16 @@
     "subClasses" : [ "99" ],
     "attributes" : [ "external" ],
     "id" : "100"
+  }, {
+    "iri" : "http://purl.obolibrary.org/obo/IAO_0000033",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "IAO_0000033"
+    },
+    "subClasses" : [ "102", "106", "112" ],
+    "attributes" : [ "external" ],
+    "id" : "103"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000021",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -1846,16 +1846,16 @@
         "value" : "http://purl.obolibrary.org/obo/cmeo.owl",
         "type" : "iri"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "A clinical event record that documents an inpatient hospital encounter in which a patient is admitted to a hospital for care (typically characterized by an admission and a discharge), and that is about the corresponding medical encounter process.",
-        "type" : "label"
-      } ],
       "hasExactSynonym" : [ {
         "identifier" : "hasExactSynonym",
         "language" : "en",
         "value" : "hospitalization",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A clinical event record that documents an inpatient hospital encounter in which a patient is admitted to a hospital for care (typically characterized by an admission and a discharge), and that is about the corresponding medical encounter process.",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -1943,16 +1943,16 @@
     "baseIri" : "http://purl.obolibrary.org/obo",
     "instances" : 0,
     "annotations" : {
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "A symbol (a string of characters) that is assigned to a concept within a standardized terminology or classification system (e.g., a SNOMED CT or LOINC code) in order to identify and denote that concept.",
-        "type" : "label"
-      } ],
       "hasExactSynonym" : [ {
         "identifier" : "hasExactSynonym",
         "language" : "en",
         "value" : "code",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A symbol (a string of characters) that is assigned to a concept within a standardized terminology or classification system (e.g., a SNOMED CT or LOINC code) in order to identify and denote that concept.",
         "type" : "label"
       } ],
       "IAO_0000116" : [ {
@@ -2108,7 +2108,7 @@
     },
     "subClasses" : [ "136", "134", "139" ],
     "intersection" : [ "59" ],
-    "attributes" : [ "external", "intersection" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "132",
     "superClasses" : [ "59" ]
   }, {
@@ -2122,16 +2122,16 @@
         "value" : "https://w3id.org/CMEO",
         "type" : "label"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "A clinical event record that documents an occurrence involving the heart or blood vessels in a patient at a specified time point or during a specified time interval, typically an acute episode or outcome relevant to cardiovascular health.",
-        "type" : "label"
-      } ],
       "hasExactSynonym" : [ {
         "identifier" : "hasExactSynonym",
         "language" : "en",
         "value" : "cardiovascular event",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A clinical event record that documents an occurrence involving the heart or blood vessels in a patient at a specified time point or during a specified time interval, typically an acute episode or outcome relevant to cardiovascular health.",
         "type" : "label"
       } ],
       "IAO_0000116" : [ {
@@ -2171,16 +2171,16 @@
         "value" : "https://w3id.org/CMEO",
         "type" : "label"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "A clinical event record that documents an occurrence of bleeding in a patient  -  the loss of blood from the circulatory system to an external site or into tissues or body cavities  -  at a specified time point or during a specified time interval.",
-        "type" : "label"
-      } ],
       "hasExactSynonym" : [ {
         "identifier" : "hasExactSynonym",
         "language" : "en",
         "value" : "bleeding event",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A clinical event record that documents an occurrence of bleeding in a patient  -  the loss of blood from the circulatory system to an external site or into tissues or body cavities  -  at a specified time point or during a specified time interval.",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -2252,16 +2252,16 @@
         "value" : "http://purl.obolibrary.org/obo/cmeo.owl",
         "type" : "iri"
       } ],
-      "hasExactSynonym" : [ {
-        "identifier" : "hasExactSynonym",
-        "language" : "en",
-        "value" : "death",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "A clinical event record that documents the death of a patient, occurring at a specified time point or during a specified time interval.",
+        "type" : "label"
+      } ],
+      "hasExactSynonym" : [ {
+        "identifier" : "hasExactSynonym",
+        "language" : "en",
+        "value" : "death",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -2296,16 +2296,16 @@
         "value" : "https://w3id.org/CMEO",
         "type" : "label"
       } ],
-      "hasExactSynonym" : [ {
-        "identifier" : "hasExactSynonym",
-        "language" : "en",
-        "value" : "device adverse event",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "An adverse event record that documents an event caused by, or associated with, the use of a medical device, where there is a causal relation between the event and the use of that device.",
+        "type" : "label"
+      } ],
+      "hasExactSynonym" : [ {
+        "identifier" : "hasExactSynonym",
+        "language" : "en",
+        "value" : "device adverse event",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -2326,7 +2326,7 @@
       "en" : "device adverse event record"
     },
     "intersection" : [ "59" ],
-    "attributes" : [ "external", "intersection" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "136",
     "superClasses" : [ "132" ]
   }, {
@@ -2340,16 +2340,16 @@
         "value" : "https://w3id.org/CMEO",
         "type" : "label"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "An adverse event record that documents a hypersensitivity reaction of the immune system occurring following exposure to an allergen such as a drug, food, or environmental substance.",
-        "type" : "label"
-      } ],
       "hasExactSynonym" : [ {
         "identifier" : "hasExactSynonym",
         "language" : "en",
         "value" : "allergic reaction",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "An adverse event record that documents a hypersensitivity reaction of the immune system occurring following exposure to an allergen such as a drug, food, or environmental substance.",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -2370,7 +2370,7 @@
       "en" : "allergic reaction record"
     },
     "intersection" : [ "59" ],
-    "attributes" : [ "external", "intersection" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "134",
     "superClasses" : [ "132" ]
   }, {
@@ -2378,28 +2378,28 @@
     "baseIri" : "http://purl.obolibrary.org/obo",
     "instances" : 0,
     "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "http://purl.obolibrary.org/obo/cmeo.owl",
-        "type" : "iri"
-      } ],
       "exactMatch" : [ {
         "identifier" : "exactMatch",
         "language" : "undefined",
         "value" : "http://purl.obolibrary.org/obo/OAE_0000005",
         "type" : "iri"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "An adverse event record that documents an adverse event following, and associated with, the administration of a drug or biological product to a patient.",
-        "type" : "label"
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://purl.obolibrary.org/obo/cmeo.owl",
+        "type" : "iri"
       } ],
       "hasExactSynonym" : [ {
         "identifier" : "hasExactSynonym",
         "language" : "en",
         "value" : "adverse drug event",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "An adverse event record that documents an adverse event following, and associated with, the administration of a drug or biological product to a patient.",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -2414,7 +2414,7 @@
       "en" : "adverse drug event record"
     },
     "intersection" : [ "59" ],
-    "attributes" : [ "external", "intersection" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "139",
     "superClasses" : [ "132" ]
   }, {
@@ -2545,7 +2545,7 @@
     "comment" : {
       "en" : "Obsoleted in response to OBO Foundry review (OBOFoundry.github.io#2822): duplicate of an existing OBO term. Use the replacement term."
     },
-    "attributes" : [ "deprecated", "external" ],
+    "attributes" : [ "external", "deprecated" ],
     "id" : "154"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000041",
@@ -2572,7 +2572,7 @@
     "comment" : {
       "en" : "Obsoleted in response to OBO Foundry review (OBOFoundry.github.io#2822): duplicate of an existing OBO term. Use the replacement term."
     },
-    "attributes" : [ "deprecated", "external" ],
+    "attributes" : [ "external", "deprecated" ],
     "id" : "155"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000040",
@@ -2619,16 +2619,16 @@
         "value" : "http://purl.obolibrary.org/obo/cmeo.owl",
         "type" : "iri"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "A patient characteristic record that documents relatively stable characteristics of a person that are used to characterize individuals or populations (e.g., age, sex, ethnicity, education, occupation), typically not representing diagnoses, procedures, or measurements of physiological state.",
-        "type" : "label"
-      } ],
       "hasExactSynonym" : [ {
         "identifier" : "hasExactSynonym",
         "language" : "en",
         "value" : "demographics",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A patient characteristic record that documents relatively stable characteristics of a person that are used to characterize individuals or populations (e.g., age, sex, ethnicity, education, occupation), typically not representing diagnoses, procedures, or measurements of physiological state.",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -2656,16 +2656,16 @@
         "value" : "https://w3id.org/CMEO",
         "type" : "label"
       } ],
-      "hasExactSynonym" : [ {
-        "identifier" : "hasExactSynonym",
-        "language" : "en",
-        "value" : "compliance or adherence",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "A patient characteristic record that documents the extent to which a patient's behavior corresponds to an agreed therapeutic plan, such as taking medication as prescribed or following a recommended therapy regimen.",
+        "type" : "label"
+      } ],
+      "hasExactSynonym" : [ {
+        "identifier" : "hasExactSynonym",
+        "language" : "en",
+        "value" : "compliance or adherence",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -2734,12 +2734,12 @@
       "hasExactSynonym" : [ {
         "identifier" : "hasExactSynonym",
         "language" : "en",
-        "value" : "therapeutic intervention",
+        "value" : "medications and therapies",
         "type" : "label"
       }, {
         "identifier" : "hasExactSynonym",
         "language" : "en",
-        "value" : "medications and therapies",
+        "value" : "therapeutic intervention",
         "type" : "label"
       } ],
       "IAO_0000115" : [ {
@@ -2825,16 +2825,16 @@
         "value" : "http://purl.obolibrary.org/obo/cmeo.owl",
         "type" : "iri"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "A patient characteristic record that documents a person's habitual behaviors, exposures, or daily living patterns that may affect health (e.g., smoking, alcohol use, diet, physical activity, sleep), typically reported by the person or observed over time.",
-        "type" : "label"
-      } ],
       "hasExactSynonym" : [ {
         "identifier" : "hasExactSynonym",
         "language" : "en",
         "value" : "lifestyle and behavior",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A patient characteristic record that documents a person's habitual behaviors, exposures, or daily living patterns that may affect health (e.g., smoking, alcohol use, diet, physical activity, sleep), typically reported by the person or observed over time.",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -2876,7 +2876,7 @@
     "comment" : {
       "en" : "Obsoleted in response to OBO Foundry review (OBOFoundry.github.io#2822): duplicate of an existing OBO term. Use the replacement term."
     },
-    "attributes" : [ "deprecated", "external" ],
+    "attributes" : [ "external", "deprecated" ],
     "id" : "182"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000030",
@@ -2917,7 +2917,7 @@
     "comment" : {
       "en" : "Differs from IAO:0000109 'measurement datum', which covers any recorded output of a measurement; this class restricts it to data about a quality of an entity, typically a patient."
     },
-    "attributes" : [ "external", "intersection" ],
+    "attributes" : [ "intersection", "external" ],
     "id" : "47",
     "superClasses" : [ "46" ]
   }, {
@@ -3056,16 +3056,16 @@
         "value" : "https://w3id.org/cmeo#",
         "type" : "iri"
       } ],
-      "hasExactSynonym" : [ {
-        "identifier" : "hasExactSynonym",
-        "language" : "en",
-        "value" : "stages and scales",
-        "type" : "label"
-      } ],
       "IAO_0000115" : [ {
         "identifier" : "IAO_0000115",
         "language" : "en",
         "value" : "A clinical measurement record that documents the level, grade, stage, or severity category assigned to a clinical condition, functional status, or other health-related state using a standardized assessment scale with predefined criteria.",
+        "type" : "label"
+      } ],
+      "hasExactSynonym" : [ {
+        "identifier" : "hasExactSynonym",
+        "language" : "en",
+        "value" : "stages and scales",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -3099,16 +3099,16 @@
         "value" : "https://w3id.org/cmeo#",
         "type" : "iri"
       } ],
-      "IAO_0000115" : [ {
-        "identifier" : "IAO_0000115",
-        "language" : "en",
-        "value" : "A clinical measurement record that documents a score summarizing the functional or behavioral status of a person, derived from a standardized assessment instrument and recorded as a single numeric or ordinal result (e.g., Barthel Index, Katz ADL, NYHA class, MMSE, MoCA, PHQ-9, GAD-7, KCCQ, EQ-5D).",
-        "type" : "label"
-      } ],
       "hasExactSynonym" : [ {
         "identifier" : "hasExactSynonym",
         "language" : "en",
         "value" : "functional and behavioral assesment score",
+        "type" : "label"
+      } ],
+      "IAO_0000115" : [ {
+        "identifier" : "IAO_0000115",
+        "language" : "en",
+        "value" : "A clinical measurement record that documents a score summarizing the functional or behavioral status of a person, derived from a standardized assessment instrument and recorded as a single numeric or ordinal result (e.g., Barthel Index, Katz ADL, NYHA class, MMSE, MoCA, PHQ-9, GAD-7, KCCQ, EQ-5D).",
         "type" : "label"
       } ],
       "inSubset" : [ {
@@ -3485,7 +3485,7 @@
       "IRI-based" : "RO_0002351"
     },
     "domain" : "3",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "2"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/RO_0000059",
@@ -3495,22 +3495,22 @@
       "IRI-based" : "RO_0000059"
     },
     "domain" : "3",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "18"
   }, {
     "range" : "21",
     "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "26"
   }, {
     "range" : "21",
     "domain" : "23",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "36"
   }, {
     "range" : "21",
     "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "37"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/IAO_0000136",
@@ -3521,7 +3521,7 @@
     },
     "domain" : "39",
     "subproperty" : [ "40" ],
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "38"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/STATO_0000129",
@@ -3531,7 +3531,7 @@
       "IRI-based" : "STATO_0000129"
     },
     "domain" : "45",
-    "attributes" : [ "datatype", "external", "someValues" ],
+    "attributes" : [ "datatype", "someValues", "external" ],
     "id" : "44"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/STATO_0000129",
@@ -3541,12 +3541,12 @@
       "IRI-based" : "STATO_0000129"
     },
     "domain" : "49",
-    "attributes" : [ "datatype", "external", "someValues" ],
+    "attributes" : [ "datatype", "someValues", "external" ],
     "id" : "48"
   }, {
     "range" : "49",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "50"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/BFO_0000051",
@@ -3556,7 +3556,7 @@
       "IRI-based" : "BFO_0000051"
     },
     "domain" : "3",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "57"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/IAO_0000221",
@@ -3566,7 +3566,7 @@
       "IRI-based" : "IAO_0000221"
     },
     "domain" : "3",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "63"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -3576,7 +3576,7 @@
       "IRI-based" : "BFO_0000050"
     },
     "domain" : "25",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "68"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -3586,7 +3586,7 @@
       "IRI-based" : "BFO_0000050"
     },
     "domain" : "27",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "70"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/BFO_0000050",
@@ -3596,7 +3596,7 @@
       "IRI-based" : "BFO_0000050"
     },
     "domain" : "21",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "73"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000084",
@@ -3622,12 +3622,12 @@
     },
     "superproperty" : [ "75" ],
     "domain" : "66",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "74"
   }, {
     "range" : "31",
     "domain" : "58",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "77"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000084",
@@ -3653,7 +3653,7 @@
     },
     "superproperty" : [ "75" ],
     "domain" : "58",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "78"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000084",
@@ -3679,27 +3679,27 @@
     },
     "superproperty" : [ "75" ],
     "domain" : "80",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "79"
   }, {
     "range" : "31",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "81"
   }, {
     "range" : "31",
     "domain" : "80",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "82"
   }, {
     "range" : "58",
     "domain" : "80",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "83"
   }, {
     "range" : "5",
     "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "84"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000084",
@@ -3725,37 +3725,37 @@
     },
     "superproperty" : [ "75" ],
     "domain" : "14",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "40"
   }, {
     "range" : "34",
     "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "87"
   }, {
     "range" : "30",
     "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "88"
   }, {
     "range" : "65",
     "domain" : "67",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "90"
   }, {
     "range" : "65",
     "domain" : "66",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "91"
   }, {
     "range" : "85",
     "domain" : "86",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "92"
   }, {
     "range" : "71",
     "domain" : "72",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "93"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000082",
@@ -3783,202 +3783,202 @@
     "comment" : {
       "en" : "Obsoleted in response to OBO Foundry review (OBOFoundry.github.io#2822): duplicate of an existing OBO term. Use the replacement term."
     },
-    "attributes" : [ "datatype", "deprecated", "external" ],
+    "attributes" : [ "datatype", "external", "deprecated" ],
     "id" : "94"
   }, {
     "range" : "61",
     "domain" : "62",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "95"
   }, {
     "range" : "32",
     "domain" : "52",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "96"
   }, {
     "range" : "65",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "97"
   }, {
     "range" : "65",
     "domain" : "49",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "98"
-  }, {
-    "range" : "22",
-    "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "101"
-  }, {
-    "range" : "22",
-    "domain" : "25",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "104"
-  }, {
-    "range" : "22",
-    "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "107"
-  }, {
-    "range" : "52",
-    "domain" : "54",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "108"
-  }, {
-    "range" : "52",
-    "domain" : "53",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "109"
   }, {
     "range" : "52",
     "domain" : "56",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "110"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "101"
   }, {
     "range" : "52",
     "domain" : "55",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "104"
+  }, {
+    "range" : "52",
+    "domain" : "54",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "107"
+  }, {
+    "range" : "22",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "108"
+  }, {
+    "range" : "22",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "109"
+  }, {
+    "range" : "52",
+    "domain" : "53",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "110"
+  }, {
+    "range" : "52",
+    "domain" : "51",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "111"
   }, {
     "range" : "31",
     "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "113"
   }, {
     "range" : "0",
     "domain" : "1",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "115"
   }, {
-    "range" : "52",
-    "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
+    "range" : "22",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "116"
   }, {
     "range" : "46",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "117"
   }, {
     "range" : "59",
     "domain" : "80",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "118"
   }, {
     "range" : "59",
     "domain" : "120",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "119"
   }, {
     "range" : "123",
     "domain" : "122",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "121"
   }, {
     "range" : "59",
     "domain" : "123",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "124"
   }, {
     "range" : "59",
     "domain" : "126",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "125"
   }, {
     "range" : "59",
     "domain" : "130",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "129"
   }, {
     "range" : "59",
     "domain" : "132",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "131"
   }, {
     "range" : "132",
     "domain" : "134",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "133"
   }, {
     "range" : "132",
     "domain" : "136",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "135"
   }, {
     "range" : "59",
     "domain" : "58",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "137"
   }, {
     "range" : "132",
     "domain" : "139",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "138"
   }, {
     "range" : "12",
     "domain" : "64",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "140"
   }, {
     "range" : "12",
     "domain" : "59",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "142"
   }, {
     "range" : "128",
     "domain" : "127",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "143"
   }, {
     "range" : "12",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "144"
   }, {
     "range" : "114",
     "domain" : "34",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "146"
   }, {
     "range" : "14",
     "domain" : "13",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "147"
   }, {
     "range" : "12",
     "domain" : "141",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "148"
   }, {
     "range" : "103",
-    "domain" : "106",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "149"
-  }, {
-    "range" : "103",
     "domain" : "102",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "150"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "149"
   }, {
     "range" : "100",
     "domain" : "99",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "152"
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "150"
   }, {
     "range" : "103",
     "domain" : "112",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "152"
+  }, {
+    "range" : "103",
+    "domain" : "106",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "153"
   }, {
     "range" : "159",
     "domain" : "158",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "157"
   }, {
     "range" : "6",
     "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "163"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000084",
@@ -4004,7 +4004,7 @@
     },
     "superproperty" : [ "75" ],
     "domain" : "120",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "164"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/IAO_0000219",
@@ -4014,7 +4014,7 @@
       "IRI-based" : "IAO_0000219"
     },
     "domain" : "127",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "165"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/OBI_0000312",
@@ -4024,7 +4024,7 @@
       "IRI-based" : "OBI_0000312"
     },
     "domain" : "127",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "166"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/RO_0002350",
@@ -4034,18 +4034,8 @@
       "IRI-based" : "RO_0002350"
     },
     "domain" : "127",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "167"
-  }, {
-    "iri" : "http://purl.obolibrary.org/obo/OBI_0000312",
-    "baseIri" : "http://purl.obolibrary.org/obo",
-    "range" : "15",
-    "label" : {
-      "IRI-based" : "OBI_0000312"
-    },
-    "domain" : "86",
-    "attributes" : [ "object", "external", "someValues" ],
-    "id" : "168"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/IAO_0000219",
     "baseIri" : "http://purl.obolibrary.org/obo",
@@ -4054,17 +4044,27 @@
       "IRI-based" : "IAO_0000219"
     },
     "domain" : "86",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
+    "id" : "168"
+  }, {
+    "iri" : "http://purl.obolibrary.org/obo/OBI_0000312",
+    "baseIri" : "http://purl.obolibrary.org/obo",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "OBI_0000312"
+    },
+    "domain" : "86",
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "169"
   }, {
     "range" : "80",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "170"
   }, {
     "range" : "58",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "171"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/OBI_0000295",
@@ -4074,7 +4074,7 @@
       "IRI-based" : "OBI_0000295"
     },
     "domain" : "11",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "172"
   }, {
     "iri" : "http://purl.obolibrary.org/obo/CMEO_0000084",
@@ -4100,82 +4100,82 @@
     },
     "superproperty" : [ "75" ],
     "domain" : "59",
-    "attributes" : [ "object", "external", "someValues" ],
+    "attributes" : [ "someValues", "external", "object" ],
     "id" : "173"
   }, {
     "range" : "47",
     "domain" : "175",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "174"
   }, {
     "range" : "47",
     "domain" : "177",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "176"
   }, {
     "range" : "47",
     "domain" : "179",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "178"
   }, {
     "range" : "47",
     "domain" : "181",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "180"
   }, {
     "range" : "47",
     "domain" : "184",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "183"
   }, {
     "range" : "141",
     "domain" : "162",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "186"
   }, {
     "range" : "47",
     "domain" : "159",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "187"
   }, {
     "range" : "47",
     "domain" : "185",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "188"
   }, {
     "range" : "141",
     "domain" : "161",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "189"
   }, {
     "range" : "141",
     "domain" : "160",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "190"
   }, {
     "range" : "141",
     "domain" : "156",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "191"
   }, {
     "range" : "16",
     "domain" : "105",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "192"
   }, {
     "range" : "123",
     "domain" : "145",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "193"
   }, {
     "range" : "10",
     "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "194"
   }, {
     "range" : "16",
     "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "195"
   } ]
 }

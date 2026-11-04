@@ -1,0 +1,6 @@
+http://purl.obolibrary.org/obo/PATO_0000001
+http://purl.obolibrary.org/obo/PATO_0001236
+http://purl.obolibrary.org/obo/PATO_0001338
+http://purl.obolibrary.org/obo/PATO_0001415
+http://purl.obolibrary.org/obo/PATO_0001993
+http://purl.obolibrary.org/obo/PATO_0010001

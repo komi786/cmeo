@@ -65,6 +65,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000293 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000293"/>
@@ -121,6 +127,12 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000027 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
     
 
 
@@ -202,6 +214,54 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000010 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000010">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000100"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>An information content entity that refers to a distribution of a random variable that can be described using a mathematical formula.</obo:IAO_0000115>
+        <obo:IAO_0000117>Yongqun He, Jie Zheng</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Probability_distribution</obo:IAO_0000119>
+        <rdfs:label>probability distribution</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000220"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000673"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A statistic measure that is a function of the samples and considered as a numberical summary of a data-set that reduces the data to one value that can be used to perform a hypothesis test. It can be used to test a finding for statistical signifiance</obo:IAO_0000115>
+        <obo:IAO_0000117>Marcy Harris, Yongqun He</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB: http://en.wikipedia.org/wiki/Test_statistic</obo:IAO_0000119>
+        <rdfs:label>test statistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000010"/>
+        <obo:IAO_0000115>A tabular summary of a set of data showing the number of items in each of several non-overlapping classes or groupings</obo:IAO_0000115>
+        <obo:IAO_0000117>Marcy Harris</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB: http://statistics.com</obo:IAO_0000119>
+        <rdfs:label>frequency distribution</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBCS_0000070 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000070">
@@ -210,6 +270,30 @@
         <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
         <obo:IAO_0000119>WEB: http://www.uptodate.com/contents/glossary-of-common-biostatistical-and-epidemiological-terms</obo:IAO_0000119>
         <rdfs:label>confidence interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000106 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000106">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500000"/>
+        <obo:IAO_0000115>A study design that starts with an exposure and moves forward to the outcome of interest, even if the data are collected retrospectively. As an example, a group of patients who have variable exposure to a risk factor of interest can be followed over time for an outcome.</obo:IAO_0000115>
+        <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB: http://www.uptodate.com/contents/glossary-of-common-biostatistical-and-epidemiological-terms</obo:IAO_0000119>
+        <rdfs:label>cohort study design</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBCS_0000107 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBCS_0000107">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0500000"/>
+        <obo:IAO_0000115>A study design in which patients are randomly assigned to two or more interventions.</obo:IAO_0000115>
+        <obo:IAO_0000117>Yongqun He</obo:IAO_0000117>
+        <obo:IAO_0000119>WEB: http://www.uptodate.com/contents/glossary-of-common-biostatistical-and-epidemiological-terms</obo:IAO_0000119>
+        <rdfs:label>randomized controlled trial design</rdfs:label>
     </owl:Class>
     
 
@@ -468,6 +552,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000673 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000673"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0200000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200000"/>
@@ -489,6 +579,12 @@
     <!-- http://purl.obolibrary.org/obo/OBI_0200184 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0200184"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0500000 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0500000"/>
     
 
 

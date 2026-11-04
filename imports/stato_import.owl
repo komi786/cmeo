@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl#"
      xml:base="http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -21,6 +22,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000112"/>
     
 
 
@@ -48,9 +55,21 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
     
 
 
@@ -63,6 +82,36 @@
         <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
         <rdfs:label xml:lang="en">STATO alternative term</rdfs:label>
     </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000041 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000041">
+        <obo:IAO_0000115 xml:lang="en">a R command syntax or link to a R documentation in support of Statistical Ontology Classes or Data Transformations</obo:IAO_0000115>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">R command</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000391 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000391">
+        <obo:IAO_0000115 xml:lang="en">an annotation property to provide a canonical command to invoke a method implementation using Python programming language</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">Python command</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/source -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/source"/>
     
 
 
@@ -107,6 +156,499 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000038 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000038"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000573 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000573"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000649 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000649"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000006 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000011"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">x-axis is a cartesian coordinate axis which is orthogonal to the y-axis and the z-axis</obo:IAO_0000115>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">x-axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000007 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000007">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000573"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">an axis is a line graph used as reference line for the measurement of coordinates.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://www.oxforddictionaries.com/definition/english/axis</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000011"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">y-axis is a cartesian coordinate axis which is orthogonal to the x-axis and the z-axis</obo:IAO_0000115>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">y-axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000011 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000011">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000007"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a cartesian axis is one of 3 the axis in a cartesian coordinate system defining a referential in 3 dimensions. each of the axis is orthogonal to the other 2</obo:IAO_0000115>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">rectangular coordinate axis</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">adapted from Wolfram Alpha:
+https://www.wolframalpha.com/input/?i=cartesian+coordinates&amp;lk=4&amp;num=6&amp;lk=4&amp;num=6</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">cartesian coordinate axis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000028 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000028">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">measure of variation or statistical dispersion is a data item which describes how much a theoritical distribution or dataset is spread.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <obo:STATO_0000032>measure of variation</obo:STATO_0000032>
+        <obo:STATO_0000032 xml:lang="en">measure of variation</obo:STATO_0000032>
+        <rdfs:label xml:lang="en">measure of dispersion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000029 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000029">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a measure of central tendency is a data item which attempts to describe a set of data by identifying the value of its centre.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:STATO_0000032>measure of central tendency</obo:STATO_0000032>
+        <rdfs:label xml:lang="en">measure of central tendency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000609"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Chi-squared statistic is a statistic computed from observations and used to produce a p-value in statistical test when compared to a Chi-Squared distribution.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">Chi-Squared statistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000033 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000033">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000649"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000029"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000574"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">The mode is a data item which corresponds to the most frequently occurring number in a set of numbers.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119>http://www.sagepub.com/upm-data/47775_ch_3.pdf</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en">mode</obo:STATO_0000032>
+        <obo:STATO_0000391 xml:lang="en">scipy.stats.mode(a, axis=0)
+
+http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.mode.html#scipy.stats.mode
+
+source:
+https://github.com/scipy/scipy/blob/v0.15.1/scipy/stats/stats.py#L586</obo:STATO_0000391>
+        <rdfs:label xml:lang="en">mode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000039 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000039">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <obo:IAO_0000112 xml:lang="en"></obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a statistic is a measurement datum to describe a dataset or a variable. It is generated by a calculation on set of observed data.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO, adapted from wikipedia (http://en.wikipedia.org/wiki/Statistic).</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en">statistic</obo:STATO_0000032>
+        <rdfs:label xml:lang="en">statistic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000047 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000047">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000112 xml:lang="en">a count of 4 resulting from counting limbs in humans</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a count is a data item denoted by an integer and representing the number of instances or occurences of an entity</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <rdfs:label xml:lang="en">count</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000068 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000068">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Skewness is a data item indicating of the degree of asymmetry of a distribution.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://mathworld.wolfram.com/Skewness.html</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <obo:STATO_0000041 xml:lang="en">skewness(x, na.rm = FALSE, type = 3)
+
+http://hosho.ees.hokudai.ac.jp/~kubo/Rdoc/library/e1071/html/skewness.html</obo:STATO_0000041>
+        <obo:STATO_0000391 xml:lang="en">http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.skew.html#scipy.stats.skew</obo:STATO_0000391>
+        <rdfs:label xml:lang="en">skewness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000087 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000087">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000252"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a polychotomous variable  is a categorical variable  which is defined to have minimally 2 categories or possible values</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">http://udel.edu/~mcdonald/statvartypes.html</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <rdfs:label xml:lang="en">polychotomous variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000088 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000088">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000047"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">statistical sample size is a count evaluating the number of individual experimental units</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">AGB-PRS</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en">statistical sample size</obo:STATO_0000032>
+        <rdfs:label xml:lang="en">study group population size</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000090 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000090">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000087"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000252"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a dichotomous variable  is a categorical variable  which is defined to have only 2 categories or possible values</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">AGB-PRS</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">http://udel.edu/~mcdonald/statvartypes.html</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <rdfs:comment>&apos;has part&apos; exactly 1 (&apos;categorical measurement datum&apos;
+ and (&apos;has category label&apos; exactly 2 &apos;categorical label&apos;))</rdfs:comment>
+        <rdfs:label xml:lang="en">dichotomous variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000113 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000113">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000028"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">variance is a data item about a random variable or probability distribution. it is equivalent to the square of the standard deviation.  It is one of several descriptors of a probability distribution, describing how far the numbers lie from the mean (expected value).The variance is the second moment of a distribution.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Belran</obo:IAO_0000117>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">σ2</obo:IAO_0000118>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <obo:STATO_0000041 xml:lang="en">var(x, y = NULL, na.rm = FALSE, use)
+
+http://stat.ethz.ch/R-manual/R-patched/library/stats/html/cor.html</obo:STATO_0000041>
+        <rdfs:label xml:lang="en">variance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000150 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000150">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a minimum value is a data item which denotes the smallest value found in a dataset or resulting from a calculation.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>COKA group</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">minimum value</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <rdfs:label>minimum observed value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000151 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000151">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">maximum value is a data item which denotes the largest value found in a dataset or resulting from a calculation.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>COKA group</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">maximum value</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <rdfs:label>maximum observed value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000152 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000152">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000291"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a quartile is a quantile which splits data into sections accrued of 25% of data, so the first quartile delineates 25% of the data, the second quartile delineates 50% of the data and the third quartile, 75 % of the data</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO, adapted from wikipedia (http://en.wikipedia.org/wiki/Quartile)</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <rdfs:label xml:lang="en">quartile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000164 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000164">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000028"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">The interquartile range is a data item which corresponds to the difference between the upper quartile (3rd quartile) and lower quartile (1st quartile).
+The interquartile range contains the second quartile or median.
+The interquartile range is a data item providing a measure of data dispersion.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO. adapted from wikipedia, wolfram alpha and oxford dictionary of statistics</obo:IAO_0000119>
+        <obo:STATO_0000041 xml:lang="en">IQR(x, na.rm = FALSE, type = 7)
+
+http://stat.ethz.ch/R-manual/R-patched/library/stats/html/IQR.html</obo:STATO_0000041>
+        <rdfs:label xml:lang="en">inter quartile range</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000166 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000166">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000038"/>
+        <obo:IAO_0000112>A bar chart is appropriate to represent counts of data.</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>the bart chart is a graph resulting from plotting rectangular bars with lengths proportional to the values that they represent.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">adapted from wikipedia (http://en.wikipedia.org/wiki/Bar_chart) polled in June 2013</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en">bar plot</obo:STATO_0000032>
+        <obo:STATO_0000041 xml:lang="en">barplot(height, ...)
+
+http://stat.ethz.ch/R-manual/R-patched/library/graphics/html/barplot.html</obo:STATO_0000041>
+        <rdfs:label xml:lang="en">bar chart</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000167 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000167">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000152"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">the first quartile is a quartile which splits the lower 25 % of the data</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">first quartile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000170 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000170">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000152"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">the first quartile is a quartile which splits the 75 % of the data</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">STATO</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <rdfs:label xml:lang="en">third quartile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000178 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000178">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">Kurtosis is a data item which denotes the degree of peakedness of a distribution. It is defined as a normalized form of the fourth central moment of a distribution.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://mathworld.wolfram.com/Kurtosis.html</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <obo:STATO_0000391 xml:lang="en">http://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.kurtosis.html#scipy.stats.kurtosis</obo:STATO_0000391>
+        <rdfs:label xml:lang="en">kurtosis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000184 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000184">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <obo:IAO_0000115 xml:lang="en">A ratio is a data item which is formed with two numbers r and s is written r/s, where r is the numerator and s is the denominator. The ratio of r to s is equivalent to the quotient r/s.</obo:IAO_0000115>
+        <obo:IAO_0000116 xml:lang="en">review formal definition as both numerator and denominator should be of the same type, not just some data item</obo:IAO_0000116>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">adapted from Wolfram Alpha:
+https://www.wolframalpha.com/share/clip?f=d41d8cd98f00b204e9800998ecf8427efdcsig76g7</obo:IAO_0000119>
+        <rdfs:label>ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000237 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000237">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000028"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">The standard deviation of a random variable, statistical population, data set, or probability distribution is a measure of variation which correspond to the average distance from the mean of the data set to any given point of that dataset. It also corresponds to the square root of its variance.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">σ</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Standard_deviation</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <obo:STATO_0000041 xml:lang="en">sd(x, na.rm = FALSE)
+
+http://stat.ethz.ch/R-manual/R-patched/library/stats/html/sd.html</obo:STATO_0000041>
+        <rdfs:label xml:lang="en">standard deviation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000251 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000251">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000722"/>
+        <obo:IAO_0000112 xml:lang="en">&quot;Time to solve an anagram problem&quot; is continuous since it could take 2 minutes, 2.13 minutes etc. to finish a problem</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">A continuous variable is one for which, within the limits the variable ranges, any value is possible.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://davidmlane.com/hyperstat/A97418.html</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">http://udel.edu/~mcdonald/statvartypes.html</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <rdfs:label xml:lang="en">continuous variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000252 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000252">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000258"/>
+        <obo:IAO_0000112 xml:lang="en">a variable detailing the different eye colors in dogs
+a variable detailing the different political parties at an election</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a categorical variable  is a variable  which that can only assume a finite number  of value and cast observation in a small number of categories</obo:IAO_0000115>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">discrete variable</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">nominal variable</obo:IAO_0000118>
+        <obo:IAO_0000118>qualitative factor</obo:IAO_0000118>
+        <obo:IAO_0000119 xml:lang="en">http://udel.edu/~mcdonald/statvartypes.html</obo:IAO_0000119>
+        <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
+        <dc:source>https://onlinecourses.science.psu.edu/stat503/node/7</dc:source>
+        <rdfs:label xml:lang="en">categorical variable</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/STATO_0000258 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000258">
@@ -123,6 +665,155 @@ and from Oxford English Dictionary:
 http://www.oed.com/view/Entry/221514?redirectedFrom=variable#eid, definition B,1</obo:IAO_0000119>
         <obo:STATO_0000032 xml:lang="en"></obo:STATO_0000032>
         <rdfs:label xml:lang="en">variable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000291 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000291">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000112 xml:lang="en"></obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115 xml:lang="en">a quantile is a data item which corresponds to specific elements x in the range of a variate X.
+the k-th n-tile P_k is that value of x, say x_k, which corresponds to a cumulative frequency of Nk/n (Kenney and Keeping 1962). If n=4, the quantity is called a quartile, and if n=100, it is called a percentile.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">Evans, M.; Hastings, N.; and Peacock, B. Statistical Distributions, 3rd ed. New York: Wiley, 2000.</obo:IAO_0000119>
+        <obo:IAO_0000119 xml:lang="en">http://mathworld.wolfram.com/Quantile.html</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">quantile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000401 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000401">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000471"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000573"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
+        <obo:IAO_0000115 xml:lang="en">the sample mean of sample of size n with n observations is an arithmetic mean computed over n number of observations on a statistical sample.
+The sample mean, denoted x¯ and read “x-bar,” is simply the average of the n data points x1, x2, ..., xn:
+
+x¯=x1+x2+⋯+xnn=1n∑i=1nxi
+The sample mean summarizes the &quot;location&quot; or &quot;center&quot; of the data.
+
+the sample mean is a measure of dispersion of the observations made on the sample and provides an unbias estimate of the population mean</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Orlaith Burke</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">adapted from:
+https://onlinecourses.science.psu.edu/stat414/node/66
+and
+http://mathworld.wolfram.com/SampleMean.html
+
+last accessed: 2015-11-05</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">sample mean</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000471 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000471">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>a estimate is a data item which is computed from a dataset to provide an approximated value (an estimator) for a &apos;statistical parameter&apos;  (a &apos;characteristics/parameter&apos; of the true underlying distribution) of a real population.</obo:IAO_0000115>
+        <obo:IAO_0000116>Hanna Cwiek</obo:IAO_0000116>
+        <obo:IAO_0000116>Tom Nichols</obo:IAO_0000116>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000117 xml:lang="en">Tom Nichols</obo:IAO_0000117>
+        <obo:IAO_0000119>STATO</obo:IAO_0000119>
+        <obo:IAO_0000233 xml:lang="en">https://github.com/ISA-tools/stato/issues/74</obo:IAO_0000233>
+        <rdfs:label>estimate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000573 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000573">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000029"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>The arithmetic mean is defined as the sum of the numerical values of each and every observation divided by the total number of observations. S The arithmetic mean A is defined by the formula
+
+A=sum[Ai] / n where i ranges from 1 to n and Ai represents the value of individual observations.
+
+The arithmetic mean is significantly affected by extreme values and outliers. A better measure of central tendency is the median (http://purl.obolibrary.org/obo/STATO_0000574).</obo:IAO_0000115>
+        <obo:IAO_0000116>replaced OBI import following addition of restrictions and use in STATO. however the xref to OBI is kept as class metadata</obo:IAO_0000116>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119>STATO</obo:IAO_0000119>
+        <obo:STATO_0000032>arithmetic mean</obo:STATO_0000032>
+        <obo:STATO_0000391>http://docs.scipy.org/doc/numpy/reference/generated/numpy.mean.html</obo:STATO_0000391>
+        <rdfs:label>average value</rdfs:label>
+        <rdfs:seeAlso>average value (http://purl.obolibrary.org/obo/OBI_0000679)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000574 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000574">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000029"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000152"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>The median is that value of the variate which divides the total frequency into two halves. The median is measure of central tendency of data. It is obtained by arranging the observations in order from smallest to largest value. If there is an odd number of observations, the median is the middle value. If there is an even number of observations, the median is the average of the two middle values.</obo:IAO_0000115>
+        <obo:IAO_0000116>PRS and AGB added restriction about &apos;measure of central tendency&apos; and quartile, june 2013 on &apos;centre value&apos; OBI class.</obo:IAO_0000116>
+        <obo:IAO_0000116>replaced OBI import following addition of restrictions and use in STATO. however the xref to OBI is kept as class metadata</obo:IAO_0000116>
+        <obo:IAO_0000117>Alejandra Gonzalez-Beltran</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118>second quartile</obo:IAO_0000118>
+        <obo:IAO_0000119>A Dictionary of Statistical Terms, 5th edition, prepared for the International Statistical Institute by F.H.C. Marriott. Published for the International Statistical Institute by Longman Scientific and Technical.
+
+and
+
+Wolfram Alpha</obo:IAO_0000119>
+        <obo:STATO_0000032>median</obo:STATO_0000032>
+        <obo:STATO_0000041></obo:STATO_0000041>
+        <rdfs:label>center value</rdfs:label>
+        <rdfs:seeAlso>center value (http://purl.obolibrary.org/obo/OBI_0000674)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000609 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000609">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000039"/>
+        <obo:IAO_0000115 xml:lang="en"></obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">COKA/SEVCO group</obo:IAO_0000119>
+        <rdfs:label xml:lang="en">measure of hypothesis testing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000639 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000639">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000184"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>A ratio formed between a numerator and a denominator (both described by the same unit), and that is multiplied by 100.</obo:IAO_0000115>
+        <obo:IAO_0000116>Expert Working Group Agreement: 2022-01-07 vote 7-0 by Harold Lehmann, Robin Ann Yurk, Janice Tufte, C P Ooi, Louis Leff, Jesus Lopez-Alcalde, Mario Tristan</obo:IAO_0000116>
+        <obo:IAO_0000117>Brian S. Alper, Harold Lehmann, Joanne Dehnbostel, Kenneth Wilkins, Janice Tufte, Muhammad Afzal, Khalid Shahin, Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000118>%</obo:IAO_0000118>
+        <obo:IAO_0000119>COKA/SEVCO/STATO</obo:IAO_0000119>
+        <rdfs:label>percentage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/STATO_0000722 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/STATO_0000722">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/STATO_0000258"/>
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000122"/>
+        <obo:IAO_0000115>A variable that can assume numerical values, with or without units of measure.</obo:IAO_0000115>
+        <obo:IAO_0000117>Brian S. Alper, Joanne Dehnbostel, Harold Lehmann</obo:IAO_0000117>
+        <obo:IAO_0000117>Philippe Rocca-Serra</obo:IAO_0000117>
+        <obo:IAO_0000119>SEVCO</obo:IAO_0000119>
+        <rdfs:label>quantitative variable</rdfs:label>
     </owl:Class>
     
 

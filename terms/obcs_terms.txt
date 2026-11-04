@@ -1,1 +1,5 @@
 http://purl.obolibrary.org/obo/OBCS_0000002
+http://purl.obolibrary.org/obo/OBCS_0000013
+http://purl.obolibrary.org/obo/OBCS_0000068
+http://purl.obolibrary.org/obo/OBCS_0000106
+http://purl.obolibrary.org/obo/OBCS_0000107
