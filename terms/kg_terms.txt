@@ -76,6 +76,7 @@ http://purl.obolibrary.org/obo/OBI_0500026
 http://purl.obolibrary.org/obo/OBI_0500027
 http://purl.obolibrary.org/obo/OBI_0500028
 http://purl.obolibrary.org/obo/OBI_0600004
+http://purl.obolibrary.org/obo/OBI_0000832
 http://purl.obolibrary.org/obo/PATO_0001338
 http://purl.obolibrary.org/obo/PATO_0001415
 http://purl.obolibrary.org/obo/RO_0000052

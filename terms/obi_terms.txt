@@ -15,6 +15,7 @@ http://purl.obolibrary.org/obo/OBI_0000649
 http://purl.obolibrary.org/obo/OBI_0000673
 http://purl.obolibrary.org/obo/OBI_0000674
 http://purl.obolibrary.org/obo/OBI_0000679
+http://purl.obolibrary.org/obo/OBI_0000832
 http://purl.obolibrary.org/obo/OBI_0001687
 http://purl.obolibrary.org/obo/OBI_0001927
 http://purl.obolibrary.org/obo/OBI_0001930

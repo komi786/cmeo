@@ -133,3 +133,4 @@ http://purl.obolibrary.org/obo/OBI_1110087
 http://purl.obolibrary.org/obo/OBI_1110112
 http://purl.obolibrary.org/obo/OBI_9991118
 http://purl.obolibrary.org/obo/OBI_9991119
+http://purl.obolibrary.org/obo/OBI_0000832

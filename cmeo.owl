@@ -9,11 +9,14 @@
      xmlns:sio="http://semanticscience.org/resource/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:cmeo="http://purl.obolibrary.org/obo/CMEO_"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:voaf="http://purl.org/vocommons/voaf#"
      xmlns:w3id="http://purl.obolibrary.org/obo/"
      xmlns:mondo="http://purl.obolibrary.org/obo/mondo#"
      xmlns:sssom="https://w3id.org/sssom/"
@@ -24,11 +27,7 @@
      xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:apollo_sv="http://purl.obolibrary.org/obo/apollo_sv.owl/"
-     xmlns:bibo="http://purl.org/ontology/bibo/"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:voaf="http://purl.org/vocommons/voaf#"
      xmlns:ncbitaxon="http://purl.obolibrary.org/obo/ncbitaxon#">
-     
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/cmeo.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/cmeo/releases/2026-11-04/cmeo.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/bfo_import.owl"/>
@@ -37,6 +36,7 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/duo_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/efo_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/iao_import.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/ncbitaxon_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/ncit_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/oae_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/obcs_import.owl"/>
@@ -49,7 +49,6 @@
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/sio_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/stato_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/symp_import.owl"/>
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/ncbitaxon_import.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/cmeo/imports/uberon_import.owl"/>
         <w3id:IAO_0000114 xml:lang="en">production</w3id:IAO_0000114>
         <dc:contributor xml:lang="en">Michel Dumontier</dc:contributor>
@@ -57,13 +56,13 @@
         <dc:description xml:lang="en">CMEO (Clinical Metadata Exploration Ontology) is an ontology for representing and querying study- and variable-level metadata from clinical cohort studies in a consistent, machine-interpretable way. CMEO models the semantics of data elements (variables) and their key metadata needed for cross-cohort discovery and harmonization - such as human-readable labels/definitions, domain/type information (e.g., condition, measurement, medication), permissible categorical values, units, visit/timepoint context, derivation/provenance (e.g., computed variables), and basic descriptive statistics. It is designed to support metadata-driven tasks including cohort cataloguing, feasibility assessment, study retrieval, and identification of compatible variables across studies - without requiring access to patient-level data.
 
 CMEO is intended to interoperate with controlled vocabularies and common clinical terminologies by linking data elements and value sets to external concept identifiers (e.g., OMOP concept IDs, SNOMED CT, LOINC, RxNorm/ATC, UCUM) while remaining model-agnostic (i.e., not tied to a single CDM).</dc:description>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:title xml:lang="en">Clinical Metadata Exploration Ontology (CMEO)</terms:title>
         <terms:abstract xml:lang="en">CMEO describes the metadata of clinical studies: study design and protocol, eligibility criteria, outcomes, the variables collected and how they are specified (data type, units, codes, visits, missing values), and data access and use conditions. Each study can be represented as a knowledge graph, so that studies and variables can be found, compared and assessed for harmonization across studies.</terms:abstract>
+        <terms:bibliographicCitation xml:lang="en">Gilani K, Wei W, Peters C, Verket M, Brunner-La Rocca HP, Nicolis E, Colombo M, Marx-Schütt K, Urovi V, Dumontier M. CMEO: a metadata-centric ontology for clinical studies exploration and harmonization assessment. BMC Med Inform Decis Mak. 2025;26(1):8. doi:10.1186/s12911-025-03272-5</terms:bibliographicCitation>
         <terms:issued>2026-11-04</terms:issued>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified>2026-11-04</terms:modified>
         <terms:publisher rdf:resource="https://obofoundry.org"/>
-        <terms:bibliographicCitation xml:lang="en">Gilani K, Wei W, Peters C, Verket M, Brunner-La Rocca HP, Nicolis E, Colombo M, Marx-Schütt K, Urovi V, Dumontier M. CMEO: a metadata-centric ontology for clinical studies exploration and harmonization assessment. BMC Med Inform Decis Mak. 2025;26(1):8. doi:10.1186/s12911-025-03272-5</terms:bibliographicCitation>
+        <terms:title xml:lang="en">Clinical Metadata Exploration Ontology (CMEO)</terms:title>
         <bibo:doi>10.1186/s12911-025-03272-5</bibo:doi>
         <bibo:status>Production</bibo:status>
         <vann:preferredNamespacePrefix>CMEO</vann:preferredNamespacePrefix>
@@ -72,7 +71,6 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/cob.owl"/>
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/cto.owl"/>
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/duo.owl"/>
-        <voaf:extends rdf:resource="http://www.ebi.ac.uk/efo/efo.owl"/>
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/iao.owl"/>
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/ncit.owl"/>
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/oae.owl"/>
@@ -83,9 +81,10 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/pato.owl"/>
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/ro.owl"/>
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/scdo.owl"/>
-        <voaf:extends rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/stato.owl"/>
         <voaf:extends rdf:resource="http://purl.obolibrary.org/obo/symp.owl"/>
+        <voaf:extends rdf:resource="http://semanticscience.org/ontology/sio.owl"/>
+        <voaf:extends rdf:resource="http://www.ebi.ac.uk/efo/efo.owl"/>
         <rdfs:label xml:lang="en">Clinical Metadata Exploration Ontology (CMEO)</rdfs:label>
         <owl:versionInfo xml:lang="en">2026-11-04</owl:versionInfo>
     </owl:Ontology>
@@ -203,9 +202,39 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
     
 
 
+    <!-- http://purl.org/dc/terms/abstract -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
     
 
 
@@ -218,6 +247,36 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/doi -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/status -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://purl.org/vocommons/voaf#extends -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocommons/voaf#extends"/>
     
 
 
@@ -403,6 +462,12 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000002">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/COB_0001300"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000085"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0000453"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <w3id:IAO_0000115 xml:lang="en">A device that is designed to be worn on, or attached to, the body of a person and that senses, records, or transmits data about the wearer&apos;s physiological, behavioral, or environmental state, continuously or intermittently.</w3id:IAO_0000115>
         <w3id:IAO_0000116 xml:lang="en">&quot;Requested for inclusion in OBI; to be replaced by the OBI term once released.&quot;</w3id:IAO_0000116>
         <w3id:IAO_0000118 xml:lang="en">health wearable</w3id:IAO_0000118>
@@ -1298,7 +1363,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
         <w3id:IAO_0000118 xml:lang="en">prior medical intervention exclusion criterion</w3id:IAO_0000118>
         <w3id:IAO_0000233 rdf:resource="https://github.com/obi-ontology/obi/issues/2014"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
-        <rdfs:label xml:lang="en">clinical exposure exclusion criterion</rdfs:label>
+        <rdfs:label xml:lang="en">medical exposure exclusion criterion</rdfs:label>
     </owl:Class>
     
 
@@ -1613,6 +1678,19 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0000272 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000272"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000832 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000832">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002215"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBCS_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
     
 
 
