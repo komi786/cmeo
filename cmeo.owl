@@ -912,7 +912,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000030"/>
         <w3id:IAO_0000115 xml:lang="en">A clinical measurement record that documents the quantification of a protein or of a measurable attribute of a protein (such as concentration or activity), used to indicate a biological state, physiological process, or pathological process, measured in a biological specimen such as blood, urine, or tissue (e.g., troponin, BNP/NT-proBNP, CRP, albumin).</w3id:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000085"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">protein biomarker measurement record</rdfs:label>
     </owl:Class>
     
@@ -948,7 +948,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000030"/>
         <w3id:IAO_0000115 xml:lang="en">A clinical measurement record that documents the output of a diagnostic device or the outcome of a diagnostic test used in the diagnosis of a medical condition.</w3id:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000085"/>
-        <rdfs:isDefinedBy xml:lang="en">https://w3id.org/cmeo#</rdfs:isDefinedBy>
+        <rdfs:isDefinedBy xml:lang="en">http://purl.obolibrary.org/obo/cmeo.owl</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">diagnostic measurement record</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://purl.obolibrary.org/obo/SCDO_0000728</rdfs:seeAlso>
     </owl:Class>
@@ -962,7 +962,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
         <w3id:IAO_0000115 xml:lang="en">A clinical measurement record that documents a score summarizing the functional or behavioral status of a person, derived from a standardized assessment instrument and recorded as a single numeric or ordinal result (e.g., Barthel Index, Katz ADL, NYHA class, MMSE, MoCA, PHQ-9, GAD-7, KCCQ, EQ-5D).</w3id:IAO_0000115>
         <oboInOwl:hasExactSynonym xml:lang="en">functional and behavioral assesment score</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000085"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">functional and behavioral assessment score</rdfs:label>
     </owl:Class>
     
@@ -975,7 +975,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
         <w3id:IAO_0000115 xml:lang="en">A clinical measurement record that documents the level, grade, stage, or severity category assigned to a clinical condition, functional status, or other health-related state using a standardized assessment scale with predefined criteria.</w3id:IAO_0000115>
         <oboInOwl:hasExactSynonym xml:lang="en">stages and scales</oboInOwl:hasExactSynonym>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000085"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">clinical assessment scale record</rdfs:label>
         <rdfs:seeAlso>http://snomed.info/id/254291000</rdfs:seeAlso>
     </owl:Class>
@@ -995,7 +995,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
         <w3id:IAO_0000115 xml:lang="en">A timestamped measurement datum that documents the elapsed time from a specified reference time point (e.g., baseline, diagnosis, treatment start) to the occurrence of a specified event, typically expressed in a time unit.</w3id:IAO_0000115>
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/CMEO_0000085"/>
         <rdfs:comment xml:lang="en">The reference time point and the event type should be explicitly stated or linked (e.g., time to death, time to rehospitalization, time to first myocardial infarction).</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">time to event measurement record</rdfs:label>
     </owl:Class>
     
@@ -1237,7 +1237,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000059">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
         <w3id:IAO_0000115 xml:lang="en">A data entity that specifies the kind of values a variable may take, such as integer, floating-point number, string, boolean, or dateTime.</w3id:IAO_0000115>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">data type</rdfs:label>
     </owl:Class>
     
@@ -1348,7 +1348,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
         <w3id:IAO_0000115 xml:lang="en">An exclusion criterion that defines a condition under which a participant is ineligible for a study because they have a history of a specified surgical procedure occurring before a defined reference time point, optionally within a specified look-back period.</w3id:IAO_0000115>
         <w3id:IAO_0000116 xml:lang="en">&quot;Requested for inclusion in OBI; to be replaced by the OBI term once released.&quot;</w3id:IAO_0000116>
         <w3id:IAO_0000233 rdf:resource="https://github.com/obi-ontology/obi/issues/2014"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">surgical procedure history exclusion criterion</rdfs:label>
     </owl:Class>
     
@@ -1362,7 +1362,7 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
         <w3id:IAO_0000116>&quot;Requested for inclusion in OBI; to be replaced by the OBI term once released.&quot;</w3id:IAO_0000116>
         <w3id:IAO_0000118 xml:lang="en">prior medical intervention exclusion criterion</w3id:IAO_0000118>
         <w3id:IAO_0000233 rdf:resource="https://github.com/obi-ontology/obi/issues/2014"/>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/cmeo#"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/cmeo.owl"/>
         <rdfs:label xml:lang="en">medical exposure exclusion criterion</rdfs:label>
     </owl:Class>
     
