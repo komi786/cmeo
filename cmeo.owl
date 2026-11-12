@@ -400,6 +400,15 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
     
 
 
+    <!-- http://purl.obolibrary.org/obo/STATO_0000102 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/STATO_0000102">
+        <w3id:IAO_0000115 xml:lang="en">relationship between a planned process and the plan specification that it carries out; it is defined as equivalent to the composed relationship (realizes o concretizes)</w3id:IAO_0000115>
+        <rdfs:label xml:lang="en">executes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1535,6 +1544,22 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/CMEO_0000086 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CMEO_0000086">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0500000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <w3id:IAO_0000115 xml:lang="en">A directive information entity that is part of a study protocol and states the condition under which a participant&apos;s recorded data classify that participant as adherent or nonadherent to the protocol&apos;s data-collection schedule.</w3id:IAO_0000115>
+        <rdfs:label xml:lang="en">adherence specification</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/COB_0000035 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/COB_0000035"/>
@@ -1740,22 +1765,6 @@ major adverse cardiovascular event (composite)</w3id:IAO_0000116>
         <w3id:IAO_0000115>A directive information entity that specifies a data item that can be measured or counted and is used in a statistical analysis.</w3id:IAO_0000115>
         <rdfs:label xml:lang="en">variable</rdfs:label>
     </rdf:Description>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/cmeo.owl#adherence_specification_design -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/cmeo.owl#adherence_specification_design">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000104"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OBI_0500000"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <terms:description xml:lang="en">In the context of a clinical study protocol, an adherence specification is an information content entity (ICE) that is part of data collection design and prescribes the exact criteria, thresholds, and measurement methods used to determine whether a study participant or investigator complies with the protocol&apos;s defined regimen.</terms:description>
-        <rdfs:label xml:lang="en">adherence specification design</rdfs:label>
-    </owl:Class>
     
 
 
