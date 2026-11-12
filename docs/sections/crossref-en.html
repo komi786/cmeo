@@ -3,6 +3,7 @@ This section provides details for each class and property defined by Clinical Me
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
+  <li><a href="#0000086" title="http://purl.obolibrary.org/obo/CMEO_0000086">adherence specification</a></li>
   <li><a href="#0000014" title="http://purl.obolibrary.org/obo/CMEO_0000014">adverse drug event record</a></li>
   <li><a href="#0000013" title="http://purl.obolibrary.org/obo/CMEO_0000013">adverse event record</a></li>
   <li><a href="#0000018" title="http://purl.obolibrary.org/obo/CMEO_0000018">all-cause mortality</a></li>
@@ -16,7 +17,6 @@ This section provides details for each class and property defined by Clinical Me
   <li><a href="#0000019" title="http://purl.obolibrary.org/obo/CMEO_0000019">cause-specific mortality</a></li>
   <li><a href="#0000039" title="http://purl.obolibrary.org/obo/CMEO_0000039">clinical assessment scale record</a></li>
   <li><a href="#0000010" title="http://purl.obolibrary.org/obo/CMEO_0000010">clinical event record</a></li>
-  <li><a href="#0000070" title="http://purl.obolibrary.org/obo/CMEO_0000070">clinical exposure exclusion criterion</a></li>
   <li><a href="#http://purl.obolibrary.org/obo/OGMS_0000014" title="http://purl.obolibrary.org/obo/OGMS_0000014">clinical finding</a></li>
   <li><a href="#0000030" title="http://purl.obolibrary.org/obo/CMEO_0000030">clinical measurement record</a></li>
   <li><a href="#0000071" title="http://purl.obolibrary.org/obo/CMEO_0000071">comparator specification</a></li>
@@ -42,6 +42,7 @@ This section provides details for each class and property defined by Clinical Me
   <li><a href="#0000072" title="http://purl.obolibrary.org/obo/CMEO_0000072">intervention specification</a></li>
   <li><a href="#0000048" title="http://purl.obolibrary.org/obo/CMEO_0000048">lifestyle factor record</a></li>
   <li><a href="#0000004" title="http://purl.obolibrary.org/obo/CMEO_0000004">medical encounter</a></li>
+  <li><a href="#0000070" title="http://purl.obolibrary.org/obo/CMEO_0000070">medical exposure exclusion criterion</a></li>
   <li><a href="#0000028" title="http://purl.obolibrary.org/obo/CMEO_0000028">missing value specification</a></li>
   <li><a href="#0000055" title="http://purl.obolibrary.org/obo/CMEO_0000055">neurological sign</a></li>
   <li><a href="#0000031" title="http://purl.obolibrary.org/obo/CMEO_0000031">obsolete anthropometric measurement</a></li>
@@ -70,12 +71,26 @@ This section provides details for each class and property defined by Clinical Me
   <li><a href="#0000040" title="http://purl.obolibrary.org/obo/CMEO_0000040">time to event measurement record</a></li>
   <li><a href="#0000061" title="http://purl.obolibrary.org/obo/CMEO_0000061">timeline specification</a></li>
   <li><a href="#0000045" title="http://purl.obolibrary.org/obo/CMEO_0000045">treatment adherence record</a></li>
-  <li><a href="#http://purl.obolibrary.org/obo/STATO_0000258" title="http://purl.obolibrary.org/obo/STATO_0000258">variable</a></li>
   <li><a href="#0000008" title="http://purl.obolibrary.org/obo/CMEO_0000008">variable derivation formula</a></li>
   <li><a href="#0000058" title="http://purl.obolibrary.org/obo/CMEO_0000058">vital sign</a></li>
   <li><a href="#0000002" title="http://purl.obolibrary.org/obo/CMEO_0000002">wearable device</a></li>
   <li><a href="#0000003" title="http://purl.obolibrary.org/obo/CMEO_0000003">wearable sensor</a></li>
  </ul>
+ <div class="entity" id="0000086">
+  <h3>adherence specification<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.obolibrary.org/obo/CMEO_0000086</p>
+  <div class="comment">
+   <span class="markdown">A directive information entity that is part of a study protocol and states the condition under which a participant's recorded data classify that participant as adherent or nonadherent to the protocol's data-collection schedule.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.obolibrary.org/obo/IAO_0000104" target="_blank" title="http://purl.obolibrary.org/obo/IAO_0000104">I A O 0000104</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="0000014">
   <h3>adverse drug event record<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.obolibrary.org/obo/CMEO_0000014</p>
@@ -354,7 +369,7 @@ This section provides details for each class and property defined by Clinical Me
     Is defined by
    </dt>
    <dd>
-    <a href="https://w3id.org/cmeo#">https://w3id.org/cmeo#</a>
+    <a href="http://purl.obolibrary.org/obo/cmeo.owl">http://purl.obolibrary.org/obo/cmeo.owl</a>
    </dd>
   </dl>
   <dl class="description">
@@ -392,35 +407,6 @@ This section provides details for each class and property defined by Clinical Me
    </dt>
    <dd>
     <a href="#0000013" title="http://purl.obolibrary.org/obo/CMEO_0000013">adverse event record</a> <sup class="type-c" title="class">c</sup>, <a href="#0000011" title="http://purl.obolibrary.org/obo/CMEO_0000011">bleeding event record</a> <sup class="type-c" title="class">c</sup>, <a href="#0000012" title="http://purl.obolibrary.org/obo/CMEO_0000012">cardiovascular event record</a> <sup class="type-c" title="class">c</sup>, <a href="#0000017" title="http://purl.obolibrary.org/obo/CMEO_0000017">death record</a> <sup class="type-c" title="class">c</sup>, <a href="#0000021" title="http://purl.obolibrary.org/obo/CMEO_0000021">hospitalization record</a> <sup class="type-c" title="class">c</sup>, <a href="#0000050" title="http://purl.obolibrary.org/obo/CMEO_0000050">procedure record</a> <sup class="type-c" title="class">c</sup>, <a href="#0000043" title="http://purl.obolibrary.org/obo/CMEO_0000043">therapeutic intervention record</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="0000070">
-  <h3>clinical exposure exclusion criterion<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.obolibrary.org/obo/CMEO_0000070</p>
-  <div class="comment">
-   <span class="markdown">An exclusion criterion that excludes a participant who has received, is receiving, or is scheduled to receive a specified medical intervention.</span>
-  </div>
-  <dl class="definedBy">
-   <dt>
-    Is defined by
-   </dt>
-   <dd>
-    <a href="https://w3id.org/cmeo#">https://w3id.org/cmeo#</a>
-   </dd>
-  </dl>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="http://purl.obolibrary.org/obo/OBI_0500028" target="_blank" title="http://purl.obolibrary.org/obo/OBI_0500028">O B I 0500028</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-   <dt>
-    has sub-classes
-   </dt>
-   <dd>
-    <a href="#0000069" title="http://purl.obolibrary.org/obo/CMEO_0000069">surgical procedure history exclusion criterion</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -648,7 +634,7 @@ This section provides details for each class and property defined by Clinical Me
     Is defined by
    </dt>
    <dd>
-    <a href="https://w3id.org/cmeo#">https://w3id.org/cmeo#</a>
+    <a href="http://purl.obolibrary.org/obo/cmeo.owl">http://purl.obolibrary.org/obo/cmeo.owl</a>
    </dd>
   </dl>
   <dl class="description">
@@ -775,7 +761,7 @@ This section provides details for each class and property defined by Clinical Me
     Is defined by
    </dt>
    <dd>
-    https://w3id.org/cmeo#
+    http://purl.obolibrary.org/obo/cmeo.owl
    </dd>
   </dl>
   <dl class="description">
@@ -857,7 +843,7 @@ This section provides details for each class and property defined by Clinical Me
     Is defined by
    </dt>
    <dd>
-    <a href="https://w3id.org/cmeo#">https://w3id.org/cmeo#</a>
+    <a href="http://purl.obolibrary.org/obo/cmeo.owl">http://purl.obolibrary.org/obo/cmeo.owl</a>
    </dd>
   </dl>
   <dl class="description">
@@ -1007,6 +993,35 @@ This section provides details for each class and property defined by Clinical Me
    </dt>
    <dd>
     <a href="http://purl.obolibrary.org/obo/BFO_0000015" target="_blank" title="http://purl.obolibrary.org/obo/BFO_0000015">B F O 0000015</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="0000070">
+  <h3>medical exposure exclusion criterion<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.obolibrary.org/obo/CMEO_0000070</p>
+  <div class="comment">
+   <span class="markdown">An exclusion criterion that excludes a participant who has received, is receiving, or is scheduled to receive a specified medical intervention.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="http://purl.obolibrary.org/obo/cmeo.owl">http://purl.obolibrary.org/obo/cmeo.owl</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="http://purl.obolibrary.org/obo/OBI_0500028" target="_blank" title="http://purl.obolibrary.org/obo/OBI_0500028">O B I 0500028</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#0000069" title="http://purl.obolibrary.org/obo/CMEO_0000069">surgical procedure history exclusion criterion</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1269,7 +1284,7 @@ This section provides details for each class and property defined by Clinical Me
     Is defined by
    </dt>
    <dd>
-    <a href="https://w3id.org/cmeo#">https://w3id.org/cmeo#</a>
+    <a href="http://purl.obolibrary.org/obo/cmeo.owl">http://purl.obolibrary.org/obo/cmeo.owl</a>
    </dd>
   </dl>
   <dl class="description">
@@ -1515,7 +1530,7 @@ This section provides details for each class and property defined by Clinical Me
     Is defined by
    </dt>
    <dd>
-    <a href="https://w3id.org/cmeo#">https://w3id.org/cmeo#</a>
+    <a href="http://purl.obolibrary.org/obo/cmeo.owl">http://purl.obolibrary.org/obo/cmeo.owl</a>
    </dd>
   </dl>
   <dl class="description">
@@ -1523,7 +1538,7 @@ This section provides details for each class and property defined by Clinical Me
     has super-classes
    </dt>
    <dd>
-    <a href="#0000070" title="http://purl.obolibrary.org/obo/CMEO_0000070">clinical exposure exclusion criterion</a> <sup class="type-c" title="class">c</sup>
+    <a href="#0000070" title="http://purl.obolibrary.org/obo/CMEO_0000070">medical exposure exclusion criterion</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1602,7 +1617,7 @@ This section provides details for each class and property defined by Clinical Me
     Is defined by
    </dt>
    <dd>
-    <a href="https://w3id.org/cmeo#">https://w3id.org/cmeo#</a>
+    <a href="http://purl.obolibrary.org/obo/cmeo.owl">http://purl.obolibrary.org/obo/cmeo.owl</a>
    </dd>
   </dl>
   <dl class="description">
@@ -1658,19 +1673,6 @@ This section provides details for each class and property defined by Clinical Me
    <dd>
     <a href="#0000044" title="http://purl.obolibrary.org/obo/CMEO_0000044">patient characteristic record</a> <sup class="type-c" title="class">c</sup>
    </dd>
-  </dl>
- </div>
- <div class="entity" id="http://purl.obolibrary.org/obo/STATO_0000258">
-  <h3>variable<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> http://purl.obolibrary.org/obo/STATO_0000258</p>
-  <div class="comment">
-   <span class="markdown">A directive information entity that specifies a data item that can be measured or counted and is used in a statistical analysis.</span>
-  </div>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd></dd>
   </dl>
  </div>
  <div class="entity" id="0000008">
@@ -1758,8 +1760,16 @@ This section provides details for each class and property defined by Clinical Me
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
+  <li><a href="#http://purl.obolibrary.org/obo/STATO_0000102" title="http://purl.obolibrary.org/obo/STATO_0000102">executes</a></li>
   <li><a href="#0000084" title="http://purl.obolibrary.org/obo/CMEO_0000084">is record of</a></li>
  </ul>
+ <div class="entity" id="http://purl.obolibrary.org/obo/STATO_0000102">
+  <h3>executes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.obolibrary.org/obo/STATO_0000102</p>
+  <div class="comment">
+   <span class="markdown">relationship between a planned process and the plan specification that it carries out; it is defined as equivalent to the composed relationship (realizes o concretizes)</span>
+  </div>
+ </div>
  <div class="entity" id="0000084">
   <h3>is record of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.obolibrary.org/obo/CMEO_0000084</p>

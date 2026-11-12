@@ -267,6 +267,12 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
 <http://purl.obolibrary.org/obo/RO_0002351> rdf:type owl:ObjectProperty .
 
 
+###  http://purl.obolibrary.org/obo/STATO_0000102
+<http://purl.obolibrary.org/obo/STATO_0000102> rdf:type owl:ObjectProperty ;
+                                               <http://purl.obolibrary.org/obo/IAO_0000115> "relationship between a planned process and the plan specification that it carries out; it is defined as equivalent to the composed relationship (realizes o concretizes)"@en ;
+                                               rdfs:label "executes"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -302,7 +308,11 @@ CMEO is intended to interoperate with controlled vocabularies and common clinica
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000002
 <http://purl.obolibrary.org/obo/CMEO_0000002> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0001300> ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0001300> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/RO_0000085> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0000453>
+                                                              ] ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A device that is designed to be worn on, or attached to, the body of a person and that senses, records, or transmits data about the wearer's physiological, behavioral, or environmental state, continuously or intermittently."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000116> "\"Requested for inclusion in OBI; to be replaced by the OBI term once released.\""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000118> "health wearable"@en ;
@@ -641,7 +651,7 @@ major adverse cardiovascular event (composite)"""@en ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical measurement record that documents the quantification of a protein or of a measurable attribute of a protein (such as concentration or activity), used to indicate a biological state, physiological process, or pathological process, measured in a biological specimen such as blood, urine, or tissue (e.g., troponin, BNP/NT-proBNP, CRP, albumin)."@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CMEO_0000085> ;
-                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "protein biomarker measurement record"@en .
 
 
@@ -668,7 +678,7 @@ major adverse cardiovascular event (composite)"""@en ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/CMEO_0000030> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical measurement record that documents the output of a diagnostic device or the outcome of a diagnostic test used in the diagnosis of a medical condition."@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CMEO_0000085> ;
-                                              rdfs:isDefinedBy "https://w3id.org/cmeo#"@en ;
+                                              rdfs:isDefinedBy "http://purl.obolibrary.org/obo/cmeo.owl"@en ;
                                               rdfs:label "diagnostic measurement record"@en ;
                                               rdfs:seeAlso "http://purl.obolibrary.org/obo/SCDO_0000728"@en .
 
@@ -679,7 +689,7 @@ major adverse cardiovascular event (composite)"""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical measurement record that documents a score summarizing the functional or behavioral status of a person, derived from a standardized assessment instrument and recorded as a single numeric or ordinal result (e.g., Barthel Index, Katz ADL, NYHA class, MMSE, MoCA, PHQ-9, GAD-7, KCCQ, EQ-5D)."@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "functional and behavioral assesment score"@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CMEO_0000085> ;
-                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "functional and behavioral assessment score"@en .
 
 
@@ -689,7 +699,7 @@ major adverse cardiovascular event (composite)"""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A clinical measurement record that documents the level, grade, stage, or severity category assigned to a clinical condition, functional status, or other health-related state using a standardized assessment scale with predefined criteria."@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "stages and scales"@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CMEO_0000085> ;
-                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "clinical assessment scale record"@en ;
                                               rdfs:seeAlso "http://snomed.info/id/254291000" .
 
@@ -704,7 +714,7 @@ major adverse cardiovascular event (composite)"""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A timestamped measurement datum that documents the elapsed time from a specified reference time point (e.g., baseline, diagnosis, treatment start) to the occurrence of a specified event, typically expressed in a time unit."@en ;
                                               <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/CMEO_0000085> ;
                                               rdfs:comment "The reference time point and the event type should be explicitly stated or linked (e.g., time to death, time to rehospitalization, time to first myocardial infarction)."@en ;
-                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "time to event measurement record"@en .
 
 
@@ -888,7 +898,7 @@ major adverse cardiovascular event (composite)"""@en ;
 <http://purl.obolibrary.org/obo/CMEO_0000059> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "A data entity that specifies the kind of values a variable may take, such as integer, floating-point number, string, boolean, or dateTime."@en ;
-                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "data type"@en .
 
 
@@ -969,7 +979,7 @@ major adverse cardiovascular event (composite)"""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000115> "An exclusion criterion that defines a condition under which a participant is ineligible for a study because they have a history of a specified surgical procedure occurring before a defined reference time point, optionally within a specified look-back period."@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000116> "\"Requested for inclusion in OBI; to be replaced by the OBI term once released.\""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/obi-ontology/obi/issues/2014> ;
-                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
                                               rdfs:label "surgical procedure history exclusion criterion"@en .
 
 
@@ -980,8 +990,8 @@ major adverse cardiovascular event (composite)"""@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000116> "\"Requested for inclusion in OBI; to be replaced by the OBI term once released.\"" ;
                                               <http://purl.obolibrary.org/obo/IAO_0000118> "prior medical intervention exclusion criterion"@en ;
                                               <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/obi-ontology/obi/issues/2014> ;
-                                              rdfs:isDefinedBy <https://w3id.org/cmeo#> ;
-                                              rdfs:label "clinical exposure exclusion criterion"@en .
+                                              rdfs:isDefinedBy <http://purl.obolibrary.org/obo/cmeo.owl> ;
+                                              rdfs:label "medical exposure exclusion criterion"@en .
 
 
 ###  http://purl.obolibrary.org/obo/CMEO_0000071
@@ -1105,6 +1115,17 @@ major adverse cardiovascular event (composite)"""@en ;
                                               rdfs:label "composite endpoint specification"@en .
 
 
+###  http://purl.obolibrary.org/obo/CMEO_0000086
+<http://purl.obolibrary.org/obo/CMEO_0000086> rdf:type owl:Class ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
+                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0500000>
+                                                              ] ;
+                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A directive information entity that is part of a study protocol and states the condition under which a participant's recorded data classify that participant as adherent or nonadherent to the protocol's data-collection schedule."@en ;
+                                              rdfs:label "adherence specification"@en .
+
+
 ###  http://purl.obolibrary.org/obo/COB_0000035
 <http://purl.obolibrary.org/obo/COB_0000035> rdf:type owl:Class .
 
@@ -1203,6 +1224,13 @@ major adverse cardiovascular event (composite)"""@en ;
 <http://purl.obolibrary.org/obo/OBI_0000272> rdf:type owl:Class .
 
 
+###  http://purl.obolibrary.org/obo/OBI_0000832
+<http://purl.obolibrary.org/obo/OBI_0000832> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/RO_0002215> ;
+                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/OBCS_0000002>
+                                                             ] .
+
+
 ###  http://purl.obolibrary.org/obo/OBI_0001933
 <http://purl.obolibrary.org/obo/OBI_0001933> rdf:type owl:Class .
 
@@ -1227,8 +1255,7 @@ major adverse cardiovascular event (composite)"""@en ;
 
 
 ###  http://purl.obolibrary.org/obo/STATO_0000258
-<http://purl.obolibrary.org/obo/STATO_0000258> rdf:type owl:Class ;
-                                               rdfs:subClassOf [ rdf:type owl:Restriction ;
+<http://purl.obolibrary.org/obo/STATO_0000258> rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
                                                                  owl:someValuesFrom <http://purl.obolibrary.org/obo/CMEO_0000009>
                                                                ] ;
